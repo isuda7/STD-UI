@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+<style type="text/css">
+	.account-item {padding:10px 15px; border:1px solid #ddd; border-radius:5px;}
+	.account-define:after {content:''; display:block; clear:both;}
+	.account-define > p {float:left; width:33.33%;}
+	.dv-android .folder-focus:focus {outline:none;}
+	.account-list-wrap .btn-ico {width:40px; height:40px;}
+</style>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Toggle</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Single</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#none" class="g-example-btn">HTML</a>
+									<a href="#none" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<!-- 단일요소 폴더링 -->
+									<div class="box demo1">
+										<div class="box-head">
+											<strong>Expand Head</strong>
+											<button type="button" id="expandDemoBtn1" class="btn btn-toggle" aria-controls="expandDemo1" aria-expanded="false"><span><i class="blind">자세히보기</i></span></button>
+										</div>
+										<div class="box-body is-hidden" id="expandDemo1">
+											Expand Body
+										</div>
+									</div>
+									<!-- 마크업뷰영역 -->
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="box demo1">
+										&lt;div class="box-head">
+											Example
+											&lt;button type="button" id="expandDemoBtn1" class="btn btn-toggle" aria-controls="expandDemo1" aria-expanded="false">&lt;span>&lt;i class="blind">자세히보기&lt;/i>&lt;/span>&lt;/button>
+										&lt;/div>
+										&lt;div class="box-body is-hidden" id="expandDemo1">
+											Expand Body
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									function expandDemo1(){
+										$document.off('click.expandEvent').on('click.expandEvent', '#expandDemoBtn1', function(e){
+											var id = $(this).attr('aria-controls');
+											$(this).toggleClass('is-active');
+											$('#'+id).toggleClass('is-hidden');
+											//상태적용
+											$(this).hasClass('is-active') ? $(this).attr('aira-expanded', 'true') : $(this).attr('aira-expanded', 'false');
+										})
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<div class="g-section-body">
+					<h3 class="g-h3">Items</h3>
+					<div class="g-example-wrap">
+						<div class="g-example-header">
+							<strong class="g-example-tit is-before"></strong>
+							<div class="g-example-nav">
+								<span class="g-example-txt"></span>
+								<a href="#none" class="g-example-btn">HTML</a>
+								<a href="#none" class="g-example-btn">SCRIPT</a>
+							</div>
+						</div>
+						<div class="g-example-body">
+							<div class="g-example-preview">
+								<h4 class="g-h4 mar-t0">Defined</h4>
+								<!-- 더보기 폴더링 -->
+								<div class="box demo2">
+									<div class="box-head">
+										Example
+										<button type="button" id="expandDemoBtn2" class="btn btn-toggle" data-target="expandDefine" aria-expanded="false"><span><i class="blind">자세히보기</i></span></button>
+									</div>
+									<div class="box-body">
+										<dl>
+											<dt>folder-title</dt>
+											<dd>folder-define</dd>
+											<dt class="is-hidden" data-name="expandDefine">folder-title</dt>
+											<dd class="is-hidden" data-name="expandDefine">folder-define</dd>
+											<dt class="is-hidden" data-name="expandDefine">folder-title</dt>
+											<dd class="is-hidden" data-name="expandDefine">folder-define</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="g-example-footer">
+							<pre class="brush:html">
+								<div class="box demo2">
+									<div class="box-head">
+										Example
+										<button type="button" id="expandDemoBtn2" class="btn btn-toggle" data-target="expandDefine" aria-expanded="false"><span><i class="blind">자세히보기</i></span></button>
+									</div>
+									<div class="box-body">
+										<dl>
+											<dt>folder-title</dt>
+											<dd>folder-define</dd>
+											<dt class="is-hidden" data-name="expandDefine">folder-title</dt>
+											<dd class="is-hidden" data-name="expandDefine">folder-define</dd>
+											<dt class="is-hidden" data-name="expandDefine">folder-title</dt>
+											<dd class="is-hidden" data-name="expandDefine">folder-define</dd>
+										</dl>
+									</div>
+								</div>
+							</pre>
+						</div>
+						<div class="g-example-footer">
+							<pre class="brush:js">
+								function expandDemo2(){
+									$document.off('click.expandEvent').on('click.expandEvent', '#expandDemoBtn2', function(e){
+										var name = $(this).data('target');
+										$(this).toggleClass('is-active');
+										$('[data-name='+name+']').toggleClass('is-hidden');
+										//상태적용
+										$(this).hasClass('is-active') ? $(this).attr('aira-expanded', 'true') : $(this).attr('aira-expanded', 'false');
+									})
+								}
+							</pre>
+						</div>
+				</div>
+				</div>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

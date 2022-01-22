@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Popups | STD Frameworks</title>
+<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="keywords" content="웹스타일가이드, STD Frameworks" />
+<meta name="description" content="웹스타일가이드, STD Frameworks" />
+<link rel="shortcut icon" href="/STD_GD/favicon.ico" type="image/x-icon">
+<script src="/STD_GD/js/import.js"></script>
+<script src="/STD_GD/js/ui/ui.publish.js"></script><!-- 퍼블리싱전용 스크립트 (개발에 추가하지 않습니다.) -->
+<link rel="stylesheet" href="guide.css" /><!-- 가이드전용 -->
+</head>
+<body class="pub_only"><!-- pub_only 퍼블리싱전용 클래스 (개발에 추가하지 않습니다.) -->
+<div class="wrapper sub-wrap">
+	<!-- Header -->
+	<header class="header"></header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div class="container">
+		<main id="content" class="content" role="main">
+			<div class="content-body">
+				<div class="in-sec">
+					<h1 class="g-h1">Popups</h1>
+				</div>
+				<!-- Section -->
+				<section class="g-section in-sec">
+					<div class="g-section-head">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<button type="button" class="btn style_1 primary" onclick="ui.popup.open('popupDialog')"><span>Popup Basic</span></button>
+						<br><br>
+						<button type="button" class="btn style_1 primary" onclick="ui.popup.open('popupFull')"><span>Popup Full</span></button>
+						<br><br>
+						<button type="button" class="btn style_1 primary" onclick="ui.popup.open('popupSelect')"><span>Popup Select</span></button>
+						<br><br>
+						<button type="button" class="btn style_1 primary" onclick="ui.popup.open('popupConfirm')"><span>Popup Confirm</span></button>
+						<br><br>
+						<button type="button" class="btn style_1 primary" onclick="ui.popup.open('popupDialog')"><span>Popup Alert</span></button>
+						<br><br>
+						<button type="button" class="btn style_1 primary" onclick="ui.popup.open('popupDialogTest')"><span>Popup Test</span></button>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</main>
+	</div>
+	<!-- //Container -->
+
+	<!-- Footer -->
+	<footer class="footer"></footer>
+	<!-- //Footer -->
+</div>
+
+
+<!-- Basic -->
+<div id="popupDialog" class="popup-wrap type-basic">
+	<section class="popup">
+		<div class="popup-head">
+			<h3 class="h_tit">Basic Popup</h3>
+		</div>
+		<div class="popup-body">
+			<div class="popup-content">
+				Popup Content
+			</div>
+		</div>
+		<div class="popup-foot">
+			<div class="btn_wrap">
+				<button type="button" class="btn style_1 primary"><span>버튼</span></button>
+			</div>
+		</div>
+		<div class="popup-close">
+			<button type="button" class="btn btn_closer" onclick="ui.popup.close('popupDialog')"><span>닫기</span></button>
+		</div>
+	</section>
+	<div class="dimmer"></div>
+</div>
+<!-- //Basic -->
+
+<!-- Fullpopup -->
+<div id="popupFull" class="popup-wrap type-full" role="dialog" aria-modal="false">
+	<section class="popup">
+		<div class="popup-head">
+			<h3 class="h_tit">Full Popup</h3>
+		</div>
+		<div class="popup-body">
+			<div class="popup-content">
+				Popup Content
+			</div>
+		</div>
+		<div class="popup-foot">
+			<div class="btn_wrap">
+				<button type="button" class="btn style_1 primary" onclick="ui.popup.close('popupFull')"><span>버튼</span></button>
+			</div>
+		</div>
+		<div class="popup-close">
+			<button type="button" class="btn btn_closer" onclick="ui.popup.close('popupFull')"><span>닫기</span></button>
+		</div>
+	</section>
+	<div class="dimmer"></div>
+</div>
+<!-- //Fullpopup -->
+
+<!-- Select -->
+<div id="popupSelect" class="popup-wrap type-select" role="dialog" aria-modal="false">
+	<section class="popup">
+		<div class="popup-head">
+			<h3 class="h_tit">Select Popup</h3>
+		</div>
+		<div class="popup-body">
+			<div class="popup-content">
+				Popup Content
+			</div>
+		</div>
+		<div class="popup-close">
+			<button type="button" class="btn btn_closer" onclick="ui.popup.close('popupSelect')"><span>닫기</span></button>
+		</div>
+	</section>
+	<div class="dimmer"></div>
+</div>
+<!-- //Select -->
+
+<!-- Confirm -->
+<div id="popupConfirm" class="popup-wrap type-confirm" role="alertdialog" aria-modal="false">
+	<section class="popup">
+		<div class="popup-body">
+			<div class="popup-content">
+				Popup Content
+			</div>
+		</div>
+		<div class="popup-foot">
+			<div class="btn_wrap">
+				<button type="button" class="btn style_1"><span>취소</span></button>
+				<button type="button" class="btn style_1 primary" onclick="ui.popup.close('popupConfirm')"><span>확인</span></button>
+			</div>
+		</div>
+		<div class="popup-close">
+			<button type="button" class="btn btn_closer" onclick="ui.popup.close('popupConfirm')"><span>닫기</span></button>
+		</div>
+	</section>
+	<div class="dimmer"></div>
+</div>
+<!-- //Confirm -->
+
+<!-- Alert -->
+<div id="popupAlert" class="popup-wrap type-alert" role="alertdialog" aria-modal="false">
+	<section class="popup">
+		<div class="popup-body">
+			<div class="popup-content">
+				Popup Content
+			</div>
+		</div>
+		<div class="popup-foot">
+			<div class="btn_wrap">
+				<button type="button" class="btn style_1 primary" onclick="ui.popup.close('popupAlert')"><span>확인</span></button>
+			</div>
+		</div>
+		<div class="popup-close">
+			<button type="button" class="btn btn_closer" onclick="ui.popup.close('popupAlert')"><span>닫기</span></button>
+		</div>
+	</section>
+	<div class="dimmer"></div>
+</div>
+<!-- //Alert -->
+
+<!-- Basic -->
+<div id="popupDialogTest" class="popup-wrap type-basic">
+	<section class="popup">
+		<div class="popup-head">
+			<h3 class="h_tit">Basic Popup</h3>
+		</div>
+		<div class="popup-body">
+			<div class="popup-content">
+				<button type="button" class="btn style_1 primary" onclick="ui.popup.open('popupAlert')"><span>경고팝업</span></button>
+			</div>
+		</div>
+		<div class="popup-foot">
+			<div class="btn_wrap">
+				<button type="button" class="btn style_1 primary"><span>버튼</span></button>
+			</div>
+		</div>
+		<div class="popup-close">
+			<button type="button" class="btn btn_closer" onclick="ui.popup.close('popupDialogTest')"><span>닫기</span></button>
+		</div>
+	</section>
+	<div class="dimmer"></div>
+</div>
+<!-- //Basic -->
+
+</body>
+</html>

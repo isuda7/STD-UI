@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Tab</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- Tab Change -->
+									<div class="tab-nav demo1">
+										<ul role="tablist" class="tab-list">
+											<li id="tabItem01" role="tab" aria-controls="tabpanel01" aria-selected="true" class="js-tab is-active">
+												<button type="button" class="btn"><span>탭제목1</span></button>
+											</li>
+											<li id="tabItem02" role="tab" aria-controls="tabpanel02" aria-selected="false" class="js-tab">
+												<button type="button" class="btn"><span>탭제목2</span></button>
+											</li>
+										</ul>
+									</div>
+									<div class="tab-body">
+										<!-- 탭내용1 -->
+										<div id="tabpanel01" role="tabpanel" aria-labelledby="tabItem01" class="tab-cont is-active">
+											<p>탭 패널1</p>
+											<p>js-tab 적용</p>
+										</div>
+										<!-- //탭내용1 -->
+										<!-- 탭내용2 -->
+										<div id="tabpanel02" role="tabpanel" aria-labelledby="tabItem02" class="tab-cont">
+											<p>탭 패널2</p>
+											<p>js-tab 적용</p>
+										</div>
+										<!-- //탭내용2 -->
+									</div>
+									<!-- //Tab Change -->
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										@Tabs
+									-------------------------------------------------------------------*/
+									/* Default */
+									.tab-panel {display:none;}
+									.tab-panel.is-active {display:block;}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									/* Tab */
+									function tabInit(){
+										$document.off('click.tabEvent').on('click.tabEvent', '.js-tab', function(e){
+											tabAction($(this).attr('aria-controls'));
+										});
+									}
+									function tabAction(id, callback){
+										var $eleTabItem = $('[aria-controls='+id+']');
+										var $eleTabPanel = $('#'+ id);
+										$eleTabItem.addClass('is-active').attr('aria-selected','true').siblings().removeClass('is-active').attr('aria-selected','false');
+										if ($eleTabPanel.length > 1) { $eleTabPanel.addClass('is-active').siblings().removeClass('is-active') }
+										if ($eleTabPanel.length == 1) { $eleTabPanel.attr('aria-labelledby', $eleTabItem.attr('id')) }
+										if (callback){ typeof(callback) == 'function' ? callback() : callback; }
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<!-- s: Tab Area -->
+									<div class="tab-nav demo1">
+										<ul role="tablist" class="tab-list">
+											<li id="tabItem11" role="tab" aria-controls="tabPanel11" aria-selected="true" class="tab-item js-tab is-active">
+												<button type="button" class="btn"><span>탭제목1</span></button>
+											</li>
+											<li id="tabItem12" role="tab" aria-controls="tabPanel12" aria-selected="false" class="tab-item js-tab">
+												<button type="button" class="btn"><span>탭제목2</span></button>
+											</li>
+										</ul>
+									</div>
+									<div class="tab-body">
+										<!-- s: 제목1 -->
+										<div id="tabPanel11" role="tabpanel" aria-labelledby="tabItem11" aria-hidden="false" class="tab-panel is-active">
+											내용1
+										</div>
+										<!-- e: 제목1 -->
+										<!-- s: 제목2 -->
+										<div id="tabPanel12" role="tabpanel" aria-labelledby="tabItem12" aria-hidden="true" class="tab-panel">
+											내용2
+										</div>
+										<!-- e: 제목2 -->
+									</div>
+									<!-- e: Tab Area -->
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tab-nav demo1">
+										...
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Design Basic */
+									.tab-nav.demo1 .tab-list {display:flex; background:#eee; border-bottom:1px solid #2496ee;}
+									.tab-nav.demo1 .tab-item .btn {position:relative; padding:10px; background:#fff; color:#222; z-index:0;}
+									.tab-nav.demo1 .tab-item.is-active .btn {background:#2496ee; color:#fff;}
+									.tab-nav.demo1 .tab-item.is-active .btn:focus {box-shadow:0 0 0 3px rgba(36,150,238,0.5); z-index:1;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

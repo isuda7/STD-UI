@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Bullet</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">기본</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<h3 class="g-h3">모양</h3>
+								<ul class="bul dot">
+									<li>블릿 리스트</li>
+								</ul>
+								<h3 class="g-h3">숫자</h3>
+								<ul class="bul num1">
+									<li>블릿 리스트
+										<ul class="bul num2">
+											<li>블릿 리스트
+												<ul class="bul num3">
+													<li>블릿 리스트
+														<ul class="bul num4">
+															<li>블릿 리스트</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<h3 class="g-h3">영문</h3>
+								<ul class="bul eng1">
+									<li>블릿 리스트
+										<ul class="bul eng2">
+											<li>블릿 리스트
+												<ul class="bul eng3">
+													<li>블릿 리스트
+														<ul class="bul eng4">
+															<li>블릿 리스트</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<h3 class="g-h3">한글</h3>
+								<ul class="bul kor1">
+									<li>블릿 리스트
+										<ul class="bul kor2">
+											<li>블릿 리스트
+												<ul class="bul kor3">
+													<li>블릿 리스트</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<h3 class="g-h3">기호</h3>
+								<div class="bul dash">
+									<p>블릿 리스트</p>
+								</div>
+								<div class="bul bill">
+									<p>블릿 리스트</p>
+								</div>
+								<div class="bul star">
+									<p>블릿 리스트</p>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<h3 class="g-h3">모양</h3>
+									<ul class="bul dot">
+										<li>블릿 리스트</li>
+									</ul>
+									<h3 class="g-h3">숫자</h3>
+									<ul class="bul num1">
+										<li>블릿 리스트
+											<ul class="bul num2">
+												<li>블릿 리스트
+													<ul class="bul num3">
+														<li>블릿 리스트
+															<ul class="bul num4">
+																<li>블릿 리스트</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<h3 class="g-h3">영문</h3>
+									<ul class="bul eng1">
+										<li>블릿 리스트
+											<ul class="bul eng2">
+												<li>블릿 리스트
+													<ul class="bul eng3">
+														<li>블릿 리스트
+															<ul class="bul eng4">
+																<li>블릿 리스트</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<h3 class="g-h3">한글</h3>
+									<ul class="bul kor1">
+										<li>블릿 리스트
+											<ul class="bul kor2">
+												<li>블릿 리스트
+													<ul class="bul kor3">
+														<li>블릿 리스트</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<h3 class="g-h3">기호</h3>
+									<div class="bul dash">
+										<p>블릿 리스트</p>
+									</div>
+									<div class="bul bill">
+										<p>블릿 리스트</p>
+									</div>
+									<div class="bul star">
+										<p>블릿 리스트</p>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										@Bullets
+									-------------------------------------------------------------------*/
+									/* Default */
+									.bul > li {position:relative; line-height:1.6; padding-left:20px;}
+									.bul > li::before {display:block; position:absolute; left:0; top:0;}
+									.bul > p {position:relative; line-height:1.6; padding-left:20px;}
+									.bul > p::before {display:block; position:absolute; left:0; top:0;}
+
+									/* 모양 */
+									.bul.dot > li::before {}
+
+									/* 기호 */
+									.bul.dash > p::before {content:'-';}
+									.bul.bill > p::before {content:'※';}
+									.bul.star > p::before {content:'*';} /* 키보드문자 말고 특수문자 사용 */
+
+									/* 숫자 */
+									.bul.num1 {counter-reset:num1;} .bul.num1 > li:before {counter-increment:num1; content:counter(num1, decimal) ".";} /* 1. */
+									.bul.num2 {counter-reset:num2;} .bul.num2 > li:before {counter-increment:num2; content:"(" counter(num2, decimal) ")";} /* (1) */
+									.bul.num3 {counter-reset:num3;} .bul.num3 > li:before {counter-increment:num3; content:counter(num3, decimal) ")";} /* 1) */
+									.bul.num4 > li:nth-child(1)::before {content:'①';}
+									.bul.num4 > li:nth-child(2)::before {content:'②';}
+									.bul.num4 > li:nth-child(3)::before {content:'③';}
+									.bul.num4 > li:nth-child(4)::before {content:'④';}
+									.bul.num4 > li:nth-child(5)::before {content:'⑤';}
+									.bul.num4 > li:nth-child(6)::before {content:'⑥';}
+									.bul.num4 > li:nth-child(7)::before {content:'⑦';}
+									.bul.num4 > li:nth-child(8)::before {content:'⑧';}
+									.bul.num4 > li:nth-child(9)::before {content:'⑨';}
+									.bul.num4 > li:nth-child(10)::before {content:'⑩';}
+
+									/* 영문 */
+									.bul.eng1 {counter-reset:eng1;} .bul.eng1 > li::before {counter-increment:eng1; content:counter(eng1, upper-alpha) ".";} /* A. */
+									.bul.eng2 {counter-reset:eng2;} .bul.eng2 > li::before {counter-increment:eng2; content:"(" counter(eng2, lower-alpha) ")";} /* (a) */
+									.bul.eng3 {counter-reset:eng3;} .bul.eng3 > li::before {counter-increment:eng3; content:counter(eng3, lower-alpha) ")";} /* a) */
+									.bul.eng4 > li:nth-child(1)::before {content:'ⓐ';}
+									.bul.eng4 > li:nth-child(2)::before {content:'ⓑ';}
+									.bul.eng4 > li:nth-child(3)::before {content:'ⓒ';}
+									.bul.eng4 > li:nth-child(4)::before {content:'ⓓ';}
+									.bul.eng4 > li:nth-child(5)::before {content:'ⓔ';}
+									.bul.eng4 > li:nth-child(6)::before {content:'ⓕ';}
+									.bul.eng4 > li:nth-child(7)::before {content:'ⓖ';}
+									.bul.eng4 > li:nth-child(8)::before {content:'ⓗ';}
+									.bul.eng4 > li:nth-child(9)::before {content:'ⓘ';}
+									.bul.eng4 > li:nth-child(10)::before {content:'ⓙ';}
+
+									/* 한글 */
+									.bul.kor1 > li:nth-child(1)::before {content:'가.';}
+									.bul.kor1 > li:nth-child(2)::before {content:'나.';}
+									.bul.kor1 > li:nth-child(3)::before {content:'다.';}
+									.bul.kor1 > li:nth-child(4)::before {content:'라.';}
+									.bul.kor1 > li:nth-child(5)::before {content:'마.';}
+									.bul.kor1 > li:nth-child(6)::before {content:'바.';}
+									.bul.kor1 > li:nth-child(7)::before {content:'사.';}
+									.bul.kor1 > li:nth-child(8)::before {content:'아.';}
+									.bul.kor1 > li:nth-child(9)::before {content:'자.';}
+									.bul.kor1 > li:nth-child(10)::before {content:'차.';}
+									.bul.kor1 > li:nth-child(11)::before {content:'카.';}
+									.bul.kor1 > li:nth-child(12)::before {content:'타.';}
+									.bul.kor1 > li:nth-child(13)::before {content:'파.';}
+									.bul.kor1 > li:nth-child(14)::before {content:'하.';}
+
+									.bul.kor2 > li:nth-child(1)::before {content:'(가)';}
+									.bul.kor2 > li:nth-child(2)::before {content:'(나)';}
+									.bul.kor2 > li:nth-child(3)::before {content:'(다)';}
+									.bul.kor2 > li:nth-child(4)::before {content:'(라)';}
+									.bul.kor2 > li:nth-child(5)::before {content:'(마)';}
+									.bul.kor2 > li:nth-child(6)::before {content:'(바)';}
+									.bul.kor2 > li:nth-child(7)::before {content:'(사)';}
+									.bul.kor2 > li:nth-child(8)::before {content:'(아)';}
+									.bul.kor2 > li:nth-child(9)::before {content:'(자)';}
+									.bul.kor2 > li:nth-child(10)::before {content:'(차)';}
+									.bul.kor2 > li:nth-child(11)::before {content:'(카)';}
+									.bul.kor2 > li:nth-child(12)::before {content:'(타)';}
+									.bul.kor2 > li:nth-child(13)::before {content:'(파)';}
+									.bul.kor2 > li:nth-child(14)::before {content:'(하)';}
+
+									.bul.kor3 > li:nth-child(1)::before {content:'가)';}
+									.bul.kor3 > li:nth-child(2)::before {content:'나)';}
+									.bul.kor3 > li:nth-child(3)::before {content:'다)';}
+									.bul.kor3 > li:nth-child(4)::before {content:'라)';}
+									.bul.kor3 > li:nth-child(5)::before {content:'마)';}
+									.bul.kor3 > li:nth-child(6)::before {content:'바)';}
+									.bul.kor3 > li:nth-child(7)::before {content:'사)';}
+									.bul.kor3 > li:nth-child(8)::before {content:'아)';}
+									.bul.kor3 > li:nth-child(9)::before {content:'자)';}
+									.bul.kor3 > li:nth-child(10)::before {content:'차)';}
+									.bul.kor3 > li:nth-child(11)::before {content:'카)';}
+									.bul.kor3 > li:nth-child(12)::before {content:'타)';}
+									.bul.kor3 > li:nth-child(13)::before {content:'파)';}
+									.bul.kor3 > li:nth-child(14)::before {content:'하)';}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

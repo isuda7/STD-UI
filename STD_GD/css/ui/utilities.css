@@ -1,0 +1,135 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	파일정의 : 유틸리티
+	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @General
+-------------------------------------------------------------------*/
+/* System */
+.blind {display:block; position:absolute; left:-9999px; top:0; width:1px; height:1px; overflow:hidden;}
+.is-locked-all {overflow:hidden;}
+.is-locked-ios {position:fixed; left:0; top:0; width:100%; height:100%; overflow:hidden;}
+
+/* Display */
+.dis-n {display:none;}
+
+/* Margin */
+.mar-0 {margin:0 !important;}
+.mar-t0 {margin-top:0 !important;}
+.mar-r0 {margin-right:0 !important;}
+.mar-b0 {margin-bottom:0 !important;}
+.mar-l0 {margin-left:0 !important;}
+
+/* Padding */
+.pad-0 {padding:0 !important}
+.pad-t0 {padding-top:0 !important}
+.pad-r0 {padding-right:0 !important}
+.pad-b0 {padding-bottom:0 !important}
+.pad-l0 {padding-left:0 !important}
+
+/* Border */
+.line-0 {border-width:0 !important;}
+.line-t0 {border-top-width:0 !important;}
+.line-r0 {border-right-width:0 !important;}
+.line-b0 {border-bottom-width:0 !important;}
+.line-l0 {border-left-width:0 !important;}
+
+/* Align - Inline */
+.align-t {vertical-align:top !important;}
+.align-m {vertical-align:middle !important;}
+.align-b {vertical-align:bottom !important;}
+.align-l {text-align:left !important;}
+.align-c {text-align:center !important;}
+.align-r {text-align:right !important;}
+.align-j {text-align:justify; -moz-text-align-last:justify; -webkit-text-align-last:justify; text-align-last:justify;}
+
+/* 말줄임 */
+.ellipsis1 {overflow:hidden; white-space:nowrap; -o-text-overflow:ellipsis; text-overflow:ellipsis;}
+.ellipsis2 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.ellipsis3 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;}
+
+/* Flexible */
+.flex {display:-webkit-box;display:-ms-flexbox;display:flex;}
+.flex-auto > .col {-webkit-box-flex:1;-ms-flex:1;flex:1;}
+.flex-column {-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}
+.flex-wrap {-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.flex-start {-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;}
+.flex-center {-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
+.flex-end {-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}
+.flex-around {-ms-flex-pack:distribute;justify-content:space-around;}
+.flex-between {-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}
+.flex-evenly {-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;}
+.cross-start {-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}
+.cross-center {-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.cross-end {-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;}
+.cross-around {-webkit-box-align:space-around;-ms-flex-align:space-around;align-items:space-around;}
+.cross-between {-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;}
+.cross-evenly {-webkit-box-align:space-evenly;-ms-flex-align:space-evenly;align-items:space-evenly;}
+
+/*-------------------------------------------------------------------
+	@Only (Display 스타일은 다양하므로 숨길경우만 사용)
+-------------------------------------------------------------------*/
+/* Device */
+.dv-pc .hide-pc, 
+.dv-pad .hide-pad,
+.dv-mobile .hide-mobile,
+.dv-android .hide-android, 
+.dv-ios .hide-ios {display:none;}
+
+/* Media */
+@media screen { .screen-hide {display:none;} }
+@media print { .print-hide {display:none;} }
+
+/*-------------------------------------------------------------------
+	@Grid System
+-------------------------------------------------------------------*/
+/* Grid */
+.grid {display:-webkit-flex; display:-webkit-box; display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap;}
+.col {-webkit-box-flex:0;-ms-flex:none;flex:none;}
+
+/* Direction */
+.col.col-a {width:auto;}
+.col.col-t {margin-bottom:auto;}
+.col.col-b {margin-top:auto;}
+.col.col-r {margin-left:auto;}
+.col.col-l {margin-right:auto;}
+
+/* Column */
+.col.col-1  {width:8.33333333%;}
+.col.col-2  {width:16.6666%;}
+.col.col-3  {width:25%;}
+.col.col-4  {width:33.3333%;}
+.col.col-5  {width:41.66666667%;}
+.col.col-6  {width:50%;}
+.col.col-7  {width:58.33333333%;}
+.col.col-8  {width:66.66666667%;}
+.col.col-9  {width:75%;}
+.col.col-10 {width:83.33333334%;}
+.col.col-11 {width:91.66666667%;}
+.col.col-12 {width:100%;}
+
+/*-------------------------------------------------------------------
+	@Color Set
+	- 배경: bg-, 텍스트: txt-, 라인: line-
+	- 밝은: -light, 어두운: -dark, 더 밝은/어두운: ~er
+-------------------------------------------------------------------*/
+/* 기본 */
+.bg-none {background-color:transparent !important;}
+.txt-none {color:transparent !important;}
+.line-none {border-color:transparent !important;}
+
+/* 주 강조 */
+.bg-primary {background-color:;}
+.txt-primary {color:;}
+.line-primary {border-color:;}
+
+/* 상태 */
+.bg-성공 {background-color:;}
+.txt-성공 {color:;}
+.line-성공 {border-color:;}
+
+/* 상품 */
+.bg-이름 {background-color:;}
+.txt-이름 {color:;}
+.line-이름 {border-color:;}

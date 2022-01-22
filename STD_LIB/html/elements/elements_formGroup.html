@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Form Gorup</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Layout</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Default</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<dl class="form">
+										<dt class="form-title">
+											<label class="form-tit" for=""></label>
+										</dt>
+										<dd class="form-cont">
+											<div class="form-controls"></div>
+											<div class="form-desc"></div>
+											<div role="alert" class="form-alert"></div>
+										</dd>
+									</dl>
+								</pre>
+							</div>
+						</div>
+						<h3 class="g-h3">Hotizontal</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div style="max-width:100%">
+									<dl class="form horizontal">
+										<!-- 아이디 -->
+										<dt class="form-title">
+											<label class="form-tit" for="sID">아이디</label>
+										</dt>
+										<dd class="form-cont">
+											<div class="form-controls">
+												<input type="text" name="sID" id="sID" value="" placeholder="" class="input demo1">
+												<div class="form-desc">
+													<p>영문/숫자 포함 6자리 이상</p>
+												</div>
+											</div>
+											<div class="form-alert is-failed" role="alert">
+												<p>아이디가 틀렸습니다.</p>
+											</div>
+										</dd>
+
+										<!-- 비밀번호 -->
+										<dt class="form-title">
+											<label class="form-tit" for="sPassword">비밀번호</label>
+										</dt>
+										<dd class="form-cont">
+											<div class="form-controls">
+												<input type="password" name="sPassword" id="sPassword" class="input demo1">
+											</div>
+											<div class="form-alert is-failed" role="alert">
+												<p>비밀번호가 틀렸습니다.</p>
+											</div>
+										</dd>
+									</dl>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<dl class="form horizontal">
+										<!-- 아이디 -->
+										<dt class="form-title">
+											<label class="form-tit" for="sID">아이디</label>
+										</dt>
+										<dd class="form-cont">
+											<div class="form-controls">
+												<input type="text" name="sID" id="sID" value="" placeholder="" class="input demo1">
+												<div class="form-desc">
+													<p>영문/숫자 포함 6자리 이상</p>
+												</div>
+											</div>
+											<div class="form-alert is-failed" role="alert">
+												<p>아이디가 틀렸습니다.</p>
+											</div>
+										</dd>
+
+										<!-- 비밀번호 -->
+										<dt class="form-title">
+											<label class="form-tit" for="sPassword">비밀번호</label>
+										</dt>
+										<dd class="form-cont">
+											<div class="form-controls">
+												<input type="password" name="sPassword" id="sPassword" class="input demo1">
+											</div>
+											<div class="form-alert is-failed" role="alert">
+												<p>비밀번호가 틀렸습니다.</p>
+											</div>
+										</dd>
+									</dl>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										@Form Group
+									-------------------------------------------------------------------*/
+									/* Col Group */
+									.form.horizontal {display:flex; flex-wrap:wrap;}
+									.form.horizontal .form-title {width:100px;}
+									.form.horizontal .form-title .form-tit {line-height:40px;}
+									.form.horizontal .form-title ~ .form-title {margin-top:20px;}
+									.form.horizontal .form-cont ~ .form-cont {margin-top:20px;}
+									.form.horizontal .form-cont {width:calc(100% - 100px);}
+									.form.horizontal .form-desc,
+									.form.horizontal .form-info,
+									.form.horizontal .form-alert {margin-top:5px; line-height:20px;}
+								</pre>
+							</div>
+						</div>
+						<h3 class="g-h3">Vertical</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<dl class="form vertical">
+									<!-- 아이디 -->
+									<dt class="form-title">
+										<label class="form-tit" for="sID">아이디</label>
+									</dd>
+									<dd class="form-cont">
+										<div class="form-controls">
+											<input type="text" name="sID" id="sID" value="" placeholder="" class="input demo1">
+										</div>
+										<div class="form-desc">
+											<p>영문/숫자 포함 6자리 이상</p>
+										</div>
+										<div class="form-alert is-failed" role="alert">
+											<p>아이디가 틀렸습니다.</p>
+										</div>
+									</dd>
+
+									<!-- 비밀번호 -->
+									<dt class="form-title">
+										<label class="form-tit" for="sPassword">비밀번호</label>
+									</dt>
+									<dd class="form-cont">
+										<div class="form-controls">
+											<input type="password" name="sPassword" id="sPassword" value="" placeholder="" class="input demo1">
+										</div>
+										<div class="form-alert is-failed" role="alert">
+											<p>비밀번호가 틀렸습니다.</p>
+										</div>
+									</dd>
+								</dl>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<dl class="form vertical">
+										<!-- 아이디 -->
+										<dt class="form-title">
+											<label class="form-tit" for="sID">아이디</label>
+										</dd>
+										<dd class="form-cont">
+											<div class="form-controls">
+												<input type="text" name="sID" id="sID" value="" placeholder="" class="input demo1">
+											</div>
+											<div class="form-desc">
+												<p>영문/숫자 포함 6자리 이상</p>
+											</div>
+											<div class="form-alert is-failed" role="alert">
+												<p>아이디가 틀렸습니다.</p>
+											</div>
+										</dd>
+	
+										<!-- 비밀번호 -->
+										<dt class="form-title">
+											<label class="form-tit" for="sPassword">비밀번호</label>
+										</dt>
+										<dd class="form-cont">
+											<div class="form-controls">
+												<input type="password" name="sPassword" id="sPassword" value="" placeholder="" class="input demo1">
+											</div>
+											<div class="form-alert is-failed" role="alert">
+												<p>비밀번호가 틀렸습니다.</p>
+											</div>
+										</dd>
+									</dl>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										@Form Group
+									-------------------------------------------------------------------*/
+									/* Row Group */
+									.form.vertical .form-title ~ .form-title {margin-top:20px;} 
+									.form.vertical .form-title {margin-bottom:5px;}
+									.form.vertical .form-desc,
+									.form.vertical .form-info,
+									.form.vertical .form-alert {margin-top:5px; line-height:20px;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>350

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Button</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<button type="button" class="btn"><span>Text Only</span></button>
+									<button type="button" class="btn-ico"><span><i class="blind">Icon Only</i></span></button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										@Button
+									-------------------------------------------------------------------*/
+									/* Default */
+									button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
+									button::-moz-focus-inner {border:0px; padding:0px;}
+									.btn-area {display:flex;}
+									.btn-group {display:flex; flex:none;}
+									.btn, .btn-ico {display:inline-flex; position:relative; overflow:hidden; vertical-align:middle; transition:all 0.2s ease;}
+									.btn > span, .btn-ico > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%;}
+
+									/*-------------------------------------------------------------------
+										@Button Icon
+									-------------------------------------------------------------------*/
+									/* Default */
+									.btn-ico > span {display:block;}
+									.btn-ico > span::before {content:''; display:block; background-image:url() no-repeat 0 0;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<button type="button" class="btn demo1"><span>Button</span></button>
+									<button type="button" class="btn-ico btn-search dark"><span><i class="blind">검색</i></span></button>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<button type="button" class="btn demo1"><span>Button</span></button>
+									<button type="button" class="btn-ico btn-search dark"><span><i class="blind">검색</i></span></button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Styles */
+									.btn.demo1 {height:34px; padding-right:20px; padding-left:20px; font-size:16px; background:#eee; color:#333;}
+
+									/* Contents */
+									.btn-search {padding:5px;}
+									.btn-search > span::before {width:20px; height:20px; background:url(../img/cmn/ico_search01.png) no-repeat -20px 0;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Options</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<!-- 마크업뷰영역 -->
+									<button type="button" class="btn demo1"><span>Default</span></button>
+									<button type="button" class="btn demo1 primary"><span>Primary</span></button>
+									<button type="button" class="btn demo1 secondary"><span>Secondary</span></button>
+									<button type="button" class="btn demo1" disabled="disabled"><span>Disabled</span></button>
+									<br>
+									<br>
+									<button type="button" class="btn demo1 has-arw"><span>Default</span></button>
+									<button type="button" class="btn demo1 has-arw primary"><span>Primary</span></button>
+									<button type="button" class="btn demo1 has-arw secondary"><span>Secondary</span></button>
+									<button type="button" class="btn demo1 has-arw" disabled="disabled"><span>Disabled</span></button>
+									<!-- //마크업뷰영역 -->
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<button type="button" class="btn demo1"><span>Default</span></button>
+									<button type="button" class="btn demo1 primary"><span>Primary</span></button>
+									<button type="button" class="btn demo1 secondary"><span>Secondary</span></button>
+									<button type="button" class="btn demo1" disabled="disabled"><span>Disabled</span></button>
+
+									<button type="button" class="btn demo1 has-arw"><span>Default</span></button>
+									<button type="button" class="btn demo1 has-arw primary"><span>Primary</span></button>
+									<button type="button" class="btn demo1 has-arw secondary"><span>Secondary</span></button>
+									<button type="button" class="btn demo1 has-arw" disabled="disabled"><span>Disabled</span></button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									.btn.demo1 {height:34px; padding:0 20px 1px; font-size:16px; background:#eee;}
+									.btn.demo1.primary {background:$color-primary; color:#fff;}
+									.btn.demo1.secondary {background:#333; color:#fff;}
+									.btn.demo1[disabled] {background:#aaa; color:#fff;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

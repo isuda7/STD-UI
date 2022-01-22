@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper" class="g-convention-wrap">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<div class="g-in-sec">
+					<h1 class="g-h1">General</h1>
+					<p class="g-explain-h1">구조, 기준, 의미, 구분, 방법 등의 일반적인 구분방법</p>
+				</div>
+			</div>
+			<div class="g-content-body">
+
+				<!-- 접두어 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">접두어</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>접두어</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">예약어</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>기기</td>
+										<td>dv-</td>
+										<td>예) -ios, -android, -mobile, -safari</td>
+									</tr>
+									<tr>
+										<td>상태</td>
+										<td>is-</td>
+										<td>예) -current, -selected, -active, -fixed</td>
+									</tr>
+									<tr>
+										<td>확장</td>
+										<td>has-</td>
+										<td>예) -btn, -ico, -line, -sticky</td>
+									</tr>
+									<tr>
+										<td>스타일</td>
+										<td>style-</td>
+										<td>스타일 구분</td>
+									</tr>
+									<tr>
+										<td>종류</td>
+										<td>type-</td>
+										<td>레이아웃 구분 (스타일과 무관하게 구분됨)</td>
+									</tr>
+									<tr>
+										<td>기능</td>
+										<td>js-</td>
+										<td>스크립트 전용 구분 (최초로 접근하는 요소에만 js- 를 사용함)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //접두어 -->
+
+				<!-- 컨텐츠구분 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">범위</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">적용요소</th>
+										<th scope="col">예약어</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>body</td>
+										<td>.dv-</td>
+										<td>디바이스</td>
+									</tr>
+									<tr>
+										<td>.wrap</td>
+										<td>-page</td>
+										<td>템플릿 구분</td>
+									</tr>
+									<tr>
+										<td>.content</td>
+										<td>-wrap</td>
+										<td>페이지 구분</td>
+									</tr>
+									<tr>
+										<td>section</td>
+										<td>-sec</td>
+										<td>섹션 구분</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //컨텐츠구분 -->
+
+				<!-- 영역구분 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">영역</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>공통그룹</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">예약어</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>전체 영역</td>
+										<td>-wrap</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>지역 영역</td>
+										<td>-area</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>반복 영역</td>
+										<td>-group</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>안쪽 영역</td>
+										<td>-inner</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //영역구분 -->
+
+				<!-- 영역구분 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">구조</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>영역구분</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">예약어</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>머리글 영역</td>
+										<td>-header</td>
+										<td>그룹내 유일한 머리글 영역</td>
+									</tr>
+									<tr>
+										<td>본문 영역</td>
+										<td>-container</td>
+										<td>그룹내 유일한 본문 영역</td>
+									</tr>
+									<tr>
+										<td>바닥글 영역</td>
+										<td>-footer</td>
+										<td>그룹내 유일한 바닥글 영역</td>
+									</tr>
+									<tr>
+										<td>제목 영역</td>
+										<td>-head</td>
+										<td>여러개의 제목 영역이 존재할 수 있음.</td>
+									</tr>
+									<tr>
+										<td>내용 영역</td>
+										<td>-cont</td>
+										<td>여러개의 내용 영역이 존재할 수 있음.</td>
+									</tr>
+									<tr>
+										<td>바닥 영역</td>
+										<td>-foot</td>
+										<td>여러개의 내용 영역이 존재할 수 있음.</td>
+									</tr>
+									<tr>
+										<td>네비게이션</td>
+										<td>-nav</td>
+										<td>탐색 역할을 갖는 범위의 메뉴 (예) .tab-nav</td>
+									</tr>
+									<tr>
+										<td>메뉴</td>
+										<td>-menu</td>
+										<td>탐색 역할이 없는 선택목록 메뉴 (예) .drop-menu, .select-menu</td>
+									</tr>
+									<tr>
+										<td>목록</td>
+										<td>-list</td>
+										<td>ul, ol 에 해당하는 반복되는 목록그룹</td>
+									</tr>
+									<tr>
+										<td>항목</td>
+										<td>-item</td>
+										<td>리스트 항목</td>
+									</tr>
+									<tr>
+										<td>링크</td>
+										<td>-link</td>
+										<td>링크 항목</td>
+									</tr>
+									<tr>
+										<td>제목</td>
+										<td>-title</td>
+										<td>텍스트 항목</td>
+									</tr>
+									<tr>
+										<td>텍스트</td>
+										<td>-text</td>
+										<td>텍스트 항목</td>
+									</tr>
+									<tr>
+										<td>토글버튼</td>
+										<td>-toggle</td>
+										<td>토글 기능을 갖는 버튼</td>
+									</tr>
+									<tr>
+										<td>열기버튼</td>
+										<td>-open</td>
+										<td>열기 기능을 갖는 버튼</td>
+									</tr>
+									<tr>
+										<td>닫기버튼</td>
+										<td>-close</td>
+										<td>닫기 기능을 갖는 버튼</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //영역구분 -->
+
+				<!-- zIndex -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">zIndex</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>zIndex</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">단위</th>
+										<th scope="col">상세</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>인라인</td>
+										<td>1</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>그 룹</td>
+										<td>10</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>구 조</td>
+										<td>100</td>
+										<td>
+											100 : .container<br>
+											101 : .footer<br>
+											200 : .search-dimmer<br>
+											201 : .search<br>
+											300 : .header<br>
+											400 : .aside-dimmer<br>
+											401 : .aside
+										</td>
+										<td>
+											- 레벨 차이는 첫 자리 증감<br>
+											- 동일 레벨은 끝 자리 증감
+										</td>
+									</tr>
+									<tr>
+										<td>팝 업</td>
+										<td>1000</td>
+										<td>
+											1000 : .dimmer<br>
+											1001 : .popup<br>
+											2000 : .calendar<br>
+											3000 : .alert
+										</td>
+										<td>
+											- 레벨 차이는 첫 자리 증감<br>
+											- 동일 레벨은 끝 단위 증감
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //zIndex -->
+
+				<!-- 속성정의 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">속성정의</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>속성정의</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">속성</th>
+										<th scope="col">예시</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>역할정의</td>
+										<td>role</td>
+										<td>button, text</td>
+									</tr>
+									<tr>
+										<td>기능정보</td>
+										<td>aria-</td>
+										<td>-controls, -hidden</td>
+									</tr>
+									<tr>
+										<td>조건정보</td>
+										<td>data-</td>
+										<td>사용자정의 속성</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //속성정의 -->
+
+				<!-- 강조의미 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">강조의미</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>강조의미</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">정의</th>
+										<th scope="col">예약어</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>성격</td>
+										<td>긍정</td>
+										<td>-positive</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>부정</td>
+										<td>-negative</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>성공</td>
+										<td>-success</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>실패</td>
+										<td>-fail</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>완료</td>
+										<td>-complete</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>오류</td>
+										<td>-error</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>주의</td>
+										<td>-warring</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>위험</td>
+										<td>-danger</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>경고</td>
+										<td>-alert</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>안내</td>
+										<td>-info</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td>표현</td>
+										<td>일 순위</td>
+										<td>-primary</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이 순위</td>
+										<td>-secondary</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>예외 강조</td>
+										<td>-emphasis</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //성격의미 -->
+
+				<!-- 접미사 -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">접미사</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>유틸</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">예약어</th>
+										<th scope="col">설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>크기단위</td>
+										<td>-xl</td>
+										<td>더크게</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-lg</td>
+										<td>크게</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-md</td>
+										<td>보통</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-sm</td>
+										<td>작게</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-xs</td>
+										<td>더작게</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td>색상단위</td>
+										<td>-darker</td>
+										<td>더어두운</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-dark</td>
+										<td>어두운</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-light</td>
+										<td>밝게</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-lighter</td>
+										<td>더밝은</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td>굵기단위</td>
+										<td>-bolder</td>
+										<td>더굵은</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-bold</td>
+										<td>굵은</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-thin</td>
+										<td>얅은</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-thiner</td>
+										<td>더얅은</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<td>라인구분</td>
+										<td>-outline</td>
+										<td>아웃라인</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-boldline</td>
+										<td>굵은라인</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-underline</td>
+										<td>언더라인</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>-pointline</td>
+										<td>강조라인</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //접미사 -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

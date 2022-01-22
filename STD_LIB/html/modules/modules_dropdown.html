@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Drop</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									&lt;div class="drop up">
+										&lt;button type="button" aria-controls="drop1" aria-haspopup="listbox" aria-expanded="false" class="btn drop-toggle">drop &lt;i class="arw arw-toggle1 dark">&lt;/i>&lt;/button>
+										&lt;div id="drop1" class="drop-menu">
+											&lt;ul class="drop-list" role="listbox">
+												&lt;li class="drop-item" role="option">&lt;a href="#">drop Link&lt;/a>&lt;/li>
+												&lt;li class="drop-item" role="option">&lt;a href="#">drop Link&lt;/a>&lt;/li>
+											&lt;/ul>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										@Drop
+									-------------------------------------------------------------------*/
+									/* Default */
+									.drop {display:inline-block; position:relative;}
+									.drop-menu {position:absolute; left:0; z-index:10; width:100%; background-color:#fff;}
+									.drop-toggle .arw {transition:transform 0.2s ease;}
+									.drop-toggle.is-active .arw {transform:rotate(180deg);}
+
+									/* Direction */
+									.drop.down .drop-menu {top:100%;}
+									.drop.up .drop-menu {bottom:100%;}
+
+									/* Transition */
+									.drop.down .drop-menu {visibility:hidden; left:0; top:100%; opacity:0; animation:dropdown 0.2s ease both; transform:translateY(-50%) scaleY(0); transition:all 0.2s ease;}
+									.drop.down .drop-menu.is-active {visibility:visible; opacity:1; animation:dropdown-active 0.2s ease both;}
+									.drop.up .drop-menu {visibility:hidden; left:0; bottom:100%; opacity:0; animation:dropup 0.2s ease both; transform:translateY(-50%) scaleY(0); transition:all 0.2s ease;}
+									.drop.up .drop-menu.is-active {visibility:visible; opacity:1; animation:dropup-active 0.2s ease both;}
+
+									@keyframes dropdown {
+										from {transform:translateY(0) scaleY(1);}
+										to {transform:translateY(-50%) scaleY(0);}
+									}
+									@keyframes dropdown-active {
+										from {transform:translateY(-50%) scaleY(0);}
+										to {transform:translateY(0) scaleY(1);}
+									}
+									@keyframes dropup {
+										from {transform:translateY(0) scaleY(1);}
+										to {transform:translateY(50%) scaleY(0);}
+									}
+									@keyframes dropup-active {
+										from {transform:translateY(50%) scaleY(0);}
+										to {transform:translateY(0) scaleY(1);}
+									}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									drop: {
+										speed: 100,
+										init: function(){
+											this.event();
+										},
+										event: function(){
+											var self = this;
+											$document.off('click.dropEvent').on('click.dropEvent', 'button.drop-toggle', function(e){
+												var id = $(this).attr('aria-controls');
+												$(this).hasClass('is-active') ? self.close(id) : self.open(id);
+											});
+											$document.off('focusin.dropEvent2 click.dropEvent2').on('focusin.dropEvent2 click.dropEvent2', function(e){
+												$('button.drop-toggle.is-active').each(function(){
+													var id = $(this).attr('aria-controls');
+													if ($('.drop').has(e.target).length === 0){ self.close(id) }
+												})
+											});
+										},
+										open: function(id, callback){
+											var self = this;
+											var $eleBtn = $('[aria-controls='+id+']');
+											var $eleMenu = $('#'+id);
+											$('.drop-toggle.is-active').each(function(){ self.close($(this).attr('aria-controls')) });
+											$eleBtn.attr({'aria-expanded':'true'}).addClass('is-active');
+											$eleMenu.addClass('is-active');
+											if (callback){ typeof(callback) == 'function' ? callback() : callback; }
+										},
+										close: function(id, callback){
+											var self = this;
+											var $eleBtn = $('[aria-controls='+id+']');
+											var $eleMenu = $('#'+id);
+											$eleBtn.attr({'aria-expanded':'false'}).removeClass('is-active');
+											$eleMenu.removeClass('is-active');
+											if (callback){ typeof(callback) == 'function' ? callback() : callback; }
+										},
+									},
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="drop down demo1">
+										<button type="button" aria-controls="drop1" aria-haspopup="listbox" aria-expanded="false" class="btn demo1 drop-toggle"><span>Drop Down <i class="arw arw-toggle1 dark"></i></span></button>
+										<div id="drop1" class="drop-menu">
+											<ul class="drop-list" role="listbox">
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="drop up demo1">
+										<button type="button" aria-controls="drop2" aria-haspopup="listbox" aria-expanded="false" class="btn demo1 drop-toggle"><span>Drop Up <i class="arw arw-toggle1 dark"></i></span></button>
+										<div id="drop2" class="drop-menu">
+											<ul class="drop-list" role="listbox">
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+												<li class="drop-item" role="option"><a href="javascript:;">링크메뉴</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="drop down demo1">...&lt;/div>
+									&lt;div class="drop up demo1">...&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Styles */
+									.drop.demo1 .drop-toggle:focus {box-shadow:none;}
+									.drop.demo1 .drop-toggle .arw {margin-left:20px;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

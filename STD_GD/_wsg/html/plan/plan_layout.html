@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-inner">
+				<div class="g-content-header">
+					<h1 class="g-h1">Layout</h1>
+					<p class="g-explain-h1">General, Wrapper, Content, Section</p>
+				</div>
+				<div class="g-content-body">
+					<!-- General Layout -->
+					<section id="gLayout1" class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">General Layout</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit is-before"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode1-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div class="g-example-body">
+									<!-- 마크업뷰영역 -->
+									<div class="g-frame-wrap">
+										<div class="g-frame">
+											<p class="g-frame-title">.[이름]-area</p>
+											<div class="g-frame">
+												<p class="g-frame-title">.[이름]</p>
+												<div class="g-frame">
+													<p class="g-frame-title">.[이름]-header</p>
+												</div>
+												<div class="g-frame">
+													<p class="g-frame-title">.[이름]-container</p>
+												</div>
+												<div class="g-frame">
+													<p class="g-frame-title">.[이름]-footer</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //마크업뷰영역 -->
+								</div>
+								<div id="tabContentCode1-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;div class="[이름]-area">
+											&lt;div class="[이름]">
+												&lt;div class="[이름]-header">
+												&lt;/div>
+												&lt;div class="[이름]-container">
+												&lt;/div>
+												&lt;div class="[이름]-footer">
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+									</pre>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //General Layout -->
+
+					<!-- Wrapper Layout -->
+					<section id="gLayout2" class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Wrapper Layout</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit is-before"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode2-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div class="g-example-body">
+									<!-- 마크업뷰영역 -->
+									<div class="g-frame-wrap">
+										<div class="g-frame">
+											<p class="g-frame-title">.wrapper</p>
+											<div class="g-frame">
+												<p class="g-frame-title">.skipNav</p>
+											</div>
+											<div class="g-frame">
+												<p class="g-frame-title">.header</p>
+											</div>
+											<div class="g-frame">
+												<p class="g-frame-title">.container</p>
+											</div>
+											<div class="g-frame">
+												<p class="g-frame-title">.footer</p>
+											</div>
+											<div class="g-frame">
+												<p class="g-frame-title">#popupName</p>
+											</div>
+										</div>
+									</div>
+									<!-- //마크업뷰영역 -->
+								</div>
+								<div id="tabContentCode2-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;body>
+										&lt;div class="wrapper">
+											&lt;!-- s: skipNav -->
+											&lt;div class="skipNav">
+											&lt;/div>
+											&lt;!-- e: skipNav -->
+
+											&lt;hr>
+
+											&lt;!-- s: Header -->
+											&lt;header class="header">
+											&lt;/header>
+											&lt;!-- e: Header -->
+
+											&lt;hr>
+
+											&lt;!-- s: Container -->
+											&lt;div class="container">
+											&lt;/div>
+											&lt;!-- e: Container -->
+
+											&lt;hr>
+
+											&lt;!-- s: Footer -->
+											&lt;footer class="footer">
+											&lt;/footer>
+											&lt;!-- e: Footer -->
+
+											&lt;hr>
+
+											&lt;!-- s: Popup -->
+											&lt;div id="popupName">
+											&lt;/div>
+											&lt;!-- e: Popup -->
+										&lt;/div>
+										&lt;/body>
+									</pre>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Master Layout -->
+
+					<!-- Content Layout -->
+					<section id="gLayout3" class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Content Layout</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit is-before"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode4-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div class="g-example-body">
+									<!-- 마크업뷰영역 -->
+									<div class="g-frame-wrap">
+										<div class="g-frame">
+											<p class="g-frame-title">.container</p>
+											<div class="g-frame">
+												<p class="g-frame-title">.content [페이지]-page</p>
+												<div class="g-frame">
+													<p class="g-frame-title">.content-header</p>
+												</div>
+												<div class="g-frame">
+													<p class="g-frame-title">.content-container</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //마크업뷰영역 -->
+								</div>
+								<div id="tabContentCode4-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;!-- s: Container -->
+										&lt;div class="container">
+											&lt;!-- s: Content -->
+											&lt;div id="content" class="content 페이지명-page">
+												&lt;!-- 여기부터 본문입니다 -->
+												&lt;div class="content-header">&lt;/div>
+												&lt;div class="content-container">&lt;/div>
+												&lt;!-- 여기까지 본문입니다 -->
+											&lt;/div>
+											&lt;!-- e: Content -->
+										&lt;/div>
+										&lt;!-- e: Container -->
+									</pre>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Content Layout -->
+
+					<!-- Section Layout -->
+					<section id="gLayout4" class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Section Layout</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit is-before"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode5-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div class="g-example-body">
+									<!-- 마크업뷰영역 -->
+									<div class="g-frame-wrap">
+										<div class="g-frame">
+											<p class="g-frame-title">section</p>
+											<div class="g-frame">
+												<p class="g-frame-title">.section-header</p>
+											</div>
+											<div class="g-frame">
+												<p class="g-frame-title">.section-container</p>
+											</div>
+										</div>
+										<div class="g-frame">
+											<p class="g-frame-title">section</p>
+										</div>
+										<div class="g-frame">
+											<p class="g-frame-title">section</p>
+										</div>
+									</div>
+									<!-- //마크업뷰영역 -->
+								</div>
+								<div id="tabContentCode5-1" class="g-example-footer">
+									<pre class="brush:html">
+										<!-- s: section -->
+										&lt;section class="section">
+											&lt;div class="section-header">
+											&lt;/div>
+											&lt;div class="section-container">
+											&lt;/div>
+										&lt;/section>
+										<!-- e: section -->
+									</pre>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Section Layout -->
+
+					<!-- Popup Layout -->
+					<section id="gLayout5" class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Popup Layout</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit is-before"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode6-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div class="g-example-body">
+									<!-- 마크업뷰영역 -->
+									<div class="g-frame-wrap">
+										<div class="row gutter-h16">
+											<div class="col col-3">
+											</div>
+											<div class="col col-6">
+												<div class="g-frame">
+													<p class="g-frame-title">#popupName.popup-wrap</p>
+													<div class="g-frame">
+														<p class="g-frame-title">.popup</p>
+														<div class="g-frame">
+															<p class="g-frame-title">.popup-header</p>
+														</div>
+														<div class="g-frame">
+															<p class="g-frame-title">.popup-container</p>
+														</div>
+														<div class="g-frame">
+															<p class="g-frame-title">.popup-footer</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col col-3"></div>
+										</div>
+									</div>
+									<!-- //마크업뷰영역 -->
+								</div>
+								<div id="tabContentCode6-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;div id="popupName" class="popup-wrap">
+											&lt;div class="popup">
+												&lt;div class="popup-header">
+													&lt;h3>h3&lt;/h3>
+												&lt;/div>
+												&lt;div class="popup-container">
+													&lt;section class="popup-section [섹션명]-sec">
+														&lt;div class="section-header">
+															&lt;h4>h4&lt;/h4>
+														&lt;/div>
+														&lt;div class="section-container">
+														&lt;/div>
+													&lt;/section>
+												&lt;/div>
+												&lt;div class="popup-footer">
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+									</pre>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- //Popup Layout -->
+				</div>
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

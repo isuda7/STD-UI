@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Standard Framework</title>
+<link rel="stylesheet" href="/Home/css/ui/base.css" type="text/css">
+<style>
+/*-------------------------------------------------------------------
+    ## Intro
+-------------------------------------------------------------------*/
+/* Layout */
+html, body {height:100%;}
+ul, li {list-style:none; margin:0; padding:0;}
+.wrapper {display:flex; flex-direction:column; min-height:100%;}
+.header {position:relative; z-index:102; width:100%; flex:none;}
+.container {width:100%; flex-grow:1; display:flex; flex-direction:column;}
+.content {flex-grow:1;}
+
+.intro-body .wrapper {display:flex; justify-content:center; align-items:center;}
+.intro-body .container {width:100%; justify-content:center;}
+.intro-body .container .content {flex:none;}
+.intro-body .header {padding:40px 0 200px 40px; display:none;}
+.intro-body .header h1 {font-size:24px; font-weight:300;}
+
+.intro-sec .section-title {text-align:center;}
+.intro-sec .section-title .btn-area {margin-top:40px;}
+.intro-sec .section-title h2 {font-size:40px; font-weight:300; letter-spacing:-0.5px;}
+.intro-sec .section-nav {margin-top:60px; text-align:center;}
+.intro-sec .section-nav ul {display:inline-flex; font-weight:300;}
+.intro-sec .section-nav ul a {display:block; position:relative; padding:5px 10px; font-size:18px;}
+.intro-sec .section-nav ul li:last-child a::after {display:none;}
+.intro-sec .btn-area {display:none; justify-content:center;}
+.intro-sec .btn {border-radius:30px;}
+.intro-sec .btn.started {padding:10px 20px; margin:0 5px; border-radius:30px; background-color:#fff; border:1px solid #666; font-weight:400; color:#666; font-size:20px; text-align:center;}
+</style>
+</head>
+<body class="intro-body">
+<div class="wrapper sub-page">
+	<header class="header">
+		<div class="logo-area">
+			<h1 class="logo">&lt;STD&gt;</h1>
+		</div>
+	</header>
+	<div class="container">
+		<div class="content">
+			<section class="intro-sec">
+				<div class="section-title">
+					<h2>Standard Frameworks</h2>
+					<div class="btn-area">
+						<a href="/STD_GD/index.html" class="btn started"><span>GET STARTED</span></a>
+					</div>
+				</div>
+				<div class="section-nav">
+					<ul>
+						<!-- <li><a href="/STD_IA/index.html" title="Information Architecture" class="btn started"><em>현황판</em></a></li> -->
+						<li><a href="/STD_GD/index.html" title="실무적이고, 현실적이고, 기본적인 범위에 대한 작업규칙 정의" class="btn started"><em>프로젝트 가이드</em></a></li>
+						<li><a href="/STD_LIB/index.html" title="통일성, 확장성, 활용성, 일반성 등의 전체를 고려한 공통기본 정의" class="btn started"><em>라이브러리 API</em></a></li>
+						<!-- <li><a href="/STD_PR/index.html" title="Standard Project Templates"><em>Templates</em></a></li> -->
+						<!-- <li><a href="https://docs.google.com/spreadsheets/d/1_Pa0A4iiyNoA-eVmgvJ4NrgdPfgBBCb9DlWZsqelojE/edit?usp=sharing" target="_blank" title="Standard Markup API"><em>API</em></a></li> -->
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+</body>
+</html>
