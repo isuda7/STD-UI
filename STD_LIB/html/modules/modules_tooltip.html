@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Tooltip</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									&lt;div class="tooltip-wrap">
+										&lt;button class="btn style-1 tooltip-open" role="button" aria-controls="tooltip1" aria-label="자세히보기" aria-labelledby="tooltipDesc1" aria-expanded="false">&lt;span>?&lt;/span>&lt;/button>
+										&lt;!-- s: 툴팁영역 -->
+										&lt;div id="tooltip1" class="tooltip tooltip-basic tooltip-right" role="tooltip" aria-hidden="true" hidden>
+											&lt;div class="tooltip-inner">
+												&lt;p id="tooltipDesc1">Tooltip&lt;/p>
+												&lt;button type="button" class="btn tooltip-close" aria-controls="tooltip1">&lt;span class="blind">닫기&lt;/span>&lt;/button>
+											&lt;/div>
+											&lt;i class="arw arw-tooltip" aria-hidden="true">&lt;/i>
+										&lt;/div>
+										&lt;!-- e: 툴팁영역 -->
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* ------------------------------------------------------------------------------------------
+										## Tooltip
+									------------------------------------------------------------------------------------------ */
+									/* Default */
+									.tooltip-wrap {display:inline-block; position:relative;}
+									.tooltip .tooltip-inner {z-index:10;}
+									.tooltip > .arw {position:absolute; z-index:11;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									무궁화 꽃이 피었습니다.
+									<div class="tooltip-wrap">
+										<button class="btn style-1 tooltip-open" role="button" aria-controls="tooltip1" aria-label="자세히보기" aria-labelledby="" aria-expanded="false"><span>?</span></button>
+										<!-- s: 툴팁영역 -->
+										<div id="tooltip1" class="tooltip tooltip-basic tooltip-right" role="tooltip" aria-hidden="true" hidden>
+											<div class="tooltip-inner">
+												Tooltip
+												<button type="button" class="btn tooltip-close" aria-controls="tooltip1"><span class="blind">닫기</span></button>
+											</div>
+											<i class="arw arw-tooltip" aria-hidden="true"></i>
+										</div>
+										<!-- e: 툴팁영역 -->
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									무궁화 꽃이 피었습니다.
+									&lt;div class="tooltip-wrap">
+										&lt;button class="btn style-1 tooltip-open" role="button" aria-controls="tooltip1" aria-label="자세히보기" aria-labelledby="" aria-expanded="false">&lt;span>?&lt;/span>&lt;/button>
+										&lt;!-- s: 툴팁영역 -->
+										&lt;div id="tooltip1" class="tooltip tooltip-basic tooltip-right" role="tooltip" aria-hidden="true" hidden>
+											&lt;div class="blind-area tooltip-focus" tabindex="0" aria-label="Button Tooltip Panel">&lt;/div>
+											&lt;i class="arw arw-tooltip" aria-hidden="true">&lt;/i>
+											&lt;div class="tooltip-inner">
+												Tooltip
+												&lt;a href="#tooltip1" aria-controls="tooltip1" aria-expanded="true" class="btn tooltip-close" aria-label="Tooltip Close">&lt;/a>
+											&lt;/div>
+										&lt;/div>
+										&lt;!-- e: 툴팁영역 -->
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Design - Type A (툴팁설명) */
+									.tooltip-basic {margin-left:10px; width:200px; animation:tootlpBasic 0.3s;}
+									.tooltip-basic .tooltip-inner {position:relative; padding:10px 15px; background-color:#fff; border:1px solid #ddd; border-radius:6px;}
+									.tooltip-basic .tooltip-close {position:absolute; right:5px; top:5px; font-size:11px;}
+									.tooltip-basic .tooltip-close::before {content:''; display:inline-block; width:20px; height:20px; border-radius:50%; line-height:18px; text-align:center; color:#999;}
+									.tooltip-basic .tooltip-close {position:absolute; right:5px; top:5px; width:17px; height:17px; padding:2px; border-radius:50%;}
+									.tooltip-basic .tooltip-close:before,
+									.tooltip-basic .tooltip-close:after {display:inline-block; position:absolute; left:50%; top:50%; width:1px; height:13px; margin-top:-6px; background-color:#333; content:'';}
+									.tooltip-basic .tooltip-close:before {transform:rotate(-45deg);}
+									.tooltip-basic .tooltip-close:after {transform:rotate(45deg);}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									var ui = {
+										init : function(){
+											if ($('.tooltip-basic').length)		{this.tooltip.init();}			// #Tooltip
+										},
+
+										/*
+											기능정의 : #Tooltip
+											참고사항 : 설명
+											참고메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
+											참고경로 : /html/menu1/page.html
+											(공통여부와 관계없이 확인이 가능한 대표화면 적용)
+										*/
+										tooltip : {
+											eleWrapper : '.tooltip-wrap',
+											eleOpener : '.tooltip-open',
+											eleCloser : '.tooltip-close',
+											eleModule : '.tooltip',
+											setTime : null,
+											init : function(){
+												this.event();
+											},
+											event : function(){
+												var _this = this;
+												$(this.eleOpener).not('.is-clicked').on('click', function(){ _this.open($(this).attr('href')); return false });
+												$(this.eleCloser).not('.is-clicked').on('click', function(){ _this.close($(this).attr('href')); return false });
+												$(this.eleWrapper).not('.is-overed').on('mouseover', function(){ _this.open('#'+$(this).find(_this.eleModule).attr('id')); });
+												$(this.eleWrapper).not('.is-leaved').on('mouseleave', function(){ _this.close('#'+$(this).find(_this.eleModule).attr('id')); });
+											},
+											open : function(id){
+												var _this = this;
+												$(id).attr({'data-state':'null', 'aria-hidden':'false'});
+												$(id).stop().fadeIn(200, function(){$(this).attr({'data-state':'opened'}).removeAttr('hidden'); });
+												$(_this.eleOpener+'[href="'+id+'"]').attr({'aria-expanded':'true'});
+											},
+											close : function(id){
+												var _this = this;
+												$(id).attr({'data-state':'null', 'aria-hidden':'true'});
+												$(id).stop().fadeOut(200, function(){$(this).attr({'data-state':'closed'}).attr('hidden'); });
+												$(_this.eleOpener+'[href="'+id+'"]').attr({'aria-expanded':'false'});
+											},
+										},
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

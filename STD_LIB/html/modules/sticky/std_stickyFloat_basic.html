@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="keywords" content="웹스타일가이드, 프로젝트명">
+<meta name="description" content="웹스타일가이드, 프로젝트명">
+<title>Admin DashBoard</title>
+<link rel="stylesheet" href="/STD_LIB/css/import.css">
+<script src="/STD_LIB/js/libs/jquery-3.3.1.min.js"></script>
+<script src="/STD_LIB/js/libs/EasePack.js"></script>
+<script src="/STD_LIB/js/libs/TweenMax.js"></script>
+<script src="/STD_LIB/js/pub/pub_device.js"></script>
+<link rel="stylesheet" href="css/std_default.css">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/STD_LIB/js/libs/html5shiv-printshiv.js"></script>
+<![endif]-->
+<style>
+.container {min-height:100%; margin-bottom:-80px; padding:72px 0 80px; background-color:#eee;}
+.content-body {padding-bottom:50px;}
+.footer {z-index:102; width:100%; height:80px; background-color:#333; color:#fff;}
+
+</style>
+<script type="text/javascript">
+<!--
+var ui = {
+	init: function(){
+		if ($('.pageTop.sticky-float').length){ ui.stickyFloat.init() }
+	},
+	stickyFloat: {
+		eleModule: '.sticky-float',
+		init: function(){
+			this.action();
+			this.event();
+		},
+		event: function(){
+			var setTime;
+			$(window).on('scroll', function(){
+				clearTimeout(setTime);
+				setTime = setTimeout(function(){ ui.stickyFloat.action(); }, 100);
+			})
+		},
+		action: function(){
+			var scrTop = $(window).scrollTop() - $(document).height() + $(window).outerHeight();
+			TweenMax.to($(this.eleModule), 0.5, {y: scrTop, ease: Power2.easeOut})
+		}
+	}
+}
+$(document).ready(function(){
+	ui.init();
+})
+//-->
+</script>
+</head>
+<body>
+<div class="wrapper">
+    <!-- SkipNav -->
+    <div class="skipNav">
+		<a href="#content">본문 바로가기</a>
+	</div>
+    <!-- //SkipNav -->
+
+    <!-- Header -->
+    <header class="header sticky">
+		<div class="header-inner in-sec">
+			<div class="header-logo">
+				<a href="#" class="logo">Sticky</a>
+			</div>
+			<div class="header-gnb">
+				<nav class="gnb">
+					<div class="node1-wrap">
+						<ul class="node1-list">
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu1</a>
+							</li>
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu2</a>
+							</li>
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu3</a>
+							</li>
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu4</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+    <!-- //Header -->
+
+    <!-- Container -->
+    <div class="container">
+		<!-- Content -->
+		<div id="content" class="content">
+			<div class="content-header"></div>
+			<div class="content-body">
+				<section class="section in-sec">
+					<div class="section-inner">
+						<div class="section-head">
+							section-head
+						</div>
+						<div class="section-body">
+							section-body
+						</div>
+					</div>
+				</section>
+				<section class="section in-sec">
+					<div class="section-inner">
+						<div class="section-head">
+							section-head
+						</div>
+						<div class="section-body">
+							section-body
+						</div>
+					</div>
+				</section>
+				<section class="section in-sec">
+					<div class="section-inner">
+						<div class="section-head">
+							section-head
+						</div>
+						<div class="section-body">
+							section-body
+						</div>
+					</div>
+				</section>
+				<section class="section in-sec">
+					<div class="section-inner">
+						<div class="section-head">
+							section-head
+						</div>
+						<div class="section-body">
+							section-body
+						</div>
+					</div>
+				</section>
+				<section class="section in-sec">
+					<div class="section-inner">
+						<div class="section-head">
+							section-head
+						</div>
+						<div class="section-body">
+							section-body
+						</div>
+					</div>
+				</section>
+				<section class="section in-sec">
+					<div class="section-inner">
+						<div class="section-head">
+							section-head
+						</div>
+						<div class="section-body">
+							section-body
+						</div>
+					</div>
+				</section>
+
+				<div class="pageTop sticky-float">
+					<button type="button" class="btn btn-top"><span>TOP</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- //Content -->
+	</div>
+    <!-- //Container -->
+
+	<!-- Footer -->
+	<footer class="footer">
+		Footer
+	</footer>
+	<!-- //Footer -->
+</div>
+</body>
+</html>

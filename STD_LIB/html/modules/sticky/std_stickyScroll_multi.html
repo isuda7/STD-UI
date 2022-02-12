@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="keywords" content="웹스타일가이드, 프로젝트명">
+<meta name="description" content="웹스타일가이드, 프로젝트명">
+<title>Admin DashBoard</title>
+<link rel="stylesheet" href="/STD_LIB/css/import.css">
+<script src="/STD_LIB/js/libs/jquery-3.3.1.min.js"></script>
+<script src="/STD_LIB/js/pub/pub_device.js"></script>
+<link rel="stylesheet" href="css/std_default.css">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/STD_LIB/js/libs/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript">
+<!--
+var ui = {
+	init: function(){
+		if ($('.tab-nav.sticky-scroll').length){ ui.stickyScroll.init() }
+	},
+	stickyScroll: {
+		eleModule: '.sticky-scroll',
+		eleWrapper: '.sticky-scroll-area',
+		init: function(){
+			this.action();
+			this.event();
+		},
+		event: function(){
+			$(window).on('scroll', function(){
+				ui.stickyScroll.action();
+			})
+		},
+		action: function(){
+			var _this = this;
+			$(this.eleModule).each(function(){
+				var $eleModule = $(this);
+				var objTop = $eleModule.closest(_this.eleWrapper).offset().top;
+				var scrTop = $(window).scrollTop();
+
+				//기존 StickyFixed 가 있는 경우
+				var fixedH;
+				$('.sticky-fixed').each(function(){
+					fixedH = $(this).outerHeight();
+					objTop = objTop - fixedH;
+				})
+
+				if (scrTop >= objTop){ $eleModule.addClass('is-fixed'); $eleModule.css({top: fixedH}); }
+				else { $eleModule.removeClass('is-fixed'); $eleModule.css({top: 0}); }
+
+				console.log(objTop, scrTop);
+			})
+		}
+	}
+}
+$(document).ready(function(){
+	ui.init();
+})
+//-->
+</script>
+</head>
+<body>
+<div class="wrapper">
+    <!-- SkipNav -->
+    <div class="skipNav">
+		<a href="#content">본문 바로가기</a>
+	</div>
+    <!-- //SkipNav -->
+
+    <!-- Header -->
+    <header class="header sticky-fixed">
+		<div class="header-inner in-sec">
+			<div class="header-logo">
+				<a href="#" class="logo">Sticky</a>
+			</div>
+			<div class="header-gnb">
+				<nav class="gnb">
+					<div class="node1-wrap">
+						<ul class="node1-list">
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu1</a>
+							</li>
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu2</a>
+							</li>
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu3</a>
+							</li>
+							<li class="node1-item">
+								<a href="#this" class="node1-link">Menu4</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+    <!-- //Header -->
+
+    <!-- Container -->
+    <div class="container">
+		<!-- Content -->
+		<div id="content" class="content">
+			<div class="content-header"></div>
+			<div class="content-body">
+				<section class="section in-sec">
+					<div class="section-inner">
+						<div class="section-head">
+							section-head
+						</div>
+						<div class="section-body">
+							section-body
+						</div>
+					</div>
+				</section>
+				<div class="tab-wrap sticky-scroll-area" style="margin-top:20px;">
+					<div class="tab-nav tab-basic sticky-scroll">
+						<ul role="tablist">
+							<li role="presentation" class="is-selected"><a href="#tabContent01-1" role="tab" aria-selected="true">탭제목1</a></li>
+							<li role="presentation"><a href="#tabContent01-2" role="tab" aria-selected="false">탭제목2</a></li>
+							<li role="presentation"><a href="#tabContent01-3" role="tab" aria-selected="false">탭제목2</a></li>
+							<li role="presentation"><a href="#tabContent01-4" role="tab" aria-selected="false">탭제목2</a></li>
+						</ul>
+					</div>
+					<div class="sticky-scroll-after"></div>
+					<div class="tab-body in-sec">
+						<section class="section">
+							<div class="section-inner">
+								<div class="section-head">
+									section-head
+								</div>
+								<div class="section-body">
+									section-body
+								</div>
+							</div>
+						</section>
+						<section class="section">
+							<div class="section-inner">
+								<div class="section-head">
+									section-head
+								</div>
+								<div class="section-body">
+									section-body
+								</div>
+							</div>
+						</section>
+						<section class="section">
+							<div class="section-inner">
+								<div class="section-head">
+									section-head
+								</div>
+								<div class="section-body">
+									section-body
+								</div>
+							</div>
+						</section>
+						<section class="section">
+							<div class="section-inner">
+								<div class="section-head">
+									section-head
+								</div>
+								<div class="section-body">
+									section-body
+								</div>
+							</div>
+						</section>
+						<section class="section">
+							<div class="section-inner">
+								<div class="section-head">
+									section-head
+								</div>
+								<div class="section-body">
+									section-body
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Content -->
+	</div>
+    <!-- //Container -->
+</div>
+</body>
+</html>

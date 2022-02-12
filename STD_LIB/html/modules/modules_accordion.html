@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">acco</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									&lt;ul class="acco">
+										&lt;li class="acco-item">
+											&lt;div class="acco-title">
+												&lt;button type="button" id="accoTitle01" class="btn acco-toggle" aria-controls="accoContent01" aria-expanded="false">
+													&lt;span class="acco-label">acco-title1&lt;/span>&lt;i class="arw arw-toggle1 dark">&lt;/i>
+												&lt;/button>
+											&lt;/div>
+											&lt;div id="accorContent01" class="acco-cont" aria-labelledby="accoTitle01" aria-hidden="true" hidden="hidden">
+												acco-content1
+											&lt;/div>
+										&lt;/li>
+									&lt;/ul>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## acco
+									-------------------------------------------------------------------*/
+									/* Default */
+									.acco-title .acco-toggle,
+									.acco-title .acco-label {display:block; position:relative;}
+									.acco-title .acco-toggle .arw {position:absolute; top:50%; right:0px; transform:translateY(-50%) rotate(0); transition:all 0.3s;}
+									.acco-title.is-active .acco-toggle .arw {transform:translateY(-50%) rotate(180deg)}
+									.acco-cont {position:relative; display:none;}
+									.acco-cont > div {position:relative; z-index:10;}
+
+									/* Design Basic */
+									.acco-basic {overflow:hidden; border:1px solid #ddd; border-radius:5px;}
+									.acco-basic .acco-title .acco-toggle {display:block; padding:10px 20px; color:#222;}
+									.acco-basic .acco-title .acco-toggle[disabled] {color:#999;}
+									.acco-basic .acco-title .acco-toggle .arw {opacity:0.5;}
+									.acco-basic .acco-title .acco-label {padding-right:20px;}
+									.acco-basic .acco-content {padding:10px 20px; background-color:#ffffff;}
+									.acco-basic .acco-content + .acco-title {border-top:1px solid #ddd;}
+									.acco-basic .is-active.acco-title {background-color:#f8f8f8;}
+									.acco-basic .is-active.acco-title .acco-toggle {color:#222;}
+									.acco-basic .is-active.acco-title .acco-toggle .arw {opacity:1;}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									var ui = {
+										init : function(){
+											if ($('.acco').length){this.acco.init();} // acco
+										},
+
+										/*
+											기능정의 : acco
+											연결방식 : href="" / id=""
+											참고경로 : modules/modules_acco.html
+											참고메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
+										*/
+										acco : {
+											eleModule : '.acco',
+											eleButton : '.acco-toggle',
+											eleTitle : '.acco-title',
+											eleContent : '.acco-content',
+											clsActive : 'is-active',
+											duration : 300,
+											init : function(){
+												this.reset();
+												this.disable();
+												this.event($(this.eleButton));
+											},
+											reset : function(){
+												var _this = this;
+												$('.acco-basic').each(function(k){
+													$(this).attr({'data-sync':'true', 'data-toggle':'true'});
+												})
+											},
+											event : function($this){
+												var _this = this;
+												$this.not('.is-clicked, [disabled]').on('click', function(){
+													_this.action($(this).attr('href')); return false;
+												}).addClass('is-clicked');
+											},
+											action : function(id){
+												var $toggle = $(this.eleButton+'[href="'+id+'"]'),
+													$title = $toggle.closest(this.eleTitle),
+													$module = $toggle.closest(this.eleModule),
+													$content = $(id),
+													clsActive = this.clsActive;
+
+												// Toggle 접기
+												if ($module.attr('data-toggle') == 'true' && $content.hasClass(clsActive)){
+													$title.removeClass(clsActive);
+													$toggle.attr('aria-expanded','false');
+													$content.stop().slideUp(this.duration, function(){$(this).removeClass(clsActive).attr('aria-hidden', 'true')});
+												}
+												// Syncroize 펼치기
+												else if ($module.attr('data-sync') == 'true' && !$content.hasClass(clsActive)){
+													$title.addClass(clsActive).find(this.eleButton).attr('aria-expanded','true');
+													$title.siblings(this.eleTitle).removeClass(clsActive).find(this.eleButton).attr('aria-expanded','false');
+													$content.stop().slideDown(this.duration, function(){$(this).addClass(clsActive).attr('aria-hidden', 'false')});
+													$content.siblings(this.eleContent).stop().slideUp(this.duration, function(){$(this).removeClass(clsActive).attr('aria-hidden', 'true')});
+												}
+												// Default 펼치기
+												else if ($module.attr('data-sync') == 'false' && !$content.hasClass(clsActive)){
+													$title.addClass(clsActive).find(this.eleButton).attr('aria-expanded','true');
+													$content.stop().slideDown(this.duration, function(){$(this).addClass(clsActive).attr('aria-hidden', 'false')});
+												}
+												// 토글이 아니면 생성된 aria-expanded 속성삭제
+												if ($module.attr('data-toggle') == 'false' && $toggle.attr('aria-expanded') == 'true'){
+													$toggle.removeAttr('aria-expanded');
+												}
+												this.disable();
+											},
+											disable : function(){
+												$(this.eleButton+'[disabled]').each(function(){
+													 $(this).removeAttr('aria-expanded');
+													 $(this).attr('aria-disabled', 'true');
+													 $(this).off('click');
+												})
+											}
+										},
+									}
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">Basic</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<ul class="acco acco-basic">
+										<li class="acco-item">
+											<div class="acco-title">
+												<button type="button" id="accoTitle11" class="btn acco-toggle" aria-controls="accoContent11" aria-expanded="false">
+													<span class="acco-label">acco-title11</span>
+													<i class="arw arw-toggle1 dark"></i>
+												</button>
+											</div>
+											<div id="accoContent11" class="acco-cont" aria-labelledby="accoTitle11">
+												acco-content11
+											</div>
+										</li>
+										<li class="acco-item">
+											<div class="acco-title">
+												<button type="button" id="accoTitle12" class="btn acco-toggle" aria-controls="accoContent12" aria-expanded="false">
+													<span class="acco-label">acco-title12</span>
+													<i class="arw arw-toggle1 dark"></i>
+												</button>
+											</div>
+											<div id="accoContent12" class="acco-cont" aria-labelledby="accoTitle12">
+												acco-content12
+											</div>
+										</li>
+										<li class="acco-item">
+											<div class="acco-title">
+												<button type="button" id="accoTitle13" class="btn acco-toggle" aria-controls="accoContent13" aria-expanded="false" disabled>
+													<span class="acco-label">acco-title13</span>
+													<i class="arw arw-toggle1 dark"></i>
+												</button>
+											</div>
+											<div id="accoContent13" class="acco-cont" aria-labelledby="accoTitle13">
+												acco-content13
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## acco
+									-------------------------------------------------------------------*/
+									/* Default */
+									.acco-title .acco-toggle,
+									.acco-title .acco-label {display:block; position:relative;}
+									.acco-title .acco-toggle .arw {position:absolute; top:50%; right:0px; transform:translateY(-50%) rotate(0); transition:all 0.3s;}
+									.acco-title.is-active .acco-toggle .arw {transform:translateY(-50%) rotate(180deg)}
+									.acco-content {position:relative; display:none;}
+									.acco-content.is-active {display:block;}
+									.acco-content > div {position:relative; z-index:10;}
+
+									/* Design Basic */
+									.acco-basic {overflow:hidden; border:1px solid #ddd; border-radius:5px;}
+									.acco-basic .acco-title .acco-toggle {display:block; padding:10px 20px; color:#222;}
+									.acco-basic .acco-title .acco-toggle[disabled] {color:#999;}
+									.acco-basic .acco-title .acco-toggle .arw {opacity:0.5;}
+									.acco-basic .acco-title .acco-label {padding-right:20px;}
+									.acco-basic .acco-content {padding:10px 20px; background-color:#ffffff;}
+									.acco-basic .acco-content + .acco-title {border-top:1px solid #ddd;}
+									.acco-basic .is-active.acco-title {background-color:#f8f8f8;}
+									.acco-basic .is-active.acco-title .acco-toggle {color:#222;}
+									.acco-basic .is-active.acco-title .acco-toggle .arw {opacity:1;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

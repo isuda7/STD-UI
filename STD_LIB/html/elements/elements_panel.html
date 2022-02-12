@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Panel</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<div class="panel">
+										<div class="panel-header"></div>
+										<div class="panel-body"></div>
+										<div class="panel-footer"></div>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## Panel
+									----------------------------------------------------------------- --*/
+									/* Default */
+									.panel {position:relative;}
+									.panel-inner,.panel-head,.panel-body,.panel-foot {position:relative; z-index:10;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- section -->
+				<section class="g-section">
+					<div class="g-section-header">
+						<h2 class="g-h2">Styles</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">.panel-style1</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<!-- 마크업뷰영역 -->
+									<div class="panel panel-style1">
+										<div class="panel-head">
+											<h3>Panel Head</h3>
+										</div>
+										<div class="panel-body">
+											<p>Panel Body</p>
+										</div>
+									</div>
+									<!-- //마크업뷰영역 -->
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									&lt;div class="panel panel-style1">
+										&lt;div class="panel-head">
+											&lt;h3>Panel Head&lt;/h3>
+										&lt;/div>
+										&lt;div class="panel-body">
+											&lt;p>Panel Body&lt;/p>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

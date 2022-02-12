@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+<script type="text/javascript">
+<!--
+	function fileAttach(obj){
+		var $this = $(obj).closest('.file');
+		$this.find('[type=file]').trigger('click');
+		$this.find('[type=file]').not('.is-evented').on('change', function(){
+			var value = $(this).val();
+			$this.find('[type=text]').val(value);
+		}).addClass('is-evented');
+	}
+//-->
+</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Form Group</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">API</a>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									.form-area			: 폼 그룹 전체영역
+									.form				: 폼 그룹 기본영역
+									.form.type-col		: 폼 그룹 좌우배치
+									.form.type-row		: 폼 그룹 상하배치
+									.form.type-wide		: 폼 그룹 넓은배치
+									.form-title			: 폼 그룹 제목영역
+									.form-content		: 폼 그룹 내용영역
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="form-area">
+										&lt;div class="form">
+											&lt;div class="form-title">&lt;/div>
+											&lt;div class="form-content">&lt;/div>
+										&lt;/div>
+
+										&lt;div class="form">
+											&lt;div class="form-title">&lt;/div>
+											&lt;div class="form-content">&lt;/div>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Form Content</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">type-row</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="form-area" style="width:320px">
+										<div class="form type-row">
+											<div class="form-container">
+												<div class="form-title">
+													<label for="sText21" class="form-tit">아이디</label>
+												</div>
+												<div class="form-content">
+													<div class="form-controls flexible">
+														<input type="text" name="sText21" id="sText21" class="input">
+													</div>
+												</div>
+											</div>
+											<div class="form-desc">
+												<p>Description Message</p>
+											</div>
+										</div>
+										<div class="form type-row">
+											<div class="form-container">
+												<div class="form-title">
+													<label for="sText11" class="form-tit">아이디</label>
+												</div>
+												<div class="form-content">
+													<div class="form-controls flexible">
+														<input type="text" name="sText11" id="sText11" class="input">
+													</div>
+												</div>
+											</div>
+											<div class="form-alert is-errored is-visibled">
+												<p>Error Message</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- type-row -->
+									&lt;div class="form type-row">
+										(Form Elements 참고)
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Row Group */
+									.form.type-row + .form.type-row {margin-top:20px;}
+									.form.type-row .form-container {display:block;}
+									.form.type-row .form-content {margin-top:2px;}
+									.form.type-row .form-desc,
+									.form.type-row .form-info,
+									.form.type-row .form-alert {margin-top:10px; line-height:20px;}
+								</pre>
+							</div>
+						</div>
+						<h3 class="g-h3">type-col</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="form-area" style="width:320px;">
+										<div class="form type-col">
+											<div class="form-title"><label for="sText22" class="form-tit">아이디</label></div>
+											<div class="form-content">
+												<div class="form-controls flexible">
+													<input type="text" name="sText22" id="sText22" class="input">
+												</div>
+												<div class="form-info">
+													<p>Information Message</p>
+												</div>
+											</div>
+										</div>
+										<div class="form type-col">
+											<div class="form-title"><label for="sText22" class="form-tit">아이디</label></div>
+											<div class="form-content">
+												<div class="form-controls flexible">
+													<input type="text" name="sText22" id="sText22" class="input">
+												</div>
+												<div class="form-alert is-successed is-visibled">
+													<p>Success Message</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- type-col -->
+									&lt;div class="form type-col">
+										(Form Elements 참고)
+									&lt;/div>
+									&lt;div class="form type-col">
+										(Form Elements 참고)
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Col Group */
+									.form.type-col + .form.type-col {margin-top:20px;}
+									.form.type-col .form-container {display:flex;}
+									.form.type-col .form-title {width:100px;}
+									.form.type-col .form-content {flex-grow:1; align-items:center;}
+									.form.type-col .form-desc,
+									.form.type-col .form-info,
+									.form.type-col .form-alert {margin-top:10px; padding-left:100px;}
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">type-wide</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="form-area">
+										<div class="form type-wide">
+											<div class="form-title">
+												<label for="sText22" class="form-tit">아이디</label>
+											</div>
+											<div class="form-content">
+												<div class="form-controls">
+													<input type="text" name="sText22" id="sText22" class="input">
+													<span class="form-txt">원</span>
+												</div>
+												<div class="form-desc">
+													<p>왼쪽정렬 메세지</p>
+												</div>
+											</div>
+										</div>
+										<div class="form type-wide">
+											<div class="form-title"><label for="sText22" class="form-tit">아이디</label></div>
+											<div class="form-content">
+												<div class="form-controls">
+													<input type="text" name="sText22" id="sText22" class="input">
+												</div>
+												<div class="form-alert is-visibled  flex-right">
+													<p>우측정렬 메세지</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- Wide -->
+									&lt;div class="form type-wide">
+										(Form Elements 참고)
+									&lt;/div>
+									&lt;div class="form type-wide">
+										(Form Elements 참고)
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>
