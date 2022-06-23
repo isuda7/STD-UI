@@ -4,11 +4,11 @@ var gRootURL = {
 var gBaseURL = {
 	_wsg : gRootURL.root+'_wsg/',
 	menu0 : gRootURL.root+'html/_prototype/',
-	menu5 : gRootURL.root+'html/general/',
-	menu1 : gRootURL.root+'html/elements/',
-	menu2 : gRootURL.root+'html/modules/',
-	menu3 : gRootURL.root+'html/content/',
-	menu4 : gRootURL.root+'html/interactions/',
+	menu1 : gRootURL.root+'html/generals/',
+	menu2 : gRootURL.root+'html/components/',
+	menu3 : gRootURL.root+'html/patterns/',
+	menu4 : gRootURL.root+'html/vanilla/',
+	menu5 : gRootURL.root+'html/motions/',
 	//target : 'target="gContentFrame"',
 	target : '',
 }
@@ -54,11 +54,11 @@ var include = {
 		document.write('			<nav class="g-lnb">');
 		document.write('				<ul>');
 		//document.write('					<li><a href="'+gBaseURL.menu0+'_prototype_markup.html" data-aside="g-snbMenu0" data-url="'+gBaseURL.menu0+'">Prototype</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu5+'index.html" data-aside="g-snbMenu5" data-url="'+gBaseURL.menu5+'">General</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu1+'index.html" data-aside="g-snbMenu1" data-url="'+gBaseURL.menu1+'">Elements</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu2+'index.html" data-aside="g-snbMenu2" data-url="'+gBaseURL.menu2+'">Modules</a></li>');
-		//document.write('					<li><a href="'+gBaseURL.menu3+'index.html" data-aside="g-snbMenu3" data-url="'+gBaseURL.menu3+'">Petterns</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu4+'index.html" data-aside="g-snbMenu4" data-url="'+gBaseURL.menu4+'">Interactions</a></li>');
+		document.write('					<li><a href="'+gBaseURL.menu1+'index.html" data-aside="g-snbMenu1" data-url="'+gBaseURL.menu1+'">Genarals</a></li>');
+		document.write('					<li><a href="'+gBaseURL.menu2+'index.html" data-aside="g-snbMenu2" data-url="'+gBaseURL.menu2+'">Components</a></li>');
+		// document.write('					<li><a href="'+gBaseURL.menu3+'index.html" data-aside="g-snbMenu3" data-url="'+gBaseURL.menu3+'">Patterns</a></li>');
+		// document.write('					<li><a href="'+gBaseURL.menu4+'index.html" data-aside="g-snbMenu4" data-url="'+gBaseURL.menu4+'">Vanilla</a></li>');
+		document.write('					<li><a href="'+gBaseURL.menu5+'index.html" data-aside="g-snbMenu5" data-url="'+gBaseURL.menu5+'">Motions</a></li>');
 		document.write('				</ul>');
 		document.write('			</nav>');
 		document.write('		</div>');
@@ -105,126 +105,130 @@ var include = {
 			document.write('				<!-- //Prototype -->');
 		},
 
-		//Elements
+		//Genaral
 		menu1 : function(){
 			var baseURL = gBaseURL.menu1;
-			document.write('				<!-- Convention -->');
+			document.write('				<!-- Checklist -->');
 			document.write('				<ul class="g-depth1 g-snbMenu1">');
 			document.write('					<li class="g-node1">');
-			document.write('						<a href="javascript:;">Elements</a>');
+			document.write('						<a href="javascript:;">Genaral</a>');
 			document.write('						<ul class="g-depth2">');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_formGroup.html">Form Group</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_form.html">Form Elements</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_formMixin.html">Form Mixins</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_button.html">Buttons</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_icon.html">Icons</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_label.html">Labels</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_badge.html">Badges</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_bullet.html">Bullets</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_breadcrumb.html">Breadcrumbs</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_list.html">List</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_box.html">Boxs</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_card.html">Cards</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_panel.html">Panels</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_step.html">Steps</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_table.html">Tables</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'elements_pagination.html">Paginations</a></li>');
-			document.write('						</ul>');
-			document.write('					</li>');
-			document.write('				</ul>');
-			document.write('				<!-- //Convention -->');
-		},
-
-		//Modules
-		menu2 : function(){
-			var baseURL = gBaseURL.menu2;
-			document.write('				<!-- Globals -->');
-			document.write('				<ul class="g-depth1 g-snbMenu2">');
-			document.write('					<li class="g-node1">');
-			document.write('						<a href="javascript:;">Modules</a>');
-			document.write('						<ul class="g-depth2">');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_nav.html">Nav</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_tab.html">Tab</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_accordion.html">Accordion</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_folder.html">Folder</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_tooltip.html">Tooltip</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_dropdown.html">Dropdown</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_popup.html">Popup</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_sticky.html">Sticky</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_spyscroll.html">Spy Scroll</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_customscroll.html">Custom Scroll</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'modules_sidebar.html">Sidebar</a></li>');
-			document.write('						</ul>');
-			document.write('					</li>');
-			//document.write('					<li class="g-node1">');
-			//document.write('						<a href="javascript:;">Addons</a>');
-			//document.write('						<ul class="g-depth2">');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'modules_carouselBx.html">Carousel BX</a></li>');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'modules_carouselFlex.html">Carousel Flex</a></li>');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'modules_carouselSwiper.html">Carousel Swiper</a></li>');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'modules_carouselSlick.html">Carousel Slick</a></li>');
-			//document.write('						</ul>');
-			//document.write('					</li>');
-			//document.write('					<li class="g-node1">');
-			//document.write('						<a href="javascript:;">Behaviors</a>');
-			//document.write('						<ul class="g-depth2">');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'behavior_youtube.html">Youtube Player</a></li>');
-			//document.write('						</ul>');
-			//document.write('					</li>');
-			document.write('				</ul>');
-			document.write('				<!-- //Globals -->');
-		},
-
-		//Contents
-		menu3 : function(){
-			var baseURL = gBaseURL.menu3;
-			document.write('				<!-- library -->');
-			document.write('				<ul class="g-depth1 g-snbMenu3">');
-			document.write('					<li class="g-node1">');
-			document.write('						<a href="javascript:;">Content</a>');
-			document.write('						<ul class="g-depth2">');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'content_search.html">Search</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'content_board.html">Board</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'content_gallary.html">Gallary</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'content_product.html">Product</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'content_store.html">Store</a></li>');
-			document.write('						</ul>');
-			document.write('					</li>');
-			document.write('				</ul>');
-			document.write('				<!-- //library -->');
-		},
-
-		//Interactions
-		menu4 : function(){
-			var baseURL = gBaseURL.menu4;
-			document.write('				<!-- Checklist -->');
-			document.write('				<ul class="g-depth1 g-snbMenu4">');
-			document.write('					<li class="g-node1">');
-			document.write('						<a href="javascript:;">Interactions</a>');
-			document.write('						<ul class="g-depth2">');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'interactions_cubicbezier.html">Cubic Bezier</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'interactions_scrollAnimate.html">Scroll Animate</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'interactions_morph.html">Morph</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'interactions_canvas.html">Canvas</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'interactions_parallex.html">Parallex</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'generals_base.html">Base</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'generals_grid.html">Grid</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'generals_font.html">Fonts</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'generals_color.html">Color</a></li>');
 			document.write('						</ul>');
 			document.write('					</li>');
 			document.write('				</ul>');
 			document.write('				<!-- //Checklist -->');
 		},
 
-		//Templates
+		//Components
+		menu2 : function(){
+			var baseURL = gBaseURL.menu2;
+			document.write('				<!-- Convention -->');
+			document.write('				<ul class="g-depth1 g-snbMenu2">');
+			document.write('					<li class="g-node1">');
+			document.write('						<a href="javascript:;">Elements</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_button.html">Buttons</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_icon.html">Icons</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_label.html">Labels</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_badge.html">Badges</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_bullet.html">Bullets</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_list.html">List</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_box.html">Boxs</a></li>');
+			document.write('						</ul>');
+			document.write('						<a href="javascript:;">Collections</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formGroup.html">Form Group</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form.html">Form Elements</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formMixin.html">Form Mixins</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_breadcrumb.html">Breadcrumbs</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_nav.html">Nav</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_step.html">Steps</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_table.html">Tables</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_pagination.html">Paginations</a></li>');
+			document.write('						</ul>');
+			document.write('						<a href="javascript:;">Views</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_card.html">Cards</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_comment.html">Cards</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_feed.html">Cards</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_item.html">Cards</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_statistic.html">Cards</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_chat.html">Cards</a></li>');
+			document.write('						</ul>');
+			document.write('						<a href="javascript:;">Modules</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('						</ul>');
+			document.write('						<a href="javascript:;">Behaviors</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_youtube.html">Youtube</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_panel.html">Panels</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_accordion.html">Accordion</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_folder.html">Folder</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_tooltip.html">Tooltip</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_dropdown.html">Dropdown</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_tab.html">Tab</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_popup.html">Popup</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_sticky.html">Sticky</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_spyscroll.html">Spy Scroll</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_customscroll.html">Custom Scroll</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_sidebar.html">Sidebar</a></li>');
+			document.write('						</ul>');
+			document.write('					</li>');
+			document.write('				</ul>');
+			document.write('				<!-- //Convention -->');
+		},
+
+		//Petterns
+		menu3 : function(){
+			var baseURL = gBaseURL.menu3;
+			document.write('				<!-- library -->');
+			document.write('				<ul class="g-depth1 g-snbMenu3">');
+			document.write('					<li class="g-node1">');
+			document.write('						<a href="javascript:;">Petterns</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'patterns_search.html">Search</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'patterns_board.html">Board</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'patterns_gallary.html">Gallary</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'patterns_product.html">Product</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'patterns_store.html">Store</a></li>');
+			document.write('						</ul>');
+			document.write('					</li>');
+			document.write('				</ul>');
+			document.write('				<!-- //library -->');
+		},
+
+		//Vanilla Dom
+		menu4 : function(){
+			var baseURL = gBaseURL.menu4;
+			document.write('				<!-- Globals -->');
+			document.write('				<ul class="g-depth1 g-snbMenu4">');
+			document.write('					<li class="g-node1">');
+			document.write('						<a href="javascript:;">Vanilla</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'vanilla_api.html">Nav</a></li>');
+			document.write('						</ul>');
+			document.write('					</li>');
+			document.write('				</ul>');
+			document.write('				<!-- //Globals -->');
+		},
+
+		//Motions
 		menu5 : function(){
 			var baseURL = gBaseURL.menu5;
 			document.write('				<!-- Checklist -->');
 			document.write('				<ul class="g-depth1 g-snbMenu5">');
 			document.write('					<li class="g-node1">');
-			document.write('						<a href="javascript:;">Genaral</a>');
+			document.write('						<a href="javascript:;">Motions</a>');
 			document.write('						<ul class="g-depth2">');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'general_base.html">Base</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'general_grid.html">Grid</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'general_font.html">Fonts</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'general_color.html">Color</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'motions_cubicbezier.html">Cubic Bezier</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'motions_scrollAnimate.html">Scroll Animate</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'motions_morph.html">Morph</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'motions_canvas.html">Canvas</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'motions_parallex.html">Parallex</a></li>');
 			document.write('						</ul>');
 			document.write('					</li>');
 			document.write('				</ul>');
@@ -233,18 +237,18 @@ var include = {
 	},
 	quick : {
 		init : function(){
-			this.opneHTML();
-			this.closeHTML();
+			// this.opneHTML();
+			// this.closeHTML();
 		},
 		opneHTML : function(){
-			//document.write('	<div id="g-quick">');
-			//document.write('		<div class="g-js-scroll g-quick-scroll">');
-			//document.write('			<nav class="g-qnb">');
+			document.write('	<div id="g-quick">');
+			document.write('		<div class="g-js-scroll g-quick-scroll">');
+			document.write('			<nav class="g-qnb">');
 		},
 		closeHTML : function(){
-			//document.write('			</nav>');
-			//document.write('		</div>');
-			//document.write('	</div>');
+			document.write('			</nav>');
+			document.write('		</div>');
+			document.write('	</div>');
 		},
 	},
 	footer : function(){

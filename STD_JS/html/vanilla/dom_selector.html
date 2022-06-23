@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Selector</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Elements</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// body
+									$("body")
+									document.body
+
+									// html
+									$("html")
+									document.documentElement
+
+									// tag
+									$("selector")
+									document.getElementsByClassName('selector')
+
+									// id
+									$("#selector")
+									document.getElementById('selector')
+
+									// class 단일
+									$(".selector")
+									document.querySelector('.selector')
+									>> 반환객체는 한개의 요소만 찾으며, 여러개일 경우 첫번째 요소를 반환합니다.
+
+									// class 복수
+									$(".selector")
+									document.querySelectorAll('.selector')
+									>> 반환객체는 nodeList이기 때문에 for문 또는 foreach 문을 사용해야 합니다.
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Find</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Varialble
+									const $ele = $(selector)
+									const ele = document.querySelector(selector)
+
+									// 자식
+									$ele.children()
+									ele.children
+
+									// 부모
+									$ele.parent()
+									ele.parentNode
+
+									// 가까운 상위
+									$ele.closest('.country')
+									ele.closest('.country')
+
+									// 가까운 상위 폼
+									$input.closest('form')
+									input.form
+
+									// 이전
+									$ele.prev()
+									ele.previousElementSibling
+
+									// 다음
+									$ele.next()
+									ele.nextElementSibling
+
+									// 형제요소
+									$ele.siblings()
+									const siblings = (el) => {
+										return  Array.prototype.filter.call(el.parentElement.children, function(e){ return e !== el;});
+									}
+									let sbl = siblings(el);
+
+									// n 번째 요소
+									$ele:eq(n)
+									ele[n]
+								</pre>
+							</div>
+						</div>
+						<br>
+						<p class="g-desc">
+							<a href="https://hogni.tistory.com/122" class="g-link-basic">children와 childNodes의 차이 (https://hogni.tistory.com/122)</a>
+						</p>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

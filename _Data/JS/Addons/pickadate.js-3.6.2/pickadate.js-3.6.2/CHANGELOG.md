@@ -269,13 +269,13 @@ To enable all this goodness, some **backward-incompatible changes** have been in
 - [Formatting rules](http://amsul.github.io/pickadate.js/date.htm#formats) that appear within a word need to be escaped with an exclamation mark (!).
 
 
-<br>
+<br />
 #### Please do read the [docs](http://amsul.github.io/pickadate.js/date.htm#options) and [api](http://amsul.github.io/pickadate.js/api.htm) to see exactly how these new options and methods work.
 
 
 
 
-<br>
+<br />
 ## Older changelogs
 
 If you’re looking for changes in older versions, please [browse the tags](https://github.com/amsul/pickadate.js/tags) for the relevant commit archive and changelog file.

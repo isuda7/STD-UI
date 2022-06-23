@@ -25,7 +25,7 @@ The mobile-friendly, responsive, and lightweight jQuery date & time input picker
 
 
 
-<br>
+<br />
 
 ## Library files
 
@@ -66,7 +66,7 @@ The translations live in the `lib/translations` folder. There are currently [43 
 
 
 
-<br>
+<br />
 
 ## Building with Grunt
 
@@ -85,7 +85,7 @@ Type out `grunt --help` to see a list of all the tasks available. The generally 
 
 
 
-<br>
+<br />
 
 <a name="less-styling"></a>
 ## Styling with LESS
@@ -104,7 +104,7 @@ Make sure to run the `grunt develop` task before making any changes to compile i
 
 
 
-<br>
+<br />
 
 ## Bugs
 
@@ -114,7 +114,7 @@ Before opening a new issue, please search the existing [Issues](https://github.c
 
 
 
-<br>
+<br />
 
 ## Contributing
 
@@ -129,7 +129,7 @@ If there’s anything you’d like to discuss, we like to hang out on Spectrum.
 
 
 
-<br>
+<br />
 
 ## Support
 
@@ -139,7 +139,7 @@ If you find this library useful and would like to see further development, consi
 
 
 
-<br><br>
+<br /><br />
 
 ---
 

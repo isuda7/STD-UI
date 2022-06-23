@@ -17,7 +17,7 @@ var include = {
 		document.write('<link href="'+gURL.root+'/assets/css/base.css" rel="stylesheet">');
 		document.write('<link href="'+gURL.root+'/assets/css/common.css" rel="stylesheet">');
 		document.write('<script src="'+gURL.root+'/assets/js/jquery.min.js"></script>');
-		
+
 		document.write('<!-- Guide Conventions-->');
 		document.write('<link href="'+gURL.parent+'/assets/css/import.css" rel="stylesheet">');
 		document.write('<link href="'+gURL.parent+'/assets/codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
@@ -49,7 +49,7 @@ var include = {
 			document.write('					<li class="g-node1"><a href="'+baseURL+'rule_standard.html">표준규칙</a></li>');
 			document.write('					<li class="g-node1"><a href="'+baseURL+'rule_code.html">코드규칙</a></li>');
 			document.write('					<li class="g-node1"><a href="'+baseURL+'rule_name.html">네임규칙</a></li>');
-			document.write('					<li class="g-node1"><a href="'+baseURL+'rule_codeset.html">설계패턴</a></li>');
+			document.write('					<li class="g-node1"><a href="'+baseURL+'rule_codeset.html">설계규칙</a></li>');
 			document.write('					<li class="g-node1"><a href="'+baseURL+'rule_title.html">서식명칭</a></li>');
 			document.write('				</ul>');
 			document.write('				<!-- //Convention -->');

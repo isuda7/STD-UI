@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Event</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Add
+									$elem.on(event, handler)
+									elem.addEventListener(event, handler)
+
+									// Remove
+									$elem.off(event)
+									elem.removeEventListener(event, handler)
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">이벤트 한번만 사용하기</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// 함수에 이름 붙여 사용하기
+									function onClickFunction(){
+										elem.removeEventListener('click', onClickFunction)
+										alert('event has been removed')
+									}
+									elem.addEventListener('click', onClickFunction)
+
+									// once 옵션 사용하기
+									elem.addEventListener('click', (e)=>{
+										alert('event has been removed')
+									}, { once: true })
+
+									// arguments.callee 사용하기
+									elem.addEventListener('click', function(){
+										elem.removeEventListener('click', arguments.callee)
+									})
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+<script type="application/javascript">
+	window.onload = function(){
+		var canvas = document.getElementById('tutorial');
+		// 지원여부 검사
+		if (canvas.getContext){
+			// 렌더링 컨텍스트
+			var ctx = canvas.getContext('2d');
+
+			// 기본예제
+			ctx.fillStyle = "rgb(200, 0, 0)";
+			ctx.fillRect(10,10,50,50);
+
+			ctx.fillStyle = "rgba(0,0,200,0.5)";
+			ctx.fillRect(30,30,50,50);
+		}
+	}
+</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">기본사용</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">튜토리얼</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="tutorial" width="150" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									var canvas = document.getElementById('tutorial');
+									// 지원여부 검사
+									if (canvas.getContext){
+										// 렌더링 컨텍스트
+										var ctx = canvas.getContext('2d');
+
+										// 기본예제
+										ctx.fillStyle = "rgb(200, 0, 0)";
+										ctx.fillRect(10,10,50,50);
+
+										ctx.fillStyle = "rgba(0,0,200,0.5)";
+										ctx.fillRect(30,30,50,50);
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@
         </v-toolbar-title>
       </v-toolbar>
       <v-sheet class="pa-3">
-        내용<br><br><br><br>
+        내용<br /><br /><br /><br />
       </v-sheet>
     </v-card>
   </div>

@@ -15,7 +15,7 @@
         <ul>
           <li>
             <code>v-if="ok"</code> ok키값이 true일때 보여준다.
-            <br>
+            <br />
             <span v-if="ok">OK</span>
           </li>
         </ul>

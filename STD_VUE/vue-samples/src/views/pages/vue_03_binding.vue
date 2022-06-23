@@ -16,22 +16,22 @@
         <ul>
           <li>
             <code>v-bind:class="{ active: isActive }"</code>
-            <br>위 구문은
+            <br />위 구문은
             <code>active</code> 클래스의 존재 여부가 데이터 속성
             <code>isActive</code> 의 참 속성에 의해 결정되는 것을 의미합니다.
             <div v-bind:class="{ active: isActive }"></div>
           </li>
           <li class="mt-3">
             <code>class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"</code>
-            <br>
+            <br />
             <code>v-bind:class</code> 디렉티브는 일반
             <code>class</code> 속성과 공존할 수 있습니다.
-            <br>
+            <br />
             <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
           </li>
           <li class="mt-3">
             바인딩 된 객체는 인라인 일 필요는 없습니다.
-            <br>
+            <br />
             <span v-bind:class="classObject"></span>
             <span v-bind:class="classObject2"></span>
           </li>
@@ -41,14 +41,14 @@
         <ul>
           <li>
             <code>v-bind:class="[activeClass, errorClass]"</code>
-            <br>위 구문은
+            <br />위 구문은
             <code>activeClass</code>와
             <code>errorClass</code>의 값을 적용한다.
             <div v-bind:class="[activeClass, errorClass]"></div>
           </li>
           <li class="mt-3">
             <code>v-bind:class="[isActive ? activeClass : staticClass, errorClass]"</code>
-            <br>위 구문은
+            <br />위 구문은
             <code>isActive ? 참 : 거짓, errorClass</code> 값을 적용한다.
             <div v-bind:class="[isActive ? activeClass : staticClass, errorClass]"></div>
           </li>
@@ -97,7 +97,7 @@
         <h4 class="mt-4">다중 값 제공</h4>
         <ul>
           <li>
-            <code>v-bind:style="{display: ['-webkit-box', '-ms-flexbox', 'flex']}</code> <br>
+            <code>v-bind:style="{display: ['-webkit-box', '-ms-flexbox', 'flex']}</code> <br />
             브라우저가 지원하는 배열의 마지막 값만 렌더링합니다.
             <div v-bind:style="{display: ['-webkit-box', '-ms-flexbox', 'flex']}">인라인스타일 예시텍스트</div>
           </li>

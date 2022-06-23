@@ -12,9 +12,9 @@
       <v-sheet class="pa-3">
         <h4>등록하기</h4>
         <ul>
-          <li>예시 <br>
-            <code>&lt;my-component&gt;&lt;/my-component&gt;</code><br>
-            <code>import myComponent from '@/components/sample/my-component.vue'</code><br>
+          <li>예시 <br />
+            <code>&lt;my-component&gt;&lt;/my-component&gt;</code><br />
+            <code>import myComponent from '@/components/sample/my-component.vue'</code><br />
             <code>components: { myComponent }</code>
           </li>
         </ul>

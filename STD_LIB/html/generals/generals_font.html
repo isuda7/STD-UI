@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+<script type="text/javascript">
+<!--
+	$(function(){
+		var setFontsize = function(){
+			var $eleNum, $eleFont, $eleSize, valNum;
+			function init(){
+				$eleNum = $('.js-fontsize-set');
+				$eleFont = $('.js-fontsize');
+				$eleSize = $eleFont.find('.js-size');
+				valNum = $eleNum.val();
+			}
+			function event(){
+				$eleNum.on('change', function(){
+					valNum = $(this).val();
+					action();
+				})
+			}
+			function action(){
+				$eleFont.css('font-size', valNum+'px');
+				$eleSize.text(valNum+'px');
+			}
+			init();
+			event();
+			action();
+		}
+		setFontsize();
+	})
+//-->
+</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Font</h1>
+				<p class="g-explain-h1">마크업뷰중심 + 일부컨텐츠 </p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<label class="form-label">폰트사이즈</label>
+									<input type="number" name="" id="" value="16" placeholder="" title="" class="form-input js-fontsize-set" style="width:60px">
+									<br /><br />
+									<div class="js-fontsize" style="display:inline-block; line-height:2; margin-right:20px; font-size:14px;">
+										<p style="font-weight:200"><span class="js-size"></span> 200 NotoSans Thin</p>
+										<p style="font-weight:300"><span class="js-size"></span> 300 NotoSans Light</p>
+										<p style="font-weight:400"><span class="js-size"></span> 400 NotoSans Reguler</p>
+										<p style="font-weight:500"><span class="js-size"></span> 500 NotoSans Medium</p>
+										<p style="font-weight:700"><span class="js-size"></span> 700 NotoSans Bold</p>
+										<p style="font-weight:900"><span class="js-size"></span> 900 NotoSans ExtraBold</p>
+									</div>
+									<div class="js-fontsize" style="display:inline-block; line-height:2; margin-right:20px; font-size:14px;">
+										<p style="font-weight:200">1234567890 가나다라마바사</p>
+										<p style="font-weight:300">1234567890 가나다라마바사</p>
+										<p style="font-weight:400">1234567890 가나다라마바사</p>
+										<p style="font-weight:500">1234567890 가나다라마바사</p>
+										<p style="font-weight:700">1234567890 가나다라마바사</p>
+										<p style="font-weight:900">1234567890 가나다라마바사</p>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									&lt;label class="form-label">폰트사이즈&lt;/label>
+									&lt;input type="number" name="" id="" value="14" placeholder="" title="" class="form-input js-fontsize-set" style="width:60px">
+									&lt;br>&lt;br>
+									&lt;div class="js-fontsize" style="display:inline-block; line-height:2; margin-right:20px; font-size:14px;">
+										&lt;p style="font-weight:200">&lt;span class="js-size">&lt;/span> 200 NotoSans Thin&lt;/p>
+										&lt;p style="font-weight:300">&lt;span class="js-size">&lt;/span> 300 NotoSans Light&lt;/p>
+										&lt;p style="font-weight:400">&lt;span class="js-size">&lt;/span> 400 NotoSans Reguler&lt;/p>
+										&lt;p style="font-weight:500">&lt;span class="js-size">&lt;/span> 500 NotoSans Medium&lt;/p>
+										&lt;p style="font-weight:700">&lt;span class="js-size">&lt;/span> 700 NotoSans Bold&lt;/p>
+										&lt;p style="font-weight:900">&lt;span class="js-size">&lt;/span> 900 NotoSans ExtraBold&lt;/p>
+									&lt;/div>
+									&lt;div class="js-fontsize" style="display:inline-block; line-height:2; margin-right:20px; font-size:14px;">
+										&lt;p style="font-weight:200">1234567890 가나다라마바사&lt;/p>
+										&lt;p style="font-weight:300">1234567890 가나다라마바사&lt;/p>
+										&lt;p style="font-weight:400">1234567890 가나다라마바사&lt;/p>
+										&lt;p style="font-weight:500">1234567890 가나다라마바사&lt;/p>
+										&lt;p style="font-weight:700">1234567890 가나다라마바사&lt;/p>
+										&lt;p style="font-weight:900">1234567890 가나다라마바사&lt;/p>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									$(function(){
+										var setFontsize = function(){
+											var $eleNum, $eleFont, $eleSize, valNum;
+											function init(){
+												$eleNum = $('.js-fontsize-set');
+												$eleFont = $('.js-fontsize');
+												$eleSize = $eleFont.find('.js-size');
+												valNum = $eleNum.val();
+											}
+											function event(){
+												$eleNum.on('change', function(){
+													valNum = $(this).val();
+													action();
+												})
+											}
+											function action(){
+												$eleFont.css('font-size', valNum+'px');
+												$eleSize.text(valNum+'px');
+											}
+											init();
+											event();
+											action();
+										}
+										setFontsize();
+									})
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

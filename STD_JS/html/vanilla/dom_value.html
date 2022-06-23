@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Value</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Generals</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// 순서 (n 번째)
+									$elem.index()
+									[].indexOf.call(element.parentNode.children, element)
+
+									// 길이
+									$elem.length
+									elem.length
+
+									// 문자열
+									variable.indexOf(value) // true: 0, false: -1
+
+									// 스타일
+									$elem.css({ top: "10px" })
+									elem.style.top = "10px"
+
+									// 속성값
+									$input.val()
+									input.value
+
+									// 상태값 disabled
+									$elem.props("disabled")
+									elem.disabled
+
+									// 상태값 readonly
+									$elem.props("readonly")
+									el.readOnly
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Offset</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Static - 절대좌표 (화면기준)
+									$elem.offset().top
+									elem.offsetTop
+
+									// Static - 상대좌표 (문서기준)
+									$elem.offset().top - $(window).scrollTop()
+									elem.getBoundingClientRect().top
+
+									// Fixed - 절대좌표 (화면기준)
+									$elem.offset().top - $(window).scrollTop()
+									elem.offsetTop
+
+									// Fixed - 상대좌표 (문서기준)
+									$elem.offset().top
+									elem.getBoundingClientRect().top + window.pageYOffset
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Scroll</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// window 높이
+									$(window).height()
+									window.innerHeight
+
+									// document 높이
+									$(document).height()
+									document.body.scrollHeight
+
+									// Scroll 위치
+									$(window).scrollTop()
+									window.pageYOffset
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec" id="section3">
+					<div class="g-section-header">
+						<h2 class="g-h2">Size</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// jQuery
+									$elem.width() 		// 요소의 폭만
+									$elem.innerWidth() 	// 요소의 padding을 포함한 폭
+									$elem.outerWidth() 	// 요소의 border, padding을 포함한 폭
+									$elem.outerWidth(true) //  요소의 margin, border, padding을 포함한 폭
+
+									$elem.height() 		// 요소 높이만
+									$elem.innerHeight() // 요소의 padding을 포함한 높이
+									$elem.outerHeight() // 요소의 border, padding 포함한 높이
+									$elem.outerHeight(true) // 요소의 margin, border, padding 포함한 높이
+
+									$(width).width()	   // 스크롤 바를 포함하지 않은 너비
+									$(width).outerWidth()  // 스크롤 바를 포함한 너비
+									$(width).height()	   // 스크롤 바를 포함하지 않은 너비
+									$(width).outerHeight() // 스크롤 바를 포함한 너비
+
+									// Varnilla
+									$elem.clientWidth	// padding을 포함한 폭
+									$elem.offsetWidth	// border, padding, 스크롤 바를 포함한 폭
+									$elem.scrollWidth	// padding을 포함한 스크롤 폭
+
+									$elem.clientHeight	// padding을 포함한 높이
+									$elem.offsetHeight	// border, padding, 스크롤 바를 포함한 높이
+									$elem.scrollHeight	// padding을 포함한 스크롤 높이
+
+									window.innerWidth	// 스크롤 바를 포함한 창 너비
+									window.innerHeight	// 스크롤 바를 포함한 창 높이
+									window.outerWidth	// 스크롤 바와 창틀을 포함한 창의 너비
+									window.outerHeight	// 스크롤 바와 창틀을 포함한 창의 높이
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Event 좌표</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// 화면 기준
+									1. screenX, screenY
+									사용자 모니터 화면을 기준으로 한 좌표를 표시합니다.
+									사용자 모니터의 왼쪽 상단 모서리가 (0, 0)이 됩니다.
+									 
+									// 문서 기준
+									2. pageX, pageY
+									전체 문서를 기준으로 한 좌표를 표시합니다.
+									스크롤시 좌표값은 변경됩니다.
+									 
+									// 웹뷰 기준
+									3. clientX, clientY
+									브라우저에서 사용자에게 웹페이지가 보여지는 영역을 기준으로 좌표를 표시합니다.
+									스크롤시 좌표값은 동일합니다.
+									 
+									// Dom 기준
+									4. offsetX, offsetY
+									이벤트가 걸려있는 DOM node를 기준으로 좌표를 표시합니다.
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>
