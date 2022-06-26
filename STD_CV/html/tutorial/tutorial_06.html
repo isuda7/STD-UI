@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+<script type="application/javascript">
+	function draw11(){
+		var ctx = document.getElementById('canvas11').getContext('2d');
+	}
+	function draw12(){
+		var ctx = document.getElementById('canvas12').getContext('2d');
+	}
+	function draw13(){
+		var ctx = document.getElementById('canvas12').getContext('2d');
+	}
+	function draw21(){
+		var ctx = document.getElementById('canvas21').getContext('2d');
+	}
+	function draw31(){
+		var ctx = document.getElementById('canvas31').getContext('2d');
+	}
+	function draw41(){
+		var ctx = document.getElementById('canvas41').getContext('2d');
+	}
+	function draw51(){
+		var ctx = document.getElementById('canvas51').getContext('2d');
+	}
+	function draw61(){
+		var ctx = document.getElementById('canvas61').getContext('2d');
+	}
+	window.onload = function(){
+		draw11();
+		draw12();
+		draw13();
+		draw21();
+		draw31();
+		draw41();
+		draw51();
+		draw61();
+	}
+</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">변형</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">상태(state)의 저장과 복원</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">save와 restore canvas 상태(state) 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas11" width="150" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas11" width="150" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">이동(translating)</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">translate 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas21" width="150" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas21" width="150" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">회전(rotating)</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">rotate 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas31" width="150" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas31" width="150" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">확대·축소(scaling)</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">scale 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas41" width="150" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas41" width="150" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">변형(transforms)</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">transform과 setTransform 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas51" width="720" height="640"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas51" width="150" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

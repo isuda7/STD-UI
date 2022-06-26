@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+<script type="application/javascript">
+	function draw11(){
+		var ctx = document.getElementById('canvas11').getContext('2d');
+		ctx.font = '48px serif';
+		ctx.fillText('Hello world', 10, 50);
+	}
+	function draw12(){
+		var ctx = document.getElementById('canvas12').getContext('2d');
+		ctx.font = '48px serif';
+		ctx.strokeText('Hello world', 10, 50);
+	}
+	function draw21(){
+		var ctx = document.getElementById('canvas21').getContext('2d');
+		ctx.font = '48px serif';
+		ctx.textBaseline = 'hanging';
+		ctx.strokeText('Hello wold', 0, 100);
+	}
+	function draw31(){
+		var ctx = document.getElementById('canvas31').getContext('2d');
+		var text = ctx.measureText('foo'); // TextMetrics object
+		text.width; // 16
+	}
+	window.onload = function(){
+		draw11();
+		draw12();
+		draw21();
+		draw31();
+	}
+</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">텍스트 그리기</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">텍스트 그리기</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">fillText 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas11" width="300" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas11" width="300" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									var ctx = document.getElementById('canvas11').getContext('2d');
+									ctx.font = '48px serif';
+									ctx.fillText('Hello world', 10, 50);
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">strokeText 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas12" width="300" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas12" width="300" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									var ctx = document.getElementById('canvas12').getContext('2d');
+									ctx.font = '48px serif';
+									ctx.strokeText('Hello world', 10, 50);
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">텍스트 스타일 적용하기</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">textBaseline 예제</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas21" width="300" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas21" width="300" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									var ctx = document.getElementById('canvas21').getContext('2d');
+									ctx.font = '48px serif';
+									ctx.textBaseline = 'hanging';
+									ctx.strokeText('Hello wold', 0, 100);
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">어드밴스드 텍스트 측정</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<canvas id="canvas31" width="300" height="150"></canvas>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<!-- HTML -->
+									&lt;canvas id="canvas31" width="300" height="150"&gt;&lt;/canvas&gt;
+								</pre>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									var ctx = document.getElementById('canvas31').getContext('2d');
+									var text = ctx.measureText('foo'); // TextMetrics object
+									text.width; // 16
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>
