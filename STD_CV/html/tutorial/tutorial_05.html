@@ -165,7 +165,19 @@
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
-								</pre>
+                                    var ctx = document.getElementById('canvas21').getContext('2d');
+                                    var img = new Image();
+                                    img.onload = function(){
+                                        ctx.drawImage(img, 0, 0);
+                                        ctx.beginPath();
+                                        ctx.moveTo(30, 96);
+                                        ctx.lineTo(70, 66);
+                                        ctx.lineTo(103, 76);
+                                        ctx.lineTo(170, 15);
+                                        ctx.stroke();
+                                    };
+                                    img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+                                </pre>
 							</div>
 						</div>
 					</div>
@@ -193,6 +205,16 @@
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+                                    var ctx = document.getElementById('canvas31').getContext('2d');
+                                    var img = new Image();
+                                    img.onload = function() {
+                                        for (var i = 0; i < 4; i++) {
+                                            for (var j = 0; j < 3; j++) {
+                                                ctx.drawImage(img, j * 50, i * 38, 50, 38);
+                                            }
+                                        }
+                                    }
+                                    img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 								</pre>
 							</div>
 						</div>
@@ -221,6 +243,21 @@
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+                                    var ctx = document.getElementById('canvas41').getContext('2d');
+                                    var imgSlice = new Image();
+                                    var imgFrame = new Image();
+                                    imgSlice.src = "https://mdn.mozillademos.org/files/5397/rhino.jpg";
+                                    imgFrame.src = "https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png";
+
+                                    // Draw slice
+                                    imgSlice.onload = function(){
+                                        ctx.drawImage(imgSlice, 33, 71, 104, 124, 21, 20, 87, 104);
+                                    }
+
+                                    // Draw Frame
+                                    imgFrame.onload = function(){
+                                        ctx.drawImage(imgFrame, 0, 0);
+                                    }
 								</pre>
 							</div>
 						</div>
@@ -260,11 +297,50 @@
 							<div class="g-example-footer is-active">
 								<pre class="brush:html">
 									<!-- HTML -->
-									&lt;canvas id="canvas51" width="200" height="150"&gt;&lt;/canvas&gt;
+									&lt;div id="gallery">
+										&lt;table>
+											&lt;tr>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg">&lt;/td>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg">&lt;/td>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg">&lt;/td>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg">&lt;/td>
+											&lt;/tr>
+											&lt;tr>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg">&lt;/td>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg">&lt;/td>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg">&lt;/td>
+											&lt;td>&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg">&lt;/td>
+											&lt;/tr>
+										&lt;/table>
+										&lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+									&lt;/div>
 								</pre>
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+                                    var gallery = document.getElementById('gallery');
+                                    var images = gallery.querySelectorAll('img');
+                                    for (var i = 0; i < images.length; i++) {
+                                        if (images[i].getAttribute('id') != 'frame') {
+
+                                            // Create canvas element
+                                            canvas = document.createElement('canvas');
+                                            canvas.setAttribute('width', 132);
+                                            canvas.setAttribute('height', 150);
+                                            canvas.setAttribute('style', 'border:0');
+
+                                            // Insert before the image
+                                            images[i].parentNode.insertBefore(canvas, images[i]);
+
+                                            ctx = canvas.getContext('2d');
+
+                                            // Draw image to canvas
+                                            ctx.drawImage(images[i], 15, 20);
+
+                                            // Add frame
+                                            ctx.drawImage(document.getElementById('frame'), 0, 0);
+                                        }
+                                    }
 								</pre>
 							</div>
 						</div>

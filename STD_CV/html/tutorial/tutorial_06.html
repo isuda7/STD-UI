@@ -8,18 +8,42 @@
 <script type="application/javascript">
 	function draw11(){
 		var ctx = document.getElementById('canvas11').getContext('2d');
-	}
-	function draw12(){
-		var ctx = document.getElementById('canvas12').getContext('2d');
-	}
-	function draw13(){
-		var ctx = document.getElementById('canvas12').getContext('2d');
+
+        ctx.fillRect(0, 0, 150, 150);
+        ctx.save();
+
+        ctx.fillStyle = '#09f';
+        ctx.fillRect(15, 15, 120, 120);
+
+        ctx.save();
+        ctx.fillStyle = '#fff';
+        ctx.globalAlpha = 0.5;
+        ctx.fillRect(30, 30, 90, 90);
+
+        ctx.restore();
+        ctx.fillRect(45, 45, 60, 60);
+
+        ctx.restore();
+        ctx.fillRect(60, 60, 30, 30);
 	}
 	function draw21(){
 		var ctx = document.getElementById('canvas21').getContext('2d');
+
+        for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 3; j++) {
+                ctx.save();
+                ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+                ctx.translate(10 + j * 50, 10 + i * 50);
+                ctx.fillRect(0, 0, 25, 25);
+                ctx.restore();
+            }
+        }
 	}
 	function draw31(){
 		var ctx = document.getElementById('canvas31').getContext('2d');
+
+        ctx.save();
+        ctx.fillStyle = '#0095dd';
 	}
 	function draw41(){
 		var ctx = document.getElementById('canvas41').getContext('2d');
@@ -27,18 +51,12 @@
 	function draw51(){
 		var ctx = document.getElementById('canvas51').getContext('2d');
 	}
-	function draw61(){
-		var ctx = document.getElementById('canvas61').getContext('2d');
-	}
 	window.onload = function(){
 		draw11();
-		draw12();
-		draw13();
 		draw21();
 		draw31();
 		draw41();
 		draw51();
-		draw61();
 	}
 </script>
 </head>
