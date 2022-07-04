@@ -78,7 +78,7 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_04.html">텍스트 그리기</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_05.html">이미지 사용하기</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_06.html">변형</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_07.html">합성 및 클리핑</a></li>');
+			// document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_07.html">합성 및 클리핑</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_08.html">기본 애니메이션</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_09.html">고급 애니메이션</a></li>');
 			// document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_10.html">픽셀 조작</a></li>');
