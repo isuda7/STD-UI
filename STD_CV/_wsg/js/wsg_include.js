@@ -83,7 +83,7 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_09.html">고급 애니메이션</a></li>');
 			// document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_10.html">픽셀 조작</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_11.html">Canvas 최적화하기</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_12.html">Finale</a></li>');
+			// document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_12.html">Finale</a></li>');
 			document.write('						</ul>');
 			document.write('					</li>');
 			document.write('				</ul>');

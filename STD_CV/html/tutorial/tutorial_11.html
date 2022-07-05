@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">캔버스 최적화</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">성능 팁</h2>
+					</div>
+					<div class="g-section-body">
+						<ul class="g-desc">
+							<li>캔버스에 표시되지 않는 비슷한 원시 혹은 반복 객체를 미리 그려라</li>
+							<li>부동 소수점 좌표를 피하고 대신 정수를 사용하라.</li>
+							<li>drawImage에서 이미지 크기를 조정하지 마라.</li>
+							<li>복잡한 장면에 여러 개의 레이어 캔버스를 사용하라.</li>
+							<li>CSS 변환(transform)을 사용하여 캔버스 크기 조정하라.</li>
+							<li>투명도를 사용하지 마라.</li>
+						</ul>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">추가 팁들</h2>
+					</div>
+					<div class="g-section-body">
+						<ul class="g-desc">
+							<li>배치 캔버스를 함께 호출합니다. 예를 들어 여러 개의 개별 선 대신 다각형 선을 그립니다.</li>
+							<li>불필요한 캔버스 상태 변경을 피하십시오.</li>
+							<li>화면의 차이만 렌더링하고 완전히 새로운 상태로 렌더링하지 마십시오.</li>
+							<li>가능하면 shadowBlur (en-US) 속성을 사용하지 마십시오.</li>
+							<li>가능하면 텍스트 렌더링을 피하십시오.</li>
+							<li>캔버스를 지우는 여러 가지 방법을 시도해보십시오 (clearRect() (en-US) vs. fillRect() (en-US) vs. 캔버스 크기 조정).</li>
+							<li>애니메이션에서는 window.setInterval() (en-US) 대신 window.requestAnimationFrame()을 사용하십시오.</li>
+							<li>무거운 물리 연산 라이브러리를 주의하십시오.</li>
+						</ul>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>
