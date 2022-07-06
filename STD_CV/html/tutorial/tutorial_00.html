@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">API</h1>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">HTML5 Canvas</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Canvas Elements
+									var canvas = document.getElementById('myCanvas');
+									var context = canvas.getContext('2d');
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Draw</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Draw
+									context.beginPath();
+									context.moveTo(100, 150);
+									context.lineTo(450, 50);
+									context.stroke();
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Line</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									context.lineTo(x, y);
+									context.lineWidth = 15;
+									context.strokeStyle = '#ff0000';
+									context.lineCap = 'butt | round | square';
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Curves</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Arc</h3>
+						<p><img src="https://www.html5canvastutorials.com/demos/tutorials/html5-canvas-arcs/html5-canvas-arcs-diagram.png" title="HTML5 Canvas Arc Diagram" width="570" height="250"></p>
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+								</pre>
+							</div>
+						</div>
+						<h3 class="g-h3">Quadratic Curve</h3>
+						<p><img src="https://www.html5canvastutorials.com/demos/tutorials/html5-canvas-quadratic-curves/html5-canvas-quadratic-curves-diagram.png" title="HTML5 Canvas Quadratic Curve Diagram" width="570" height="250"></p>
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									quadraticCurveTo(cp1x, cp1y, x, y)
+								</pre>
+							</div>
+						</div>
+						<h3 class="g-h3">Bezier Curve</h3>
+						<p><img src="https://www.html5canvastutorials.com/demos/tutorials/html5-canvas-bezier-curves/html5-canvas-bezier-curves-diagram.png" alt="" title="HTML5 Canvas Bezier Curve Diagram" width="570" height="250"></p>
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									ctx.bezierCurveTo(cp1.x, cp1.y, cp2.x, cp2.y, end.x, end.y);
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Paths</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Path
+									context.beginPath();
+									context.closePath();
+
+									// Line Join
+									context.lineJoin = 'miter | round | bevel';
+
+									// Rounded Corners
+									context.arcTo(x1, y1, x2, y2, radius)
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Shapes</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Rectangle
+									context.rect(x, y, width, height)
+
+									// Circle
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Fill Styles</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Color Fill
+									context.fillStyle = '#8ED6FF';
+
+									// Linear Gradient
+									var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+									grd.addColorStop(0, '#8ED6FF');
+									grd.addColorStop(1, '#004CB3');
+									context.fillStyle = grd;
+									context.fill();
+
+									// Radial Gradient
+									var grd = context.createRadialGradient(238, 50, 10, 238, 50, 300);
+									grd.addColorStop(0, '#8ED6FF');
+									grd.addColorStop(1, '#004CB3');
+									context.fillStyle = grd;
+									context.fill();
+
+									// Pattern
+									var imageObj = new Image();
+									imageObj.onload = function() {
+									  var pattern = context.createPattern(imageObj, 'repeat');
+									  context.rect(0, 0, canvas.width, canvas.height);
+									  context.fillStyle = pattern;
+									  context.fill();
+									};
+									imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/wood-pattern.png';
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Images</h2>
+					</div>
+					<div class="g-section-body">
+						<p><img src="https://www.html5canvastutorials.com/demos/tutorials/html5-canvas-image-crop/html5-canvas-image-crop-diagram.png" alt="" title="HTML5 Canvas Crop Image Diagram" width="356" height="356" class="alignnone size-full wp-image-3704"></p>
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+									// Draw Image
+									var imageObj = new Image();
+									imageObj.onload = function() {
+										// Image Size, Image Crop
+										context.drawImage(imageObj, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
+									};
+									imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+
+									// Image Loader
+									var sources = {
+										darthVader: 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg',
+										yoda: 'http://www.html5canvastutorials.com/demos/assets/yoda.jpg'
+									};
+									loadImages(sources, function(images) {
+										context.drawImage(images.darthVader, 100, 30, 200, 137);
+										context.drawImage(images.yoda, 350, 55, 93, 104);
+									});
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Text</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Transformations</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Composites</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Image Data &amp; URLs</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Animation</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-footer is-active">
+								<pre class="brush:js">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

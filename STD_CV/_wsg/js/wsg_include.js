@@ -72,6 +72,7 @@ var include = {
 			document.write('					<li class="g-node1">');
 			document.write('						<a href="javascript:;">Tutorial</a>');
 			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_00.html">API</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_01.html">기본사용</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_02.html">도형그리기</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_03.html">스타일 및 색상 적용하기</a></li>');
@@ -83,7 +84,6 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_09.html">고급 애니메이션</a></li>');
 			// document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_10.html">픽셀 조작</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_11.html">Canvas 최적화하기</a></li>');
-			// document.write('							<li class="g-node2"><a href="'+baseURL+'tutorial_12.html">Finale</a></li>');
 			document.write('						</ul>');
 			document.write('					</li>');
 			document.write('				</ul>');
