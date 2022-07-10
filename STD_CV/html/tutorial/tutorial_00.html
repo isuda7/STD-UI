@@ -245,6 +245,15 @@
 						<div class="g-example-wrap">
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+									var metrics = context.measureText(text);
+									var width = metrics.width
+									context.font = 'italic 40pt Calibri';
+									context.fillStyle = 'blue';
+									context.textAlign = 'center';
+									context.textBaseline = 'middle';
+									context.strokeStyle = 'blue';
+									context.fillText('Hello World!', 150, 100);
+									wrapText(context, text, x, y, maxWidth, lineHeight);
 								</pre>
 							</div>
 						</div>
@@ -261,6 +270,11 @@
 						<div class="g-example-wrap">
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+									context.translate(x, y);
+									context.scale(x, y);
+									context.rotate(angle);
+									context.transform(a, b, c, d, e, f);
+									context.resetTransform();
 								</pre>
 							</div>
 						</div>
@@ -277,6 +291,32 @@
 						<div class="g-example-wrap">
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+									// Shadows
+									context.shadowColor = '#999';
+									context.shadowBlur = 20;
+									context.shadowOffsetX = 15;
+									context.shadowOffsetY = 15;
+
+									// Global Alpha
+									context.globalAlpha = 0.5;
+
+									// Clipping Region
+									context.clip();
+
+									// Operations
+									// var thisOperation = 'source-atop'
+									// var thisOperation = 'source-in'
+									// var thisOperation = 'source-out'
+									// var thisOperation = 'source-over'
+									// var thisOperation = 'destination-atop'
+									// var thisOperation = 'destination-in'
+									// var thisOperation = 'destination-out'
+									// var thisOperation = 'destination-over'
+									// var thisOperation = 'lighter'
+									// var thisOperation = 'darker'
+									// var thisOperation = 'xor'
+									// var thisOperation = 'copy'
+									context.globalCompositeOperation = thisOperation;
 								</pre>
 							</div>
 						</div>
@@ -293,6 +333,32 @@
 						<div class="g-example-wrap">
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+									// Draw Image
+									function drawImage(imageObj){ }
+									imageObj.onload = function() { drawImage(this);};
+									imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+
+									// Image Data
+									var imageData = context.getImageData(imageX, imageY, imageWidth, imageHeight);
+									var data = imageData.data;
+
+									// Get Data URL
+									var dataURL = canvas.toDataURL();
+
+									// Load Data URL
+									function loadCanvas(dataURL){
+										imageObj.src = dataURL;
+									}
+									var request = new XMLHttpRequest();
+									request.open('GET', 'http://www.html5canvastutorials.com/demos/assets/dataURL.txt', true);
+									request.onreadystatechange = function() {
+										if(request.readyState == 4) {
+											if(request.status == 200) {
+												loadCanvas(request.responseText);
+											}
+										}
+									};
+									request.send(null);
 								</pre>
 							</div>
 						</div>
@@ -309,6 +375,26 @@
 						<div class="g-example-wrap">
 							<div class="g-example-footer is-active">
 								<pre class="brush:js">
+									// Clear Canvas
+									document.getElementById('clear').addEventListener('click', function(){
+										context.clearRect(0, 0, canvas.width, canvas.height);
+									})
+
+									// Linear Motion
+									function animate(myRectangle, canvas, context, startTime) {
+										context.clearRect(0, 0, canvas.width, canvas.height);
+										drawRectangle(myRectangle, context);
+										requestAnimFrame(function(){
+											animate(myRectangle, canvas, context, startTime);
+										})
+									}
+									setTimeout(function() {
+										var startTime - (new Date()).getTime();
+										animate(myRectangle, canvas, context, startTime);
+									})
+
+									// Acceleration
+									distance = velocity * time + 1/2 * acceleration * time ^2
 								</pre>
 							</div>
 						</div>
