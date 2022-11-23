@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './assets/css/base.css';
 import './assets/css/layout.css';
 import './assets/css/utilities.css';
+import './assets/css/components.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

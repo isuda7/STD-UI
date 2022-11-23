@@ -6,7 +6,11 @@ import UserLayoutSub from './Layouts/UserLayoutSub';
 import UserLayoutMain from './Layouts/UserLayoutMain';
 
 // Guide
-import PageList from "./Guide/PageList";
+import GuidePageList from "./Guide/PageList";
+
+// Samples
+import SamplesPrototype from "./Guide/Samples/Prototype";
+import SamplesButtons from "./Guide/Samples/ButtonPage";
 
 // Pages
 import Index from "./Pages/Main";
@@ -18,7 +22,9 @@ const Router = () => {
 		<>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/Guide/PageList" element={<PageList />} />
+					<Route path="/guide/" element={<GuidePageList />} />
+					<Route path="/guide/samples/prototype" element={<SamplesPrototype />} />
+					<Route path="/guide/samples/buttons" element={<SamplesButtons />} />
 					<Route path="/" element={<UserLayoutMain />}>
 						<Route index element={<Index />} />
 					</Route>
