@@ -1,0 +1,32 @@
+/*********************************************************************
+	Buttons
+*********************************************************************/
+/* Base */
+button, .button {display:inline-flex; align-items: center; justify-content: center; overflow:hidden; padding:0px; border:0px; background-color:transparent; cursor:pointer; vertical-align: middle;}
+.button:disabled {cursor: default;}
+.button:disabled {opacity: 0.5;}
+
+/* Module A */
+.button.module-a {min-width: 180px; height:48px; padding: 10px 20px; border-radius: 4px; background-color: #fff; color: #222; font-size: 16px; box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.1), 1px 1px 5px 0 rgba(0,0,0,0.05);}
+.button.module-a + .button.module-a {margin-left: 10px;}
+.button.module-a.primary {background-color: #ff664d; border-color: transparent; color: #fff;}
+
+/* Module B */
+.button.module-b {min-width: 180px; height:48px; padding: 10px 20px; border-radius: 4px; background-color: #fff; border:1px solid #222; color: #222; font-size: 16px;}
+.button.module-b + .button.module-b {margin-left: 10px;}
+.button.module-b.primary {background-color: #fff; border:1px solid #ff664d; color: #ff664d;}
+
+/* Module C */
+.button.module-c {padding: 6px 12px; border-radius: 4px; background-color: #fff; border:1px solid #222; color: #222;}
+.button.module-c + .button.module-c {margin-left: 8px;}
+.button.module-c.primary {background-color: #ff664d; border-color: transparent; color: #fff;}
+
+/* Module D */
+.button.module-d {padding: 6px 12px; border-radius: 20px; background-color: #fff; border:1px solid #222; color: #222;}
+.button.module-d + .button.module-d {margin-left: 8px;}
+.button.module-d.primary {background-color: #ff664d; border-color: transparent; color: #fff;}
+
+/* Module E */
+.button.module-e {color: #666;}
+.button.module-e + .button.module-e {margin-left: 8px;}
+.button.module-e.primary {color: #ff664d;}

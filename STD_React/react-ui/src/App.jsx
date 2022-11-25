@@ -9,8 +9,13 @@ import UserLayoutMain from './Layouts/UserLayoutMain';
 import GuidePageList from "./Guide/PageList";
 
 // Samples
-import SamplesPrototype from "./Guide/Samples/Prototype";
-import SamplesButtons from "./Guide/Samples/ButtonPage";
+import SamplePrototype from "./Guide/Samples/Prototype";
+import SampleButtons from "./Guide/Samples/ButtonsPage";
+import SampleIcons from "./Guide/Samples/IconsPage";
+import SampleLabels from "./Guide/Samples/LabelsPage";
+import SampleTabs from "./Guide/Samples/TabsPage";
+import SampleAccordions from "./Guide/Samples/AccordionsPage";
+import SampleCards from "./Guide/Samples/CardsPage";
 
 // Pages
 import Index from "./Pages/Main";
@@ -23,8 +28,13 @@ const Router = () => {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/guide/" element={<GuidePageList />} />
-					<Route path="/guide/samples/prototype" element={<SamplesPrototype />} />
-					<Route path="/guide/samples/buttons" element={<SamplesButtons />} />
+					<Route path="/guide/samples/prototype" element={<SamplePrototype />} />
+					<Route path="/guide/samples/buttons" element={<SampleButtons />} />
+					<Route path="/guide/samples/icons" element={<SampleIcons />} />
+					<Route path="/guide/samples/labels" element={<SampleLabels />} />
+					<Route path="/guide/samples/tabs" element={<SampleTabs />} />
+					<Route path="/guide/samples/accordions" element={<SampleAccordions />} />
+					<Route path="/guide/samples/cards" element={<SampleCards />} />
 					<Route path="/" element={<UserLayoutMain />}>
 						<Route index element={<Index />} />
 					</Route>

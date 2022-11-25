@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
 .g-wrap {padding:50px 60px;}
-.g-head {margin-bottom: 60px; padding-bottom: 22px; border-bottom: 1px solid #75777B;}
-.g-head .g-title {font-weight: 700;font-size: 32px;line-height: 36px;}
+.g-header {margin-bottom: 60px; padding-bottom: 22px; border-bottom: 1px solid #75777B;}
+.g-title {font-weight: 700;font-size: 32px;line-height: 36px;}
+.g-para {margin-top:10px;  line-height: 1.5;}
+.g-para:first-child {margin-top:0;}

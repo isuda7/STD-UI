@@ -1,0 +1,16 @@
+/*********************************************************************
+	Icons
+*********************************************************************/
+/* Base */
+.icon {display:inline-flex; flex:none; align-items: center; justify-content: center; position: relative; vertical-align: middle;}
+.icon::before, .icon::after {display:block; width:0; height: 0; background: no-repeat 0 0 / 100% auto;}
+
+/* Types */
+.label.icon.left::before {margin-right: 4px;}
+.label.icon.right::after {margin-left: 4px;}
+.button.icon.left::before {margin-right: 4px;}
+.button.icon.right::after {margin-left: 4px;}
+
+/* Size 24 */
+.icon.twitter.right::after,
+.icon.twitter:not(.right)::before {content:''; width: 24px; height: 24px; background-image: url('../img/icon_24_px_twitter.png');}

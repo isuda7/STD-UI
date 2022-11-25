@@ -1,0 +1,27 @@
+/*********************************************************************
+	Tabs
+*********************************************************************/
+/* Base */
+.tab-list {display:flex; align-items: center;}
+.tab {position: relative; display:inline-flex; justify-content: center; align-items: center; z-index: 0;}
+.tab-panel {display:none;}
+.tab-panel.is-visibled {display:block;}
+
+/* Module A */
+.tab-nav.module-a .tab-list {height: 48px; border-bottom: 1px solid #ddd;}
+.tab-nav.module-a .tab {height: 48px; padding: 10px 20px; border-bottom: 2px solid transparent; color: #666;}
+.tab-nav.module-a .tab.is-selected {border-bottom-color: #222; color: #222;}
+.tab-nav.module-a + .tab-panels {margin-top:30px;}
+
+/* Module B */
+.tab-nav.module-b .tab-list {height: 48px; border-bottom: 1px solid #222;}
+.tab-nav.module-b .tab {height: 48px; background-color: #fafafa; padding: 10px 20px; border: 1px solid #ddd; border-bottom-color: #222; color: #666; margin-right: -1px;}
+.tab-nav.module-b .tab.is-selected {z-index:1; background-color: #fff; border-color:#222; border-bottom-color: #fff; color: #222;}
+.tab-nav.module-b + .tab-panels {margin-top:30px;}
+
+/* Module C */
+.tab-nav.module-c .tab-list {height: 48px;}
+.tab-nav.module-c .tab {height: 48px; padding: 10px 20px; border: 1px solid #ddd; color: #666;}
+.tab-nav.module-c .tab + .tab {margin-left: 8px;}
+.tab-nav.module-c .tab.is-selected {border-color: #222; background-color: #222; color: #fff;}
+.tab-nav.module-c + .tab-panels {margin-top:30px;}

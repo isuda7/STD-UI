@@ -1,0 +1,27 @@
+/*********************************************************************
+	Accordions
+*********************************************************************/
+/* Base */
+.acco-panel {display: none; line-height: 1.5;}
+.acco-item.is-selected .acco-panel {display: block;}
+
+/* Module A */
+.acco.module-a .acco-item {border-bottom: 1px solid #ddd;}
+.acco.module-a .acco-item:last-child {border-bottom: 0;}
+.acco.module-a .acco-title {padding:14px 20px;}
+.acco.module-a .acco-item.is-selected .acco-title {font-weight: 700;}
+.acco.module-a .acco-panel {padding:14px 20px; background-color: #fafafa;}
+
+/* Module B */
+.acco.module-b .acco-item { border: 1px solid #ddd; border-radius: 8px;}
+.acco.module-b .acco-item + .acco-item {margin-top:8px;}
+.acco.module-b .acco-title {padding:14px 20px;}
+.acco.module-b .acco-item.is-selected .acco-title {font-weight: 700;}
+.acco.module-b .acco-panel {margin:0 20px; padding:14px 0px; border-top: 1px solid #ddd;}
+
+/* Module C */
+.acco.module-c .acco-item { border: 1px solid #ddd; border-radius: 8px;}
+.acco.module-c .acco-item + .acco-item {margin-top:8px;}
+.acco.module-c .acco-title {padding:14px 20px;}
+.acco.module-c .acco-item.is-selected .acco-title {font-weight: 700;}
+.acco.module-c .acco-panel {padding:14px 20px; background-color: #fafafa;}

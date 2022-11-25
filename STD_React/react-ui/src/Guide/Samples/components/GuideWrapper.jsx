@@ -7,10 +7,10 @@ import '../../assets/css/components.css';
 const GuideWrapper = (props) => {
 	return (
 		<div className='g-wrap'>
-            <div className="g-head">
+            <div className="g-header">
                 <h2 className='g-title'>{props.title}</h2>
             </div>
-            <div className="g-body">
+            <div className="g-container">
                 {props.children}
             </div>
 		</div>
