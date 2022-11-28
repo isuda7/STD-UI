@@ -2,6 +2,12 @@
 
 .g-wrap {padding:50px 60px;}
 .g-header {margin-bottom: 60px; padding-bottom: 22px; border-bottom: 1px solid #75777B;}
-.g-title {font-weight: 700;font-size: 32px;line-height: 36px;}
+
+.g-sec + .g-sec {margin-top:60px;}
+.g-sec-head {margin-bottom: 28px;}
+.g-sec-sub + .g-sec-sub {margin-top:30px;}
+.g-sec-sub-head {margin-bottom: 12px;}
+h2.g-title {font-weight: 700;font-size: 18px;line-height: 28px;}
+h3.g-title {font-weight: 700;font-size: 14px;line-height: 22px;}
 .g-para {margin-top:10px;  line-height: 1.5;}
 .g-para:first-child {margin-top:0;}

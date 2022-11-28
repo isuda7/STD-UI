@@ -17,16 +17,11 @@ button, .button {display:inline-flex; align-items: center; justify-content: cent
 .button.module-b.primary {background-color: #fff; border:1px solid #ff664d; color: #ff664d;}
 
 /* Module C */
-.button.module-c {padding: 6px 12px; border-radius: 4px; background-color: #fff; border:1px solid #222; color: #222;}
+.button.module-c {padding: 6px 12px; border-radius: 20px; background-color: #fff; border:1px solid #222; color: #222;}
 .button.module-c + .button.module-c {margin-left: 8px;}
 .button.module-c.primary {background-color: #ff664d; border-color: transparent; color: #fff;}
 
 /* Module D */
-.button.module-d {padding: 6px 12px; border-radius: 20px; background-color: #fff; border:1px solid #222; color: #222;}
+.button.module-d {color: #666;}
 .button.module-d + .button.module-d {margin-left: 8px;}
-.button.module-d.primary {background-color: #ff664d; border-color: transparent; color: #fff;}
-
-/* Module E */
-.button.module-e {color: #666;}
-.button.module-e + .button.module-e {margin-left: 8px;}
-.button.module-e.primary {color: #ff664d;}
+.button.module-d.primary {color: #ff664d;}

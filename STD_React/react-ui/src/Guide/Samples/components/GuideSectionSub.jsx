@@ -4,7 +4,7 @@ const GuideSectionSub = (props) => {
 	return (
 		<div className='g-sec-sub'>
             <div className="g-sec-sub-head">
-                <h2 className='g-title'>{props.title}</h2>
+                <h3 className='g-title'>{props.title}</h3>
             </div>
             <div className="g-sec-sub-body">
                 {props.children}

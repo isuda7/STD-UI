@@ -10,6 +10,7 @@ import GuidePageList from "./Guide/PageList";
 
 // Samples
 import SamplePrototype from "./Guide/Samples/Prototype";
+import SampleElements from "./Guide/Samples/ElementsPage";
 import SampleButtons from "./Guide/Samples/ButtonsPage";
 import SampleIcons from "./Guide/Samples/IconsPage";
 import SampleLabels from "./Guide/Samples/LabelsPage";
@@ -29,6 +30,7 @@ const Router = () => {
 				<Routes>
 					<Route path="/guide/" element={<GuidePageList />} />
 					<Route path="/guide/samples/prototype" element={<SamplePrototype />} />
+					<Route path="/guide/samples/elements" element={<SampleElements />} />
 					<Route path="/guide/samples/buttons" element={<SampleButtons />} />
 					<Route path="/guide/samples/icons" element={<SampleIcons />} />
 					<Route path="/guide/samples/labels" element={<SampleLabels />} />
