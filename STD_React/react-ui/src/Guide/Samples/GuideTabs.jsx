@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GuideSection from './components/GuideSection';
 import GuideWrapper from './components/GuideWrapper';
 
-const TabsPage = () => {
+const GuideTabs = () => {
     const [tab1, setTab1] = useState("tab11");
     const [tab2, setTab2] = useState("tab22");
     const [tab3, setTab3] = useState("tab33");
@@ -90,4 +90,4 @@ const TabsPage = () => {
 		</GuideWrapper>
 	)
 }
-export default TabsPage;
+export default GuideTabs;

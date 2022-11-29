@@ -6,11 +6,14 @@
 .icon::before, .icon::after {display:block; width:0; height: 0; background: no-repeat 0 0 / 100% auto;}
 
 /* Types */
+.icon.right {flex-direction: row-reverse;}
 .label.icon.left::before {margin-right: 4px;}
-.label.icon.right::after {margin-left: 4px;}
+.label.icon.right::before {margin-left: 4px;}
 .button.icon.left::before {margin-right: 4px;}
-.button.icon.right::after {margin-left: 4px;}
+.button.icon.right::before {margin-left: 4px;}
 
 /* Size 24 */
-.icon.twitter.right::after,
-.icon.twitter:not(.right)::before {content:''; width: 24px; height: 24px; background-image: url('../img/icon_24_px_twitter.png');}
+.icon.twitter::before {content:''; width: 24px; height: 24px; background-image: url('../img/icon_24_px_twitter.png');}
+
+/* Size 20 */
+.icon.feel::before {content:''; width: 20px; height: 20px; background-image: url('../img/icons_20_ic_information_grey_6.png');}

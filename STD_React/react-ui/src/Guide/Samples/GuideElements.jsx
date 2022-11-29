@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GuideSection from './components/GuideSection';
-import GuideSectionSub from './components/GuideSectionSub';
 import GuideWrapper from './components/GuideWrapper';
 
-const ElementsPage = () => {
+const GuideElements = () => {
 	return (
-		<GuideWrapper title="Elements" explain="">
+		<GuideWrapper title="Elements">
 			<GuideSection title="Buttons">
                 <button type='button' className='button module-a'>Basic</button>
-                <button type='button' className='button module-a' disabled>Disabled</button>
+                <button type='button' className='button module-a dark'>Dark</button>
                 <button type='button' className='button module-a primary'>Primary</button>
                 <button type='button' className='button module-a primary' disabled>Disabled</button>
                 <br />
@@ -73,33 +72,28 @@ const ElementsPage = () => {
                 <br />
                 <hr className='divider module-c' />
 			</GuideSection>
-			<GuideSection title="Thumbnails">
+			<GuideSection title="Image Cover" explain="기본값은 가로 세로 100% 이며, Thumb, Avata, Banner 등 컨텐츠에 의해서 사이즈가 적용된다.">
                 <div style={{"width":"160px", "height":"100px"}}>
                     <div className='img-cover'>
                         <img src="http://placeimg.com/640/480/nature" alt="Thumbnail" />
                     </div>
                 </div>
-                <p className="g-para">기본 사이즈는 width, height 100% 이며, 컨텐츠에 의해서 사이즈가 적용된다. </p>
-			</GuideSection>
-			<GuideSection title="Avatas">
+                <br />
                 <div style={{"width":"60px", "height":"60px"}}>
                     <div className='img-cover'>
                         <img src="http://placeimg.com/100/100/animals" alt="Avata" />
                     </div>
                 </div>
-                <p className="g-para">기본 사이즈는 width, height 100% 이며, 컨텐츠에 의해서 사이즈가 적용된다. </p>
-			</GuideSection>
-			<GuideSection title="Banners">
+                <br />
                 <div style={{"width":"640px", "height":"120px"}}>
                     <Link to="" className="banner">
                         <div className='img-cover'>
-                            <img src="http://placeimg.com/640/120/nature" alt="Banner" />
+                            <img src="http://placeimg.com/720/150/nature" alt="Banner" />
                         </div>
                     </Link>
                 </div>
-                <p className="g-para">기본 사이즈는 width, height 100% 이며, 컨텐츠에 의해서 사이즈가 적용된다. </p>
 			</GuideSection>
 		</GuideWrapper>
 	)
 }
-export default ElementsPage;
+export default GuideElements;

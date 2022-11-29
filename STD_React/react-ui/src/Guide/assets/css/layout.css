@@ -9,5 +9,8 @@
 .g-sec-sub-head {margin-bottom: 12px;}
 h2.g-title {font-weight: 700;font-size: 18px;line-height: 28px;}
 h3.g-title {font-weight: 700;font-size: 14px;line-height: 22px;}
+.g-explain {margin-top:10px; line-height: 1.5; color:#999;}
 .g-para {margin-top:10px;  line-height: 1.5;}
+.g-para strong {font-weight: 700;}
+.g-para strong.g-tit {margin-right: 20px;}
 .g-para:first-child {margin-top:0;}

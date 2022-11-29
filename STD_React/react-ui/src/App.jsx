@@ -9,14 +9,11 @@ import UserLayoutMain from './Layouts/UserLayoutMain';
 import GuidePageList from "./Guide/PageList";
 
 // Samples
-import SamplePrototype from "./Guide/Samples/Prototype";
-import SampleElements from "./Guide/Samples/ElementsPage";
-import SampleButtons from "./Guide/Samples/ButtonsPage";
-import SampleIcons from "./Guide/Samples/IconsPage";
-import SampleLabels from "./Guide/Samples/LabelsPage";
-import SampleTabs from "./Guide/Samples/TabsPage";
-import SampleAccordions from "./Guide/Samples/AccordionsPage";
-import SampleCards from "./Guide/Samples/CardsPage";
+import GuidePrototype from "./Guide/Samples/GuidePrototype";
+import GuideAccordions from "./Guide/Samples/GuideAccordions";
+import GuideElements from "./Guide/Samples/GuideElements";
+import GuideTabs from "./Guide/Samples/GuideTabs";
+import GuideTooltips from "./Guide/Samples/GuideTooltips";
 
 // Pages
 import Index from "./Pages/Main";
@@ -29,14 +26,11 @@ const Router = () => {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/guide/" element={<GuidePageList />} />
-					<Route path="/guide/samples/prototype" element={<SamplePrototype />} />
-					<Route path="/guide/samples/elements" element={<SampleElements />} />
-					<Route path="/guide/samples/buttons" element={<SampleButtons />} />
-					<Route path="/guide/samples/icons" element={<SampleIcons />} />
-					<Route path="/guide/samples/labels" element={<SampleLabels />} />
-					<Route path="/guide/samples/tabs" element={<SampleTabs />} />
-					<Route path="/guide/samples/accordions" element={<SampleAccordions />} />
-					<Route path="/guide/samples/cards" element={<SampleCards />} />
+					<Route path="/guide/samples/prototype" element={<GuidePrototype />} />
+					<Route path="/guide/samples/accordions" element={<GuideAccordions />} />
+					<Route path="/guide/samples/elements" element={<GuideElements />} />
+					<Route path="/guide/samples/tabs" element={<GuideTabs />} />
+					<Route path="/guide/samples/utilities" element={<GuideTooltips />} />
 					<Route path="/" element={<UserLayoutMain />}>
 						<Route index element={<Index />} />
 					</Route>

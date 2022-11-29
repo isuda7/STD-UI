@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GuideSection from './components/GuideSection';
 import GuideWrapper from './components/GuideWrapper';
 
-const AccordionsPage = () => {
+const GuideAccordions = () => {
     const [acco1, setAcco1] = useState("acco11");
     const [acco2, setAcco2] = useState("acco22");
     const [acco3, setAcco3] = useState("acco33");
@@ -96,4 +96,4 @@ const AccordionsPage = () => {
 		</GuideWrapper>
 	)
 }
-export default AccordionsPage;
+export default GuideAccordions;

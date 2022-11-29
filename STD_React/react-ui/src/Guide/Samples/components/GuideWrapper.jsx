@@ -9,6 +9,7 @@ const GuideWrapper = (props) => {
 		<div className='g-wrap'>
             <div className="g-header">
                 <h2 className='g-title'>{props.title}</h2>
+                {props.explain && <p className='g-explain'>{props.explain}</p>}
             </div>
             <div className="g-container">
                 {props.children}

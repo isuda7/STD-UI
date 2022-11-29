@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>AA6F1F28-2927-5197-3F83-F30F52B6D4BE</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="20"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1210.000000, -982.000000)">
+            <g id="20dp" transform="translate(62.000000, 941.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-20-/-Black" transform="translate(34.000000, 41.000000)">
+                        <g id="Icons-/-20-/-ic_information_grey6" transform="translate(160.000000, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-20-/-ic_information_grey6-(Background/Mask)"></g>
+                            <path d="M10.4997559,8.5 L9.49975586,8.5 L9.49975586,14.5 L10.4997559,14.5 L10.4997559,8.5 Z M10.4997559,6.5 C10.4997559,6.2238574 10.275898,6 9.99975586,6 C9.72361374,6 9.49975586,6.2238574 9.49975586,6.5 C9.49975586,6.7761426 9.72361374,7 9.99975586,7 C10.275898,7 10.4997559,6.7761426 10.4997559,6.5 Z M10,19 C5.02943707,19 1,14.9705629 1,10 C1,5.02943707 5.02943707,1 10,1 C14.9705629,1 19,5.02943707 19,10 C19,14.9705629 14.9705629,19 10,19 Z M18,10 C18,5.58172178 14.4182777,2 10,2 C5.58172178,2 2,5.58172178 2,10 C2,14.4182777 5.58172178,18 10,18 C14.4182777,18 18,14.4182777 18,10 Z" id="Union" fill="#44464A" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

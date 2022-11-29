@@ -6,8 +6,7 @@ const Main = () => {
 		<div>
 			<div><Link to="/guide/">GuidePageList</Link></div>
 			<div><Link to="/guide/samples/prototype">Sample Prototype</Link></div>
-			<div><Link to="/guide/samples/buttons">Sample Buttons</Link></div>
-			<div><Link to="/guide/samples/icons">Sample Icons</Link></div>
+			<div><Link to="/guide/samples/utilities">Sample Utilities</Link></div>
 			<div><Link to="/guide/samples/elements">Sample Elements</Link></div>
 			<div><Link to="/guide/samples/accordions">Sample Accordions</Link></div>
 			<div><Link to="/guide/samples/tabs">Sample Tabs</Link></div>

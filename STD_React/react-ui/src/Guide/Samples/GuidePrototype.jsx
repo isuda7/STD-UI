@@ -2,7 +2,7 @@ import React from 'react';
 import GuideSection from './components/GuideSection';
 import GuideWrapper from './components/GuideWrapper';
 
-const Prototype = () => {
+const GuidePrototype = () => {
 	return (
 		<GuideWrapper title="Prototype" explain="">
 			<GuideSection title="Section">
@@ -17,4 +17,4 @@ const Prototype = () => {
 		</GuideWrapper>
 	)
 }
-export default Prototype;
+export default GuidePrototype;

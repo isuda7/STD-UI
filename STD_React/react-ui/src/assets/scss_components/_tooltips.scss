@@ -2,4 +2,32 @@
 	Tooltips
 *********************************************************************/
 /* Base */
+.tooltip-wrap {position: relative; display:inline-flex;}
+.tooltip {position: absolute; left: 0; top: 0; visibility: hidden; transition: all 0.2s ease;}
+.tooltip.is-visibled {position: absolute; left: 0; top: 0; visibility: visible;}
+.tooltip.top {top:auto; bottom: 100%;}
+.tooltip.bottom {bottom:auto; top: 100%;}
+.tooltip.left {left:auto; right: 0;}
+.tooltip.right {right:auto; left: 0;}
+.tooltip.middle {top:50%; transform: translateY(-50%);}
+.tooltip.middle.left {right:100%;}
+.tooltip.middle.right {left:100%;}
+.tooltip.center {left:50%; transform: translateX(-50%);}
 
+/* Position */
+.tooltip.module-a {min-width: 200px; max-width: 300px;}
+.tooltip.module-a.top {padding-bottom:10px;}
+.tooltip.module-a.bottom {padding-top:10px;}
+.tooltip.module-a.left.middle {padding-right:10px;}
+.tooltip.module-a.right.middle {padding-left:10px;}
+.tooltip.module-a .tooltip-body {position:relative; padding: 10px 16px; border-radius: 4px; background-color: #44464a; color: #fff; text-align: left; font-size: 12px; line-height: 18px;}
+.tooltip.module-a .tooltip-desc {white-space: nowrap;}
+.tooltip.module-a .tooltip-body::before {content: '';display: block;position: absolute;width: 8px;height: 8px;background: no-repeat center center / 100% auto;background-image: url('../img/icons_8_ic_balloon_tail.svg');}
+.tooltip.module-a.right.middle .tooltip-body::before {right: 100%; top:50%; transform: rotate(-270deg) translateX(-50%)}
+.tooltip.module-a.left.middle .tooltip-body::before {left: 100%; top:50%; transform: rotate(-90deg) translateX(50%)}
+.tooltip.module-a.center.top .tooltip-body::before {left: 50%; top:100%; transform: rotate(0deg) translateX(-50%)}
+.tooltip.module-a.center.bottom .tooltip-body::before {left: 50%; bottom:100%; transform: rotate(180deg) translateX(50%)}
+.tooltip.module-a.left.bottom .tooltip-body::before {right: 10px; bottom:100%; transform: rotate(180deg) translateX(-50%)}
+.tooltip.module-a.right.bottom .tooltip-body::before {left: 10px; bottom:100%; transform: rotate(180deg) translateX(50%)}
+.tooltip.module-a.left.top .tooltip-body::before {right: 10px; top:100%; transform: rotate(0deg) translateX(50%)}
+.tooltip.module-a.right.top .tooltip-body::before {left: 10px; top:100%; transform: rotate(0deg) translateX(-50%)}

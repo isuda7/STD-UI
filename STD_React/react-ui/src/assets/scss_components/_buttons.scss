@@ -7,12 +7,13 @@ button, .button {display:inline-flex; align-items: center; justify-content: cent
 .button:disabled {opacity: 0.5;}
 
 /* Module A */
-.button.module-a {min-width: 180px; height:48px; padding: 10px 20px; border-radius: 4px; background-color: #fff; color: #222; font-size: 16px; box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.1), 1px 1px 5px 0 rgba(0,0,0,0.05);}
+.button.module-a {min-width:160px; padding: 10px 20px; border-radius: 4px; background-color: #fff; color: #222; font-size: 16px; box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.1), 1px 1px 5px 0 rgba(0,0,0,0.05);}
 .button.module-a + .button.module-a {margin-left: 10px;}
 .button.module-a.primary {background-color: #ff664d; border-color: transparent; color: #fff;}
+.button.module-a.dark {background-color: #444; border-color: transparent; color: #fff;}
 
 /* Module B */
-.button.module-b {min-width: 180px; height:48px; padding: 10px 20px; border-radius: 4px; background-color: #fff; border:1px solid #222; color: #222; font-size: 16px;}
+.button.module-b {@extend .button.module-a; box-shadow: none; background-color: #fff; border:1px solid #222;}
 .button.module-b + .button.module-b {margin-left: 10px;}
 .button.module-b.primary {background-color: #fff; border:1px solid #ff664d; color: #ff664d;}
 
@@ -25,3 +26,4 @@ button, .button {display:inline-flex; align-items: center; justify-content: cent
 .button.module-d {color: #666;}
 .button.module-d + .button.module-d {margin-left: 8px;}
 .button.module-d.primary {color: #ff664d;}
+
