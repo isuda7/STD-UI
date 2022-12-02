@@ -24,7 +24,7 @@ const GuideTooltips = () => {
 			<GuideSection title="Module A">
                 <div style={{"textAlign":"center"}}>
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip1}>Tooltip - right middle</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip1}></button>
                         <div className={'tooltip right middle module-a' + ((tooltip1 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - right middle</p>
@@ -35,7 +35,7 @@ const GuideTooltips = () => {
                     <br />
                     <br />
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip2}>Tooltip - left middle</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip2}></button>
                         <div className={'tooltip left middle module-a' + ((tooltip2 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - left middle</p>
@@ -50,7 +50,7 @@ const GuideTooltips = () => {
                     <br />
                     <br />
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip3}>Tooltip - center top</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip3}></button>
                         <div className={'tooltip center top module-a' + ((tooltip3 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - center top</p>
@@ -61,7 +61,7 @@ const GuideTooltips = () => {
                     <br />
                     <br />
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip4}>Tooltip - center bottom</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip4}></button>
                         <div className={'tooltip center bottom module-a' + ((tooltip4 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - center bottom</p>
@@ -75,7 +75,7 @@ const GuideTooltips = () => {
                     <br />
                     <br />
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip5}>Tooltip - left bottom</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip5}></button>
                         <div className={'tooltip left bottom module-a' + ((tooltip5 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - left bottom</p>
@@ -89,7 +89,7 @@ const GuideTooltips = () => {
                     <br />
                     <br />
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip6}>Tooltip - right bottom</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip6}></button>
                         <div className={'tooltip right bottom module-a' + ((tooltip6 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - left bottom</p>
@@ -106,7 +106,7 @@ const GuideTooltips = () => {
                     <br />
                     <br />
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip7}>Tooltip - left top</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip7}></button>
                         <div className={'tooltip left top module-a' + ((tooltip7 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - left top</p>
@@ -120,7 +120,7 @@ const GuideTooltips = () => {
                     <br />
                     <br />
                     <div className="tooltip-wrap">
-                        <button type='button' className='button icon feel left' onClick={handlerTooltip8}>Tooltip - right top</button>
+                        <button type='button' className='button icon feel' onClick={handlerTooltip8}></button>
                         <div className={'tooltip right top module-a' + ((tooltip8 === true) ? ' is-visibled':'')}>
                             <div className="tooltip-body">
                                 <p className='tooltip-desc'>Tooltip Message - right top</p>
