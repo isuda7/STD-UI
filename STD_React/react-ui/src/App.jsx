@@ -7,8 +7,6 @@ import UserLayoutMain from './Layouts/UserLayoutMain';
 
 // Guide
 import GuidePageList from "./Guide/PageList";
-
-// Samples
 import GuidePrototype from "./Guide/Samples/GuidePrototype";
 import GuideAccordions from "./Guide/Samples/GuideAccordions";
 import GuideElements from "./Guide/Samples/GuideElements";
