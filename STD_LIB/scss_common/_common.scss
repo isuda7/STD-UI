@@ -1,23 +1,17 @@
 @charset "utf-8";
 /*-------------------------------------------------------------------
-	파일정의 : 전역스타일 공통
+	파일이름 : 전역스타일 공통
 	작성날짜 : YYYY-MM-DD 홍길동
 	참고사항 : 가이드화 하는 것을 권장하며, 예외의 경우에만 사용한다.
 	분류순서 : General > Grid Layout > Custom Color > Fixed Size & Gutter
-	속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
     ##General
 -------------------------------------------------------------------*/
 /* No Scroll */
-.is-noScroll {position:fixed; left:0; top:0; width:100%; height:100%; overflow:hidden; -webkit-overflow-scrolling:initial;}
-html.is-noScroll {overflow-y:scroll;}
-
-/* IR */
-.is-hidden {display:none;}
+.is-scroll-lock {position:fixed; left:0; top:0; width:100%; height:100%; overflow:hidden; -webkit-overflow-scrolling:initial;}
 .blind {position:absolute; top:-999em; left:-999em; z-index:0; width:1px; height:1px; overflow:hidden;}
-.blind-wrap {position:relative;}
-.blind-area {position:absolute; top:0; right:0; bottom:0; left:0; z-index:0; color:transparent;}
 
 /* Margin */
 .mar-t0 {margin-top:0 !important;}

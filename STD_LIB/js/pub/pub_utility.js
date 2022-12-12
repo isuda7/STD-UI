@@ -160,7 +160,7 @@ var setFocus = {
 	기능상세 : 모달 노출시 배경스크롤링 잠금
 */
 var setScroll = {
-	clsFixed : 'is-noScroll',
+	clsFixed : 'is-scroll-lock',
 	scrTop : null,
 	//스크롤 비활성
 	disable : function(){

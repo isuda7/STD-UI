@@ -1,0 +1,13 @@
+/*-------------------------------------------------------------------
+	파일이름 : Labels
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Default */
+.label {display:inline-block; }
+
+/* Design */
+.label-basic {padding:1px 8px 2px; line-height:21px; background-color:#444; color:#fff; border-radius:3px; text-align:center; vertical-align:middle;}
+.label-basic {min-width:50px; max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.label-basic.label-primary {background:$color-primary;}
+.label-basic.label-outline {padding:0px 7px 1px; background:transparent; border:1px solid #444; color:#444;}
+.label-basic.label-outline.label-primary {border:1px solid $color-primary; color:$color-primary;}

@@ -1,0 +1,13 @@
+/*-------------------------------------------------------------------
+	파일이름 : Breadcrumb
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Style */
+.breadcrumb {position:relative; display:inline-block; margin:0 -10px; overflow:hidden; line-height:1; @extend %clear;}
+.breadcrumb .item {position:relative; float:left; padding:0 10px 0 16px;vertical-align:middle;}
+.breadcrumb .item.is-current {color:$color-primary;}
+.breadcrumb .arw {@extend .centered-l; margin-top:1px;}
+
+/* Select */
+.breadcrumb-select .dropdown {width:160px;}
+.breadcrumb-select .dropdown + .dropdown {margin-left:5px;}

@@ -1,0 +1,24 @@
+/*-------------------------------------------------------------------
+	파일이름 : Tabs
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Default */
+.tab-wrap {position:relative;}
+.tab-nav li {position:relative; text-align:center;}
+.tab-nav a {display:block; padding:10px;}
+.tab-content {position:relative; padding:10px;}
+
+/* Layout */
+.tab-nav.tab-float ul::after {display:block; clear:both; content:'';}
+.tab-nav.tab-float li {float:left;}
+.tab-nav.tab-flex ul {display:flex;}
+.tab-nav.tab-flex li {float:none; width:100%;}
+.tab-nav.tab-table ul {display:table; table-layout:fixed; width:100%;}
+.tab-nav.tab-table li {display:table-cell; float:none;}
+
+/* Design Basic */
+.tab-basic ul {background:#eee; border-bottom:1px solid $color-primary;}
+.tab-basic ul::after {display:block; clear:both; content:'';}
+.tab-basic li {float:left;}
+.tab-basic a {background:#fff; color:#222;}
+.tab-basic .is-selected a {background:$color-primary; color:#fff;}

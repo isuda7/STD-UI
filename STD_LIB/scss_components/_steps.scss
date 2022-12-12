@@ -1,0 +1,45 @@
+/*-------------------------------------------------------------------
+	파일이름 : Steps
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Default */
+.step {text-align:center;}
+.step .step-list {display:table; position:relative; margin:auto;}
+.step .step-item {display:table-cell; position:relative; z-index:1;}
+.step .step-label {position:relative;}
+
+/* Design - Style1 */
+.step-style1 .step-item {padding:0 30px;}
+.step-style1 .step-item .step-label {display:inline-block; width:50px; height:50px; padding-bottom:1px; line-height:49px; border-radius:50%; background-color:#eee;}
+.step-style1 .step-item.is-on .step-label {border:1px solid $color-primary; background-color:#fff; color:$color-primary; line-height:47px;}
+.step-style1 .step-item.is-current .step-label {background-color:$color-primary; color:#fff;}
+
+/* Design - Style2 */
+.step-style2 .step-item {padding:0 30px;}
+.step-style2 .step-item .step-label {display:block; position:relative; width:50px; height:50px; padding-bottom:1px; line-height:49px; border-radius:50%; background-color:#eee;}
+.step-style2 .step-item .step-text {display:block; margin-top:10px; color:#999;}
+.step-style2 .step-item .step-label .ico-check {display:inline-block; width:12px; height:12px; border:3px solid #999; border-width:3px 3px 0 0; transform:translate(-50%, -50%) rotate(45deg);}
+.step-style2 .step-item.is-on .step-label {border:1px solid $color-primary; background-color:#fff; color:$color-primary; line-height:47px;}
+.step-style2 .step-item.is-on .step-text {color:#999;}
+.step-style2 .step-item.is-on .step-label .ico-check {width:18px; border-color:$color-primary; transform:translate(-50%, -50%) rotate(135deg);}
+.step-style2 .step-item.is-current .step-label {background-color:$color-primary; color:#fff;}
+.step-style2 .step-item.is-current .step-text {color:$color-primary;}
+.step-style2 .step-item.is-current .step-label .ico-check {width:18px; border-color:#fff; transform:translate(-50%, -50%) rotate(135deg);}
+
+/* Design - Style3 */
+.step-style3 .step-list {width:100%;}
+.step-style3 .step-item {height:50px; padding-bottom:1px; line-height:47px; border:1px solid #ccc; background-color:#eee; text-align:center;}
+.step-style3 .step-item.is-on {border:1px solid $color-primary; background-color:#fff; color:$color-primary;}
+.step-style3 .step-item.is-current {border:1px solid $color-primary; background-color:$color-primary; color:#fff;}
+.step-style3 .step-item + .step-item {border-left-width:0;}
+.step-style3 .step-item.is-on + .is-on {border-left:0;}
+
+/* Design - Style4 */
+.step-style4 .step-list:after {content:''; position:absolute; left:0; top:24px; width:100%; height:2px; background-color:#eee;}
+.step-style4 .step-item {width:25%;}
+.step-style4 .step-item .step-label {display:block; position:relative; width:50px; height:50px; padding-bottom:1px; line-height:49px; border-radius:50%; background-color:#eee; text-align:center;}
+.step-style4 .step-item .step-label .ico-check {display:inline-block; width:12px; height:12px; border:3px solid #999; border-width:3px 3px 0 0; transform:translate(-50%, -50%) rotate(45deg);}
+.step-style4 .step-item.is-on .step-label {border:1px solid $color-primary; background-color:#fff; color:$color-primary; line-height:47px;}
+.step-style4 .step-item.is-on .step-label .ico-check {width:18px; border-color:$color-primary; transform:translate(-50%, -50%) rotate(135deg);}
+.step-style4 .step-item.is-current .step-label {background-color:$color-primary; color:#fff;}
+.step-style4 .step-item.is-current .step-label .ico-check {width:18px; border-color:#fff; transform:translate(-50%, -50%) rotate(135deg);}

@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+파일이름 : Bullets
+속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Default */
+.bul-list > li, .bul-list > .bul {
+  display: table; }
+
+.bul-list > li:before, .bul-list > .bul:before {
+  content: '';
+  display: table-cell;
+  position: relative;
+  padding-right: 5px; }
+
+.bul-list > li[data-bul]::before, .bul-list > .bul[data-bul]::before {
+  content: attr(data-bul) !important; }
+
+/* (사용자정의 목록) data-bul속성 사용하는 경우 우선순위로 적용 */
+/* Common
+    그룹 {counter-reset:이름}
+    목록 {counter-increment:이름}
+    순서 {content:"문자" counter(이름, 형식) "문자"} ("문자"는 생략가능)
+*/
+/* 특수문자 */
+.bul-hyphen > li::before, .bul-hyphen > .bul::before {
+  content: '-'; }
+
+.bul-star > li::before, .bul-star > .bul::before {
+  content: '*'; }
+
+.bul-bill > li::before, .bul-bill > .bul::before {
+  content: '※'; }
+
+/* 숫자목록 : 1. (1) 1) ① */
+.bul-num1 {
+  counter-reset: num1; }
+
+.bul-num1 > li:before {
+  counter-increment: num1;
+  content: counter(num1, decimal) "."; }
+
+.bul-num2 {
+  counter-reset: num2; }
+
+.bul-num2 > li:before {
+  counter-increment: num2;
+  content: "(" counter(num2, decimal) ")"; }
+
+.bul-num3 {
+  counter-reset: num3; }
+
+.bul-num3 > li:before {
+  counter-increment: num3;
+  content: counter(num3, decimal) ")"; }
+
+.bul-num4 > li::before {
+  content: '①'; }
+
+.bul-num4 > li + li::before {
+  content: '②'; }
+
+.bul-num4 > li + li + li::before {
+  content: '③'; }
+
+.bul-num4 > li + li + li + li::before {
+  content: '④'; }
+
+.bul-num4 > li + li + li + li + li::before {
+  content: '⑤'; }
+
+.bul-num4 > li + li + li + li + li + li::before {
+  content: '⑥'; }
+
+.bul-num4 > li + li + li + li + li + li + li::before {
+  content: '⑦'; }
+
+.bul-num4 > li + li + li + li + li + li + li + li::before {
+  content: '⑧'; }
+
+.bul-num4 > li + li + li + li + li + li + li + li + li::before {
+  content: '⑨'; }
+
+.bul-num4 > li + li + li + li + li + li + li + li + li + li::before {
+  content: '⑩'; }
+
+/* 한글목록 가. (가) 가) */
+.bul-kor1 > li::before {
+  content: '가'; }
+
+.bul-kor1 > li + li::before {
+  content: '나'; }
+
+.bul-kor1 > li + li + li::before {
+  content: '다'; }
+
+.bul-kor1 > li + li + li + li::before {
+  content: '라'; }
+
+.bul-kor1 > li + li + li + li + li::before {
+  content: '마'; }
+
+.bul-kor1 > li + li + li + li + li + li::before {
+  content: '바'; }
+
+.bul-kor1 > li + li + li + li + li + li + li::before {
+  content: '사'; }
+
+.bul-kor1 > li + li + li + li + li + li + li + li::before {
+  content: '아'; }
+
+.bul-kor1 > li + li + li + li + li + li + li + li + li::before {
+  content: '자'; }
+
+.bul-kor1 > li + li + li + li + li + li + li + li + li + li::before {
+  content: '차'; }
+
+.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '카'; }
+
+.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '타'; }
+
+.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '파'; }
+
+.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '하'; }
+
+.bul-kor2 > li::before {
+  content: '(가)'; }
+
+.bul-kor2 > li + li::before {
+  content: '(나)'; }
+
+.bul-kor2 > li + li + li::before {
+  content: '(다)'; }
+
+.bul-kor2 > li + li + li + li::before {
+  content: '(라)'; }
+
+.bul-kor2 > li + li + li + li + li::before {
+  content: '(마)'; }
+
+.bul-kor2 > li + li + li + li + li + li::before {
+  content: '(바)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li::before {
+  content: '(사)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li + li::before {
+  content: '(아)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li + li + li::before {
+  content: '(자)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li + li + li + li::before {
+  content: '(차)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '(카)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '(타)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '(파)'; }
+
+.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '(하)'; }
+
+.bul-kor3 > li::before {
+  content: '가)'; }
+
+.bul-kor3 > li + li::before {
+  content: '나)'; }
+
+.bul-kor3 > li + li + li::before {
+  content: '다)'; }
+
+.bul-kor3 > li + li + li + li::before {
+  content: '라)'; }
+
+.bul-kor3 > li + li + li + li + li::before {
+  content: '마)'; }
+
+.bul-kor3 > li + li + li + li + li + li::before {
+  content: '바)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li::before {
+  content: '사)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li + li::before {
+  content: '아)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li + li + li::before {
+  content: '자)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li + li + li + li::before {
+  content: '차)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '카)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '타)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '파)'; }
+
+.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+  content: '하)'; }
+
+/* 알파벳목록 A. (a) a) ⓐ */
+.bul-eng1 {
+  counter-reset: eng1; }
+
+.bul-eng1 > li::before {
+  counter-increment: eng1;
+  content: counter(eng1, upper-alpha) "."; }
+
+.bul-eng2 {
+  counter-reset: eng2; }
+
+.bul-eng2 > li::before {
+  counter-increment: eng2;
+  content: "(" counter(eng2, lower-alpha) ")"; }
+
+.bul-eng3 {
+  counter-reset: eng3; }
+
+.bul-eng3 > li::before {
+  counter-increment: eng3;
+  content: counter(eng3, lower-alpha) ")"; }
+
+.bul-eng4 > li::before {
+  content: 'ⓐ'; }
+
+.bul-eng4 > li + li::before {
+  content: 'ⓑ'; }
+
+.bul-eng4 > li + li + li::before {
+  content: 'ⓒ'; }
+
+.bul-eng4 > li + li + li + li::before {
+  content: 'ⓓ'; }
+
+.bul-eng4 > li + li + li + li + li::before {
+  content: 'ⓔ'; }
+
+.bul-eng4 > li + li + li + li + li + li::before {
+  content: 'ⓕ'; }
+
+.bul-eng4 > li + li + li + li + li + li + li::before {
+  content: 'ⓖ'; }
+
+.bul-eng4 > li + li + li + li + li + li + li + li::before {
+  content: 'ⓗ'; }
+
+.bul-eng4 > li + li + li + li + li + li + li + li + li::before {
+  content: 'ⓘ'; }
+
+.bul-eng4 > li + li + li + li + li + li + li + li + li + li::before {
+  content: 'ⓙ'; }

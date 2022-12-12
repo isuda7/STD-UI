@@ -1,0 +1,30 @@
+/*-------------------------------------------------------------------
+	파일이름 : Buttons
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Default */
+button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
+button::-moz-focus-inner {border:0px; padding:0px;}
+.btn-area {display:flex;}
+.btn-group {display:flex; flex:none;}
+.btn,
+.btn-ico {display:inline-flex; position:relative; overflow:hidden; vertical-align:middle;}
+.btn > span,
+.btn-ico > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%; pointer-events:none;}
+
+/* Common - Layout */
+.btn-fluid {flex-wrap:wrap;}
+.btn-fluid .btn {width:100%;}
+.btn-flex .btn {flex:1;}
+
+/* Styles */
+.btn-basic {height:34px; padding:0 20px 1px; font-size:16px; background:#eee;}
+.btn-basic.btn-primary {background:$color-primary; color:#fff;}
+.btn-basic.btn-secondary {background:#333; color:#fff;}
+.btn-basic[disabled] {background:#aaa; color:#fff;}
+.btn.style-1 {height:30px; padding:0 10px 1px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); line-height:27px;}
+
+/* Content */
+.btn-search {width:34px; height:34px;}
+.btn-pager {width:20px; height:20px; line-height:18px; border:1px solid #ddd;}
+.btn-top {width:50px; height:50px; line-height:48px; background-color:#fff; border:1px solid #ccc; border-radius:50%;}

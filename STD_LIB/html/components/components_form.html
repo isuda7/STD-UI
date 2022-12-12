@@ -54,19 +54,21 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									.input		: 폼 컨트롤 인풋
-									.select		: 폼 컨트롤 셀렉트
-									.check		: 폼 컨트롤 체크박스
-									.radio		: 폼 컨트롤 라디오
-									.switch		: 폼 컨트롤 스위치
-									.file		: 폼 컨트롤 파일
+									<!-- Constrols -->
+									.form-input		: 폼 컨트롤 인풋
+									.form-select	: 폼 컨트롤 셀렉트
+									.form-check		: 폼 컨트롤 체크박스
+									.form-radio		: 폼 컨트롤 라디오
+									.form-switch	: 폼 컨트롤 스위치
+									.form-file		: 폼 컨트롤 파일
 
-									.label		: 폼 텍스트 레이블
-									.static		: 폼 텍스트 기본
+									<!-- Texts -->
+									.form-label		: 폼 텍스트 레이블
+									.form-text		: 폼 텍스트 기본
 									.form-desc		: 폼 텍스트 기술설명
 									.form-alert		: 폼 텍스트 경고메시지
 									.form-info		: 폼 텍스트 관련정보안내
-									.split		: 폼 텍스트 구분기호
+									.form-split		: 폼 텍스트 구분기호
 								</pre>
 							</div>
 							<div class="g-example-footer">
@@ -87,8 +89,6 @@ jQuery(document).keydown(function(e){
 									textarea {width:100%; vertical-align:middle; resize:none;}
 									select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
 									select::-ms-expand {display:none;}
-									.ie9 select {padding:5px 35px 4px 5px;background:none;}
-									.ie9 :root select {padding:0; font-size:0;}
 								</pre>
 							</div>
 						</div>
@@ -114,24 +114,24 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="input" />
-									<input type="search" name="sText1" id="" value="search" placeholder="Placeholder" class="input" />
-									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="input">
-									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="input" readonly/>
-									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="input" disabled>
-									<input type="text" name="sText1" id="" value="" placeholder="Required" title="제목" class="input" required/>
+									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="form-input" />
+									<input type="search" name="sText1" id="" value="search" placeholder="Placeholder" class="form-input" />
+									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input">
+									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly/>
+									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled>
+									<input type="text" name="sText1" id="" value="" placeholder="Required" title="제목" class="form-input" required/>
 									<br /><br />
-									<textarea rows="3" cols="50" class="input"></textarea>
+									<textarea rows="3" cols="50" class="form-input"></textarea>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="input" />
-									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="input">
-									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="input" readonly/>
-									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="input" disabled>
-									<input type="text" name="sText1" id="" value="" placeholder="Required" title="제목" class="input" required/>
-									<textarea rows="3" cols="50" class="input"></textarea>
+									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="form-input" />
+									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input">
+									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly/>
+									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled>
+									<input type="text" name="sText1" id="" value="" placeholder="Required" title="제목" class="form-input" required/>
+									<textarea rows="3" cols="50" class="form-input"></textarea>
 								</pre>
 							</div>
 							<div class="g-example-footer">
@@ -478,7 +478,7 @@ jQuery(document).keydown(function(e){
 									<p>파일첨부</p>
 									<br />
 									<div class="file">
-										<input type="text" class="input" title="첨부된 파일명" />
+										<input type="text" class="form-input" title="첨부된 파일명" />
 										<label for="sFile" class="btn style-1" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
@@ -500,7 +500,7 @@ jQuery(document).keydown(function(e){
 								<pre class="brush:html">
 									&lt;span class="file">
 										&lt;input type="file" name="sFiles1" id="sFiles1" value="찾아보기" tabindex="-1" aria-hidden="true"/>
-										&lt;input type="text" class="input" title="첨부된 파일명" />
+										&lt;input type="text" class="form-input" title="첨부된 파일명" />
 										&lt;button type="button" class="btn style-1 btn_file" onclick="fileAttach(this)">&lt;span>파일첨부&lt;/span>&lt;/button>
 									&lt;/span>
 								</pre>
@@ -556,7 +556,7 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-body">
 								<!-- 마크업뷰영역 -->
-								<input type="text" name="" id="" value="" placeholder="" title="" class="input">
+								<input type="text" name="" id="" value="" placeholder="" title="" class="form-input">
 								<span class="form-txt">고등학교</span>
 								<!-- //마크업뷰영역 -->
 							</div>
@@ -678,13 +678,13 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-body">
 								<!-- 마크업뷰영역 -->
-								<input type="text" class="input">
+								<input type="text" class="form-input">
 								<i class="split">~</i>
-								<input type="text" class="input">
+								<input type="text" class="form-input">
 								<br />
-								<input type="text" class="input">
+								<input type="text" class="form-input">
 								<i class="split">@</i>
-								<input type="text" class="input">
+								<input type="text" class="form-input">
 								<!-- //마크업뷰영역 -->
 							</div>
 							<div id="tabContentCode1-1" class="g-example-footer">

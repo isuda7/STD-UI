@@ -1,13 +1,13 @@
 @charset "utf-8";
 /*-------------------------------------------------------------------
-파일정의 : UI Modules
+파일이름 : UI Modules
 작성날짜 : YYYY-MM-DD 홍길동
 참고사항 : 공통 범위를 최소화하고, 컨텐츠 스타일로 구분한다.
 분류순서 : Element > Block > Layout > Plugin
-속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-    ## Text
+    @@ Text
 -------------------------------------------------------------------*/
 /* Title */
 .tit-h3 {font-weight:500; font-size:18px;}
@@ -21,7 +21,7 @@
 .para-basic > p + p {margin-top:5px;}
 
 /*-------------------------------------------------------------------
-    ## Form Controls
+    @@ Form Controls
 -------------------------------------------------------------------*/
 /* Default */
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#999;}/* IE 10 + */
@@ -41,9 +41,9 @@ select::-ms-expand {display:none;}
 .ie9 :root select {padding:0; font-size:0;}
 
 /* Form Textfield */
-.input {height:30px; padding:0 10px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); transition:all 0.3s;}
-.input:focus,.input:hover,.input.is-focused {border-color:#0089b3;}
-textarea.input {height:auto; padding:10px;}
+.form-input {height:30px; padding:0 10px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); transition:all 0.3s;}
+.form-input:focus,.form-input:hover,.form-input.is-focused {border-color:#0089b3;}
+textarea.form-input {height:auto; padding:10px;}
 
 /* Form Select */
 .select {display:inline-block; position:relative;}
@@ -144,7 +144,7 @@ textarea.input {height:auto; padding:10px;}
 .switch input[disabled] + label:before {background-color:#ddd;}
 
 /*-------------------------------------------------------------------
-    ## Form Elements
+    @@ Form Elements
 -------------------------------------------------------------------*/
 /* Form Text */
 .form-tit, .form-txt {position:relative; padding:1px 0 2px 0px; line-height:27px; vertical-align:middle;}
@@ -161,7 +161,7 @@ textarea.input {height:auto; padding:10px;}
 .form-info {color:gray;}
 
 /*-------------------------------------------------------------------
-    ## Form Group
+    @@ Form Group
 -------------------------------------------------------------------*/
 /* Row Group */
 .form.type-row + .form.type-row {margin-top:20px;}
@@ -217,7 +217,7 @@ textarea.input {height:auto; padding:10px;}
 .input-group.has-search .input {padding-right:40px;}
 
 /*-------------------------------------------------------------------
-    ## Form Custom
+    @@ Form Custom
 -------------------------------------------------------------------*/
 /* Gutter */
 .form-controls .row + .row {margin-top:5px;}
@@ -487,7 +487,7 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 
 /*-------------------------------------------------------------------
 	## List
------------------------------------------------------------------ --*/
+-------------------------------------------------------------------*/
 /* Style1 */
 .list-style1 {border:1px solid #999; border-width:1px 0;}
 .list-style1 .item {padding:5px 10px; min-height:40px; line-height:30px; border-top:1px solid #ddd;}
@@ -937,7 +937,7 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 .dimmer.is-active {opacity:1;}
 
 /*-------------------------------------------------------------------
-    ## FullPopup
+    @@ FullPopup
 -------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------

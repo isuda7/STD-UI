@@ -1,11 +1,11 @@
 @charset "utf-8";
 
-@import '_variables';
-@import '_base';
-@import '_common';
-@import '_layout';
-@import '_ui';
-@import '_content';
-@import '_main';
+@import '../scss_common/variables';
+@import '../scss_common/base';
+@import '../scss_common/common';
+@import '../scss_common/layout';
+@import '../scss_common/ui';
+@import '../scss_common/content';
+@import '../scss_common/main';
 @import 'animate.css';
 @import 'plugins.css';

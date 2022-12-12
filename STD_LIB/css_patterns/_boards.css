@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+	파일이름 : Boards
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* board-wrap */
+/* board-search */
+.board-search {
+  border-bottom: 1px solid #eee;
+  text-align: center; }
+
+.board-search > .inner {
+  border: 1px solid #ccc;
+  padding: 20px; }
+
+/* board-list */
+.board-search + .board-list {
+  margin-top: 30px; }
+
+.paging + .btn-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: -35px;
+  text-align: right; }
+
+/* 게시판상세 */
+.board-view .view-header .subject-wrap {
+  position: relative;
+  padding: 10px 50px;
+  border-top: 2px solid #444;
+  border-bottom: 1px solid #444; }
+
+.board-view .view-header .subject-wrap .subject {
+  font-size: 23px;
+  font-family: 'NSB';
+  line-height: 30px;
+  text-align: center; }
+
+.board-view .view-header .subject-wrap .btn-pager2 {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px; }
+
+.board-view .view-header .subject-wrap .btn-pager2.prev {
+  left: 20px; }
+
+.board-view .view-header .subject-wrap .btn-pager2.next {
+  right: 20px; }
+
+.board-view .view-header .define-wrap {
+  border-bottom: 1px solid #444; }
+
+.board-view .view-header .define-wrap .define {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-top: 1px solid #ddd; }
+
+.board-view .view-header .define-wrap .define .tit,
+.board-view .view-header .define-wrap .define .txt {
+  display: table-cell;
+  padding: 10px 20px;
+  vertical-align: middle; }
+
+.board-view .view-header .define-wrap .define .tit {
+  width: 120px;
+  font-family: 'NSB'; }
+
+.board-view .view-header .define-wrap .define .txt {
+  color: #666; }
+
+.board-view .view-header .define-wrap .define:first-child {
+  border-top: 0; }
+
+.board-view .view-content {
+  padding: 20px;
+  line-height: 24px;
+  border-bottom: 1px solid #444; }
+
+.board-view .btn-wrap {
+  margin-top: 30px; }
+
+/* 이전글다음글 */
+.board-pager {
+  margin-top: 50px;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444; }
+
+.board-pager .define {
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
+
+.board-pager .define .tit,
+.board-pager .define .txt {
+  display: table-cell;
+  padding: 10px 20px;
+  vertical-align: middle; }
+
+.board-pager .define .tit {
+  width: 120px;
+  font-family: 'NSB'; }
+
+.board-pager .define .txt {
+  color: #666; }

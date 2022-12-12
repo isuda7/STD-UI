@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+	파일이름 : Section
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Title */
+.tit-h3 {
+  font-weight: 500;
+  font-size: 18px; }
+
+.tit-h4 {
+  font-weight: 400;
+  font-size: 16px; }
+
+.tit-h5 {
+  font-weight: 400;
+  font-size: 14px; }
+
+.tit-h6 {
+  font-weight: 400;
+  font-size: 12px; }
+
+/* Paragraph */
+.para-basic + .para-basic {
+  margin-top: 20px; }
+
+.para-basic > p {
+  line-height: 20px; }
+
+.para-basic > p + p {
+  margin-top: 5px; }

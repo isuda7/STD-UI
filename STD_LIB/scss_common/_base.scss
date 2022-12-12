@@ -1,0 +1,107 @@
+@charset 'utf-8';
+/*-------------------------------------------------------------------
+	파일이름 : 초기화
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ Reset
+-------------------------------------------------------------------*/
+/* Fonts */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css);
+
+/* Tags */
+html, body {height: 100%; text-size-adjust:none; -webkit-text-size-adjust: none;}
+::before,::after,
+html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td, caption, address, article, aside,
+canvas, details, figure, figcaption, main, footer, header, menu, nav, section,
+button, select, textarea, input, form, fieldset, legend, label, a, span, strong, em, address, pre, code, dfn, small, i, b {margin:0; padding:0; border:0; line-height:inherit; list-style:none; font-style:normal; font-size:inherit; font-weight:inherit; font-family:inherit; color:inherit; letter-spacing:inherit; box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit; -webkit-print-color-adjust:exact;}
+:before, :after {box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit;}
+main, article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section {display:block;}
+html {scroll-behavior: smooth; font-size:1px;}
+body {scroll-behavior: smooth;}
+body {font-family:"Noto Sans KR", "sans-serif", "Apple SD Gothic Neo", "AppleGothic", "Apple Gothic", "-apple-system", sans-serif; color:#000000; font-size:1.4rem; line-height:1; letter-spacing:-0.02rem; word-break:break-all; word-wrap:break-word; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+html[lang=ja] body, html[lang=zh] body {word-break:normal;}
+[hidden], hr {display:none;}
+img {vertical-align:middle; max-width:100%;}
+button {background-color:transparent; cursor:pointer;}
+fieldset, iframe {width:100%;}
+img, a, frame, iframe, fieldset {border:0;}
+a {text-decoration:none;}
+a:active,
+a:hover,
+a:focus {color:inherit;}
+caption {height:1px; overflow:hidden;}
+legend {position:fixed; overflow: hidden; border: 0; margin:-1px; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%);}
+button {overflow:hidden; background-color:transparent; cursor:pointer;}
+button::-moz-focus-inner {border:0px; padding:0px;}
+input[type="checkbox"],input[type="radio"],select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
+textarea {resize:none;}
+input, textarea {caret-color:$color-primary;}
+select::-ms-expand {display:none;}
+input::-ms-clear,
+input::-ms-reveal {display:none; width:0; height:0;}
+input::search-decoration,
+input::search-cancel-button,
+input::search-results-button,
+input::search-results-decoration {display:none;}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {display:none;}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance:none; margin:0;}
+input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
+[tabindex="0"]:focus,
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {outline:0;}
+[tabindex="0"],
+a,
+button,
+input,
+textarea,
+select {-webkit-tap-highlight-color:transparent;}
+
+/*-------------------------------------------------------------------
+	@@ Utilities
+-------------------------------------------------------------------*/
+.is-scroll-lock {position:fixed; left:0; top:0; width:100%; height:100%; overflow:hidden; -webkit-overflow-scrolling:initial;}
+.blind {position:absolute; top:-999em; left:-999em; z-index:0; width:1px; height:1px; overflow:hidden;}
+
+/*-------------------------------------------------------------------
+	@@ iOS safe-area
+-------------------------------------------------------------------*/
+/* Default */
+:root {
+	--safeRightScript: 0px;
+	--safeTop: 0px;
+	--safeBottom: 0px;
+}
+/* iOS 11.0 버전 */
+@supports (--safeTop: constant(safe-area-inset-top)) {
+	:root {
+		--safeTop: constant(safe-area-inset-top);
+		--safeBottom: constant(safe-area-inset-bottom);
+	}
+}
+@supports (--safeRightScript: constant(safe-area-inset-right)) {
+	:root {
+		// 풀화면 스크립트 팝업 전용
+		--safeRightScript: 2rem;
+	}
+}
+/* iOS 11.2 이상 */
+@supports (--safeTop: env(safe-area-inset-top)) {
+	:root {
+		--safeTop: env(safe-area-inset-top);
+		--safeBottom: env(safe-area-inset-bottom);
+	}
+}
+@supports (--safeRightScript: env(safe-area-inset-right)) {
+	:root {
+		// 풀화면 스크립트 팝업 전용
+		--safeRightScript: 2rem;
+	}
+}

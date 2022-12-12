@@ -1,0 +1,92 @@
+/*-------------------------------------------------------------------
+	파일이름 : Form Mixins
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @@ Form Group
+-------------------------------------------------------------------*/
+/* Row Group */
+.form.type-row + .form.type-row {margin-top:20px;}
+.form.type-row {display:block;}
+.form.type-row .form-content {margin-top:2px;}
+.form.type-row .form-desc,
+.form.type-row .form-info,
+.form.type-row .form-alert {margin-top:5px; line-height:20px;}
+.form.type-row .form-controls + .form-desc,
+.form.type-row .form-controls + .form-info,
+.form.type-row .form-controls + .form-alert {margin-top:10px;}
+
+/* Col Group */
+.form.type-col + .form.type-col {margin-top:20px;}
+.form.type-col {display:flex; width:100%;}
+.form.type-col .form-title {width:100px;}
+.form.type-col .form-content {flex:1 1 auto;}
+.form.type-col .form-desc,
+.form.type-col .form-info,
+.form.type-col .form-alert {margin-top:5px; line-height:20px;}
+.form.type-col .form-controls + .form-desc,
+.form.type-col .form-controls + .form-info,
+.form.type-col .form-controls + .form-alert {margin-top:10px;}
+
+/* Wide Group */
+.form.type-wide + .form.type-wide {margin-top:20px;}
+.form.type-wide {display:flex;}
+.form.type-wide .form-title {width:100px;}
+.form.type-wide .form-content {display:flex; flex:1 0 auto; align-items:center;}
+.form.type-wide .form-content .form-controls {width:auto;}
+.form.type-wide .form-desc,
+.form.type-wide .form-info,
+.form.type-wide .form-alert {flex:none; margin-left:20px; line-height:20px;}
+
+/*-------------------------------------------------------------------
+	@@ Form Controls
+-------------------------------------------------------------------*/
+/* Controls */
+.form-controls {position:relative; display:flex; flex-wrap:wrap; width:100%;}
+.form-controls.flexible .select,
+.form-controls.flexible .input,
+.form-controls.flexible .input-group {flex:1 1 auto;}
+
+/* Gutter */
+.form-controls .row + .row {margin-top:5px;}
+.form-controls .form-txt {margin-right:8px;}
+.form-controls .style-1 {margin-left:8px;}
+.form-controls .style-1:first-child {margin-left:0;}
+
+/*-------------------------------------------------------------------
+	@@ Form Controls Group
+-------------------------------------------------------------------*/
+/* Mixin Common */
+.input-group {position:relative; vertical-align:middle;}
+.input-group .input {width:100%;}
+.input-group .prepend {@extend .centered-l; left:5px;}
+.input-group .append {@extend .centered-r; right:5px;}
+.input-group .prepend .btn-ico,
+.input-group .append .btn-ico {vertical-align:top;}
+.input-group.has-prepend .input {padding-left:35px;}
+.input-group.has-append .input {padding-right:35px;}
+
+/* Mixins Types */
+.input-group.has-search .btn-ico {position:absolute; right:0; top:0; height:30px; width:30px; line-height:30px;} /* 검색아이콘 버튼 */
+.input-group.has-search .input {padding-right:40px;}
+
+/*-------------------------------------------------------------------
+    @@ Form Controls Custom
+-------------------------------------------------------------------*/
+/* Types */
+.form-controls.type-email2 .select {width:47%;} /* 이메일 */
+.form-controls.type-telNo .select,
+.form-controls.type-telNo .input {width:calc(33.333% - 16px);}
+.form-controls.type-email1 .input {width:calc(50% - 12px);}
+.form-controls.type-email2 .select,
+.form-controls.type-email2 .input {width:calc(50% - 12px);}
+.form-controls.type-email3 .select {width:calc(33% - 9px); margin-left:6px;}
+.form-controls.type-email3 .input {width:calc(33% - 9px);}
+.form-controls.type-socialNo .input {width:calc(50% - 12px);}
+.form-controls.type-globalNo .input {width:calc(50% - 12px);}
+.form-controls.type-corpNo .input {width:calc(50% - 12px);}
+.form-controls.type-bizNo .input {width:calc(33.333% - 16px);}
+.form-controls.type-cardNo .input {width:calc(25% - 18px);}
+.form-controls.type-address {flex-direction:column;}
+.form-controls.type-address .row {display:flex;}
+.form-controls.type-address .row .input {flex-grow:1; width:1px;}
