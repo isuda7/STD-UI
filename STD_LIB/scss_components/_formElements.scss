@@ -3,6 +3,10 @@
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
+    @@ Form Variables
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
     @@ Form Input
 -------------------------------------------------------------------*/
 /* Default */
@@ -22,119 +26,117 @@ select::-ms-expand {display:none;}
 .ie9 select {padding:5px 35px 4px 5px;background:none;}
 .ie9 :root select {padding:0; font-size:0;}
 
+/* Form Button */
+.form-button {@include ui-input-module-a; flex:none;}
+
 /* Form Textfield */
-.form-input {height:30px; padding:0 10px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); transition:all 0.3s;}
-.form-input:focus,.form-input:hover,.form-input.is-focused {border-color:#0089b3;}
-textarea.form-input {height:auto; padding:10px;}
+.form-input {@include ui-input-module-a;}
+textarea.form-input {@include ui-input-module-a; height:auto; padding-top:10px; padding-bottom:10px;}
 
 /* Form Select */
-.select {display:inline-block; position:relative;}
-.select {height:30px; padding:0 30px 0 10px; border:1px solid #ddd; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 10px) center; vertical-align:middle; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); transition:all 0.3s;}
+.form-select {@include ui-input-module-a; padding-right:45px; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 15px) center;}
 
 /* Form File */
-.file {position:relative; display:inline-block;}
-.file input[type="file"] {position:absolute; width:0; height:0; overflow:hidden;}
-
-.file .file-hide {position:absolute; width:0; height:0; overflow:hidden;}
-.file .file-preview {position:relative; display:flex; justify-content:center; align-items:center; overflow:hidden; width:264px; height:124px; border:1px solid #e1e1e1;}
-.file .file-preview img {position:absolute; left:50%; top:50%; max-width:100%; transform:translate(-50%, -50%);}
+.form-file {position:relative; display:inline-block;}
+.form-file input[type="file"] {position:absolute; width:0; height:0; overflow:hidden;}
+.form-file .file-hide {position:absolute; width:0; height:0; overflow:hidden;}
+.form-file .file-preview {position:relative; display:flex; justify-content:center; align-items:center; overflow:hidden; width:264px; height:124px; border:1px solid #e1e1e1;}
+.form-file .file-preview img {position:absolute; left:50%; top:50%; max-width:100%; transform:translate(-50%, -50%);}
 
 /* Form Radio */
 /* Basic */
-.radio {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
-.radio label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:18px; vertical-align:middle;}
-.radio label span {display:inline-block; padding-left:28px;}
-.radio label:before, .radio label:after {content:''; position:absolute; left:0; top:0;}
-.radio label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff; border-radius:50%;}
-.radio > input {position:absolute; left:0; top:0; width:20px; height:20px;}
-.radio + .radio {margin-left:10px;}
+.form-radio {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
+.form-radio label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:18px; vertical-align:middle;}
+.form-radio label span {display:inline-block; padding-left:28px;}
+.form-radio label:before, .form-radio label:after {content:''; position:absolute; left:0; top:0;}
+.form-radio label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff; border-radius:50%;}
+.form-radio > input {position:absolute; left:0; top:0; width:20px; height:20px;}
+.form-radio + .form-radio {margin-left:10px;}
 /* Checked */
-.radio > input:checked + label:before {background-color:#fff; border-color:$color-primary;}
-.radio > input:checked + label:after {top:5px; left:5px; width:10px; height:10px; border-radius:50%; background:$color-primary;}
+.form-radio > input:checked + label:before {background-color:#fff; border-color:$color-primary;}
+.form-radio > input:checked + label:after {top:5px; left:5px; width:10px; height:10px; border-radius:50%; background:$color-primary;}
 /* Focused */
-.radio > input.is-focused + label:before,
-.radio > input:hover + label:before,
-.radio > input:focus + label:before {border-color:#888;}
-.radio > input:checked:focus + label:before,
-.radio > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
+.form-radio > input.is-focused + label:before,
+.form-radio > input:hover + label:before,
+.form-radio > input:focus + label:before {border-color:#888;}
+.form-radio > input:checked:focus + label:before,
+.form-radio > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
 /* Disabled */
-.radio > input[disabled] + label {color:#999;}
-.radio > input[disabled] + label:before {background-color:#f0f0f0;}
-.radio > input[disabled]:focus + label:before,
-.radio > input[disabled]:hover + label:before {border-color:#ddd;}
-.radio > input[disabled]:checked + label:after {background:#888;}
-.radio > input[disabled]:checked + label:before,
-.radio > input[disabled]:checked:focus + label:before,
-.radio > input[disabled]:checked:hover + label:before {border-color:#888;}
+.form-radio > input[disabled] + label {color:#999;}
+.form-radio > input[disabled] + label:before {background-color:#f0f0f0;}
+.form-radio > input[disabled]:focus + label:before,
+.form-radio > input[disabled]:hover + label:before {border-color:#ddd;}
+.form-radio > input[disabled]:checked + label:after {background:#888;}
+.form-radio > input[disabled]:checked + label:before,
+.form-radio > input[disabled]:checked:focus + label:before,
+.form-radio > input[disabled]:checked:hover + label:before {border-color:#888;}
 /* Errored */
-.radio > input.is-errored + label {color:#f52727;}
-.radio > input.is-errored + label:before,
-.radio > input.is-errored.is-focused:checked + label:before,
-.radio > input.is-errored:checked:hover + label:before,
-.radio > input.is-errored:checked:focus + label:before  {border-color:#f52727;}
-.radio > input.is-errored:checked + label:before {border-color:#f52727;}
-.radio > input.is-errored:checked + label:after {background-color:#f52727;}
+.form-radio > input.is-errored + label {color:#f52727;}
+.form-radio > input.is-errored + label:before,
+.form-radio > input.is-errored.is-focused:checked + label:before,
+.form-radio > input.is-errored:checked:hover + label:before,
+.form-radio > input.is-errored:checked:focus + label:before  {border-color:#f52727;}
+.form-radio > input.is-errored:checked + label:before {border-color:#f52727;}
+.form-radio > input.is-errored:checked + label:after {background-color:#f52727;}
 
 /* Form Check */
 /* Basic */
-.check {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
-.check label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:20px; vertical-align:middle;}
-.check label span {display:inline-block; padding-left:28px;}
-.check label:before, .check label:after {content:''; position:absolute; left:0; top:0;}
-.check label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff;}
-.check > input {position:absolute; left:0; top:0; width:20px; height:20px;}
-.check + .check {margin-left:10px;}
+.form-checkbox {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
+.form-checkbox label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:20px; vertical-align:middle;}
+.form-checkbox label span {display:inline-block; padding-left:28px;}
+.form-checkbox label:before, .form-checkbox label:after {content:''; position:absolute; left:0; top:0;}
+.form-checkbox label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff;}
+.form-checkbox > input {position:absolute; left:0; top:0; width:20px; height:20px;}
+.form-checkbox + .form-checkbox {margin-left:10px;}
 /* Checked */
-.check > input:checked + label:before {border-color:$color-primary;}
-.check > input:checked + label:after {left:5px; top:5px; width:10px; height:7px; background:none; border-left:2px solid $color-primary; border-bottom:2px solid $color-primary; transform:rotate(-45deg);}
+.form-checkbox > input:checked + label:before {border-color:$color-primary;}
+.form-checkbox > input:checked + label:after {left:5px; top:5px; width:10px; height:7px; background:none; border-left:2px solid $color-primary; border-bottom:2px solid $color-primary; transform:rotate(-45deg);}
 /* Focused */
-.check > input.is-focused + label:before,
-.check > input:hover + label:before,
-.check > input:focus + label:before {border-color:#888;}
-.check > input:checked:focus + label:before,
-.check > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
+.form-checkbox > input.is-focused + label:before,
+.form-checkbox > input:hover + label:before,
+.form-checkbox > input:focus + label:before {border-color:#888;}
+.form-checkbox > input:checked:focus + label:before,
+.form-checkbox > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
 /* Disabled */
-.check > input[disabled] + label {color:#999;}
-.check > input[disabled] + label:before {background-color:#f0f0f0;}
-.check > input[disabled]:focus + label:before,
-.check > input[disabled]:hover + label:before {border-color:#ddd;}
-.check > input[disabled]:checked + label:after {border-color:#888;}
-.check > input[disabled]:checked + label:before,
-.check > input[disabled]:checked:focus + label:before,
-.check > input[disabled]:checked:hover + label:before {border-color:#888;}
+.form-checkbox > input[disabled] + label {color:#999;}
+.form-checkbox > input[disabled] + label:before {background-color:#f0f0f0;}
+.form-checkbox > input[disabled]:focus + label:before,
+.form-checkbox > input[disabled]:hover + label:before {border-color:#ddd;}
+.form-checkbox > input[disabled]:checked + label:after {border-color:#888;}
+.form-checkbox > input[disabled]:checked + label:before,
+.form-checkbox > input[disabled]:checked:focus + label:before,
+.form-checkbox > input[disabled]:checked:hover + label:before {border-color:#888;}
 /* Errored */
-.check > input.is-errored + label {color:#f52727;}
-.check > input.is-errored + label:before,
-.check > input.is-errored.is-focused:checked + label:before,
-.check > input.is-errored:checked:hover + label:before,
-.check > input.is-errored:checked:focus + label:before  {border-color:#f52727;}
-.check > input.is-errored:checked + label:before {border-color:#f52727;}
-.check > input.is-errored:checked + label:after {border-color:#f52727;}
+.form-checkbox > input.is-errored + label {color:#f52727;}
+.form-checkbox > input.is-errored + label:before,
+.form-checkbox > input.is-errored.is-focused:checked + label:before,
+.form-checkbox > input.is-errored:checked:hover + label:before,
+.form-checkbox > input.is-errored:checked:focus + label:before  {border-color:#f52727;}
+.form-checkbox > input.is-errored:checked + label:before {border-color:#f52727;}
+.form-checkbox > input.is-errored:checked + label:after {border-color:#f52727;}
 
 /* Form Switch */
-.switch + .switch {margin-left:10px;}
-.switch {display:inline-block; position:relative;}
-.switch label {display:inline-block; width:80px; vertical-align:top;}
-.switch label:before, .switch label:after {content:'';}
-.switch label:before {display:inline-block; width:100%; height:30px; background-color:#f0f0f0; border-radius:15px; vertical-align:top;}
-.switch input,.switch label:after {position:absolute; left:2px; top:50%; z-index:1; width:40px; height:26px; line-height:26px; text-align:center; border-radius:13px; overflow:hidden; background-color:#aaa; color:#fff; font-size:12px; transform:translateY(-50%); transition:all 0.3s;}
-.switch input {z-index:0; border:0; height:24px;}
-.switch input:checked,.switch input:checked + label:after {left:calc(100% - 42px);}
-.switch input:checked + label:after {background-color:$color-primary;}
-.switch input + label:after {content:'OFF';}
-.switch input:checked + label:after {content:'ON';}
-.switch input[disabled] + label:before {background-color:#ddd;}
+.form-switch + .form-switch {margin-left:10px;}
+.form-switch {display:inline-block; position:relative;}
+.form-switch label {display:inline-block; width:80px; vertical-align:top;}
+.form-switch label:before, .form-switch label:after {content:'';}
+.form-switch label:before {display:inline-block; width:100%; height:30px; background-color:#f0f0f0; border-radius:15px; vertical-align:top;}
+.form-switch input,.form-switch label:after {position:absolute; left:2px; top:50%; z-index:1; width:40px; height:26px; line-height:26px; text-align:center; border-radius:13px; overflow:hidden; background-color:#aaa; color:#fff; font-size:12px; transform:translateY(-50%); transition:all 0.3s;}
+.form-switch input {z-index:0; border:0; height:24px;}
+.form-switch input:checked,.form-switch input:checked + label:after {left:calc(100% - 42px);}
+.form-switch input:checked + label:after {background-color:$color-primary;}
+.form-switch input + label:after {content:'OFF';}
+.form-switch input:checked + label:after {content:'ON';}
+.form-switch input[disabled] + label:before {background-color:#ddd;}
 
 /*-------------------------------------------------------------------
     @@ Form Elements
 -------------------------------------------------------------------*/
 /* Form Text */
-.form-tit, .form-txt {position:relative; padding:1px 0 2px 0px; line-height:27px; vertical-align:middle;}
-.form-tit, span.form-txt {display:inline-block;}
-.form-txt {margin-left:10px;}
-.form-txt:first-child {margin-left:0;}
-.form-tit .form-required {position:absolute; top:4px; right:5px; color:$color-red;}
-.form-split {display:inline-block; min-width:24px; line-height:30px; text-align:center;}
+.form-label, .form-text {flex:none; position:relative; padding:11px 0 11px 0px; line-height:22px; vertical-align:middle;}
+.form-label, span.form-text {display:inline-block;}
+.form-label .required {position:absolute; top:4px; right:5px; color:$color-red;}
+.form-split {display:inline-block; min-width:24px; line-height:45px; text-align:center;}
 .form-alert {display:none; color:#555;}
 .form-alert.is-visibled {display:block;}
 .form-alert.is-errored {color:red;}

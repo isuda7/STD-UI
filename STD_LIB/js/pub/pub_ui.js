@@ -52,8 +52,8 @@ var ui = {
 	fileAttach: function(obj, e){
 		// 파일첨부 - 파일명적용
 		var sel_files = [];
-		var $eleFormText = $(obj).closest('.file').find('input[type=text]');
-		var $eleFormImg = $(obj).closest('.file').find('.file-preview');
+		var $eleFormText = $(obj).closest('.form-file').find('input[type=text]');
+		var $eleFormImg = $(obj).closest('.form-file').find('.file-preview');
 
 		var action = function(){
 			//파일명 적용
@@ -63,8 +63,8 @@ var ui = {
 				$eleFormText.val(fileName);
 			}
 
+            //이미지 미리보기
 			if ($eleFormImg.length){
-				//이미지 사진보기
 				var files = e.target.files;
 				var filesArr = Array.prototype.slice.call(files);
 

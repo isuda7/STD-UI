@@ -1,11 +1,34 @@
 @charset "utf-8";
 
+// SCSS Common
 @import '../scss_common/variables';
 @import '../scss_common/base';
 @import '../scss_common/common';
 @import '../scss_common/layout';
-@import '../scss_common/ui';
+// @import '../scss_common/ui';
 @import '../scss_common/content';
 @import '../scss_common/main';
 @import 'animate.css';
 @import 'plugins.css';
+
+// SCSS Components
+@import '../scss_components/accordions';
+@import '../scss_components/badges';
+@import '../scss_components/breadcrumb';
+@import '../scss_components/bullets';
+@import '../scss_components/buttons';
+@import '../scss_components/cards';
+@import '../scss_components/dimmer';
+@import '../scss_components/dropmenus';
+@import '../scss_components/formElements';
+@import '../scss_components/formGroup';
+@import '../scss_components/icons';
+@import '../scss_components/labels';
+@import '../scss_components/lists';
+@import '../scss_components/modals';
+@import '../scss_components/paging';
+@import '../scss_components/sections';
+@import '../scss_components/steps';
+@import '../scss_components/tables';
+@import '../scss_components/tabs';
+@import '../scss_components/tooltips';

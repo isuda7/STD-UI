@@ -6,57 +6,57 @@
 	## Icon
 -------------------------------------------------------------------*/
 /* Default */
-.arw, .ico, .flag {display:inline-block; background:no-repeat 0 0; vertical-align:middle; overflow:hidden; color:transparent; text-indent:-999px; white-space:nowrap;}
+.arw, .icon, .flag {display:inline-block; background:no-repeat 0 0; vertical-align:middle; overflow:hidden; color:transparent; text-indent:-999px; white-space:nowrap;}
 
 /* Styles */
-.ico-badge1 {width:40px; height:28px; background-image:url(../img/cmn/ico_badge01.png);}
-.ico-badge1.primary {background-position:0 0;}
-.ico-badge1.gray {background-position:-40px 0;}
-.ico-close1 {width:15px; height:15px; background-image:url(../img/cmn/ico_close01.png);}
-.ico-close1.primary {background-position:0 0;}
-.ico-close1.dark {background-position:-15px 0;}
-.ico-close1.white {background-position:-30px 0;}
-.ico-close1.gray {background-position:-45px 0;}
-.ico-del1 {width:22px; height:22px; background-image:url(../img/cmn/ico_del01.png);}
-.ico-del1.primary {background-position:0 0;}
-.ico-del1.dark {background-position:-22px 0;}
-.ico-del1.white {background-position:-44px 0;}
-.ico-del1.gray {background-position:-66px 0;}
-.ico-more1 {width:25px; height:25px; background-image:url(../img/cmn/ico_more01.png);}
-.ico-more1.primary {background-position:0 0;}
-.ico-more1.dark {background-position:-25px 0;}
-.ico-more1.white {background-position:-50px 0;}
-.ico-more1.gray {background-position:-75px 0;}
-.ico-more2 {width:40px; height:40px; background-image:url(../img/cmn/ico_more02.png);}
-.ico-more2.primary {background-position:0 0;}
-.ico-more2.dark {background-position:-40px 0;}
-.ico-more2.white {background-position:-80px 0;}
-.ico-more2.gray {background-position:-120px 0;}
-.ico-file1 {width:22px; height:24px; background-image:url(../img/cmn/ico_file01.png);}
-.ico-file1.primary {background-position:0 0;}
-.ico-file1.dark {background-position:-21px 0;}
-.ico-file1.white {background-position:-42px 0;}
-.ico-file1.gray {background-position:-63px 0;}
-.ico-slide2-pause {width:14px; height:16px; background-image:url(../img/cmn/ico_slide02_pause.png);}
-.ico-slide2-pause.primary {background-position:0 0;}
-.ico-slide2-pause.dark {background-position:-14px 0;}
-.ico-slide2-pause.white {background-position:-28px 0;}
-.ico-slide2-pause.gray {background-position:-42px 0;}
-.ico-slide2-play {width:15px; height:16px; background-image:url(../img/cmn/ico_slide02_play.png);}
-.ico-slide2-play.primary {background-position:0 0;}
-.ico-slide2-play.dark {background-position:-15px 0;}
-.ico-slide2-play.white {background-position:-30px 0;}
-.ico-slide2-play.gray {background-position:-45px 0;}
-.ico-search1 {width:20px; height:20px; background-image:url(../img/cmn/ico_search01.png);}
-.ico-search1.primary {background-position:0 0;}
-.ico-search1.dark {background-position:-20px 0;}
-.ico-search1.white {background-position:-40px 0;}
-.ico-search1.gray {background-position:-60px 0;}
-.ico-youtube-play {width:90px; height:90px; background-image:url(../img/cmn/ico_youtube_play.png);}
-.ico-youtube-play.primary {background-position:0 0;}
-.ico-youtube-play.dark {background-position:-90px 0;}
-.ico-youtube-play.white {background-position:-180px 0;}
-.ico-youtube-play.gray {background-position:-270px 0;}
+.icon-badge1 {width:40px; height:28px; background-image:url(../img/cmn/ico_badge01.png);}
+.icon-badge1.primary {background-position:0 0;}
+.icon-badge1.gray {background-position:-40px 0;}
+.icon-close1 {width:15px; height:15px; background-image:url(../img/cmn/ico_close01.png);}
+.icon-close1.primary {background-position:0 0;}
+.icon-close1.dark {background-position:-15px 0;}
+.icon-close1.white {background-position:-30px 0;}
+.icon-close1.gray {background-position:-45px 0;}
+.icon-del1 {width:22px; height:22px; background-image:url(../img/cmn/ico_del01.png);}
+.icon-del1.primary {background-position:0 0;}
+.icon-del1.dark {background-position:-22px 0;}
+.icon-del1.white {background-position:-44px 0;}
+.icon-del1.gray {background-position:-66px 0;}
+.icon-more1 {width:25px; height:25px; background-image:url(../img/cmn/ico_more01.png);}
+.icon-more1.primary {background-position:0 0;}
+.icon-more1.dark {background-position:-25px 0;}
+.icon-more1.white {background-position:-50px 0;}
+.icon-more1.gray {background-position:-75px 0;}
+.icon-more2 {width:40px; height:40px; background-image:url(../img/cmn/ico_more02.png);}
+.icon-more2.primary {background-position:0 0;}
+.icon-more2.dark {background-position:-40px 0;}
+.icon-more2.white {background-position:-80px 0;}
+.icon-more2.gray {background-position:-120px 0;}
+.icon-file1 {width:22px; height:24px; background-image:url(../img/cmn/ico_file01.png);}
+.icon-file1.primary {background-position:0 0;}
+.icon-file1.dark {background-position:-21px 0;}
+.icon-file1.white {background-position:-42px 0;}
+.icon-file1.gray {background-position:-63px 0;}
+.icon-slide2-pause {width:14px; height:16px; background-image:url(../img/cmn/ico_slide02_pause.png);}
+.icon-slide2-pause.primary {background-position:0 0;}
+.icon-slide2-pause.dark {background-position:-14px 0;}
+.icon-slide2-pause.white {background-position:-28px 0;}
+.icon-slide2-pause.gray {background-position:-42px 0;}
+.icon-slide2-play {width:15px; height:16px; background-image:url(../img/cmn/ico_slide02_play.png);}
+.icon-slide2-play.primary {background-position:0 0;}
+.icon-slide2-play.dark {background-position:-15px 0;}
+.icon-slide2-play.white {background-position:-30px 0;}
+.icon-slide2-play.gray {background-position:-45px 0;}
+.icon-search1 {width:20px; height:20px; background-image:url(../img/cmn/ico_search01.png);}
+.icon-search1.primary {background-position:0 0;}
+.icon-search1.dark {background-position:-20px 0;}
+.icon-search1.white {background-position:-40px 0;}
+.icon-search1.gray {background-position:-60px 0;}
+.icon-youtube-play {width:90px; height:90px; background-image:url(../img/cmn/ico_youtube_play.png);}
+.icon-youtube-play.primary {background-position:0 0;}
+.icon-youtube-play.dark {background-position:-90px 0;}
+.icon-youtube-play.white {background-position:-180px 0;}
+.icon-youtube-play.gray {background-position:-270px 0;}
 
 /* Bullets */
 .bul-circle1 {width:12px; height:12px; background-image:url(../img/cmn/bul_circle01.png);}

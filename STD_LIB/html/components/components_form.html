@@ -8,7 +8,7 @@
 <script type="text/javascript">
 <!--
 	function fileAttach(obj){
-		var $this = $(obj).closest('.file');
+		var $this = $(obj).closest('.form-file');
 		$this.find('[type=file]').trigger('click');
 		$this.find('[type=file]').not('.is-evented').on('change', function(){
 			var value = $(this).val();
@@ -50,6 +50,7 @@ jQuery(document).keydown(function(e){
 									<span class="g-example-txt"></span>
 									<a href="javascript:;" class="g-example-btn">API</a>
 									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCSS</a>
 								</div>
 							</div>
 							<div class="g-example-footer">
@@ -73,7 +74,7 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-									/*-------------------------------------------------------------------
+                                    /*-------------------------------------------------------------------
 										## Form
 									-------------------------------------------------------------------*/
 									/* Default */
@@ -89,6 +90,21 @@ jQuery(document).keydown(function(e){
 									textarea {width:100%; vertical-align:middle; resize:none;}
 									select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
 									select::-ms-expand {display:none;}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+                                    /*-------------------------------------------------------------------
+                                        ## Variables
+                                    -------------------------------------------------------------------*/
+                                    $color-primary: #2496ee;
+                                    @mixin ui-input-module-a {
+                                        height:45px; padding:0 15px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 1.5; transition:all 0.3s;
+                                        &:hover {border-color: #222;}
+                                        &:focus {border-color: $color-primary; color: $color-primary;}
+                                        &:disabled {background-color: #fafafa; opacity: 0.75;}
+                                        &:disabled:hover {border-color: #999; opacity: 0.75;}
+                                    }
 								</pre>
 							</div>
 						</div>
@@ -115,31 +131,27 @@ jQuery(document).keydown(function(e){
 							<div class="g-example-body">
 								<div class="g-example-preview">
 									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="form-input" />
-									<input type="search" name="sText1" id="" value="search" placeholder="Placeholder" class="form-input" />
-									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input">
-									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly/>
-									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled>
-									<input type="text" name="sText1" id="" value="" placeholder="Required" title="제목" class="form-input" required/>
+									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input" />
+									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly />
+									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled />
 									<br /><br />
-									<textarea rows="3" cols="50" class="form-input"></textarea>
+									<textarea rows="3" cols="50" class="form-input" placeholder=""></textarea>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
 									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="form-input" />
-									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input">
-									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly/>
-									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled>
-									<input type="text" name="sText1" id="" value="" placeholder="Required" title="제목" class="form-input" required/>
+									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input" />
+									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly />
+									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled />
 									<textarea rows="3" cols="50" class="form-input"></textarea>
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
 									/* Form Textfield */
-									.input {height:30px; padding:0 10px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); @include mixTransition(all 0.3s);}
-									.input:focus,.input:hover,.input.is-focused {border-color:#0089b3;}
-									textarea.input {height:auto; padding:10px;}
+									.form-input {@include ui-input-module-a;}
+                                    textarea.form-input {@include ui-input-module-a; height:auto; padding-top:10px; padding-bottom:10px;}
 								</pre>
 							</div>
 						</div>
@@ -152,55 +164,46 @@ jQuery(document).keydown(function(e){
 									<span class="g-example-txt"></span>
 									<a href="javascript:;" class="g-example-btn">HTML</a>
 									<a href="javascript:;" class="g-example-btn">CSS</a>
-									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
 								</div>
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<select name="sSelect1" id="sSelect1" class="select">
+									<select name="sSelect1" id="sSelect1" class="form-select">
 										<option value="">콤보상자 목록선택</option>
 									</select>
-									<select name="sSelect1" id="sSelect1" class="select" disabled>
+									<select name="sSelect1" id="sSelect1" class="form-select" disabled>
 										<option value="">Disabled</option>
 									</select>
-									<select name="sSelect1" id="sSelect1" class="select" readonly>
+									<select name="sSelect1" id="sSelect1" class="form-select" readonly>
 										<option value="">Readonly</option>
 									</select>
-									<select name="sSelect1" id="sSelect1" class="select" required>
-										<option value="">Required</option>
-									</select>
+                                    <br>
+									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false">버튼타입 팝업선택</button>
+									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false" disabled>Disabled</button>
+									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false" readonly>Readonly</button>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									<select name="sSelect1" id="sSelect1" class="select">
+									<select name="sSelect1" id="sSelect1" class="form-select">
 										<option value="">콤보상자 목록선택</option>
 									</select>
-									<select name="sSelect1" id="sSelect1" class="select" disabled>
+									<select name="sSelect1" id="sSelect1" class="form-select" disabled>
 										<option value="">Disabled</option>
 									</select>
-									<select name="sSelect1" id="sSelect1" class="select" readonly>
+									<select name="sSelect1" id="sSelect1" class="form-select" readonly>
 										<option value="">Readonly</option>
 									</select>
-									<select name="sSelect1" id="sSelect1" class="select" required>
-										<option value="">Required</option>
-									</select>
-									<button type="button" class="form-button" aria-haspopup="true" aria-expanded="false"><span>버튼타입 팝업선택</span></button>
-									<button type="button" class="form-button" aria-haspopup="true" aria-expanded="false" disabled><span>Disabled</span></button>
-									<button type="button" class="form-button" aria-haspopup="true" aria-expanded="false" readonly><span>Readonly</span></button>
-									<button type="button" class="form-button" aria-haspopup="true" aria-expanded="false" required><span>Required</span></button>
+                                    <br>
+									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false">버튼타입 팝업선택</button>
+									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false" disabled>Disabled</button>
+									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false" readonly>Readonly</button>
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-									.form-button {display:inline-block; position:relative; height:30px; padding:0 30px 0 10px; border:1px solid #ddd; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 10px) center; vertical-align:middle; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); transition:all 0.3s;}
-									.select {display:inline-block; position:relative;}
-									.select {height:30px; padding:0 30px 0 10px; border:1px solid #ddd; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 10px) center; vertical-align:middle; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); transition:all 0.3s;}
-								</pre>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:js">
-									SCRIPT SOURCE
+                                    /* Form Select */
+                                    .form-select {@include ui-input-module-a; padding-right:45px; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 15px) center;}
 								</pre>
 							</div>
 						</div>
@@ -208,7 +211,7 @@ jQuery(document).keydown(function(e){
 						<h3 class="g-h3">Radio</h3>
 						<div class="g-example-wrap">
 							<div class="g-example-header">
-								<strong class="g-example-tit">.radio</strong>
+								<strong class="g-example-tit">.form-radio</strong>
 								<div class="g-example-nav">
 									<span class="g-example-txt"></span>
 									<a href="javascript:;" class="g-example-btn">HTML</a>
@@ -218,48 +221,48 @@ jQuery(document).keydown(function(e){
 							<div class="g-example-body">
 								<div class="g-example-preview">
 									<!-- Form radio -->
-									<span class="radio">
-										<input type="radio" name="sRadio10" id="sRadio11" value="">
+									<span class="form-radio">
+										<input type="radio" name="sRadio10" id="sRadio11" value="" />
 										<label for="sRadio11"><span class="blind">Hidden</span></label>
 									</span>
-									<span class="radio">
-										<input type="radio" name="sRadio11" id="sRadio12" value="">
+									<span class="form-radio">
+										<input type="radio" name="sRadio11" id="sRadio12" value="" />
 										<label for="sRadio12"><span>Radio1</span></label>
 									</span>
-									<span class="radio">
-										<input type="radio" name="sRadio11" id="sRadio13" value="" checked>
+									<span class="form-radio">
+										<input type="radio" name="sRadio11" id="sRadio13" value="" checked />
 										<label for="sRadio13"><span>Radio2</span></label>
 									</span>
-									<span class="radio">
-										<input type="radio" name="sRadio12" id="sRadio14" value="" disabled>
+									<span class="form-radio">
+										<input type="radio" name="sRadio12" id="sRadio14" value="" disabled />
 										<label for="sRadio14"><span>disabled</span></label>
 									</span>
-									<span class="radio">
-										<input type="radio" name="sRadio12" id="sRadio15" value="" checked disabled>
+									<span class="form-radio">
+										<input type="radio" name="sRadio12" id="sRadio15" value="" checked disabled />
 										<label for="sRadio15"><span>disabled</span></label>
 									</span>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									&lt;span class="radio">
-										&lt;input type="radio" name="sRadio10" id="sRadio11" value="">
+									&lt;span class="form-radio">
+										&lt;input type="radio" name="sRadio10" id="sRadio11" value="" />
 										&lt;label for="sRadio11">&lt;span class="blind">Hidden&lt;/span>&lt;/label>
 									&lt;/span>
-									&lt;span class="radio">
-										&lt;input type="radio" name="sRadio11" id="sRadio12" value="">
+									&lt;span class="form-radio">
+										&lt;input type="radio" name="sRadio11" id="sRadio12" value="" />
 										&lt;label for="sRadio12">&lt;span>Label1&lt;/span>&lt;/label>
 									&lt;/span>
-									&lt;span class="radio">
-										&lt;input type="radio" name="sRadio11" id="sRadio13" value="" checked>
+									&lt;span class="form-radio">
+										&lt;input type="radio" name="sRadio11" id="sRadio13" value="" checked />
 										&lt;label for="sRadio13">&lt;span>Label1&lt;/span>&lt;/label>
 									&lt;/span>
-									&lt;span class="radio">
-										&lt;input type="radio" name="sRadio12" id="sRadio14" value="" disabled>
+									&lt;span class="form-radio">
+										&lt;input type="radio" name="sRadio12" id="sRadio14" value="" disabled />
 										&lt;label for="sRadio14">&lt;span>disabled&lt;/span>&lt;/label>
 									&lt;/span>
-									&lt;span class="radio">
-										&lt;input type="radio" name="sRadio12" id="sRadio15" value="" checked disabled>
+									&lt;span class="form-radio">
+										&lt;input type="radio" name="sRadio12" id="sRadio15" value="" checked disabled />
 										&lt;label for="sRadio15">&lt;span>disabled&lt;/span>&lt;/label>
 									&lt;/span>
 								</pre>
@@ -268,31 +271,31 @@ jQuery(document).keydown(function(e){
 								<pre class="brush:css">
 									/* Form Radio */
 									/* Basic */
-									.radio {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
-									.radio label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:18px; vertical-align:middle;}
-									.radio label span {display:inline-block; padding-left:28px; vertical-align:middle;}
-									.radio label:before, .radio label:after {content:''; position:absolute; left:0; top:0;}
-									.radio label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff; border-radius:50%;}
-									.radio > input {display:none; position:absolute; left:0; top:0; width:20px; height:20px;}
-									.radio + .radio {margin-left:10px;}
+									.form-radio {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
+									.form-radio label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:18px; vertical-align:middle;}
+									.form-radio label span {display:inline-block; padding-left:28px; vertical-align:middle;}
+									.form-radio label:before, .form-radio label:after {content:''; position:absolute; left:0; top:0;}
+									.form-radio label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff; border-radius:50%;}
+									.form-radio > input {display:none; position:absolute; left:0; top:0; width:20px; height:20px;}
+									.form-radio + .form-radio {margin-left:10px;}
 									/* Checked */
-									.radio > input:checked + label:before {background-color:#fff; border-color:$color-primary;}
-									.radio > input:checked + label:after {top:5px; left:5px; width:10px; height:10px; border-radius:50%; background:$color-primary;}
+									.form-radio > input:checked + label:before {background-color:#fff; border-color:$color-primary;}
+									.form-radio > input:checked + label:after {top:5px; left:5px; width:10px; height:10px; border-radius:50%; background:$color-primary;}
 									/* Focused */
-									.radio > input.is-focused + label:before,
-									.radio > input:hover + label:before,
-									.radio > input:focus + label:before {border-color:#888;}
-									.radio > input:checked:focus + label:before,
-									.radio > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
+									.form-radio > input.is-focused + label:before,
+									.form-radio > input:hover + label:before,
+									.form-radio > input:focus + label:before {border-color:#888;}
+									.form-radio > input:checked:focus + label:before,
+									.form-radio > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
 									/* Disabled */
-									.radio > input[disabled] + label {color:#999;}
-									.radio > input[disabled] + label:before {background-color:#f0f0f0;}
-									.radio > input[disabled]:focus + label:before,
-									.radio > input[disabled]:hover + label:before {border-color:#ddd;}
-									.radio > input[disabled]:checked + label:after {background:#888;}
-									.radio > input[disabled]:checked + label:before,
-									.radio > input[disabled]:checked:focus + label:before,
-									.radio > input[disabled]:checked:hover + label:before {border-color:#888;}
+									.form-radio > input[disabled] + label {color:#999;}
+									.form-radio > input[disabled] + label:before {background-color:#f0f0f0;}
+									.form-radio > input[disabled]:focus + label:before,
+									.form-radio > input[disabled]:hover + label:before {border-color:#ddd;}
+									.form-radio > input[disabled]:checked + label:after {background:#888;}
+									.form-radio > input[disabled]:checked + label:before,
+									.form-radio > input[disabled]:checked:focus + label:before,
+									.form-radio > input[disabled]:checked:hover + label:before {border-color:#888;}
 								</pre>
 							</div>
 						</div>
@@ -300,7 +303,7 @@ jQuery(document).keydown(function(e){
 						<h3 class="g-h3">Checkbox</h3>
 						<div class="g-example-wrap">
 							<div class="g-example-header">
-								<strong class="g-example-tit">.check</strong>
+								<strong class="g-example-tit">.form-checkbox</strong>
 								<div class="g-example-nav">
 									<span class="g-example-txt"></span>
 									<a href="javascript:;" class="g-example-btn">HTML</a>
@@ -309,48 +312,48 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<span class="check">
+									<span class="form-checkbox">
 										<input type="checkbox" name="sCheck11" id="sCheck11" value="" />
 										<label for="sCheck11"><span class="blind">Hidden</span></label>
 									</span>
-									<span class="check">
+									<span class="form-checkbox">
 										<input type="checkbox" name="sCheck12" id="sCheck12" value="" />
 										<label for="sCheck12"><span>Checkbox1</span></label>
 									</span>
-									<span class="check">
-										<input type="checkbox" name="sCheck12" id="sCheck13" value="" checked>
+									<span class="form-checkbox">
+										<input type="checkbox" name="sCheck12" id="sCheck13" value="" checked />
 										<label for="sCheck13"><span>Checkbox2</span></label>
 									</span>
-									<span class="check">
-										<input type="checkbox" name="sCheck13" id="sCheck14" value="" disabled>
+									<span class="form-checkbox">
+										<input type="checkbox" name="sCheck13" id="sCheck14" value="" disabled />
 										<label for="sCheck14"><span>disabled</span></label>
 									</span>
-									<span class="check">
-										<input type="checkbox" name="sCheck13" id="sCheck15" value="" checked disabled>
+									<span class="form-checkbox">
+										<input type="checkbox" name="sCheck13" id="sCheck15" value="" checked disabled />
 										<label for="sCheck15"><span>disabled</span></label>
 									</span>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									<span class="check">
+									<span class="form-checkbox">
 										<input type="checkbox" name="sCheck11" id="sCheck11" value="" />
 										<label for="sCheck11"><span class="blind">Hidden</span></label>
 									</span>
-									<span class="check">
+									<span class="form-checkbox">
 										<input type="checkbox" name="sCheck12" id="sCheck12" value="" />
 										<label for="sCheck12"><span>Checkbox1</span></label>
 									</span>
-									<span class="check">
-										<input type="checkbox" name="sCheck12" id="sCheck13" value="" checked>
+									<span class="form-checkbox">
+										<input type="checkbox" name="sCheck12" id="sCheck13" value="" checked />
 										<label for="sCheck13"><span>Checkbox2</span></label>
 									</span>
-									<span class="check">
-										<input type="checkbox" name="sCheck13" id="sCheck14" value="" disabled>
+									<span class="form-checkbox">
+										<input type="checkbox" name="sCheck13" id="sCheck14" value="" disabled />
 										<label for="sCheck14"><span>disabled</span></label>
 									</span>
-									<span class="check">
-										<input type="checkbox" name="sCheck13" id="sCheck15" value="" checked disabled>
+									<span class="form-checkbox">
+										<input type="checkbox" name="sCheck13" id="sCheck15" value="" checked disabled />
 										<label for="sCheck15"><span>disabled</span></label>
 									</span>
 								</pre>
@@ -359,31 +362,31 @@ jQuery(document).keydown(function(e){
 								<pre class="brush:css">
 									/* Form Check */
 									/* Basic */
-									.check {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
-									.check label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:20px; vertical-align:middle;}
-									.check label span {display:inline-block; padding-left:28px;}
-									.check label:before, .check label:after {content:''; position:absolute; left:0; top:0;}
-									.check label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff;}
-									.check > input {display:none; position:absolute; left:0; top:0; width:20px; height:20px;}
-									.check + .check {margin-left:10px;}
+									.form-checkbox {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
+									.form-checkbox label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:20px; vertical-align:middle;}
+									.form-checkbox label span {display:inline-block; padding-left:28px;}
+									.form-checkbox label:before, .form-checkbox label:after {content:''; position:absolute; left:0; top:0;}
+									.form-checkbox label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff;}
+									.form-checkbox > input {display:none; position:absolute; left:0; top:0; width:20px; height:20px;}
+									.form-checkbox + .form-checkbox {margin-left:10px;}
 									/* Checked */
-									.check > input:checked + label:before {border-color:$color-primary;}
-									.check > input:checked + label:after {left:5px; top:5px; width:10px; height:7px; background:none; border-left:2px solid $color-primary; border-bottom:2px solid $color-primary; transform:rotate(-45deg);}
+									.form-checkbox > input:checked + label:before {border-color:$color-primary;}
+									.form-checkbox > input:checked + label:after {left:5px; top:5px; width:10px; height:7px; background:none; border-left:2px solid $color-primary; border-bottom:2px solid $color-primary; transform:rotate(-45deg);}
 									/* Focused */
-									.check > input.is-focused + label:before,
-									.check > input:hover + label:before,
-									.check > input:focus + label:before {border-color:#888;}
-									.check > input:checked:focus + label:before,
-									.check > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
+									.form-checkbox > input.is-focused + label:before,
+									.form-checkbox > input:hover + label:before,
+									.form-checkbox > input:focus + label:before {border-color:#888;}
+									.form-checkbox > input:checked:focus + label:before,
+									.form-checkbox > input:checked:hover + label:before {border-color:$color-primary; transition:all 0.3s;}
 									/* Disabled */
-									.check > input[disabled] + label {color:#999;}
-									.check > input[disabled] + label:before {background-color:#f0f0f0;}
-									.check > input[disabled]:focus + label:before,
-									.check > input[disabled]:hover + label:before {border-color:#ddd;}
-									.check > input[disabled]:checked + label:after {border-color:#888;}
-									.check > input[disabled]:checked + label:before,
-									.check > input[disabled]:checked:focus + label:before,
-									.check > input[disabled]:checked:hover + label:before {border-color:#888;}
+									.form-checkbox > input[disabled] + label {color:#999;}
+									.form-checkbox > input[disabled] + label:before {background-color:#f0f0f0;}
+									.form-checkbox > input[disabled]:focus + label:before,
+									.form-checkbox > input[disabled]:hover + label:before {border-color:#ddd;}
+									.form-checkbox > input[disabled]:checked + label:after {border-color:#888;}
+									.form-checkbox > input[disabled]:checked + label:before,
+									.form-checkbox > input[disabled]:checked:focus + label:before,
+									.form-checkbox > input[disabled]:checked:hover + label:before {border-color:#888;}
 								</pre>
 							</div>
 						</div>
@@ -396,67 +399,61 @@ jQuery(document).keydown(function(e){
 									<span class="g-example-txt"></span>
 									<a href="javascript:;" class="g-example-btn">HTML</a>
 									<a href="javascript:;" class="g-example-btn">CSS</a>
-									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
 								</div>
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<span class="switch">
-										<input type="checkbox" name="sSwitch2" id="sSwitch21" value="">
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch21" value="" />
 										<label for="sSwitch21"></label>
 									</span>
-									<span class="switch">
-										<input type="checkbox" name="sSwitch2" id="sSwitch22" value="" checked>
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch22" value="" checked />
 										<label for="sSwitch22"></label>
 									</span>
-									<span class="switch">
-										<input type="checkbox" name="sSwitch2" id="sSwitch23" value="" disabled>
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch23" value="" disabled />
 										<label for="sSwitch23"></label>
 									</span>
-									<span class="switch">
-										<input type="checkbox" name="sSwitch2" id="sSwitch24" value="" checked disabled>
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch24" value="" checked disabled />
 										<label for="sSwitch24"></label>
 									</span>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									&lt;span class="switch">
-										&lt;input type="checkbox" name="sSwitch2" id="sSwitch21" value="">
+									&lt;span class="form-switch">
+										&lt;input type="checkbox" name="sSwitch2" id="sSwitch21" value="" />
 										&lt;label for="sSwitch21">&lt;/label>
 									&lt;/span>
-									&lt;span class="switch">
-										&lt;input type="checkbox" name="sSwitch2" id="sSwitch22" value="" checked>
+									&lt;span class="form-switch">
+										&lt;input type="checkbox" name="sSwitch2" id="sSwitch22" value="" checked />
 										&lt;label for="sSwitch22">&lt;/label>
 									&lt;/span>
-									&lt;span class="switch">
-										&lt;input type="checkbox" name="sSwitch2" id="sSwitch23" value="" disabled>
+									&lt;span class="form-switch">
+										&lt;input type="checkbox" name="sSwitch2" id="sSwitch23" value="" disabled />
 										&lt;label for="sSwitch23">&lt;/label>
 									&lt;/span>
-									&lt;span class="switch">
-										&lt;input type="checkbox" name="sSwitch2" id="sSwitch24" value="" checked disabled>
+									&lt;span class="form-switch">
+										&lt;input type="checkbox" name="sSwitch2" id="sSwitch24" value="" checked disabled />
 										&lt;label for="sSwitch24">&lt;/label>
 									&lt;/span>
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-									.switch + .switch {margin-left:10px;}
-									.switch {display:inline-block; position:relative;}
-									.switch label {display:inline-block; width:80px; vertical-align:top;}
-									.switch label:before {content:''; display:inline-block; width:100%; height:30px; background-color:#f0f0f0; border-radius:15px; vertical-align:top; box-shadow:2px 2px 3px -2px inset rgba(100,100,100,0.5);}
-									.switch input,.switch span {position:absolute; left:2px; top:50%; z-index:1; width:40px; height:26px; line-height:26px; text-align:center; border-radius:13px; overflow:hidden; background-color:#aaa; color:#fff; font-size:12px; transform:translateY(-50%); transition:all 0.3s;}
-									.switch input {z-index:0; border:0;}
-									.switch input:checked,.switch input:checked + label span {left:calc(100% - 42px);}
-									.switch input:checked + label span {background-color:$color-primary;}
-									.switch input + label span:before {content:'OFF';}
-									.switch input:checked + label span:before {content:'ON';}
-									.switch input[disabled] + label:before {background-color:#ddd;}
-								</pre>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:js">
-									SCRIPT SOURCE
+									.form-switch + .form-switch {margin-left:10px;}
+									.form-switch {display:inline-block; position:relative;}
+									.form-switch label {display:inline-block; width:80px; vertical-align:top;}
+									.form-switch label:before {content:''; display:inline-block; width:100%; height:30px; background-color:#f0f0f0; border-radius:15px; vertical-align:top; box-shadow:2px 2px 3px -2px inset rgba(100,100,100,0.5);}
+									.form-switch input,.form-switch span {position:absolute; left:2px; top:50%; z-index:1; width:40px; height:26px; line-height:26px; text-align:center; border-radius:13px; overflow:hidden; background-color:#aaa; color:#fff; font-size:12px; transform:translateY(-50%); transition:all 0.3s;}
+									.form-switch input {z-index:0; border:0;}
+									.form-switch input:checked,.form-switch input:checked + label span {left:calc(100% - 42px);}
+									.form-switch input:checked + label span {background-color:$color-primary;}
+									.form-switch input + label span:before {content:'OFF';}
+									.form-switch input:checked + label span:before {content:'ON';}
+									.form-switch input[disabled] + label:before {background-color:#ddd;}
 								</pre>
 							</div>
 						</div>
@@ -477,9 +474,9 @@ jQuery(document).keydown(function(e){
 									<!-- Form Attach Files -->
 									<p>파일첨부</p>
 									<br />
-									<div class="file">
+									<div class="form-file">
 										<input type="text" class="form-input" title="첨부된 파일명" />
-										<label for="sFile" class="btn style-1" role="button" tabindex="0">
+										<label for="sFile" class="btn form-button" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
 										</label>
@@ -487,9 +484,9 @@ jQuery(document).keydown(function(e){
 									<br /><br /><br />
 									<p>이미지 미리보기</p>
 									<br />
-									<div class="file has-preview">
+									<div class="form-file has-preview">
 										<div class="file-preview"></div>
-										<label for="sFile2" class="btn style-1" role="button" tabindex="0">
+										<label for="sFile2" class="btn form-button" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile2" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
 										</label>
@@ -498,33 +495,62 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									&lt;span class="file">
+									&lt;span class="form-file">
 										&lt;input type="file" name="sFiles1" id="sFiles1" value="찾아보기" tabindex="-1" aria-hidden="true"/>
 										&lt;input type="text" class="form-input" title="첨부된 파일명" />
-										&lt;button type="button" class="btn style-1 btn_file" onclick="fileAttach(this)">&lt;span>파일첨부&lt;/span>&lt;/button>
+										&lt;button type="button" class="btn form-button" onclick="fileAttach(this)">&lt;span>파일첨부&lt;/span>&lt;/button>
 									&lt;/span>
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
 									/* Form File */
-									.file {position:relative;}
-									.file input[type="file"] {position:absolute; width:0; height:0; overflow:hidden;}
-									.file input[type="text"] {display:inline-table;}
-									.file .btn_file {display:inline-table;}
+                                    .form-file {position:relative; display:inline-block;}
+                                    .form-file input[type="file"] {position:absolute; width:0; height:0; overflow:hidden;}
+                                    .form-file .file-hide {position:absolute; width:0; height:0; overflow:hidden;}
+                                    .form-file .file-preview {position:relative; display:flex; justify-content:center; align-items:center; overflow:hidden; width:264px; height:124px; border:1px solid #e1e1e1;}
+                                    .form-file .file-preview img {position:absolute; left:50%; top:50%; max-width:100%; transform:translate(-50%, -50%);}
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:js">
-									//파일첨부
-									function fileAttach(obj){
-										var $this = $(obj).closest('.file');
-										$this.find('[type=file]').trigger('click');
-										$this.find('[type=file]').not('.is-evented').on('change', function(){
-											var value = $(this).val();
-											$this.find('[type=text]').val(value);
-										}).addClass('is-evented');
-									}
+                                    fileAttach: function(obj, e){
+                                        // 파일첨부 - 파일명적용
+                                        var sel_files = [];
+                                        var $eleFormText = $(obj).closest('.form-file').find('input[type=text]');
+                                        var $eleFormImg = $(obj).closest('.form-file').find('.file-preview');
+
+                                        var action = function(){
+                                            //파일명 적용
+                                            if ($eleFormText.length){
+                                                var fileValue = $(obj).val().split("\\");
+                                                var fileName = fileValue[fileValue.length-1];
+                                                $eleFormText.val(fileName);
+                                            }
+
+                                            //이미지 미리보기
+                                            if ($eleFormImg.length){
+                                                var files = e.target.files;
+                                                var filesArr = Array.prototype.slice.call(files);
+
+                                                filesArr.forEach(function(f){
+                                                    if (!f.type.match("image.*")){
+                                                        alert('확장자는 이미지 확장자만 가능합니다.');
+                                                        return;
+                                                    }
+                                                    sel_files.push(f);
+
+                                                    var reader = new FileReader();
+                                                    reader.onload = function(e){
+                                                        var eleImg = '<img src="'+e.target.result+'" alt="첨부된파일">';
+                                                        $eleFormImg.html(eleImg);
+                                                    }
+                                                    reader.readAsDataURL(f);
+                                                })
+                                            }
+                                        }
+                                        action();
+                                    },
 								</pre>
 							</div>
 							<div class="g-example-guide" hidden>
@@ -545,153 +571,59 @@ jQuery(document).keydown(function(e){
 						<h2 class="g-h2">Form Texts</h2>
 					</div>
 					<div class="g-section-body">
-						<h3 class="g-h3">Text</h3>
+						<h3 class="g-h3">기본 유형</h3>
+						<h4 class="g-h4">제목, 일반, 데이터</h4>
 						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode1-1" class="g-example-btn">HTML</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<!-- 마크업뷰영역 -->
-								<input type="text" name="" id="" value="" placeholder="" title="" class="form-input">
-								<span class="form-txt">고등학교</span>
-								<!-- //마크업뷰영역 -->
-							</div>
-							<div id="tabContentCode1-1" class="g-example-footer">
+							<div id="tabContentCode1-1" class="g-example-footer is-active">
 								<pre class="brush:html">
-									&lt;!-- Form Text (기본 텍스트) -->
-									<span class="form-txt">고등학교</span>
-								</pre>
+									&lt;!-- Form Label (라벨 텍스트) -->
+                                    <label for="textLabel" class="form-label">학교명</label>
+
+                                    &lt;!-- Form Text (기본 텍스트) -->
+                                    <span class="form-text">고등학교</span>
+
+                                    &lt;!-- Form Data (데이터 텍스트) -->
+                                    <p class="form-data">입력된 제목입니다.</p>
+                                </pre>
 							</div>
 						</div>
 
-						<h3 class="g-h3">Description</h3>
+						<h3 class="g-h3">안내 유형</h3>
+						<h4 class="g-h4">기술설명, 관련정보, 경고</h4>
 						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode1-1" class="g-example-btn">HTML</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<!-- 마크업뷰영역 -->
-								<div class="form type-row">
-									<div class="form-controls">
-										<input type="text" name="" id="" value="" placeholder="" title="" class="input style-1">
-									</div>
-									<div class="form-desc">
-										<p>비밀번호는 특수문자, 영어 조합의 8자 이상이어야 합니다.</p>
-									</div>
-								</div>
-								<!-- //마크업뷰영역 -->
-							</div>
-							<div id="tabContentCode1-1" class="g-example-footer">
+							<div id="tabContentCode1-1" class="g-example-footer is-active">
 								<pre class="brush:html">
-									&lt;!-- Form Description (기술설명 텍스트) -->
+									&lt;!-- Form Description (기술설명 안내) -->
 									&lt;div class="form-desc">
+										&lt;p>비밀번호는 특수문자, 영어 조합의 8자 이상이어야 합니다.&lt;/p>
+									&lt;/div>
+
+									&lt;!-- Form Information (관련정보 안내) -->
+									&lt;div class="form-info">
+										&lt;p>참고자료 : 기술과학교육원&lt;/p>
+									&lt;/div>
+
+									&lt;!-- Form Alert (경고 안내) -->
+									&lt;div class="form-alert is-errored is-visibled">
 										&lt;p>비밀번호는 특수문자, 영어 조합의 8자 이상이어야 합니다.&lt;/p>
 									&lt;/div>
 								</pre>
 							</div>
 						</div>
 
-						<h3 class="g-h3">Alert</h3>
+						<h3 class="g-h3">구분 유형</h3>
+						<h4 class="g-h4">이메일, 주민번호, 기간</h4>
 						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode1-1" class="g-example-btn">HTML</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<!-- 마크업뷰영역 -->
-								<div class="form type-row">
-									<div class="form-controls">
-										<input type="text" name="" id="" value="" placeholder="" title="" class="input style-1">
-									</div>
-									<div class="form-alert is-errored is-visibled" role="alert">
-										<p>비밀번호를 입력하세요.</p>
-									</div>
-									<div class="form-alert is-successed is-visibled" role="alert">
-										<p>비밀번호 확인되었습니다.</p>
-									</div>
-								</div>
-								<!-- //마크업뷰영역 -->
-							</div>
-							<div id="tabContentCode1-1" class="g-example-footer">
+							<div id="tabContentCode1-1" class="g-example-footer is-active">
 								<pre class="brush:html">
-									&lt;!-- Form Alert (경고 메세지) -->
-									&lt;div class="form-alert is-errored is-visibled" role="alert">
-										&lt;p>비밀번호를 입력하세요.&lt;/p>
-									&lt;/div>
-									&lt;div class="form-alert is-successed is-visibled" role="alert">
-										&lt;p>비밀번호 확인되었습니다.&lt;/p>
-									&lt;/div>
-								</pre>
-							</div>
-						</div>
+									&lt;!-- Form Split (이메일 구분) -->
+									&lt;i class="form-split">@&lt;/i>
 
-						<h3 class="g-h3">Information</h3>
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode1-1" class="g-example-btn">HTML</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<!-- 마크업뷰영역 -->
-								<div class="form type-row">
-									<div class="form-controls">
-										<input type="text" name="" id="" value="" placeholder="" title="" class="input style-1">
-									</div>
-									<div class="form-info">
-										<p>관련정보를 설명하는 내용입니다.</p>
-									</div>
-								</div>
-								<!-- //마크업뷰영역 -->
-							</div>
-							<div id="tabContentCode1-1" class="g-example-footer">
-								<pre class="brush:html">
-									&lt;!-- Form Information (안내 메세지) -->
-									&lt;div class="form-info">
-										&lt;p>관련정보를 설명하는 내용입니다.&lt;/p>
-									&lt;/div>
-								</pre>
-							</div>
-						</div>
+									&lt;!-- Form Split (주민번호 구분) -->
+									&lt;i class="form-split">-&lt;/i>
 
-						<h3 class="g-h3">Split</h3>
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="#tabContentCode1-1" class="g-example-btn">HTML</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<!-- 마크업뷰영역 -->
-								<input type="text" class="form-input">
-								<i class="split">~</i>
-								<input type="text" class="form-input">
-								<br />
-								<input type="text" class="form-input">
-								<i class="split">@</i>
-								<input type="text" class="form-input">
-								<!-- //마크업뷰영역 -->
-							</div>
-							<div id="tabContentCode1-1" class="g-example-footer">
-								<pre class="brush:html">
-									&lt;!-- Form Split (구분 텍스트) -->
-									&lt;i class="split">~&lt;/i>
-									&lt;i class="split">@&lt;/i>
+									&lt;!-- Form Split (기간 구분) -->
+									&lt;i class="form-split">~&lt;/i>
 								</pre>
 							</div>
 						</div>

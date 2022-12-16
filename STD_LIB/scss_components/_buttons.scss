@@ -5,12 +5,9 @@
 /* Default */
 button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
 button::-moz-focus-inner {border:0px; padding:0px;}
-.btn-area {display:flex;}
-.btn-group {display:flex; flex:none;}
-.btn,
-.btn-ico {display:inline-flex; position:relative; overflow:hidden; vertical-align:middle;}
-.btn > span,
-.btn-ico > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%; pointer-events:none;}
+.button-area {display:flex;}
+.button-group {display:flex; flex:none;}
+.button {flex:none; display:inline-flex; position:relative; overflow:hidden; justify-content:center; align-items: center; vertical-align:middle;}
 
 /* Common - Layout */
 .btn-fluid {flex-wrap:wrap;}

@@ -132,8 +132,8 @@ var include = {
 			document.write('						<a href="javascript:;">Forms</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form.html">Form Elements</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formMixin.html">Form Mixins</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formGroup.html">Form Fields</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formGroup.html">Form Group</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formMixin.html">Form Patterns</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Elements</a>');
 			document.write('						<ul class="g-depth2">');
