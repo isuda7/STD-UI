@@ -5,7 +5,7 @@ var ui = {
 	init: function(){
 		console.log('ui.init()');
 
-		if ($('.btn').length)				{this.waveEffect.init();}		// #Btn Effect
+		if ($('.button').length)				{this.waveEffect.init();}		// #Btn Effect
 		if ($('.gnb-dropdown').length)		{this.gnb_dropdown.init();}		// #Gnb Dropdown
 		if ($('.gnb-fulldown').length)		{this.gnb_fulldown.init();}		// #Gnb Fulldown
 		if ($('.tab-nav').length)			{this.tab.init();}				// #Tab
@@ -31,7 +31,7 @@ var ui = {
 		},
 		event : function(){
 			/* Add the class effect on button */
-			$('.btn, .g-snb .g-depth2 .g-node2 > a').not('.not-effect').on('click', function(e) {
+			$('.button, .g-snb .g-depth2 .g-node2 > a').not('.not-effect').on('click', function(e) {
 				var self = $(this),
 					wave = '.effect-wave',
 					/* Get the width of button (if different buttons types) */
@@ -94,7 +94,7 @@ var ui = {
 			id = 'sFilesAdd'+idx,
 			html = '<div class="file">'+
 					'	<input type="text" class="form-input" title="첨부된 파일명" readonly>'+
-					'	<label class="btn style-1" role="button" tabindex="0">'+
+					'	<label class="button style-1" role="button" tabindex="0">'+
 					'		<span>파일첨부</span>'+
 					'		<input type="file" name="" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">'+
 					'	</label>'+

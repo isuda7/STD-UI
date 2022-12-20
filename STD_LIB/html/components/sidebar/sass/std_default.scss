@@ -41,16 +41,16 @@ body.is-sidebar-opened[data-sidebar=push] .wrapper {transform:translateX(200px);
 body.is-sidebar-opened[data-sidebar=over] .sidebar {transform:translateX(100%);}
 
 /* UI */
-.btn.btn-drawer {width:44px; height:44px;}
-.btn.btn-drawer span {display:inline-block; position:absolute; left:50%; top:50%; width:24px; height:20px; margin:-10px 0 0 -12px; vertical-align:top;}
-.btn.btn-drawer span:before, .btn-drawer span:after {content:'';}
-.btn.btn-drawer i, .btn-drawer span:before, .btn-drawer span:after {display:inline-block; position:absolute; left:0; top:50%; width:24px; height:2px; background:#000; vertical-align:top;}
-.btn.btn-drawer i {margin-top:-1px; width:16px;}
-.btn.btn-drawer span:before {top:0;}
-.btn.btn-drawer span:after {top:auto; bottom:0;}
+.button.button-drawer {width:44px; height:44px;}
+.button.button-drawer span {display:inline-block; position:absolute; left:50%; top:50%; width:24px; height:20px; margin:-10px 0 0 -12px; vertical-align:top;}
+.button.button-drawer span:before, .button-drawer span:after {content:'';}
+.button.button-drawer i, .button-drawer span:before, .button-drawer span:after {display:inline-block; position:absolute; left:0; top:50%; width:24px; height:2px; background:#000; vertical-align:top;}
+.button.button-drawer i {margin-top:-1px; width:16px;}
+.button.button-drawer span:before {top:0;}
+.button.button-drawer span:after {top:auto; bottom:0;}
 
-.sidebar .btn-drawer {position:absolute; right:0; top:0; color:#fff;}
-.sidebar .btn-drawer i, .sidebar .btn-drawer span:before, .sidebar .btn-drawer span:after {background-color:#fff;}
+.sidebar .button-drawer {position:absolute; right:0; top:0; color:#fff;}
+.sidebar .button-drawer i, .sidebar .button-drawer span:before, .sidebar .button-drawer span:after {background-color:#fff;}
 
 
 

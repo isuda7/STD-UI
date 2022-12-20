@@ -15,7 +15,7 @@
 		<!-- Content -->
 		<article id="g-content">
 			<div class="g-content-header">
-				<h1 class="g-h1">Badge</h1>
+				<h1 class="g-h1">Dividers</h1>
 				<p class="g-explain-h1">Library Elements</p>
 			</div>
 			<div class="g-content-body">
@@ -36,17 +36,16 @@
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:html">
-									<span class="badge"></span>
+									<hr class="divider" />
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
 									/*-------------------------------------------------------------------
-										## Badge
+										## Dividers
 									-------------------------------------------------------------------*/
 									/* Default */
-									.badge {display:inline-block;}
-									.badge-group {position:absolute;}
+									.divider {display:block; border:0; margin: 0;}
 								</pre>
 							</div>
 						</div>
@@ -71,25 +70,26 @@
 							</div>
 							<div class="g-example-body">
 								<!-- 마크업뷰영역 -->
-                                <span class="badge style-1"><span class="blind">NEW</span></span>
-                                <span class="badge style-2">9</span>
-                                <span class="badge style-2">999</span>
-                                <span class="badge style-2">999999</span>
+                                <hr class="divider style-1" />
+                                <br/>
+                                <hr class="divider style-2" />
+                                <br/>
+                                <hr class="divider style-3" />
 								<!-- //마크업뷰영역 -->
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:html">
-                                    <span class="badge style-1"><span class="blind">NEW</span></span>
-                                    <span class="badge style-2">9</span>
-                                    <span class="badge style-2">999</span>
-                                    <span class="badge style-2">999999</span>
+                                    <hr class="divider style-1" />
+                                    <hr class="divider style-2" />
+                                    <hr class="divider style-3" />
                                 </pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
 									/* Styles */
-									.badge-basic {width:24px; height:24px; padding-bottom:1px; line-height:21px; border:1px solid transparent; background-color:#333; color:#fff; text-align:center;}
-									.badge-basic.badge-outline {color:#333; border-color:#333; background-color:#fff;}
+									.divider.style-1 {height:4px; background-color: #eee;}
+                                    .divider.style-2 {height:6px; background-color: #eee;}
+                                    .divider.style-3 {height:8px; background-color: #fafafa; border-top:1px solid #eee; border-bottom:1px solid #eee;}
 								</pre>
 							</div>
 						</div>

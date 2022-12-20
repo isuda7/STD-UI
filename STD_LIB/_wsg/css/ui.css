@@ -151,8 +151,8 @@ a.g-top {display:block; position:fixed; right:20px; bottom:20px; width:50px; hei
 	Example
 -------------------------------------------------------------------*/
 /* Form */
-.ex-form-basic,.ex-btn-basic {height:30px; padding:0 10px; border:1px solid #bbb; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.25); color:#555;}
-.ex-form-basic:hover,.ex-form-basic:focus,.ex-btn-basic:hover,.ex-btn-basic:focus {border-color:#888;}
+.ex-form-basic,.ex-button {height:30px; padding:0 10px; border:1px solid #bbb; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.25); color:#555;}
+.ex-form-basic:hover,.ex-form-basic:focus,.ex-button:hover,.ex-button:focus {border-color:#888;}
 .ex-form-check {display:inline-block; position:relative; line-height:16px;}
 .ex-form-check > .label {display:inline-block; position:relative; z-index:1; padding-left:22px;}
 .ex-form-check > input {width:0; height:0; position:absolute; left:0; top:0;}
@@ -162,7 +162,7 @@ a.g-top {display:block; position:fixed; right:20px; bottom:20px; width:50px; hei
 .ex-form-check + .ex-form-check {margin-left:20px;}
 
 /* Button */
-.ex-btn-basic {display:inline-block; line-height:28px;}
+.ex-button {display:inline-block; line-height:28px;}
 
 /* Arrow */
 .arw {position:relative; display:inline-block; vertical-align:middle; text-indent:-9999em;}

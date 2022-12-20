@@ -588,7 +588,7 @@ select {
 
 /* Effect Wave */
 .effect-wave,
-.btn .effect-wave {
+.button .effect-wave {
   display: block;
   position: absolute;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -1252,26 +1252,28 @@ select {
 -------------------------------------------------------------------*/
 /* Default */
 .badge {
-  display: inline-block; }
-
-.badge-group {
-  position: absolute; }
+  display: inline-block;
+  vertical-align: middle; }
 
 /* Styles */
-.badge-basic {
-  width: 24px;
-  height: 24px;
-  padding-bottom: 1px;
-  line-height: 21px;
-  border: 1px solid transparent;
-  background-color: #333;
-  color: #fff;
-  text-align: center; }
+.badge.style-1 {
+  width: 6px;
+  height: 6px;
+  background-color: #ff5400;
+  border-radius: 50%; }
 
-.badge-basic.badge-outline {
-  color: #333;
-  border-color: #333;
-  background-color: #fff; }
+.badge.style-2 {
+  min-width: 13px;
+  max-width: 50px;
+  padding: 3px 6px;
+  background-color: #ff5400;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 /*-------------------------------------------------------------------
 	파일이름 : Breadcrumb
@@ -1309,16 +1311,16 @@ select {
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /* Default */
-.bul-list > li, .bul-list > .bul {
+.bullets > li, .bullets > .bul {
   display: table; }
 
-.bul-list > li:before, .bul-list > .bul:before {
+.bullets > li:before, .bullets > .bul:before {
   content: '';
   display: table-cell;
   position: relative;
   padding-right: 5px; }
 
-.bul-list > li[data-bul]::before, .bul-list > .bul[data-bul]::before {
+.bullets > li[data-bul]::before, .bullets > .bul[data-bul]::before {
   content: attr(data-bul) !important; }
 
 /* (사용자정의 목록) data-bul속성 사용하는 경우 우선순위로 적용 */
@@ -1328,244 +1330,244 @@ select {
     순서 {content:"문자" counter(이름, 형식) "문자"} ("문자"는 생략가능)
 */
 /* 특수문자 */
-.bul-hyphen > li::before, .bul-hyphen > .bul::before {
+.bullets.hyphen > li::before, .bullets.hyphen > .bul::before {
   content: '-'; }
 
-.bul-star > li::before, .bul-star > .bul::before {
+.bullets.star > li::before, .bullets.star > .bul::before {
   content: '*'; }
 
-.bul-bill > li::before, .bul-bill > .bul::before {
+.bullets.bill > li::before, .bullets.bill > .bul::before {
   content: '※'; }
 
 /* 숫자목록 : 1. (1) 1) ① */
-.bul-num1 {
+.bullets.num1 {
   counter-reset: num1; }
 
-.bul-num1 > li:before {
+.bullets.num1 > li:before {
   counter-increment: num1;
   content: counter(num1, decimal) "."; }
 
-.bul-num2 {
+.bullets.num2 {
   counter-reset: num2; }
 
-.bul-num2 > li:before {
+.bullets.num2 > li:before {
   counter-increment: num2;
   content: "(" counter(num2, decimal) ")"; }
 
-.bul-num3 {
+.bullets.num3 {
   counter-reset: num3; }
 
-.bul-num3 > li:before {
+.bullets.num3 > li:before {
   counter-increment: num3;
   content: counter(num3, decimal) ")"; }
 
-.bul-num4 > li::before {
+.bullets.num4 > li::before {
   content: '①'; }
 
-.bul-num4 > li + li::before {
+.bullets.num4 > li + li::before {
   content: '②'; }
 
-.bul-num4 > li + li + li::before {
+.bullets.num4 > li + li + li::before {
   content: '③'; }
 
-.bul-num4 > li + li + li + li::before {
+.bullets.num4 > li + li + li + li::before {
   content: '④'; }
 
-.bul-num4 > li + li + li + li + li::before {
+.bullets.num4 > li + li + li + li + li::before {
   content: '⑤'; }
 
-.bul-num4 > li + li + li + li + li + li::before {
+.bullets.num4 > li + li + li + li + li + li::before {
   content: '⑥'; }
 
-.bul-num4 > li + li + li + li + li + li + li::before {
+.bullets.num4 > li + li + li + li + li + li + li::before {
   content: '⑦'; }
 
-.bul-num4 > li + li + li + li + li + li + li + li::before {
+.bullets.num4 > li + li + li + li + li + li + li + li::before {
   content: '⑧'; }
 
-.bul-num4 > li + li + li + li + li + li + li + li + li::before {
+.bullets.num4 > li + li + li + li + li + li + li + li + li::before {
   content: '⑨'; }
 
-.bul-num4 > li + li + li + li + li + li + li + li + li + li::before {
+.bullets.num4 > li + li + li + li + li + li + li + li + li + li::before {
   content: '⑩'; }
 
 /* 한글목록 가. (가) 가) */
-.bul-kor1 > li::before {
+.bullets.kor1 > li::before {
   content: '가'; }
 
-.bul-kor1 > li + li::before {
+.bullets.kor1 > li + li::before {
   content: '나'; }
 
-.bul-kor1 > li + li + li::before {
+.bullets.kor1 > li + li + li::before {
   content: '다'; }
 
-.bul-kor1 > li + li + li + li::before {
+.bullets.kor1 > li + li + li + li::before {
   content: '라'; }
 
-.bul-kor1 > li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li::before {
   content: '마'; }
 
-.bul-kor1 > li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li::before {
   content: '바'; }
 
-.bul-kor1 > li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li::before {
   content: '사'; }
 
-.bul-kor1 > li + li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li + li::before {
   content: '아'; }
 
-.bul-kor1 > li + li + li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li + li + li::before {
   content: '자'; }
 
-.bul-kor1 > li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li + li + li + li::before {
   content: '차'; }
 
-.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li + li + li + li + li::before {
   content: '카'; }
 
-.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '타'; }
 
-.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '파'; }
 
-.bul-kor1 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor1 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '하'; }
 
-.bul-kor2 > li::before {
+.bullets.kor2 > li::before {
   content: '(가)'; }
 
-.bul-kor2 > li + li::before {
+.bullets.kor2 > li + li::before {
   content: '(나)'; }
 
-.bul-kor2 > li + li + li::before {
+.bullets.kor2 > li + li + li::before {
   content: '(다)'; }
 
-.bul-kor2 > li + li + li + li::before {
+.bullets.kor2 > li + li + li + li::before {
   content: '(라)'; }
 
-.bul-kor2 > li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li::before {
   content: '(마)'; }
 
-.bul-kor2 > li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li::before {
   content: '(바)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li::before {
   content: '(사)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li + li::before {
   content: '(아)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li + li + li::before {
   content: '(자)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li + li + li + li::before {
   content: '(차)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li + li + li + li + li::before {
   content: '(카)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '(타)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '(파)'; }
 
-.bul-kor2 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor2 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '(하)'; }
 
-.bul-kor3 > li::before {
+.bullets.kor3 > li::before {
   content: '가)'; }
 
-.bul-kor3 > li + li::before {
+.bullets.kor3 > li + li::before {
   content: '나)'; }
 
-.bul-kor3 > li + li + li::before {
+.bullets.kor3 > li + li + li::before {
   content: '다)'; }
 
-.bul-kor3 > li + li + li + li::before {
+.bullets.kor3 > li + li + li + li::before {
   content: '라)'; }
 
-.bul-kor3 > li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li::before {
   content: '마)'; }
 
-.bul-kor3 > li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li::before {
   content: '바)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li::before {
   content: '사)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li + li::before {
   content: '아)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li + li + li::before {
   content: '자)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li + li + li + li::before {
   content: '차)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li + li + li + li + li::before {
   content: '카)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '타)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '파)'; }
 
-.bul-kor3 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
+.bullets.kor3 > li + li + li + li + li + li + li + li + li + li + li + li + li + li::before {
   content: '하)'; }
 
 /* 알파벳목록 A. (a) a) ⓐ */
-.bul-eng1 {
+.bullets.eng1 {
   counter-reset: eng1; }
 
-.bul-eng1 > li::before {
+.bullets.eng1 > li::before {
   counter-increment: eng1;
   content: counter(eng1, upper-alpha) "."; }
 
-.bul-eng2 {
+.bullets.eng2 {
   counter-reset: eng2; }
 
-.bul-eng2 > li::before {
+.bullets.eng2 > li::before {
   counter-increment: eng2;
   content: "(" counter(eng2, lower-alpha) ")"; }
 
-.bul-eng3 {
+.bullets.eng3 {
   counter-reset: eng3; }
 
-.bul-eng3 > li::before {
+.bullets.eng3 > li::before {
   counter-increment: eng3;
   content: counter(eng3, lower-alpha) ")"; }
 
-.bul-eng4 > li::before {
+.bullets.eng4 > li::before {
   content: 'ⓐ'; }
 
-.bul-eng4 > li + li::before {
+.bullets.eng4 > li + li::before {
   content: 'ⓑ'; }
 
-.bul-eng4 > li + li + li::before {
+.bullets.eng4 > li + li + li::before {
   content: 'ⓒ'; }
 
-.bul-eng4 > li + li + li + li::before {
+.bullets.eng4 > li + li + li + li::before {
   content: 'ⓓ'; }
 
-.bul-eng4 > li + li + li + li + li::before {
+.bullets.eng4 > li + li + li + li + li::before {
   content: 'ⓔ'; }
 
-.bul-eng4 > li + li + li + li + li + li::before {
+.bullets.eng4 > li + li + li + li + li + li::before {
   content: 'ⓕ'; }
 
-.bul-eng4 > li + li + li + li + li + li + li::before {
+.bullets.eng4 > li + li + li + li + li + li + li::before {
   content: 'ⓖ'; }
 
-.bul-eng4 > li + li + li + li + li + li + li + li::before {
+.bullets.eng4 > li + li + li + li + li + li + li + li::before {
   content: 'ⓗ'; }
 
-.bul-eng4 > li + li + li + li + li + li + li + li + li::before {
+.bullets.eng4 > li + li + li + li + li + li + li + li + li::before {
   content: 'ⓘ'; }
 
-.bul-eng4 > li + li + li + li + li + li + li + li + li + li::before {
+.bullets.eng4 > li + li + li + li + li + li + li + li + li + li::before {
   content: 'ⓙ'; }
 
 /*-------------------------------------------------------------------
@@ -1616,58 +1618,168 @@ button::-moz-focus-inner {
   vertical-align: middle; }
 
 /* Common - Layout */
-.btn-fluid {
+.button-fluid {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.btn-fluid .btn {
+.button-fluid .button {
   width: 100%; }
 
-.btn-flex .btn {
+.button-flex .button {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1; }
 
 /* Styles */
-.btn-basic {
-  height: 34px;
-  padding: 0 20px 1px;
-  font-size: 16px;
-  background: #eee; }
+.button.style-1 {
+  padding: 8px 16px;
+  background-color: #eee;
+  color: #222;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .button.style-1:hover, .button.style-1:focus {
+    background-color: #ddd;
+    color: #000; }
+  .button.style-1:disabled {
+    opacity: 0.5; }
+  .button.style-1.primary {
+    background: #ff5400;
+    color: #fff; }
+  .button.style-1.primary:hover, .button.style-1.primary:focus {
+    background: #ea1b00; }
 
-.btn-basic.btn-primary {
-  background: #ff5400;
-  color: #fff; }
-
-.btn-basic.btn-secondary {
-  background: #333;
-  color: #fff; }
-
-.btn-basic[disabled] {
-  background: #aaa;
-  color: #fff; }
-
-.btn.style-1 {
-  height: 30px;
-  padding: 0 10px 1px;
+.button.style-2 {
+  padding: 8px 16px;
+  background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 3px;
-  -webkit-box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
-  box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
-  line-height: 27px; }
+  color: #222;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .button.style-2:hover, .button.style-2:focus {
+    border-color: #222;
+    color: #000; }
+  .button.style-2:disabled {
+    opacity: 0.5; }
+  .button.style-2.primary {
+    border-color: #ff5400;
+    color: #ff5400; }
+  .button.style-2.primary:hover, .button.style-2.primary:focus {
+    border-color: #ea1b00; }
+
+.button.style-3 {
+  padding: 8px 16px;
+  background-color: #eee;
+  color: #222;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px; }
+  .button.style-3:hover, .button.style-3:focus {
+    background-color: #ddd;
+    color: #000; }
+  .button.style-3:disabled {
+    opacity: 0.5; }
+  .button.style-3.primary {
+    background: #ff5400;
+    color: #fff; }
+  .button.style-3.primary:hover, .button.style-3.primary:focus {
+    background: #ea1b00; }
+
+.button.style-4 {
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #222;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px; }
+  .button.style-4:hover, .button.style-4:focus {
+    border-color: #222;
+    color: #000; }
+  .button.style-4:disabled {
+    opacity: 0.5; }
+  .button.style-4.primary {
+    border-color: #ff5400;
+    color: #ff5400; }
+  .button.style-4.primary:hover, .button.style-4.primary:focus {
+    border-color: #ea1b00; }
+
+.button.style-5 {
+  padding: 8px 16px;
+  background-color: #eee;
+  color: #222;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 100px; }
+  .button.style-5:hover, .button.style-5:focus {
+    background-color: #ddd;
+    color: #000; }
+  .button.style-5:disabled {
+    opacity: 0.5; }
+  .button.style-5.primary {
+    background: #ff5400;
+    color: #fff; }
+  .button.style-5.primary:hover, .button.style-5.primary:focus {
+    background: #ea1b00; }
+
+.button.style-6 {
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #222;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 100px; }
+  .button.style-6:hover, .button.style-6:focus {
+    border-color: #222;
+    color: #000; }
+  .button.style-6:disabled {
+    opacity: 0.5; }
+  .button.style-6.primary {
+    border-color: #ff5400;
+    color: #ff5400; }
+  .button.style-6.primary:hover, .button.style-6.primary:focus {
+    border-color: #ea1b00; }
+
+.button.text.text {
+  font-size: 14px;
+  line-height: 22px; }
+
+.button.text.text:disabled {
+  opacity: 0.5; }
+
+.button.text.text.primary {
+  color: #ff5400; }
 
 /* Content */
-.btn-search {
-  width: 34px;
-  height: 34px; }
+.button.icon-search1 {
+  width: 40px;
+  height: 40px; }
 
-.btn-pager {
+.button-pager {
   width: 20px;
   height: 20px;
   line-height: 18px;
   border: 1px solid #ddd; }
 
-.btn-top {
+.button-top {
   width: 50px;
   height: 50px;
   line-height: 48px;
@@ -1723,6 +1835,31 @@ button::-moz-focus-inner {
 
 .dimmer.is-active {
   opacity: 1; }
+
+/*-------------------------------------------------------------------
+	파일이름 : Dividers
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Default */
+.divider {
+  display: block;
+  border: 0;
+  margin: 0; }
+
+/* Styles */
+.divider.style-1 {
+  height: 4px;
+  background-color: #eee; }
+
+.divider.style-2 {
+  height: 6px;
+  background-color: #eee; }
+
+.divider.style-3 {
+  height: 8px;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
 
 /*-------------------------------------------------------------------
 	파일이름 : Dropmenus
@@ -1807,9 +1944,6 @@ button::-moz-focus-inner {
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-    @@ Form Variables
--------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
     @@ Form Input
 -------------------------------------------------------------------*/
 /* Default */
@@ -1884,7 +2018,7 @@ select::-ms-expand {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 4px;
   -webkit-box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   font-size: 14px;
@@ -1912,7 +2046,7 @@ select::-ms-expand {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 4px;
   -webkit-box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   font-size: 14px;
@@ -1936,7 +2070,7 @@ textarea.form-input {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 4px;
   -webkit-box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   font-size: 14px;
@@ -1964,7 +2098,7 @@ textarea.form-input {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 4px;
   -webkit-box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, 0.3);
   font-size: 14px;
@@ -3062,128 +3196,188 @@ textarea.form-input {
 -------------------------------------------------------------------*/
 /* Default */
 .label {
-  display: inline-block; }
-
-/* Design */
-.label-basic {
-  padding: 1px 8px 2px;
-  line-height: 21px;
-  background-color: #444;
-  color: #fff;
-  border-radius: 3px;
+  display: inline-block;
   text-align: center;
   vertical-align: middle; }
 
-.label-basic {
-  min-width: 50px;
-  max-width: 100px;
+/* Styles */
+.label.style-1 {
+  line-height: 22px;
+  padding: 0 8px;
+  background: #444;
+  border: 1px solid transparent;
+  color: #fff;
+  min-width: 60px;
+  max-width: 120px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap; }
+  .label.style-1.primary {
+    background: #ff5400; }
 
-.label-basic.label-primary {
-  background: #ff5400; }
-
-.label-basic.label-outline {
-  padding: 0px 7px 1px;
-  background: transparent;
+.label.style-2 {
+  line-height: 22px;
+  padding: 0 8px;
+  background: #fff;
   border: 1px solid #444;
   color: #444; }
+  .label.style-2.primary {
+    border: 1px solid #ff5400;
+    color: #ff5400; }
 
-.label-basic.label-outline.label-primary {
-  border: 1px solid #ff5400;
-  color: #ff5400; }
+.label.style-3 {
+  line-height: 22px;
+  padding: 0 8px;
+  background: #444;
+  border: 1px solid transparent;
+  color: #fff;
+  border-radius: 4px; }
+  .label.style-3.primary {
+    background: #ff5400; }
+
+.label.style-4 {
+  line-height: 22px;
+  padding: 0 8px;
+  background: #fff;
+  border: 1px solid #444;
+  color: #444;
+  border-radius: 4px; }
+  .label.style-4.primary {
+    border: 1px solid #ff5400;
+    color: #ff5400; }
+
+.label.style-5 {
+  line-height: 22px;
+  padding: 0 8px;
+  background: #444;
+  border: 1px solid transparent;
+  color: #fff;
+  border-radius: 100px; }
+  .label.style-5.primary {
+    background: #ff5400; }
+
+.label.style-6 {
+  line-height: 22px;
+  padding: 0 8px;
+  background: #fff;
+  border: 1px solid #444;
+  color: #444;
+  border-radius: 100px; }
+  .label.style-6.primary {
+    border: 1px solid #ff5400;
+    color: #ff5400; }
+
+.label.texted {
+  font-size: 14px;
+  line-height: 22px; }
+  .label.texted.primary {
+    color: #ff5400; }
 
 /*-------------------------------------------------------------------
 	파일이름 : Lists
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /* Style1 */
-.list-style1 {
+.list.style-1 {
   border: 1px solid #999;
   border-width: 1px 0; }
 
-.list-style1 .item {
+.list.style-1 .item {
   padding: 5px 10px;
   min-height: 40px;
-  line-height: 30px;
+  line-height: 30px; }
+
+.list.style-1 .item + .item {
   border-top: 1px solid #ddd; }
 
-.list-style1 .item:first-child {
-  border-top-color: transparent; }
-
-.list-style1 .item .item-link {
-  position: relative;
-  display: block; }
-
-.list-style1 .item .item-link.has-arw {
-  padding-right: 20px; }
-
-.list-style1 .item .arw-more1 {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
-.list-style1 .item-header {
-  background-color: #f8f8f8; }
-
-.list-style1 .item-footer {
-  background-color: #f8f8f8; }
-
-.explain-header + .list-style1 {
-  margin-top: 10px; }
-
-.list-style1 + .explain-footer {
-  margin-top: 10px; }
-
 /* Style2 */
-.list-style2 {
-  border: 1px solid #999;
-  border-width: 1px 0; }
-
-.list-style2 .item {
+.list.style-2 .item {
   padding: 5px 10px;
   min-height: 40px;
   line-height: 30px;
   border-top: 1px solid transparent; }
 
-.list-style2 .item .item-link {
-  position: relative;
-  display: block; }
-
-.list-style2 .item .arw-more1 {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+.list.style-2 .item + .item {
+  border-top: 1px solid #ddd; }
 
 /* Style3 */
-.list-style3 {
-  border: 1px solid #999; }
+.list.style-3 {
+  padding: 5px 10px; }
 
-.list-style3 .item {
-  padding: 5px 10px;
+.list.style-3 .item {
   min-height: 40px;
   line-height: 30px;
-  border-top: 1px solid transparent; }
+  border-bottom: 1px solid #ddd; }
 
-.list-style3 .item .item-link {
+.list.style-1 .item .item-link {
   position: relative;
   display: block; }
 
-.list-style3 .item .arw-more1 {
+.list.style-1 .item .item-link.has-arw {
+  padding-right: 20px; }
+
+.list.style-1 .item .arw-more1 {
   position: absolute;
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+
+.list.style-1 .item-header {
+  background-color: #f8f8f8; }
+
+.list.style-1 .item-footer {
+  background-color: #f8f8f8; }
+
+.list.style-1 + .explain-footer {
+  margin-top: 10px; }
+
+.explain-header + .list.style-1 {
+  margin-top: 10px; }
+
+.list.style-2 .item .item-link {
+  position: relative;
+  display: block; }
+
+.list.style-2 .item .arw-more1 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.list.style-3 .item .item-link {
+  position: relative;
+  display: block; }
+
+.list.style-3 .item .arw-more1 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/* Toolbar */
+.list-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.list-toolbar-count {
+  color: #999; }
+
+.list-toolbar-count .total {
+  color: #ff5400; }
 
 /*-------------------------------------------------------------------
 	파일이름 : Modals
@@ -3322,13 +3516,13 @@ textarea.form-input {
   justify-content: center;
   text-align: center; }
 
-.paging .btn-group, .paging .num-group {
+.paging .button-group, .paging .num-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
 /* Design */
-.paging-basic .btn {
+.paging-basic .button {
   min-width: 30px;
   height: 30px;
   padding: 0 5px 1px;
@@ -3338,15 +3532,15 @@ textarea.form-input {
 .paging-basic .num-group {
   margin: 0 16px; }
 
-.paging-basic .page-group .btn + .btn,
+.paging-basic .page-group .button + .button,
 .paging-basic .num-group li + li {
   margin-left: 4px; }
 
-.paging-basic .num-group .btn[aria-current=true] {
+.paging-basic .num-group .button[aria-current=true] {
   color: #ff5400;
   border: 1px solid #ff5400; }
 
-.paging-basic .page-group .btn:disabled {
+.paging-basic .page-group .button:disabled {
   opacity: 0.5; }
 
 /*-------------------------------------------------------------------

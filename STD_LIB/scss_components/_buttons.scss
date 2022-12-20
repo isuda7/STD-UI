@@ -10,18 +10,20 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 .button {flex:none; display:inline-flex; position:relative; overflow:hidden; justify-content:center; align-items: center; vertical-align:middle;}
 
 /* Common - Layout */
-.btn-fluid {flex-wrap:wrap;}
-.btn-fluid .btn {width:100%;}
-.btn-flex .btn {flex:1;}
+.button-fluid {flex-wrap:wrap;}
+.button-fluid .button {width:100%;}
+.button-flex .button {flex:1;}
 
 /* Styles */
-.btn-basic {height:34px; padding:0 20px 1px; font-size:16px; background:#eee;}
-.btn-basic.btn-primary {background:$color-primary; color:#fff;}
-.btn-basic.btn-secondary {background:#333; color:#fff;}
-.btn-basic[disabled] {background:#aaa; color:#fff;}
-.btn.style-1 {height:30px; padding:0 10px 1px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); line-height:27px;}
+.button.style-1 {@include ui-button-contained;}
+.button.style-2 {@include ui-button-outlined;}
+.button.style-3 {@include ui-button-contained; @include rounded-md;}
+.button.style-4 {@include ui-button-outlined; @include rounded-md;}
+.button.style-5 {@include ui-button-contained; @include pilled;}
+.button.style-6 {@include ui-button-outlined; @include pilled;}
+.button.text {@include ui-button-texted;}
 
 /* Content */
-.btn-search {width:34px; height:34px;}
-.btn-pager {width:20px; height:20px; line-height:18px; border:1px solid #ddd;}
-.btn-top {width:50px; height:50px; line-height:48px; background-color:#fff; border:1px solid #ccc; border-radius:50%;}
+.button.icon-search1 {width:40px; height:40px;}
+.button-pager {width:20px; height:20px; line-height:18px; border:1px solid #ddd;}
+.button-top {width:50px; height:50px; line-height:48px; background-color:#fff; border:1px solid #ccc; border-radius:50%;}

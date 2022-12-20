@@ -98,7 +98,7 @@ jQuery(document).keydown(function(e){
                                         ## Variables
                                     -------------------------------------------------------------------*/
                                     $color-primary: #2496ee;
-                                    @mixin ui-input-module-a {
+                                    @mixin ui-input-outlined {
                                         height:45px; padding:0 15px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 1.5; transition:all 0.3s;
                                         &:hover {border-color: #222;}
                                         &:focus {border-color: $color-primary; color: $color-primary;}
@@ -150,8 +150,8 @@ jQuery(document).keydown(function(e){
 							<div class="g-example-footer">
 								<pre class="brush:css">
 									/* Form Textfield */
-									.form-input {@include ui-input-module-a;}
-                                    textarea.form-input {@include ui-input-module-a; height:auto; padding-top:10px; padding-bottom:10px;}
+									.form-input {@include ui-input-outlined;}
+                                    textarea.form-input {@include ui-input-outlined; height:auto; padding-top:10px; padding-bottom:10px;}
 								</pre>
 							</div>
 						</div>
@@ -203,7 +203,7 @@ jQuery(document).keydown(function(e){
 							<div class="g-example-footer">
 								<pre class="brush:css">
                                     /* Form Select */
-                                    .form-select {@include ui-input-module-a; padding-right:45px; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 15px) center;}
+                                    .form-select {@include ui-input-outlined; padding-right:45px; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 15px) center;}
 								</pre>
 							</div>
 						</div>
@@ -476,7 +476,7 @@ jQuery(document).keydown(function(e){
 									<br />
 									<div class="form-file">
 										<input type="text" class="form-input" title="첨부된 파일명" />
-										<label for="sFile" class="btn form-button" role="button" tabindex="0">
+										<label for="sFile" class="button form-button" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
 										</label>
@@ -484,9 +484,9 @@ jQuery(document).keydown(function(e){
 									<br /><br /><br />
 									<p>이미지 미리보기</p>
 									<br />
-									<div class="form-file has-preview">
+									<div class="form-file">
 										<div class="file-preview"></div>
-										<label for="sFile2" class="btn form-button" role="button" tabindex="0">
+										<label for="sFile2" class="button form-button" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile2" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
 										</label>
@@ -495,11 +495,21 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
+                                    <!-- 파일첨부 -->
 									&lt;span class="form-file">
 										&lt;input type="file" name="sFiles1" id="sFiles1" value="찾아보기" tabindex="-1" aria-hidden="true"/>
 										&lt;input type="text" class="form-input" title="첨부된 파일명" />
-										&lt;button type="button" class="btn form-button" onclick="fileAttach(this)">&lt;span>파일첨부&lt;/span>&lt;/button>
+										&lt;button type="button" class="button form-button" onclick="fileAttach(this)">&lt;span>파일첨부&lt;/span>&lt;/button>
 									&lt;/span>
+
+                                    <!-- 이미지 미리보기 -->
+									<div class="form-file">
+										<div class="file-preview"></div>
+										<label for="sFile2" class="button form-button" role="button" tabindex="0">
+											<span>파일첨부</span>
+											<input type="file" name="" id="sFile2" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
+										</label>
+									</div>
 								</pre>
 							</div>
 							<div class="g-example-footer">

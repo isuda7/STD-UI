@@ -207,13 +207,13 @@ textarea.form-input {height:auto; padding:10px;}
 .input-group .input {width:100%;}
 .input-group .prepend {@extend .centered-l; left:5px;}
 .input-group .append {@extend .centered-r; right:5px;}
-.input-group .prepend .btn-ico,
-.input-group .append .btn-ico {vertical-align:top;}
+.input-group .prepend .button-ico,
+.input-group .append .button-ico {vertical-align:top;}
 .input-group.has-prepend .input {padding-left:35px;}
 .input-group.has-append .input {padding-right:35px;}
 
 /* Mixins Types */
-.input-group.has-search .btn-ico {position:absolute; right:0; top:0; height:30px; width:30px; line-height:30px;} /* 검색아이콘 버튼 */
+.input-group.has-search .button-ico {position:absolute; right:0; top:0; height:30px; width:30px; line-height:30px;} /* 검색아이콘 버튼 */
 .input-group.has-search .input {padding-right:40px;}
 
 /*-------------------------------------------------------------------
@@ -249,29 +249,29 @@ textarea.form-input {height:auto; padding:10px;}
 /* Default */
 button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
 button::-moz-focus-inner {border:0px; padding:0px;}
-.btn-area {display:flex;}
-.btn-group {display:flex; flex:none;}
-.btn,
-.btn-ico {display:inline-flex; position:relative; overflow:hidden; vertical-align:middle;}
-.btn > span,
-.btn-ico > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%; pointer-events:none;}
+.button-area {display:flex;}
+.button-group {display:flex; flex:none;}
+.button,
+.button-ico {display:inline-flex; position:relative; overflow:hidden; vertical-align:middle;}
+.button > span,
+.button-ico > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%; pointer-events:none;}
 
 /* Common - Layout */
-.btn-fluid {flex-wrap:wrap;}
-.btn-fluid .btn {width:100%;}
-.btn-flex .btn {flex:1;}
+.button-fluid {flex-wrap:wrap;}
+.button-fluid .button {width:100%;}
+.button-flex .button {flex:1;}
 
 /* Styles */
-.btn-basic {height:34px; padding:0 20px 1px; font-size:16px; background:#eee;}
-.btn-basic.btn-primary {background:$color-primary; color:#fff;}
-.btn-basic.btn-secondary {background:#333; color:#fff;}
-.btn-basic[disabled] {background:#aaa; color:#fff;}
-.btn.style-1 {height:30px; padding:0 10px 1px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); line-height:27px;}
+.button {height:34px; padding:0 20px 1px; font-size:16px; background:#eee;}
+.button.button-primary {background:$color-primary; color:#fff;}
+.button.button-secondary {background:#333; color:#fff;}
+.button[disabled] {background:#aaa; color:#fff;}
+.button.style-1 {height:30px; padding:0 10px 1px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); line-height:27px;}
 
 /* Content */
-.btn-search {width:34px; height:34px;}
-.btn-pager {width:20px; height:20px; line-height:18px; border:1px solid #ddd;}
-.btn-top {width:50px; height:50px; line-height:48px; background-color:#fff; border:1px solid #ccc; border-radius:50%;}
+.button-search {width:34px; height:34px;}
+.button-pager {width:20px; height:20px; line-height:18px; border:1px solid #ddd;}
+.button-top {width:50px; height:50px; line-height:48px; background-color:#fff; border:1px solid #ccc; border-radius:50%;}
 
 /*-------------------------------------------------------------------
 	## Icon
@@ -649,15 +649,15 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 -------------------------------------------------------------------*/
 /* Common */
 .paging {position:relative; display:flex; justify-content:center; text-align:center;}
-.paging .btn-group, .paging .num-group {display:flex;}
+.paging .button-group, .paging .num-group {display:flex;}
 
 /* Design */
-.paging-basic .btn {min-width:30px; height:30px; padding:0 5px 1px; line-height:27px; border:1px solid #ddd;}
+.paging-basic .button {min-width:30px; height:30px; padding:0 5px 1px; line-height:27px; border:1px solid #ddd;}
 .paging-basic .num-group {margin:0 16px;}
-.paging-basic .page-group .btn + .btn,
+.paging-basic .page-group .button + .button,
 .paging-basic .num-group li + li  {margin-left:4px;}
-.paging-basic .num-group .btn[aria-current=true] {color:$color-primary; border:1px solid $color-primary;}
-.paging-basic .page-group .btn:disabled {opacity:0.5;}
+.paging-basic .num-group .button[aria-current=true] {color:$color-primary; border:1px solid $color-primary;}
+.paging-basic .page-group .button:disabled {opacity:0.5;}
 
 /*-------------------------------------------------------------------
 	## Board
@@ -671,14 +671,14 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 
 /* board-list */
 .board-search + .board-list {margin-top:30px;}
-.paging + .btn-wrap {position:relative; z-index:1; margin-top:-35px; text-align:right;}
+.paging + .button-wrap {position:relative; z-index:1; margin-top:-35px; text-align:right;}
 
 /* 게시판상세 */
 .board-view .view-header .subject-wrap {position:relative; padding:10px 50px; border-top:2px solid #444; border-bottom:1px solid #444;}
 .board-view .view-header .subject-wrap .subject {font-size:23px; font-family:'NSB'; line-height:30px; text-align:center;}
-.board-view .view-header .subject-wrap .btn-pager2 {position:absolute; top:50%; margin-top:-10px;}
-.board-view .view-header .subject-wrap .btn-pager2.prev {left:20px;}
-.board-view .view-header .subject-wrap .btn-pager2.next {right:20px;}
+.board-view .view-header .subject-wrap .button-pager2 {position:absolute; top:50%; margin-top:-10px;}
+.board-view .view-header .subject-wrap .button-pager2.prev {left:20px;}
+.board-view .view-header .subject-wrap .button-pager2.next {right:20px;}
 .board-view .view-header .define-wrap {border-bottom:1px solid #444;}
 .board-view .view-header .define-wrap .define {display:table; width:100%; table-layout:fixed; border-top:1px solid #ddd;}
 .board-view .view-header .define-wrap .define .tit,
@@ -687,7 +687,7 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 .board-view .view-header .define-wrap .define .txt {color:#666;}
 .board-view .view-header .define-wrap .define:first-child {border-top:0;}
 .board-view .view-content {padding:20px; line-height:24px; border-bottom:1px solid #444;}
-.board-view .btn-wrap {margin-top:30px;}
+.board-view .button-wrap {margin-top:30px;}
 
 /* 이전글다음글 */
 .board-pager {margin-top:50px; border-top:1px solid #444; border-bottom:1px solid #444;}
@@ -704,7 +704,7 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 .paging {}
 
 /* btn-wrap */
-.board-footer .btn-wrap {}
+.board-footer .button-wrap {}
 
 /*-------------------------------------------------------------------
 	## Step

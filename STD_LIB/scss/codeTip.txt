@@ -34,7 +34,7 @@
 }
 
 /* & 선택자 (가상 선택자, 가상 엘리먼트, 다중클래스) 부조까지의 선택자 자체를 참조한다. */
-.btn {
+.button {
 	/* 버튼 공통 기본 속성 정의 */
 	display: inline-block;
 	border:1px solid;
@@ -45,8 +45,8 @@
 		position: relative;
 	}
 
-	/* 버튼 사이즈별 정의 (.클래스를 붙이지 않고 이용할 경우 부모의 클래스에 그대로 덧붙여져서 변환된다. .btn-sm, .btn.md...) */
-	/* .을 붙일경우는 .btn.sm, .btn.md 이런식으로 변환된다. */
+	/* 버튼 사이즈별 정의 (.클래스를 붙이지 않고 이용할 경우 부모의 클래스에 그대로 덧붙여져서 변환된다. .button-sm, .button.md...) */
+	/* .을 붙일경우는 .button.sm, .button.md 이런식으로 변환된다. */
 	&-sm {
 		padding: 0 15px;
 		font-size: 12px;

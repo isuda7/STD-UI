@@ -15,8 +15,8 @@
 		<!-- Content -->
 		<article id="g-content">
 			<div class="g-content-header">
-				<h1 class="g-h1">List</h1>
-				<p class="g-explain-h1">마크업뷰중심 + 일부컨텐츠 </p>
+				<h1 class="g-h1">Item</h1>
+				<p class="g-explain-h1">마크업뷰중심 + 일부컨텐츠</p>
 			</div>
 			<div class="g-content-body">
 				<!-- Section -->
@@ -35,11 +35,22 @@
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:html">
-                                    <!-- list -->
-                                    <ul class="list">
-                                        <li class="item"></li>
-                                    </ul>
-                                    <!-- //list -->
+                                    <!-- item -->
+                                    <div class="item-demo">
+                                        <div class="primary-area">
+                                            <div class="thumb">
+                                                <img src="" alt="Thumbnail" />
+                                            </div>
+                                            <div class="title">
+                                                <p class="info">Info Text</p>
+                                                <p class="tit">Primary Text</p>
+                                            </div>
+                                        </div>
+                                        <div class="secondary-area">
+                                            Optional Content
+                                        </div>
+                                    </div>
+                                    <!-- //item -->
 								</pre>
 							</div>
 						</div>
@@ -138,66 +149,6 @@
                                     /* Style3 */
                                     .list.style-3 {padding:5px 10px;}
                                     .list.style-3 .item {min-height:40px; line-height:30px; border-bottom:1px solid #ddd;}
-								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
-
-				<!-- Section -->
-				<section class="g-section g-in-sec">
-					<div class="g-section-header">
-						<h2 class="g-h2">Toolbar</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn">HTML</a>
-									<a href="javascript:;" class="g-example-btn">CSS</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<div class="g-example-preview">
-                                    <div class="list-toolbar">
-                                        <div class="list-toolbar-count">
-                                            <span class="text">총</span>
-                                            <span class="total">20</span>
-                                            <span class="unit">개</span>
-                                        </div>
-                                        <div class="list-toolbar-sort">
-                                            <select class="form-select">
-                                                <option value="">최신순</option>
-                                            </select>
-                                        </div>
-                                    </div>
-								</div>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:html">
-                                    <div class="list-toolbar">
-                                        <div class="list-toolbar-count">
-                                            <span class="text">총</span>
-                                            <span class="total">20</span>
-                                            <span class="unit">개</span>
-                                        </div>
-                                        <div class="list-toolbar-sort">
-                                            <select class="form-select">
-                                                <option value="">최신순</option>
-                                            </select>
-                                        </div>
-                                    </div>
-								</pre>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:css">
-                                    /* Toolbar */
-                                    .list-toolbar {display: flex; justify-content: space-between; align-items: center;}
-                                    .list-toolbar-count {color:#999;}
-                                    .list-toolbar-count .total {color: $color-primary;}
 								</pre>
 							</div>
 						</div>

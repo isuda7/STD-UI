@@ -1,0 +1,12 @@
+/*-------------------------------------------------------------------
+	파일이름 : Dividers
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Default */
+.divider {display:block; border:0; margin: 0;}
+
+/* Styles */
+.divider.style-1 {height:4px; background-color: #eee;}
+.divider.style-2 {height:6px; background-color: #eee;}
+.divider.style-3 {height:8px; background-color: #fafafa; border-top:1px solid #eee; border-bottom:1px solid #eee;}
+

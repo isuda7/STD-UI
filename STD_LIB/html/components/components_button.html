@@ -36,11 +36,11 @@
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:html">
-									<button type="button" class="btn"><span>Text Button</span></button>
-									<button type="button" class="btn"><span><i class="ico">Icon Button</i></span></button>
+									<button type="button" class="button">Text Button</button>
+									<button type="button" class="button"><i class="icon">Icon Button</i></button>
 
-									<a href="javascript:;" class="btn"><span>Text Button</span></a>
-									<a href="javascript:;" class="btn"><span><i class="ico">Icon Button</i></span></a>
+									<a href="javascript:;" class="button">Text Button</a>
+									<a href="javascript:;" class="button"><i class="icon">Icon Button</i></a>
 								</pre>
 							</div>
 							<div class="g-example-footer">
@@ -51,12 +51,12 @@
 									/* Default */
 									button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
 									button::-moz-focus-inner {border:0px; padding:0px;}
-									.btn-area {display:flex;}
-									.btn-group {display:flex; flex:none;}
-									.btn,
-									.btn-ico {display:inline-flex; position:relative; overflow:hidden; vertical-align:middle;}
-									.btn > span,
-									.btn-ico > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%;}
+									.button-area {display:flex;}
+									.button-group {display:flex; flex:none;}
+									.button,
+									.button-ico {display:inline-flex; position:relative; overflow:hidden; vertical-align:middle;}
+									.button > span,
+									.button-ico > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%;}
 								</pre>
 							</div>
 						</div>
@@ -67,263 +67,127 @@
 				<!-- Section -->
 				<section class="g-section g-in-sec">
 					<div class="g-section-header">
-						<h2 class="g-h2">Basic</h2>
+						<h2 class="g-h2">Styles</h2>
 					</div>
 					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
+                        <div class="g-example-wrap">
+                            <div class="g-example-header">
 								<strong class="g-example-tit">Markup Codeview</strong>
 								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<div class="g-example-preview">
-									<a href="javascript:;" class="btn btn-basic"><span>Button</span></a>
-									<button type="button" class="btn btn-basic"><span>버튼</span></button>
-									<button type="button" class="btn btn-search"><span><i class="ico ico-search1 dark"></i></span></button>
-								</div>
-							</div>
-							<div class="g-example-footer is-active">
-								<pre class="brush:html">
-									<button type="button" class="btn btn-basic"><span>Button</span></button>
-									<button type="button" class="btn btn-basic"><span>버튼</span></button>
-									<button type="button" class="btn btn-search"><span><i class="ico ico-search1 dark"></i></span></button>
-								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
-
-				<!-- Section -->
-				<section class="g-section g-in-sec">
-					<div class="g-section-header">
-						<h2 class="g-h2">Color</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+                                    <span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
 									<a href="javascript:;" class="g-example-btn">CSS</a>
 								</div>
 							</div>
 							<div class="g-example-body">
-								<div class="g-example-preview">
-									<!-- 마크업뷰영역 -->
-									<button type="button" class="btn btn-basic"><span>Default</span></button>
-									<button type="button" class="btn btn-basic btn-primary"><span>Primary</span></button>
-									<button type="button" class="btn btn-basic btn-secondary"><span>Secondary</span></button>
-									<button type="button" class="btn btn-basic" disabled="disabled"><span>Disabled</span></button>
-									<!-- //마크업뷰영역 -->
+                                <div class="g-example-preview">
+                                    <button type="button" class="button style-1">Flat Contained</button>
+									<button type="button" class="button style-1 primary">Primary</button>
+									<button type="button" class="button style-1" disabled>Disabled</button>
+									<button type="button" class="button style-1 primary" disabled>Primary</button>
+                                    <br/>
+                                    <br/>
+									<button type="button" class="button style-2">Flat Outlined</button>
+									<button type="button" class="button style-2 primary">Primary</button>
+									<button type="button" class="button style-2" disabled>Disabled</button>
+									<button type="button" class="button style-2 primary" disabled>Primary</button>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+									<button type="button" class="button style-3">Round Contained</button>
+									<button type="button" class="button style-3 primary">Primary</button>
+									<button type="button" class="button style-3" disabled>Disabled</button>
+									<button type="button" class="button style-3 primary" disabled>Primary</button>
+                                    <br/>
+                                    <br/>
+									<button type="button" class="button style-4">Round Outlined</button>
+									<button type="button" class="button style-4 primary">Primary</button>
+									<button type="button" class="button style-4" disabled>Disabled</button>
+									<button type="button" class="button style-4 primary" disabled>Primary</button>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+									<button type="button" class="button style-5">Pill Contained</button>
+									<button type="button" class="button style-5 primary">Primary</button>
+									<button type="button" class="button style-5" disabled>Disabled</button>
+									<button type="button" class="button style-5 primary" disabled>Primary</button>
+                                    <br/>
+                                    <br/>
+									<button type="button" class="button style-6">Pill Outlined</button>
+									<button type="button" class="button style-6 primary">Primary</button>
+									<button type="button" class="button style-6" disabled>Disabled</button>
+									<button type="button" class="button style-6 primary" disabled>Primary</button>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+									<button type="button" class="button text">Texted</button>
+									<button type="button" class="button text primary">Primary</button>
+									<button type="button" class="button text" disabled>Disabled</button>
+									<button type="button" class="button text primary" disabled>Primary</button>
 								</div>
 							</div>
-							<div class="g-example-footer is-active">
+							<div class="g-example-footer">
 								<pre class="brush:html">
-									<button type="button" class="btn btn-basic"><span>Default</span></button>
-									<button type="button" class="btn btn-basic btn-primary"><span>Primary</span></button>
-									<button type="button" class="btn btn-basic btn-secondary"><span>Secondary</span></button>
-									<button type="button" class="btn btn-basic" disabled="disabled"><span>Disabled</span></button>
+                                    <!-- Styles -->
+									<button type="button" class="button style-1">Flat Contained</button>
+									<button type="button" class="button style-2">Flat Outlined</button>
+                                    <button type="button" class="button style-3">Round Contained</button>
+                                    <button type="button" class="button style-4">Round Outlined</button>
+                                    <button type="button" class="button style-5">Pill Contained</button>
+                                    <button type="button" class="button style-6">Pill Outlined</button>
+
+                                    <!-- Optionals -->
+									<button type="button" class="button style-1">Flat Contained</button>
+									<button type="button" class="button style-1 primary">Primary</button>
+									<button type="button" class="button style-1" disabled>Disabled</button>
+									<button type="button" class="button style-1 primary" disabled>Primary</button>
+
+                                    <!-- Texted -->
+                                    <button type="button" class="button text">Texted</button>
+                                    <button type="button" class="button text primary">Primary</button>
+                                    <button type="button" class="button text" disabled>Disabled</button>
+                                    <button type="button" class="button text primary" disabled>Primary</button>
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-									.btn-basic {min-height:34px; padding:0 20px 1px; font-size:16px; background:#eee;}
-									.btn-basic.primary {background:$color-primary; color:#fff;}
-									.btn-basic.secondary {background:#333; color:#fff;}
-									.btn-basic[disabled] {background:#aaa; color:#fff;}
-								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
+                                    // Rounded
+                                    @mixin rounded-xxl {border-radius:8px;}
+                                    @mixin pilled {border-radius: 100px;}
 
-				<!-- Section -->
-				<section class="g-section g-in-sec">
-					<div class="g-section-header">
-						<h2 class="g-h2">Group</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<div class="g-example-preview">
-									<!-- 마크업뷰영역 -->
-									<span class="btn-group">
-										<button type="button" class="btn btn-basic btn-primary"><span>Primary</span></button>
-										<button type="button" class="btn btn-basic btn-secondary"><span>Secondary</span></button>
-									</span>
-									<!-- //마크업뷰영역 -->
-								</div>
-							</div>
-							<div class="g-example-footer is-active">
-								<pre class="brush:html">
-									&lt;span class="btn-group">
-										&lt;button type="button" class="btn">&lt;span>&lt;/span>&lt;/button>
-										&lt;button type="button" class="btn">&lt;span>&lt;/span>&lt;/button>
-									&lt;/span>
-								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
+                                    // Buttons
+                                    @mixin ui-button-contained {
+                                        padding:8px 16px; background-color:#eee; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
+                                        &:hover, &:focus {background-color:#ddd; color: #000;}
+                                        &:disabled {opacity: 0.5;}
+                                        &.primary {background:$color-primary; color:#fff;}
+                                        &.primary:hover, &.primary:focus {background:$color-primary-dark;}
+                                    }
+                                    @mixin ui-button-outlined {
+                                        padding:8px 16px; background-color:#fff; border:1px solid #ddd; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
+                                        &:hover, &:focus {border-color: #222; color: #000;}
+                                        &:disabled {opacity: 0.5;}
+                                        &.primary {border-color: $color-primary; color: $color-primary;}
+                                        &.primary:hover, &.primary:focus {border-color:$color-primary-dark;}
+                                    }
+                                    @mixin ui-button-texted {
+                                        &.text {font-size:14px; line-height: 22px;}
+                                        &.text:disabled {opacity: 0.5;}
+                                        &.text.primary {color:$color-primary;}
+                                    }
 
-				<!-- Section -->
-				<section class="g-section g-in-sec">
-					<div class="g-section-header">
-						<h2 class="g-h2">Flexible</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
-									<a href="javascript:;" class="g-example-btn">CSS</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<div class="g-example-preview">
-									<!-- 마크업뷰영역 -->
-									<div class="btn-group btn-flex">
-										<button type="button" class="btn btn-basic btn-primary"><span>Primary</span></button>
-										<button type="button" class="btn btn-basic btn-secondary"><span>Secondary</span></button>
-									</div>
-									<!-- //마크업뷰영역 -->
-								</div>
-							</div>
-							<div class="g-example-footer is-active">
-								<pre class="brush:html">
-									&lt;div class="btn-group btn-flex">
-										&lt;button type="button" class="btn btn-basic btn-primary">&lt;span>Primary&lt;/span>&lt;/button>
-										&lt;button type="button" class="btn btn-basic btn-secondary">&lt;span>Secondary&lt;/span>&lt;/button>
-									&lt;/div>
-								</pre>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:css">
-									.btn-flex {display:flex;}
-									.btn-flex .btn {display:block; width:100%;}
-								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
-
-				<!-- Section -->
-				<section class="g-section g-in-sec">
-					<div class="g-section-header">
-						<h2 class="g-h2">Fluid</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
-									<a href="javascript:;" class="g-example-btn">CSS</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<div class="g-example-preview">
-									<!-- 마크업뷰영역 -->
-									<div class="btn-group btn-fluid">
-										<button type="button" class="btn btn-basic btn-primary"><span>Primary</span></button>
-										<button type="button" class="btn btn-basic btn-secondary"><span>Secondary</span></button>
-									</div>
-									<!-- //마크업뷰영역 -->
-								</div>
-							</div>
-							<div class="g-example-footer is-active">
-								<pre class="brush:html">
-									&lt;div class="btn-group btn-fluid">
-										&lt;button type="button" class="btn btn-basic">&lt;span>Button&lt;/span>&lt;/button>
-										&lt;button type="button" class="btn btn-basic">&lt;span>Button&lt;/span>&lt;/button>
-									&lt;/div>
-								</pre>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:css">
-									.btn-fluid .btn {width:100%;}
-								</pre>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
-
-				<!-- Section -->
-				<section class="g-section g-in-sec">
-					<div class="g-section-header">
-						<h2 class="g-h2">Effect</h2>
-					</div>
-					<div class="g-section-body">
-						<div class="g-example-wrap">
-							<div class="g-example-header">
-								<strong class="g-example-tit is-before"></strong>
-								<div class="g-example-nav">
-									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn">CSS</a>
-									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
-								</div>
-							</div>
-							<div class="g-example-body">
-								<div class="g-example-preview">
-									<!-- 마크업뷰영역 -->
-									<div class="btn-group">
-										<button type="button" class="btn btn-basic button-effect"><span>Primary</span></button>
-									</div>
-									<!-- //마크업뷰영역 -->
-								</div>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:css">
-									/* Effect Wave */
-									.effect-wave {display:block; position:absolute; transform:translateX(-50%) translateY(-50%); width:0px; height:0px; background-color:#000; border-radius:50%; opacity:0.2;}
-								</pre>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:js">
-									waveEffect : {
-										init : function(){
-											this.event();
-										},
-										event : function(){
-											/* Add the class effect on button */
-											$('.button-effect').not('.not-effect').on('click', function(e) {
-											  var self = $(this),
-												  wave = '.effect-wave',
-												  /* Get the width of button (if different buttons types) */
-												  btnWidth = self.outerWidth(),
-												  x = e.offsetX,
-												  y = e.offsetY;
-
-											  self.prepend('<span class="effect-wave"></span>');
-
-											  $(wave)
-												.css({'top': y, 'left': x})
-												.animate({opacity: '0', width: btnWidth * 2.2, height: btnWidth * 2.2 }, 500, function() {
-													self.find(wave).remove();
-												})
-											})
-										}
-									},
-								</pre>
+                                    /* Styles */
+                                    .button.style-1 {@include ui-button-contained;}
+                                    .button.style-2 {@include ui-button-outlined;}
+                                    .button.style-3 {@include ui-button-contained; @include rounded-md;}
+                                    .button.style-4 {@include ui-button-outlined; @include rounded-md;}
+                                    .button.style-5 {@include ui-button-contained; @include pilled;}
+                                    .button.style-6 {@include ui-button-outlined; @include pilled;}
+                                    .button.text {@include ui-button-texted;}
+                                </pre>
 							</div>
 						</div>
 					</div>

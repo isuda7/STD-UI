@@ -3,11 +3,13 @@
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /* Default */
-.label {display:inline-block; }
+.label {display:inline-block; text-align: center; vertical-align:middle;}
 
-/* Design */
-.label-basic {padding:1px 8px 2px; line-height:21px; background-color:#444; color:#fff; border-radius:3px; text-align:center; vertical-align:middle;}
-.label-basic {min-width:50px; max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-.label-basic.label-primary {background:$color-primary;}
-.label-basic.label-outline {padding:0px 7px 1px; background:transparent; border:1px solid #444; color:#444;}
-.label-basic.label-outline.label-primary {border:1px solid $color-primary; color:$color-primary;}
+/* Styles */
+.label.style-1 {@include ui-label-contained; @include ui-label-sized(60px, 120px)}
+.label.style-2 {@include ui-label-outlined;}
+.label.style-3 {@include ui-label-contained; @include rounded-md;}
+.label.style-4 {@include ui-label-outlined; @include rounded-md;}
+.label.style-5 {@include ui-label-contained; @include pilled;}
+.label.style-6 {@include ui-label-outlined; @include pilled;}
+.label.texted {@include ui-label-texted;}
