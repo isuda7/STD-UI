@@ -126,18 +126,20 @@
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-                                    /* Style1 */
-                                    .list.style-1 {border:1px solid #999; border-width:1px 0;}
-                                    .list.style-1 .item {padding:5px 10px; min-height:40px; line-height:30px;}
-                                    .list.style-1 .item + .item {border-top:1px solid #ddd;}
+                                    // Variables
+                                    $color-list-lined: #ddd;
 
-                                    /* Style2 */
-                                    .list.style-2 .item {padding:5px 10px; min-height:40px; line-height:30px; border-top:1px solid transparent;}
-                                    .list.style-2 .item + .item {border-top:1px solid #ddd;}
+                                    // Style1
+                                    .list.style-1 {border:1px solid #ddd; border-width:1px 0;}
+                                    .list.style-1 .item {padding:12px 10px; min-height:40px; line-height:22px;}
+                                    .list.style-1 .item + .item {border-top:1px solid $color-list-lined;}
 
-                                    /* Style3 */
-                                    .list.style-3 {padding:5px 10px;}
-                                    .list.style-3 .item {min-height:40px; line-height:30px; border-bottom:1px solid #ddd;}
+                                    // Style2
+                                    .list.style-2 .item {padding:12px 10px; min-height:40px; line-height:22px; border-top:1px solid transparent;}
+                                    .list.style-2 .item + .item {border-top:1px solid $color-list-lined;}
+
+                                    // Style3
+                                    .list.style-3 .item {padding:12px 10px; min-height:40px; line-height:22px; border-bottom:1px solid $color-list-lined;}
 								</pre>
 							</div>
 						</div>

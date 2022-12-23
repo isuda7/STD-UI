@@ -1,0 +1,26 @@
+/*-------------------------------------------------------------------
+	파일이름 : Lists
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+// Variables
+@mixin ui-item {
+    .has-arrow {position: relative;}
+    .has-arrow::after {content:''; @include centered-right; display:block;}
+    .primary-area {display: flex; align-items: center; width: 100%;}
+    .primary-area .title strong,
+    .primary-area .text strong {font-weight: 700;}
+    .primary-area .check-area,
+    .primary-area .thumb-area,
+    .primary-area .avata-area {flex:none;}
+    .primary-area .title-area {flex:1 1 auto; width:100%;}
+}
+
+/* Demo */
+.item-demo {@include ui-item;}
+.item-demo .has-arrow {padding-right: 30px;}
+.item-demo .has-arrow::after {width:6px; height:10px; background:url(../img/cmn/arw_more01.png) no-repeat -18px 0; background-size:24px 10px;}
+.item-demo .primary-area .thumb-area {width:120px; height:80px; margin-right: 20px;}
+.item-demo .primary-area .avata-area {width:60px; height:60px; margin-right: 20px;}
+.item-demo .primary-area .title {font-size: 16px; line-height: 28px; color:#222;}
+.item-demo .primary-area .date {font-size: 12px; color:#666;}
+.item-demo .primary-area .info {display:flex; align-items: center; font-size: 12px; color:#666;}

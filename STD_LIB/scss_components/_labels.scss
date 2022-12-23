@@ -2,6 +2,23 @@
 	파일이름 : Labels
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
+// Variables
+@mixin ui-label-contained {
+    line-height: 22px; padding:0 8px; background:#444; border:1px solid transparent; color:#fff;
+    &.primary {background:$color-primary;}
+}
+@mixin ui-label-outlined {
+    line-height: 22px; padding:0 8px; background:#fff; border:1px solid #444; color:#444;
+    &.primary {border:1px solid $color-primary; color:$color-primary;}
+}
+@mixin ui-label-texted {
+    font-size:14px; line-height: 22px;
+    &.primary {color:$color-primary;}
+}
+@mixin ui-label-sized($min, $max) {
+    min-width:$min; max-width:$max; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+
 /* Default */
 .label {display:inline-block; text-align: center; vertical-align:middle;}
 

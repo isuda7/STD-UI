@@ -2,6 +2,27 @@
 	파일이름 : Buttons
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
+// Variables
+@mixin ui-button-contained {
+    padding:8px 16px; background-color:#eee; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
+    &:hover, &:focus {background-color:#ddd; color: #000;}
+    &:disabled {opacity: 0.5;}
+    &.primary {background:$color-primary; color:#fff;}
+    &.primary:hover, &.primary:focus {background:$color-primary-dark;}
+}
+@mixin ui-button-outlined {
+    padding:8px 16px; background-color:#fff; border:1px solid #ddd; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
+    &:hover, &:focus {border-color: #222; color: #000;}
+    &:disabled {opacity: 0.5;}
+    &.primary {border-color: $color-primary; color: $color-primary;}
+    &.primary:hover, &.primary:focus {border-color:$color-primary-dark;}
+}
+@mixin ui-button-texted {
+    &.text {font-size:14px; line-height: 22px;}
+    &.text:disabled {opacity: 0.5;}
+    &.text.primary {color:$color-primary;}
+}
+
 /* Default */
 button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
 button::-moz-focus-inner {border:0px; padding:0px;}

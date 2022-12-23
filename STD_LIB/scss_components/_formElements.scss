@@ -3,8 +3,17 @@
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-    @@ Form Input
+@@ Form Input
 -------------------------------------------------------------------*/
+// Variables
+@mixin ui-input-outlined {
+    height:45px; padding:0 15px; border:1px solid #ddd; @include rounded-md; @include shadowed-md; font-size: 14px; line-height: 22px; transition:all 0.3s;
+    &:hover {border-color: #222;}
+    &:focus {border-color: $color-primary; color: $color-primary;}
+    &:disabled {background-color: #fafafa; opacity: 0.75;}
+    &:disabled:hover {border-color: #999; opacity: 0.75;}
+}
+
 /* Default */
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#999;}/* IE 10 + */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#999;}/* Webkit Browser */

@@ -143,6 +143,7 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_badge.html">Badges</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_bullet.html">Bullets</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_divider.html">Dividers</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_images.html">Images</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Collections</a>');
 			document.write('						<ul class="g-depth2">');

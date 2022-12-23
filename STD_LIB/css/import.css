@@ -1846,6 +1846,15 @@ button::-moz-focus-inner {
   border: 0;
   margin: 0; }
 
+.split {
+  position: relative;
+  top: 1px;
+  display: block;
+  width: 1px;
+  height: 10px;
+  margin: 0 10px;
+  background-color: #ccc; }
+
 /* Styles */
 .divider.style-1 {
   height: 4px;
@@ -1944,7 +1953,7 @@ button::-moz-focus-inner {
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-    @@ Form Input
+@@ Form Input
 -------------------------------------------------------------------*/
 /* Default */
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
@@ -3191,6 +3200,60 @@ textarea.form-input {
   background-image: url(../img/cmn/rat_star01_5.png); }
 
 /*-------------------------------------------------------------------
+	파일이름 : Images
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+img.img-cover {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.thumb {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
+
+.avata {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; }
+
+.banner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
+
+/*-------------------------------------------------------------------
 	파일이름 : Labels
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
@@ -3280,86 +3343,33 @@ textarea.form-input {
 -------------------------------------------------------------------*/
 /* Style1 */
 .list.style-1 {
-  border: 1px solid #999;
+  border: 1px solid #ddd;
   border-width: 1px 0; }
 
 .list.style-1 .item {
-  padding: 5px 10px;
+  padding: 12px 10px;
   min-height: 40px;
-  line-height: 30px; }
+  line-height: 22px; }
 
 .list.style-1 .item + .item {
   border-top: 1px solid #ddd; }
 
 /* Style2 */
 .list.style-2 .item {
-  padding: 5px 10px;
+  padding: 12px 10px;
   min-height: 40px;
-  line-height: 30px;
+  line-height: 22px;
   border-top: 1px solid transparent; }
 
 .list.style-2 .item + .item {
   border-top: 1px solid #ddd; }
 
 /* Style3 */
-.list.style-3 {
-  padding: 5px 10px; }
-
 .list.style-3 .item {
+  padding: 12px 10px;
   min-height: 40px;
-  line-height: 30px;
+  line-height: 22px;
   border-bottom: 1px solid #ddd; }
-
-.list.style-1 .item .item-link {
-  position: relative;
-  display: block; }
-
-.list.style-1 .item .item-link.has-arw {
-  padding-right: 20px; }
-
-.list.style-1 .item .arw-more1 {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
-.list.style-1 .item-header {
-  background-color: #f8f8f8; }
-
-.list.style-1 .item-footer {
-  background-color: #f8f8f8; }
-
-.list.style-1 + .explain-footer {
-  margin-top: 10px; }
-
-.explain-header + .list.style-1 {
-  margin-top: 10px; }
-
-.list.style-2 .item .item-link {
-  position: relative;
-  display: block; }
-
-.list.style-2 .item .arw-more1 {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
-.list.style-3 .item .item-link {
-  position: relative;
-  display: block; }
-
-.list.style-3 .item .arw-more1 {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
 
 /* Toolbar */
 .list-toolbar {
@@ -3378,6 +3388,88 @@ textarea.form-input {
 
 .list-toolbar-count .total {
   color: #ff5400; }
+
+/*-------------------------------------------------------------------
+	파일이름 : Lists
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+/* Demo */
+.item-demo .has-arrow {
+  position: relative; }
+
+.item-demo .has-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block; }
+
+.item-demo .primary-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%; }
+
+.item-demo .primary-area .title strong,
+.item-demo .primary-area .text strong {
+  font-weight: 700; }
+
+.item-demo .primary-area .check-area,
+.item-demo .primary-area .thumb-area,
+.item-demo .primary-area .avata-area {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none; }
+
+.item-demo .primary-area .title-area {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%; }
+
+.item-demo .has-arrow {
+  padding-right: 30px; }
+
+.item-demo .has-arrow::after {
+  width: 6px;
+  height: 10px;
+  background: url(../img/cmn/arw_more01.png) no-repeat -18px 0;
+  background-size: 24px 10px; }
+
+.item-demo .primary-area .thumb-area {
+  width: 120px;
+  height: 80px;
+  margin-right: 20px; }
+
+.item-demo .primary-area .avata-area {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px; }
+
+.item-demo .primary-area .title {
+  font-size: 16px;
+  line-height: 28px;
+  color: #222; }
+
+.item-demo .primary-area .date {
+  font-size: 12px;
+  color: #666; }
+
+.item-demo .primary-area .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  color: #666; }
 
 /*-------------------------------------------------------------------
 	파일이름 : Modals

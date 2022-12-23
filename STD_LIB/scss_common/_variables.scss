@@ -55,56 +55,6 @@ $color-red: red;
 @mixin shadowed-md {box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3);}
 
 //-------------------------------------------------------------------
-//	Components
-//-------------------------------------------------------------------
-// Forms
-@mixin ui-input-outlined {
-    height:45px; padding:0 15px; border:1px solid #ddd; @include rounded-md; @include shadowed-md; font-size: 14px; line-height: 22px; transition:all 0.3s;
-    &:hover {border-color: #222;}
-    &:focus {border-color: $color-primary; color: $color-primary;}
-    &:disabled {background-color: #fafafa; opacity: 0.75;}
-    &:disabled:hover {border-color: #999; opacity: 0.75;}
-}
-
-// Buttons
-@mixin ui-button-contained {
-    padding:8px 16px; background-color:#eee; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
-    &:hover, &:focus {background-color:#ddd; color: #000;}
-    &:disabled {opacity: 0.5;}
-    &.primary {background:$color-primary; color:#fff;}
-    &.primary:hover, &.primary:focus {background:$color-primary-dark;}
-}
-@mixin ui-button-outlined {
-    padding:8px 16px; background-color:#fff; border:1px solid #ddd; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
-    &:hover, &:focus {border-color: #222; color: #000;}
-    &:disabled {opacity: 0.5;}
-    &.primary {border-color: $color-primary; color: $color-primary;}
-    &.primary:hover, &.primary:focus {border-color:$color-primary-dark;}
-}
-@mixin ui-button-texted {
-    &.text {font-size:14px; line-height: 22px;}
-    &.text:disabled {opacity: 0.5;}
-    &.text.primary {color:$color-primary;}
-}
-
-// Labels
-@mixin ui-label-contained {
-    line-height: 22px; padding:0 8px; background:#444; border:1px solid transparent; color:#fff;
-    &.primary {background:$color-primary;}
-}
-@mixin ui-label-outlined {
-    line-height: 22px; padding:0 8px; background:#fff; border:1px solid #444; color:#444;
-    &.primary {border:1px solid $color-primary; color:$color-primary;}
-}
-@mixin ui-label-texted {
-    font-size:14px; line-height: 22px;
-    &.primary {color:$color-primary;}
-}
-@mixin ui-label-sized($min, $max) {
-    min-width:$min; max-width:$max; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
-}
-
-//-------------------------------------------------------------------
 //	@Extend
 //	- 클래스선택자를 정의할 경우 common.css에 정의한다.
 //	- 선언 : %selector1
