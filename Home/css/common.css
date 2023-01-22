@@ -68,7 +68,7 @@ body, html {height:100%;}
 .main-wrap {background:url('http://placeimg.com/1000/800/any') no-repeat center center / cover;}
 /* .main-wrap .header {display:none;} */
 .main-wrap .container {position:absolute; left:0; right:0; width:100%; top:50%; transform: translateY(-50%);}
-.main-wrap .content {flex-direction: column; color:#fff;}
+.main-wrap .content {flex-direction: column; color:#fff; padding: 30px;}
 .main-wrap .footer {display:none; background-color: rgba(0,0,0,0.2); color: #fff;}
 
 .main-wrap .jumbotron {max-width:420px; height:100%; text-align: center; text-shadow:0 3px 3px rgba(0,0,0,0.2);}

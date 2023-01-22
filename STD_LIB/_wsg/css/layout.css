@@ -33,7 +33,7 @@
 .g-aside-scroll .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {background-color:#666;}
 
 /* LNB */
-.g-lnb {margin-right:20px; text-align:right;}
+.g-lnb {padding-right:0; text-align:right;}
 .g-lnb > .g-node-title {display:none;}
 .g-lnb > ul {display:inline-block;}
 .g-lnb > ul > li {position:relative; display:inline-block;}
