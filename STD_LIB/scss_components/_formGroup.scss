@@ -31,12 +31,12 @@
 /* Wide Group */
 .form.type-wide + .form.type-wide {margin-top:20px;}
 .form.type-wide {display:flex;}
-.form.type-wide .form-title {width:100px;}
+.form.type-wide .form-title {flex:none; width:100px;}
 .form.type-wide .form-content {display:flex; flex:1 0 auto; align-items:center;}
 .form.type-wide .form-content .form-controls {width:auto;}
 .form.type-wide .form-desc,
 .form.type-wide .form-info,
-.form.type-wide .form-alert {flex:none; margin-left:20px; line-height:22px;}
+.form.type-wide .form-alert {flex:none; padding-left:20px; line-height:22px;}
 
 /*-------------------------------------------------------------------
 	@@ Form Controls
