@@ -9,12 +9,12 @@
 .drop-toggle .arw {position:absolute; top:50%; right:10px;}
 
 /* Transition */
-.drop-down .drop-menu {@extend %dropdown}
-.drop-down.is-active .drop-menu {@extend %dropdown-active}
+.drop-down .drop-menu {@include dropdown}
+.drop-down.is-active .drop-menu {@include dropdown-active}
 .drop-down .drop-toggle .arw {transform:translateY(-50%) rotate(0deg); transition:transform 0.2s ease;}
 .drop-down.is-active .drop-toggle .arw {transform:translateY(-50%) rotate(180deg);}
-.drop-top .drop-menu {@extend %dropup}
-.drop-top.is-active .drop-menu {@extend %dropup-active}
+.drop-top .drop-menu {@include dropup}
+.drop-top.is-active .drop-menu {@include dropup-active}
 .drop-top .drop-toggle .arw {transform:translateY(-50%) rotate(180deg); transition:transform 0.2s ease;}
 .drop-top.is-active .drop-toggle .arw {transform:translateY(-50%) rotate(0deg);}
 

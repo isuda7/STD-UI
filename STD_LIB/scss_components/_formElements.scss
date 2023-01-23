@@ -7,7 +7,7 @@
 -------------------------------------------------------------------*/
 // Variables
 @mixin ui-input-outlined {
-    height:45px; padding:0 15px; border:1px solid #ddd; @include rounded-md; @include shadowed-md; font-size: 14px; line-height: 22px; transition:all 0.3s;
+    height:45px; padding:0 15px; border:1px solid #ddd; border-radius:4px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 22px; transition:all 0.3s;
     &:hover {border-color: #222;}
     &:focus {border-color: $color-primary; color: $color-primary;}
     &:disabled {background-color: #fafafa; opacity: 0.75;}

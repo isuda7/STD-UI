@@ -51,25 +51,13 @@ $color-red: red;
 @mixin rounded-xxl {border-radius:8px;}
 @mixin pilled {border-radius: 100px;}
 
-// Shadowed
-@mixin shadowed-md {box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3);}
-
-//-------------------------------------------------------------------
-//	@Extend
-//	- 클래스선택자를 정의할 경우 common.css에 정의한다.
-//	- 선언 : %selector1
-//	- 활용 : selector2 {@extend %selector1}
-//-------------------------------------------------------------------
-// Floating Clear
-%clear {content:''; clear:both; display:block;} // selector::after {@extend %clear-b;}
-
-/* Transition */
-%dropdown {left:0; top:100%; opacity:0; animation:dropdown 0.3s ease both; transform:translateY(-50%) scaleY(0); transition:opacity 0.2s ease;}
-%dropdown-active {opacity:1; animation:dropdown-active 0.3s ease both;}
-%dropup {left:0; bottom:100%; opacity:0; animation:dropup 0.3s ease both; transform:translateY(-50%) scaleY(0); transition:opacity 0.2s ease;}
-%dropup-active {opacity:1; animation:dropup-active 0.3s ease both;}
-%wideScale {transform:scaleX(0); transition:transform 0.25s ease;}
-%wideScale-active {transform:scaleX(1);}
+/* Dropmenu */
+@mixin dropdown {left:0; top:100%; opacity:0; animation:dropdown 0.3s ease both; transform:translateY(-50%) scaleY(0); transition:opacity 0.2s ease;}
+@mixin dropdown-active {opacity:1; animation:dropdown-active 0.3s ease both;}
+@mixin dropup {left:0; bottom:100%; opacity:0; animation:dropup 0.3s ease both; transform:translateY(-50%) scaleY(0); transition:opacity 0.2s ease;}
+@mixin dropup-active {opacity:1; animation:dropup-active 0.3s ease both;}
+@mixin wideScale {transform:scaleX(0); transition:transform 0.25s ease;}
+@mixin wideScale-active {transform:scaleX(1);}
 
 @keyframes dropdown {
 	from {transform:translateY(0) scaleY(1);}

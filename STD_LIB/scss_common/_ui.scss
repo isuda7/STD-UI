@@ -476,10 +476,11 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 	## Breadcrumb
 ----------------------------------------------------------------- --*/
 /* Style */
-.breadcrumb {position:relative; display:inline-block; margin:0 -10px; overflow:hidden; line-height:1; @extend %clear;}
-.breadcrumb .item {position:relative; float:left; padding:0 10px 0 16px;vertical-align:middle;}
+.breadcrumb {position:relative; display:flex;}
+.breadcrumb .item {position:relative;}
+.breadcrumb .item + .item {margin-left: 10px;}
 .breadcrumb .item.is-current {color:$color-primary;}
-.breadcrumb .arw {@extend .centered-l; margin-top:1px;}
+.breadcrumb .arw {@include centered-left; margin-top:1px;}
 
 /* Select */
 .breadcrumb-select .dropdown {width:160px;}
@@ -888,12 +889,12 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 .drop-toggle .arw {position:absolute; top:50%; right:10px;}
 
 /* Transition */
-.drop-down .drop-menu {@extend %dropdown}
-.drop-down.is-active .drop-menu {@extend %dropdown-active}
+.drop-down .drop-menu {@include dropdown}
+.drop-down.is-active .drop-menu {@include dropdown-active}
 .drop-down .drop-toggle .arw {transform:translateY(-50%) rotate(0deg); transition:transform 0.2s ease;}
 .drop-down.is-active .drop-toggle .arw {transform:translateY(-50%) rotate(180deg);}
-.drop-top .drop-menu {@extend %dropup}
-.drop-top.is-active .drop-menu {@extend %dropup-active}
+.drop-top .drop-menu {@include dropup}
+.drop-top.is-active .drop-menu {@include dropup-active}
 .drop-top .drop-toggle .arw {transform:translateY(-50%) rotate(180deg); transition:transform 0.2s ease;}
 .drop-top.is-active .drop-toggle .arw {transform:translateY(-50%) rotate(0deg);}
 
