@@ -140,7 +140,7 @@ textarea.form-input {@include ui-input-outlined; height:auto; padding-top:10px; 
 /* Form Text */
 .form-label, .form-text {flex:none; position:relative; padding:11px 0 11px 0px; line-height:22px; vertical-align:middle;}
 .form-label, span.form-text {display:inline-block;}
-.form-label .required {position:absolute; top:4px; right:5px; color:$color-red;}
+.form-label .form-required {position:absolute; top:4px; right:5px;}
 .form-split {display:inline-block; min-width:24px; line-height:45px; text-align:center;}
 .form-alert {display:none; color:#555;}
 .form-alert.is-visibled {display:block;}

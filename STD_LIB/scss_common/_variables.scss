@@ -1,19 +1,16 @@
 @charset "utf-8";
 //-------------------------------------------------------------------
-//	파일이름 : Settings
-//	작성날짜 : 2018-11-18 조찬기
-//	참고사항 : 이 파일은 설정값만 정의한다.
-//	분류순서 : 기본정책 > 유틸리티 > 사용자정의(컬러, 폰트, 보더, 간격 등)
+//	파일이름 : Variables
 //	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
-//	Variables
+//	Value
 //-------------------------------------------------------------------
-// 기본정책
-$base-width: 1200px;
-$base-gutter: 20px;
+// 레이아웃
+$layout-width: 1200px;
+$layout-side: 20px;
 
-// 컬러 - 의미
+// 컬러 의미
 $color-basic: #333;
 $color-success: #47a104;
 $color-warning: #e9b500;
@@ -25,31 +22,27 @@ $color-primary-dark: #ea1b00;
 $color-primary-light: #ff935d;
 $color-secondary: #54873c;
 
-// 컬래 - 채도
+// 컬래 팔래트
 $color-red: red;
 
 //-------------------------------------------------------------------
-//	@Include
-//	- 클래스선택자를 정의할 경우 common.css에 정의한다.
-//	- 선언 : @mixin name {}
-//	- 활용 : selector2 {@include name}
+//	Includes
 //-------------------------------------------------------------------
-//-------------------------------------------------------------------
-//	Utilites
-//-------------------------------------------------------------------
-// Position
-@mixin centered-top {position:absolute; left:50%; top:0; transform:translateX(-50%);}
-@mixin centered-right {position:absolute; right:0; top:50%; transform:translateY(-50%);}
-@mixin centered-bottom {position:absolute; left:50%; bottom:0; transform:translateX(-50%);}
-@mixin centered-left {position:absolute; left:0; top:50%; transform:translateY(-50%);}
-@mixin centered-center {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
+/* 말줄임 */
+@mixin ellipsis-1 {overflow:hidden; white-space:nowrap; -o-text-overflow:ellipsis; text-overflow:ellipsis;}
+@mixin ellipsis-2 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+@mixin ellipsis-3 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;}
+@mixin ellipsis-4 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;}
+@mixin ellipsis-5 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical;}
+@mixin ellipsis-6 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:6; -webkit-box-orient:vertical;}
+@mixin ellipsis-7 {overflow:hidden; -o-text-overflow:ellipsis; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:7; -webkit-box-orient:vertical;}
 
-// Rounded
-@mixin rounded-xs {border-radius:2px;}
-@mixin rounded-md {border-radius:4px;}
-@mixin rounded-xl {border-radius:6px;}
-@mixin rounded-xxl {border-radius:8px;}
-@mixin pilled {border-radius: 100px;}
+// Position
+@mixin centered-t {position:absolute; left:50%; top:0; transform:translateX(-50%);}
+@mixin centered-r {position:absolute; right:0; top:50%; transform:translateY(-50%);}
+@mixin centered-b {position:absolute; left:50%; bottom:0; transform:translateX(-50%);}
+@mixin centered-l {position:absolute; left:0; top:50%; transform:translateY(-50%);}
+@mixin centered-c {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
 
 /* Dropmenu */
 @mixin dropdown {left:0; top:100%; opacity:0; animation:dropdown 0.3s ease both; transform:translateY(-50%) scaleY(0); transition:opacity 0.2s ease;}
@@ -75,4 +68,3 @@ $color-red: red;
 	from {transform:translateY(50%) scaleY(0);}
 	to {transform:translateY(0) scaleY(1);}
 }
-

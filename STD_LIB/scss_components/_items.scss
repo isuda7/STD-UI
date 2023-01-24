@@ -5,7 +5,7 @@
 // Variables
 @mixin ui-item {
     .has-arrow {position: relative;}
-    .has-arrow::after {content:''; @include centered-right; display:block;}
+    .has-arrow::after {content:''; @include centered-r; display:block;}
     .primary-area {display: flex; align-items: center; width: 100%;}
     .primary-area .title strong,
     .primary-area .text strong {font-weight: 700;}
