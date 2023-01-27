@@ -15,7 +15,7 @@
 		<!-- Content -->
 		<article id="g-content">
 			<div class="g-content-header">
-				<h1 class="g-h1">Step</h1>
+				<h1 class="g-h1">Steps</h1>
 				<p class="g-explain-h1">Library Elements</p>
 			</div>
 			<div class="g-content-body">
@@ -36,13 +36,15 @@
 							</div>
 							<div class="g-example-footer is-active">
 								<pre class="brush:html">
-									&lt;div class="step">
-										&lt;ol class="step-list">
-											&lt;li class="step-item is-on">&lt;span class="step-label" title="가입 1단계 약관동의">1단계&lt;/span>&lt;/li>
-											&lt;li class="step-item is-current" aria-current="step">&lt;span class="step-label" title="가입 2단계 정보입력">2단계&lt;/span>&lt;/li>
-											&lt;li class="step-item">&lt;span class="step-label" title="가입 3단계 가입완료">3단계&lt;/span>&lt;/li>
-										&lt;/ol>
-									&lt;/div>
+									<div class="step style-1">
+                                        <ol class="step-list">
+                                            <li class="step-item is-on" title="채용 1단계 이력서등록 진행됨"><span class="step-label">1단계</span></li>
+                                            <li class="step-item is-on" title="채용 2단계 서류심사 진행됨"><span class="step-label">2단계</span></li>
+                                            <li class="step-item is-current" title="채용 3단계 그룹면접" aria-current="step"><span class="step-label">3단계</span></li>
+                                            <li class="step-item" title="채용 4단계 임원면접"><span class="step-label">4단계</span></li>
+                                            <li class="step-item" title="채용 5단계 심사결과"><span class="step-label">5단계</span></li>
+                                        </ol>
+									</div>
 								</pre>
 							</div>
 							<div class="g-example-footer">
@@ -51,11 +53,10 @@
 										## Step
 									-------------------------------------------------------------------*/
 									/* Default */
-									.step {text-align:center;}
-									.step .step-list {display:table; position:relative; margin:auto;}
-									.step .step-item {display:table-cell; position:relative; z-index:1;}
-									.step .step-label {position:relative;}
-								</pre>
+                                    .step .step-list {display:flex; justify-content: center; align-items: center;}
+                                    .step .step-item {position:relative;}
+                                    .step .step-label {position:relative; z-index:1; display:inline-flex; justify-content: center; align-items: center;}
+                                </pre>
 							</div>
 						</div>
 					</div>
@@ -65,7 +66,7 @@
 				<!-- Section -->
 				<section class="g-section g-in-sec">
 					<div class="g-section-header">
-						<h2 class="g-h2">Basic</h2>
+						<h2 class="g-h2">Centered</h2>
 					</div>
 					<div class="g-section-body">
 						<div class="g-example-wrap">
@@ -79,18 +80,20 @@
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<div class="step step-style1">
-										<ol class="step-list">
-											<li class="step-item is-on"><span class="step-label">1단계</span></li>
-											<li class="step-item is-current" aria-current="step"><span class="step-label">2단계</span></li>
-											<li class="step-item"><span class="step-label">3단계</span></li>
-										</ol>
+									<div class="step style-1">
+                                        <ol class="step-list">
+                                            <li class="step-item is-on" title="채용 1단계 이력서등록 진행됨"><span class="step-label">1단계</span></li>
+                                            <li class="step-item is-on" title="채용 2단계 서류심사 진행됨"><span class="step-label">2단계</span></li>
+                                            <li class="step-item is-current" title="채용 3단계 그룹면접" aria-current="step"><span class="step-label">3단계</span></li>
+                                            <li class="step-item" title="채용 4단계 임원면접"><span class="step-label">4단계</span></li>
+                                            <li class="step-item" title="채용 5단계 심사결과"><span class="step-label">5단계</span></li>
+                                        </ol>
 									</div>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									<div class="step step-style1">
+									<div class="step style-1">
 										...
 									</div>
 								</pre>
@@ -98,10 +101,10 @@
 							<div class="g-example-footer">
 								<pre class="brush:css">
 									/* Style1 */
-									.step-style1 .step-item {padding:0 30px;}
-									.step-style1 .step-item .step-label {display:inline-block; width:50px; height:50px; padding-bottom:1px; line-height:49px; border-radius:50%; background-color:#eee;}
-									.step-style1 .step-item.is-on .step-label {border:1px solid $color-primary; background-color:#fff; color:$color-primary; line-height:47px;}
-									.step-style1 .step-item.is-current .step-label {background-color:$color-primary; color:#fff;}
+									.step.style-1 .step-item {padding:0 30px;}
+									.step.style-1 .step-item .step-label {display:inline-block; width:50px; height:50px; padding-bottom:1px; line-height:49px; border-radius:50%; background-color:#eee;}
+									.step.style-1 .step-item.is-on .step-label {border:1px solid $color-primary; background-color:#fff; color:$color-primary; line-height:47px;}
+									.step.style-1 .step-item.is-current .step-label {background-color:$color-primary; color:#fff;}
 								</pre>
 							</div>
 						</div>
@@ -112,7 +115,7 @@
 				<!-- Section -->
 				<section class="g-section g-in-sec">
 					<div class="g-section-header">
-						<h2 class="g-h2">Flexible</h2>
+						<h2 class="g-h2">Flexibled</h2>
 					</div>
 					<div class="g-section-body">
 						<div class="g-example-wrap">
@@ -127,35 +130,36 @@
 							<div class="g-example-body">
 								<div class="g-example-preview">
 									<!-- 마크업뷰영역 -->
-									<div class="step step-style3 step-flexible">
-										<ol class="step-list">
-											<li class="step-item is-on" title="채용 1단계 이력서등록">1단계</li>
-											<li class="step-item is-on" title="채용 2단계 서류심사">2단계</li>
-											<li class="step-item is-current" aria-current="step" title="채용 3단계 그룹면접">3단계</li>
-											<li class="step-item" title="채용 4단계 임원면접">4단계</li>
-											<li class="step-item" title="채용 3단계 심사결과">5단계</li>
-										</ol>
+									<div class="step style-2">
+                                        <ol class="step-list">
+                                            <li class="step-item is-on" title="채용 1단계 이력서등록 진행됨"><span class="step-label">1단계</span></li>
+                                            <li class="step-item is-on" title="채용 2단계 서류심사 진행됨"><span class="step-label">2단계</span></li>
+                                            <li class="step-item is-current" title="채용 3단계 그룹면접" aria-current="step"><span class="step-label">3단계</span></li>
+                                            <li class="step-item" title="채용 4단계 임원면접"><span class="step-label">4단계</span></li>
+                                            <li class="step-item" title="채용 5단계 심사결과"><span class="step-label">5단계</span></li>
+                                        </ol>
 									</div>
 									<!-- //마크업뷰영역 -->
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									<div class="step step-style3 step-flexible">
+									<div class="step style-2">
 										...
 									</div>
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-									/* Design - Type3 */
-									.step-style3 .step-list {width:100%;}
-									.step-style3 .step-item {height:50px; padding-bottom:1px; line-height:47px; border:1px solid #ccc; background-color:#eee; text-align:center;}
-									.step-style3 .step-item.is-on {border:1px solid $color-primary; background-color:#fff; color:$color-primary;}
-									.step-style3 .step-item.is-current {border:1px solid $color-primary; background-color:$color-primary; color:#fff;}
-									.step-style3 .step-item + .step-item {border-left-width:0;}
-									.step-style3 .step-item.is-on + .is-on {border-left:0;}
-								</pre>
+									/* Type2 */
+                                    .step.style-2 .step-list {width:100%;}
+                                    .step.style-2 .step-item {flex:1 1 auto; border:1px solid #ccc; background-color:#eee; text-align:center;}
+                                    .step.style-2 .step-item .step-label {height: 50px;}
+                                    .step.style-2 .step-item.is-on {border:1px solid $color-primary; background-color:#fff; color:$color-primary;}
+                                    .step.style-2 .step-item.is-current {border:1px solid $color-primary; background-color:$color-primary; color:#fff;}
+                                    .step.style-2 .step-item + .step-item {border-left-width:0;}
+                                    .step.style-2 .step-item.is-on + .is-on {border-left:0;}
+                                </pre>
 							</div>
 						</div>
 					</div>
@@ -165,7 +169,7 @@
 				<!-- Section -->
 				<section class="g-section g-in-sec">
 					<div class="g-section-header">
-						<h2 class="g-h2">Flexible Side</h2>
+						<h2 class="g-h2">Betweened</h2>
 					</div>
 					<div class="g-section-body">
 						<div class="g-example-wrap">
@@ -180,46 +184,126 @@
 							<div class="g-example-body">
 								<div class="g-example-preview">
 									<!-- 마크업뷰영역 -->
-									<div class="step step-style4">
-										<ol class="step-list" role="img" aria-label="채용 총 5단계 중 3단계">
-											<li class="step-item is-on" title="채용 1단계 이력서등록">
-												<span class="step-label">1단계</span>
-											</li>
-											<li class="step-item is-on" title="채용 2단계 서류심사">
-												<span class="step-label">2단계</span>
-											</li>
-											<li class="step-item is-current" aria-current="step" title="채용 3단계 그룹면접">
-												<span class="step-label">3단계</span>
-											</li>
-											<li class="step-item" title="채용 4단계 임원면접">
-												<span class="step-label">4단계</span>
-											</li>
-											<li class="step-item" title="채용 5단계 심사결과">
-												<span class="step-label">5단계</span>
-											</li>
-										</ol>
+									<div class="step style-3">
+                                        <ol class="step-list">
+                                            <li class="step-item is-on" title="채용 1단계 이력서등록 진행됨"><span class="step-label">1단계</span></li>
+                                            <li class="step-item is-on" title="채용 2단계 서류심사 진행됨"><span class="step-label">2단계</span></li>
+                                            <li class="step-item is-current" title="채용 3단계 그룹면접" aria-current="step"><span class="step-label">3단계</span></li>
+                                            <li class="step-item" title="채용 4단계 임원면접"><span class="step-label">4단계</span></li>
+                                            <li class="step-item" title="채용 5단계 심사결과"><span class="step-label">5단계</span></li>
+                                        </ol>
 									</div>
 									<!-- //마크업뷰영역 -->
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									<div class="step step-style4">
+									<div class="step style-3">
 										...
 									</div>
 								</pre>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-									/* Design - Style4 */
-									.step-style4 .step-list:after {content:''; position:absolute; left:0; top:24px; width:100%; height:2px; background-color:#eee;}
-									.step-style4 .step-item {width:25%;}
-									.step-style4 .step-item .step-label {display:block; position:relative; width:50px; height:50px; padding-bottom:1px; line-height:49px; border-radius:50%; background-color:#eee; text-align:center;}
-									.step-style4 .step-item .step-label .ico-check {display:inline-block; width:12px; height:12px; border:3px solid #999; border-width:3px 3px 0 0; transform:translate(-50%, -50%) rotate(45deg);}
-									.step-style4 .step-item.is-on .step-label {border:1px solid $color-primary; background-color:#fff; color:$color-primary; line-height:47px;}
-									.step-style4 .step-item.is-on .step-label .ico-check {width:18px; border-color:$color-primary; transform:translate(-50%, -50%) rotate(135deg);}
-									.step-style4 .step-item.is-current .step-label {background-color:$color-primary; color:#fff;}
-									.step-style4 .step-item.is-current .step-label .ico-check {width:18px; border-color:#fff; transform:translate(-50%, -50%) rotate(135deg);}
+									/* Style3 */
+                                    .step.style-3 .step-list {justify-content: space-between;}
+                                    .step.style-3 .step-list:after {content:''; position:absolute; left:0; top:24px; width:100%; height:2px; background-color:#eee;}
+                                    .step.style-3 .step-item .step-label {display:block; position:relative; width:50px; height:50px; padding-bottom:1px; line-height:49px; border-radius:50%; background-color:#eee; text-align:center;}
+                                    .step.style-3 .step-item .step-label .ico-check {display:inline-block; width:12px; height:12px; border:3px solid #999; border-width:3px 3px 0 0; transform:translate(-50%, -50%) rotate(45deg);}
+                                    .step.style-3 .step-item.is-on .step-label {border:1px solid $color-primary; background-color:#fff; color:$color-primary; line-height:47px;}
+                                    .step.style-3 .step-item.is-on .step-label .ico-check {width:18px; border-color:$color-primary; transform:translate(-50%, -50%) rotate(135deg);}
+                                    .step.style-3 .step-item.is-current .step-label {background-color:$color-primary; color:#fff;}
+                                    .step.style-3 .step-item.is-current .step-label .ico-check {width:18px; border-color:#fff; transform:translate(-50%, -50%) rotate(135deg);}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Lined</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="step style-4">
+                                        <ol class="step-list">
+                                            <li class="step-item is-on" title="채용 1단계 이력서등록 진행됨"><span class="blind">1단계</span></li>
+                                            <li class="step-item is-on" title="채용 2단계 서류심사 진행됨"><span class="blind">2단계</span></li>
+                                            <li class="step-item is-current" title="채용 3단계 그룹면접" aria-current="step"><span class="blind">3단계</span></li>
+                                            <li class="step-item" title="채용 4단계 임원면접"><span class="blind">4단계</span></li>
+                                            <li class="step-item" title="채용 5단계 심사결과"><span class="blind">5단계</span></li>
+                                        </ol>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<div class="step style-4">
+										...
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Style4 */
+                                    .step.style-4 .step-item {width:50px; height:4px; margin: 0 2px; background-color:#ccc;}
+                                    .step.style-4 .step-item.is-on {background-color:$color-primary;}
+                                    .step.style-4 .step-item.is-current {background-color:$color-primary; height: 8px; border-radius: 4px;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Progressed</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="step style-5">
+                                        <input type="range" value="3" min="0" max="6" class="step-range" title="채용 총 6단계 중 현재단계 표시" />
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<div class="step style-1">
+										...
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+                                    /* Style5 */
+                                    .step.style-5 .step-range {display: flex;width:100%;height:2px;overflow: hidden;background:#f2f3f5;pointer-events: none;-webkit-appearance: none;}
+                                    .step.style-5 .step-range::-webkit-slider-runnable-track {height:2px;border: 0;}
+                                    .step.style-5 .step-range::-webkit-slider-thumb {-webkit-appearance: none;position: relative;width: 2px;height: 2px;background-color:transparent;box-shadow: -100vw 0 0 100vw $color-primary;cursor: default;}
 								</pre>
 							</div>
 						</div>
