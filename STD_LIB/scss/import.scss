@@ -5,9 +5,6 @@
 @import '../scss_common/base';
 @import '../scss_common/common';
 @import '../scss_common/layout';
-// @import '../scss_common/ui';
-@import '../scss_common/content';
-@import '../scss_common/main';
 @import 'animate.css';
 @import 'plugins.css';
 
@@ -30,8 +27,12 @@
 @import '../scss_components/items';
 @import '../scss_components/modals';
 @import '../scss_components/paging';
-@import '../scss_components/sections';
 @import '../scss_components/steps';
 @import '../scss_components/tables';
 @import '../scss_components/tabs';
 @import '../scss_components/tooltips';
+
+// SCSS Patterns
+@import '../scss_patterns/boards';
+@import '../scss_patterns/comments';
+@import '../scss_patterns/sections';

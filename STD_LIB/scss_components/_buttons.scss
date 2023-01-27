@@ -4,11 +4,11 @@
 -------------------------------------------------------------------*/
 // Variables
 @mixin ui-button-contained {
-    padding:8px 16px; background-color:#eee; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
-    &:hover, &:focus {background-color:#ddd; color: #000;}
+    padding:8px 16px; background-color:#eee; border:1px solid #eee; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
+    &:hover, &:focus {background-color:#ddd; border-color: #eee; color: #000;}
     &:disabled {opacity: 0.5;}
-    &.primary {background:$color-primary; color:#fff;}
-    &.primary:hover, &.primary:focus {background:$color-primary-dark;}
+    &.primary {background:$color-primary; border-color: $color-primary; color:#fff;}
+    &.primary:hover, &.primary:focus {background:$color-primary-dark; border-color: $color-primary-dark}
 }
 @mixin ui-button-outlined {
     padding:8px 16px; background-color:#fff; border:1px solid #ddd; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
@@ -38,10 +38,10 @@ button::-moz-focus-inner {border:0px; padding:0px;}
 /* Styles */
 .button.style-1 {@include ui-button-contained;}
 .button.style-2 {@include ui-button-outlined;}
-.button.style-3 {@include ui-button-contained; @include rounded-md;}
-.button.style-4 {@include ui-button-outlined; @include rounded-md;}
-.button.style-5 {@include ui-button-contained; @include pilled;}
-.button.style-6 {@include ui-button-outlined; @include pilled;}
+.button.style-3 {@include ui-button-contained; border-radius:4px;}
+.button.style-4 {@include ui-button-outlined; border-radius:4px;}
+.button.style-5 {@include ui-button-contained; border-radius:30px;}
+.button.style-6 {@include ui-button-outlined; border-radius:30px;}
 .button.text {@include ui-button-texted;}
 
 /* Content */

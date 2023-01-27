@@ -1,116 +1,39 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
-<title>Standard Framework</title>
-<style>
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-/*-------------------------------------------------------------------
-	@珥덇린��
--------------------------------------------------------------------*/
-html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td, caption, address,
-canvas, details, figure, figcaption, footer, header, menu, nav, section, article, aside,
-form, fieldset, button, select, textarea, input, fieldset, legend, label, a, span, strong, em, address, dfn, small, i, b, ::before, ::after {margin:0; padding:0; border:0; list-style:none; color:inherit; font-style:normal; font-size:100%; font-weight:inherit; font-family:inherit; line-height:inherit; word-break:inherit; word-wrap:inherit; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box;}
-article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section {display:block;}
-body {font-family:"Noto Sans KR", "Dotum", "Dotumche", "Arial"; font-size:16px; font-weight:400; color:#666; line-height:1.5; word-break:keep-all; word-wrap:word-break; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
-html[lang=ja] body, html[lang=zh] body {word-break:normal;}
-[hidden], hr {display:none;}
-img {vertical-align:middle;}
-button {background-color:transparent; cursor:pointer;}
-b, strong {font-weight:normal;}
-fieldset, iframe {width:100%;}
-img, a, frame, iframe, fieldset {border:0;}
-a {text-decoration:none;}
-table {width:100%; border-spacing:0; border-collapse:collapse;}
-caption {display:block; position:absolute; left:-9999px;}
-legend {position:absolute; left:-9999em; top:-9999em;}
-button {overflow:hidden; background-color:transparent; cursor:pointer;}
-button::-moz-focus-inner {border:0px; padding:0px;}
-select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
-select::-ms-expand {display:none;}
-input::-ms-clear,
-input::-ms-reveal {display:none; width:0; height:0;}
-input::search-decoration,
-input::search-cancel-button,
-input::search-results-button,
-input::search-results-decoration {display:none;}
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration {display:none;}
-input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance:none; margin:0;}
-input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
-.dv-android [tabindex='0']:focus,
-.dv-android a:focus,
-.dv-android button:focus,
-.dv-android input:focus,
-.dv-android textarea:focus,
-.dv-android select:focus {outline:0;}
-.dv-ios [tabindex='0'],
-.dv-ios a,
-.dv-ios button,
-.dv-ios input,
-.dv-ios textarea,
-.dv-ios select {-webkit-tap-highlight-color:transparent;}
-/*-------------------------------------------------------------------
-    @@ Intro
--------------------------------------------------------------------*/
-/* Layout */
-html, body {height:100%;}
-ul, li {list-style:none; margin:0; padding:0;}
-.wrapper {display:flex; flex-direction:column; min-height:100%;}
-.header {position:relative; z-index:102; width:100%; flex:none;}
-.container {width:100%; flex-grow:1; display:flex; flex-direction:column;}
-.content {flex-grow:1;}
-
-.intro-body .wrapper {display:flex; justify-content:center; align-items:center;}
-.intro-body .container {width:100%; justify-content:center;}
-.intro-body .container .content {flex:none;}
-.intro-body .header {padding:40px 0 200px 40px; display:none;}
-.intro-body .header h1 {font-size:24px; font-weight:100;}
-
-.intro-sec .section-title {text-align:center;}
-.intro-sec .section-title .btn-area {margin-top:40px;}
-.intro-sec .section-title h2 {font-size:40px; font-weight:300; letter-spacing:-0.5px;}
-.intro-sec .section-nav {margin-top:60px; text-align:center;}
-.intro-sec .section-nav ul {display:inline-flex; font-weight:300;}
-.intro-sec .section-nav ul a {display:block; position:relative; padding:5px 10px; font-size:18px;}
-.intro-sec .section-nav ul li:last-child a::after {display:none;}
-.intro-sec .btn-area {display:none; justify-content:center;}
-.intro-sec .btn {border-radius:30px;}
-.intro-sec .btn.started {padding:4px 20px; margin:0 5px; border-radius:30px; background-color:#fff; border:1px solid #666; font-weight:400; color:#666; font-size:20px; text-align:center;}
-</style>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"/> -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="keywords" content="프로젝트가이드, STANDARD-UI FRAMEWORKS"/>
+<meta name="description" content="프로젝트가이드, STANDARD-UI FRAMEWORKS"/>
+<title>Presentation | Standard Frameworks</title>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
 </head>
-<body class="intro-body">
-<div class="wrapper sub-page">
-	<header class="header">
-		<div class="logo-area">
-			<h1 class="logo">&lt;STD&gt;</h1>
+<body class="only-pub">
+<div class="wrapper main-wrap">
+	<!-- Container -->
+	<main role="main" class="container">
+		<div id="content" class="content">
+			<div class="jumbotron">
+				<h1 class="jumbo-tit">Standard UI</h1>
+				<p class="jumbo-explain">Start the Development With A Badass Standard UI Kit inspired by Standard Design.</p>
+			</div>
+			<div class="section-nav">
+				<ul>
+					<!-- <li><a href="javascript:void(0)" target="_blank" title="퍼블리싱 가이드" class="btn demo1" style="pointer-events: none;"><em>Conventions Full</em></a></li> -->
+					<li><a href="/STD_PR/ProjectBase/index.html" target="_blank" class="btn demo1 primary"><em>Project Base</em></a></li>
+					<li><a href="/STD_GD/convention/index.html" target="_blank" class="btn demo1 primary"><em>Conventions</em></a></li>
+					<li><a href="/STD_LIB/index.html" target="_blank" class="btn demo1 primary"><em>Components</em></a></li>
+					<li><a href="/STD_JS/index.html" target="_blank" class="btn demo1 primary"><em>Vanilla JS</em></a></li>
+					<li><a href="/STD_CV/index.html" target="_blank" class="btn demo1 primary"><em>Canvas</em></a></li>
+					<!-- <li><a href="javascript:void(0)" title="Templates, Pages, Components Librarys" class="btn demo1" style="pointer-events: none;"><em>Demo</em></a></li> -->
+				</ul>
+			</div>
 		</div>
-	</header>
-	<div class="container">
-		<div class="content">
-			<section class="intro-sec">
-				<div class="section-title">
-					<h2>Standard UI</h2>
-					<div class="btn-area">
-						<a href="/STD_GD/index.html" class="btn started"><span>GET STARTED</span></a>
-					</div>
-				</div>
-				<div class="section-nav">
-					<ul>
-						<!-- <li><a href="/STD_IA/index.html" title="Information Architecture" class="btn started"><em>현황판</em></a></li> -->
-						<li><a href="/STD_GD/convention/index.html" target="_blank" title="실무적이고, 현실적이고, 기본적인 범위에 대한 작업규칙 정의" class="btn started"><em>Convention</em></a></li>
-						<li><a href="/STD_LIB/index.html" target="_blank" title="통일성, 확장성, 활용성, 일반성 등의 전체를 고려한 공통기본 정의" class="btn started"><em>Library</em></a></li>
-						<li><a href="/STD_KIT/index.html" target="_blank" title="Templates, Pages, Components Librarys" class="btn started"><em>Demo</em></a></li>
-						<!-- <li><a href="/STD_PR/index.html" title="Standard Project Templates"><em>Templates</em></a></li> -->
-						<!-- <li><a href="https://docs.google.com/spreadsheets/d/1_Pa0A4iiyNoA-eVmgvJ4NrgdPfgBBCb9DlWZsqelojE/edit?usp=sharing" target="_blank" title="Standard Markup API"><em>API</em></a></li> -->
-					</ul>
-				</div>
-			</section>
-		</div>
-	</div>
+    </main>
+	<!-- //Container -->
 </div>
 </body>
 </html>

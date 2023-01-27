@@ -1,28 +1,26 @@
 {
-  "editor.tabSize": 4,
-"editor.detectIndentation": false,
-"liveSassCompile.settings.generateMap": false, //이부분 수정
-"liveSassCompile.settings.formats": [
-	{
-		"format": "compressed",
-		"extensionName": ".css",
-		"savePath": "~/../css/"
-	}
-],
-"liveServer.settings.donotShowInfoMsg": true,
-"liveSassCompile.settings.excludeList": [
-	"_*.scss",
-	"*.css",
-	"**/codeview/**",
-	"**/convention/**",
-	".vscode/**"
-],
-"editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "liveSassCompile.settings.generateMap": false, //이부분 수정
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "~/../css/"
+        }
+    ],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.excludeList": [
+        "_*.scss",
+        "**/node_modules/**",
+        "**/react-ui/**",
+        "**/codeview/**",
+        "**/css/**",
+        "**/convention/**",
+        ".vscode/**"
+    ],
+    "editor.detectIndentation": false,
+    "liveSassCompile.settings.autoprefix": [
 
-"liveSassCompile.settings.autoprefix": [
-
-
-
-
-]
+    ]
 }

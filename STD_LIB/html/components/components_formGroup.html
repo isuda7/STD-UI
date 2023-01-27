@@ -95,7 +95,7 @@
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<div class="form-area" style="width:320px">
+									<div class="form-area" style="max-width:720px; width:100%">
 										<div class="form type-row">
 											<div class="form-container">
 												<div class="form-title">
@@ -161,7 +161,7 @@
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<div class="form-area" style="width:320px;">
+									<div class="form-area" style="max-width:720px; width:100%;">
 										<div class="form type-col">
 											<div class="form-title"><label for="sText22" class="form-label">아이디</label></div>
 											<div class="form-content">
@@ -266,7 +266,16 @@
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:css">
-								</pre>
+                                    /* Wide Group */
+                                    .form.type-wide + .form.type-wide {margin-top:20px;}
+                                    .form.type-wide {display:flex;}
+                                    .form.type-wide .form-title {flex:none; width:100px;}
+                                    .form.type-wide .form-content {display:flex; flex:1 0 auto; align-items:center;}
+                                    .form.type-wide .form-content .form-controls {width:auto;}
+                                    .form.type-wide .form-desc,
+                                    .form.type-wide .form-info,
+                                    .form.type-wide .form-alert {flex:none; padding-left:20px; line-height:22px;}
+                                </pre>
 							</div>
 						</div>
 					</div>

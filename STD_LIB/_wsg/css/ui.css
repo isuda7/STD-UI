@@ -138,7 +138,7 @@ ul.g-desc.g-gutter > li + li {margin-top:15px;}
 .g-item + .g-item {margin-top:20px;}
 
 /* Top */
-a.g-top {display:block; position:fixed; right:20px; bottom:20px; width:50px; height:50px; background-color:#d3002e; line-height:50px; color:#fff; border-radius:50%; text-align:center;}
+a.g-top {display:block; position:fixed; right:20px; bottom:20px; z-index: 10; width:50px; height:50px; background-color:#d3002e; line-height:50px; color:#fff; border-radius:50%; text-align:center;}
 
 /*-------------------------------------------------------------------
 	Codeview Edit
