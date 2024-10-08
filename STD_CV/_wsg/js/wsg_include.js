@@ -2,7 +2,7 @@ var gRootURL = {
 	root : '/STD_CV/',
 }
 var gBaseURL = {
-	_wsg : gRootURL.root+'_wsg/',
+	wsg : gRootURL.root+'wsg/',
 	menu1 : gRootURL.root+'html/tutorial/',
 	menu2 : gRootURL.root+'html/api/',
 	target : '',
@@ -18,18 +18,18 @@ var include = {
 	},
 	head : function(){
 		document.write('<!-- Guide -->');
-		document.write('<link href="'+gBaseURL._wsg+'css/import.css" rel="stylesheet" />');
+		document.write('<link href="'+gBaseURL.wsg+'css/import.css" rel="stylesheet" />');
 		document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">');
-		document.write('<link href="'+gBaseURL._wsg+'codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
+		document.write('<link href="'+gBaseURL.wsg+'codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
 		document.write('<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'js/addon/jquery.clipboard.min.js"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'js/wsg_guide.js"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shCore.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shAutoLoader.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shBrushjScript.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shBrushXml.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shBrushCss.js?cb=undefined"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'js/addon/jquery.clipboard.min.js"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'js/wsg_guide.js"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shCore.js?cb=undefined"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shAutoLoader.js?cb=undefined"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shBrushjScript.js?cb=undefined"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shBrushXml.js?cb=undefined"></script>');
+		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shBrushCss.js?cb=undefined"></script>');
 		document.write('<script>SyntaxHighlighter.all();</script>');
 	},
 	header : function(){

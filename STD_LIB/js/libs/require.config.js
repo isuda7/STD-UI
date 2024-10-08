@@ -13,7 +13,7 @@ require.config({
 require(['common/js/libs/jquery-3.3.1.min'] , function () {
 	require(['common/js/libs/TweenMax']);
 	require(['common/js/libs/EasePack']);
-	require(['_wsg/common/js/addon/jquery.mCustomScrollbar.min']);
+	require(['wsg/common/js/addon/jquery.mCustomScrollbar.min']);
 	require(['common/js/pub/pub_variable']);
 	require(['common/js/pub/pub_device']);
 	require(['common/js/pub/pub_utility']);
@@ -21,5 +21,5 @@ require(['common/js/libs/jquery-3.3.1.min'] , function () {
 	require(['common/js/pub/pub_ui']);
 	require(['common/js/pub/pub_content']);
 	require(['common/js/pub/pub_init']);
-	require(['_wsg/common/js/guide']);
+	require(['wsg/common/js/guide']);
 });

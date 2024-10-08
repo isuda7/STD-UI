@@ -168,7 +168,7 @@ var gUI = {
 			this.followActive.init();
 		}
 		if ($('.g-example-copy').length){
-			//ut.setScriptLoader(gRootURL.root+'_wsg/common/js/addon/jquery.clipboard.min.js', 'clipboardScript');
+			//ut.setScriptLoader(gRootURL.root+'wsg/common/js/addon/jquery.clipboard.min.js', 'clipboardScript');
 			//this.copyed.init();
 		}
 	},
