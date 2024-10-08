@@ -2,13 +2,13 @@ var gRootURL = {
 	root : '../../../STD_LIB/',
 }
 var gBaseURL = {
-	wsg : gRootURL.root+'wsg/',
-	menu0 : gRootURL.root+'html/_prototype/',
-	menu1 : gRootURL.root+'html/generals/',
-	menu2 : gRootURL.root+'html/components/',
-	menu3 : gRootURL.root+'html/patterns/',
-	menu4 : gRootURL.root+'html/vanilla/',
-	menu5 : gRootURL.root+'html/motions/',
+	wsg : 'wsg/',
+	menu0 : 'html/prototype/',
+	menu1 : 'html/generals/',
+	menu2 : 'html/components/',
+	menu3 : 'html/patterns/',
+	menu4 : 'html/vanilla/',
+	menu5 : 'html/motions/',
 	//target : 'target="gContentFrame"',
 	target : '',
 }
@@ -33,17 +33,17 @@ var include = {
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_ui.js"></script>');
 
 		document.write('<!-- Guide -->');
-		document.write('<link href="'+gBaseURL.wsg+'css/import.css" rel="stylesheet" />');
+		document.write('<link href="'+gRootURL.root+gBaseURL.wsg+'css/import.css" rel="stylesheet" />');
 		document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">');
-		document.write('<link href="'+gBaseURL.wsg+'codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
-		document.write('<script src="'+gBaseURL.wsg+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
-		document.write('<script src="'+gBaseURL.wsg+'js/addon/jquery.clipboard.min.js"></script>');
-		document.write('<script src="'+gBaseURL.wsg+'js/wsg_guide.js"></script>');
-		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shCore.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shAutoLoader.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shBrushjScript.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shBrushXml.js?cb=undefined"></script>');
-		document.write('<script src="'+gBaseURL.wsg+'codeview/scripts/shBrushCss.js?cb=undefined"></script>');
+		document.write('<link href="'+gRootURL.root+gBaseURL.wsg+'codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'js/addon/jquery.clipboard.min.js"></script>');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'js/wsg_guide.js"></script>');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'codeview/scripts/shCore.js?cb=undefined"></script>');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'codeview/scripts/shAutoLoader.js?cb=undefined"></script>');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'codeview/scripts/shBrushJScript.js?cb=undefined"></script>');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'codeview/scripts/shBrushXml.js?cb=undefined"></script>');
+		document.write('<script src="'+gRootURL.root+gBaseURL.wsg+'codeview/scripts/shBrushCss.js?cb=undefined"></script>');
 		document.write('<script>SyntaxHighlighter.all();</script>');
 	},
 	header : function(){
@@ -53,12 +53,12 @@ var include = {
 		document.write('			<button type="button" class="g-btn-aside"><span>Menu</span></button>');
 		document.write('			<nav class="g-lnb">');
 		document.write('				<ul>');
-		//document.write('					<li><a href="'+gBaseURL.menu0+'_prototype_markup.html" data-aside="g-snbMenu0" data-url="'+gBaseURL.menu0+'">Prototype</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu1+'index.html" data-aside="g-snbMenu1" data-url="'+gBaseURL.menu1+'">Genarals</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu2+'index.html" data-aside="g-snbMenu2" data-url="'+gBaseURL.menu2+'">Components</a></li>');
-		// document.write('					<li><a href="'+gBaseURL.menu3+'index.html" data-aside="g-snbMenu3" data-url="'+gBaseURL.menu3+'">Patterns</a></li>');
-		// document.write('					<li><a href="'+gBaseURL.menu4+'index.html" data-aside="g-snbMenu4" data-url="'+gBaseURL.menu4+'">Vanilla</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu5+'index.html" data-aside="g-snbMenu5" data-url="'+gBaseURL.menu5+'">Motions</a></li>');
+		//document.write('					<li><a href="'+gRootURL.root+gBaseURL.menu0+'prototype_markup.html" data-aside="g-snbMenu0" data-url="'+gRootURL.root+gBaseURL.menu0+'">Prototype</a></li>');
+		document.write('					<li><a href="'+gRootURL.root+gBaseURL.menu1+'index.html" data-aside="g-snbMenu1" data-url="'+gBaseURL.menu1+'">Genarals</a></li>');
+		document.write('					<li><a href="'+gRootURL.root+gBaseURL.menu2+'index.html" data-aside="g-snbMenu2" data-url="'+gBaseURL.menu2+'">Components</a></li>');
+		// document.write('					<li><a href="'+gRootURL.root+gBaseURL.menu3+'index.html" data-aside="g-snbMenu3" data-url="'+gBaseURL.menu3+'">Patterns</a></li>');
+		// document.write('					<li><a href="'+gRootURL.root+gBaseURL.menu4+'index.html" data-aside="g-snbMenu4" data-url="'+gBaseURL.menu4+'">Vanilla</a></li>');
+		document.write('					<li><a href="'+gRootURL.root+gBaseURL.menu5+'index.html" data-aside="g-snbMenu5" data-url="'+gBaseURL.menu5+'">Motions</a></li>');
 		document.write('				</ul>');
 		document.write('			</nav>');
 		document.write('		</div>');
@@ -95,10 +95,10 @@ var include = {
 			document.write('						<a href="javascript:;">가이드 템플릿</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'index.html">Intro</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'_prototype_conventions.html">컨텐츠 템플릿</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'_prototype_standard.html">표준 템플릿</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'_prototype_markup.html">마크업 템플릿</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'_prototype_ui.html">라이브러리 템플릿</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'prototype_conventions.html">컨텐츠 템플릿</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'prototype_standard.html">표준 템플릿</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'prototype_markup.html">마크업 템플릿</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'prototype_ui.html">라이브러리 템플릿</a></li>');
 			document.write('						</ul>');
 			document.write('					</li>');
 			document.write('				</ul>');
