@@ -3,21 +3,21 @@
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 // Variables
-@mixin ui-button-contained {
+@mixin ui-btn-contained {
     padding:8px 16px; background-color:#eee; border:1px solid #eee; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
     &:hover, &:focus {background-color:#ddd; border-color: #eee; color: #000;}
     &:disabled {opacity: 0.5;}
     &.primary {background:$color-primary; border-color: $color-primary; color:#fff;}
     &.primary:hover, &.primary:focus {background:$color-primary-dark; border-color: $color-primary-dark}
 }
-@mixin ui-button-outlined {
+@mixin ui-btn-outlined {
     padding:8px 16px; background-color:#fff; border:1px solid #ddd; color: #222; font-size: 14px; line-height: 22px; transition:all 0.3s;
     &:hover, &:focus {border-color: #222; color: #000;}
     &:disabled {opacity: 0.5;}
     &.primary {border-color: $color-primary; color: $color-primary;}
     &.primary:hover, &.primary:focus {border-color:$color-primary-dark;}
 }
-@mixin ui-button-texted {
+@mixin ui-btn-texted {
     &.text {font-size:14px; line-height: 22px;}
     &.text:disabled {opacity: 0.5;}
     &.text.primary {color:$color-primary;}
@@ -26,25 +26,25 @@
 /* Default */
 button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
 button::-moz-focus-inner {border:0px; padding:0px;}
-.button-area {display:flex;}
-.button-group {display:flex; flex:none;}
-.button {flex:none; display:inline-flex; position:relative; overflow:hidden; justify-content:center; align-items: center; vertical-align:middle;}
+.btn-area {display:flex;}
+.btn-group {display:flex; flex:none;}
+.btn {flex:none; display:inline-flex; position:relative; overflow:hidden; justify-content:center; align-items: center; vertical-align:middle;}
 
 /* Common - Layout */
-.button-fluid {flex-wrap:wrap;}
-.button-fluid .button {width:100%;}
-.button-flex .button {flex:1;}
+.btn-fluid {flex-wrap:wrap;}
+.btn-fluid .btn {width:100%;}
+.btn-flex .btn {flex:1;}
 
 /* Styles */
-.button.style-1 {@include ui-button-contained;}
-.button.style-2 {@include ui-button-outlined;}
-.button.style-3 {@include ui-button-contained; border-radius:4px;}
-.button.style-4 {@include ui-button-outlined; border-radius:4px;}
-.button.style-5 {@include ui-button-contained; border-radius:30px;}
-.button.style-6 {@include ui-button-outlined; border-radius:30px;}
-.button.text {@include ui-button-texted;}
+.btn.style-1 {@include ui-btn-contained;}
+.btn.style-2 {@include ui-btn-outlined;}
+.btn.style-3 {@include ui-btn-contained; border-radius:4px;}
+.btn.style-4 {@include ui-btn-outlined; border-radius:4px;}
+.btn.style-5 {@include ui-btn-contained; border-radius:30px;}
+.btn.style-6 {@include ui-btn-outlined; border-radius:30px;}
+.btn.text {@include ui-btn-texted;}
 
 /* Content */
-.button.icon-search1 {width:40px; height:40px;}
-.button-pager {width:20px; height:20px; line-height:18px; border:1px solid #ddd;}
-.button-top {width:50px; height:50px; line-height:48px; background-color:#fff; border:1px solid #ccc; border-radius:50%;}
+.btn.icon-search1 {width:40px; height:40px;}
+.btn-pager {width:20px; height:20px; line-height:18px; border:1px solid #ddd;}
+.btn-top {width:50px; height:50px; line-height:48px; background-color:#fff; border:1px solid #ccc; border-radius:50%;}

@@ -21,6 +21,15 @@ jQuery(document).keydown(function(e){
 		e.preventDefault();
 	}
 });
+
+// Input Clear
+function InputClearHandler(id) {
+	var inputElement = document.querySelector(id);
+	if (inputElement) {
+		inputElement.value = '';
+		inputElement.focus();
+	}
+}
 //-->
 </script>
 </head>
@@ -99,13 +108,18 @@ jQuery(document).keydown(function(e){
                                     -------------------------------------------------------------------*/
                                     $color-primary: #2496ee;
                                     @mixin ui-input-outlined {
-                                        height:45px; padding:0 15px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 1.5; transition:all 0.3s;
+                                        display: flex; align-items: center; gap: 4px;
+                                        height:45px; padding: 0 15px; border:1px solid #ddd; border-radius:4px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 22px; transition:all 0.3s;
+                                        .input, .select {background: transparent;}
+                                        .textarea {padding:5px 15px; background: transparent;}
+                                        .btn, .icon {flex: none;}
                                         &:hover {border-color: #222;}
-                                        &:focus {border-color: $color-primary; color: $color-primary;}
-                                        &:disabled {background-color: #fafafa; opacity: 0.75;}
-                                        &:disabled:hover {border-color: #999; opacity: 0.75;}
+                                        &:focus-visible {border-color: $color-primary; color: $color-primary;}
+                                        &:has(:disabled) {
+                                            background-color: #fafafa; opacity: 0.75;
+                                        }
                                     }
-								</pre>
+                                </pre>
 							</div>
 						</div>
 					</div>
@@ -130,21 +144,57 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="form-input" />
-									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input" />
-									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly />
-									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled />
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="input" />
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="input" />
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="input" readonly />
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="input" disabled />
+                                    </div>
 									<br /><br />
-									<textarea rows="3" cols="50" class="form-input" placeholder=""></textarea>
+                                    <div class="form-textarea">
+                                        <textarea rows="3" cols="50" class="textarea" placeholder=""></textarea>
+                                    </div>
+                                    <br /><br />
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="frmDemoClear1" value="Valued" placeholder="Placeholder" class="input"/>
+                                        <button type="button" class="btn btn-clear" onclick="InputClearHandler('frmDemoClear1')"><i class="icon icon-del1 dark"></i></button>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="frmDemoClear2" value="Valued" placeholder="Placeholder" class="input"/>
+                                        <button type="button" class="btn btn-srch"><i class="icon icon-search1 dark"></i></button>
+                                        <button type="button" class="btn btn-clear" onclick="InputClearHandler('frmDemoClear2')"><i class="icon icon-del1 dark"></i></button>
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="frmDemoClear3" value="Valued" placeholder="Placeholder" class="input" />
+                                        <span class="form-time">03:00</span>
+                                        <button type="button" class="btn btn-clear" onclick="InputClearHandler('frmDemoClear3')"><i class="icon icon-del1 dark"></i></button>
+                                    </div>
 								</div>
 							</div>
 							<div class="g-example-footer">
 								<pre class="brush:html">
-									<input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="form-input" />
-									<input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="form-input" />
-									<input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="form-input" readonly />
-									<input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="form-input" disabled />
-									<textarea rows="3" cols="50" class="form-input"></textarea>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="" placeholder="Placeholder" class="input" />
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="Valued" placeholder="Placeholder" title="제목" class="input" />
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="" placeholder="Readonly" title="제목" class="input" readonly />
+                                    </div>
+                                    <div class="form-input">
+                                        <input type="text" name="sText1" id="" value="" placeholder="Disabled" title="제목" class="input" disabled />
+                                    </div>
+									<br /><br />
+                                    <div class="form-textarea">
+                                        <textarea rows="3" cols="50" class="textarea" placeholder=""></textarea>
+                                    </div>
 								</pre>
 							</div>
 							<div class="g-example-footer">
@@ -168,19 +218,31 @@ jQuery(document).keydown(function(e){
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<select name="sSelect1" id="sSelect1" class="form-select">
-										<option value="">콤보상자 목록선택</option>
-									</select>
-									<select name="sSelect1" id="sSelect1" class="form-select" disabled>
-										<option value="">Disabled</option>
-									</select>
-									<select name="sSelect1" id="sSelect1" class="form-select" readonly>
-										<option value="">Readonly</option>
-									</select>
+                                    <div class="form-select">
+                                        <select name="sSelect1" id="sSelect1" class="select">
+                                            <option value="">콤보상자 목록선택</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-select">
+                                        <select name="sSelect1" id="sSelect1" class="select" disabled>
+                                            <option value="">Disabled</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-select">
+                                        <select name="sSelect1" id="sSelect1" class="select" readonly>
+                                            <option value="">Readonly</option>
+                                        </select>
+                                    </div>
                                     <br>
-									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false">버튼타입 팝업선택</button>
-									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false" disabled>Disabled</button>
-									<button type="button" class="form-select" aria-haspopup="true" aria-expanded="false" readonly>Readonly</button>
+                                    <div class="form-select">
+                                        <button type="button" class="select" aria-haspopup="true" aria-expanded="false">버튼타입 팝업선택</button>
+                                    </div>
+                                    <div class="form-select">
+                                        <button type="button" class="select" aria-haspopup="true" aria-expanded="false" disabled>Disabled</button>
+                                    </div>
+                                    <div class="form-select">
+                                        <button type="button" class="select" aria-haspopup="true" aria-expanded="false" readonly>Readonly</button>
+                                    </div>
 								</div>
 							</div>
 							<div class="g-example-footer">
@@ -476,7 +538,7 @@ jQuery(document).keydown(function(e){
 									<br />
 									<div class="form-file">
 										<input type="text" class="form-input" title="첨부된 파일명" />
-										<label for="sFile" class="button form-button" role="button" tabindex="0">
+										<label for="sFile" class="btn form-button" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
 										</label>
@@ -486,7 +548,7 @@ jQuery(document).keydown(function(e){
 									<br />
 									<div class="form-file">
 										<div class="file-preview"></div>
-										<label for="sFile2" class="button form-button" role="button" tabindex="0">
+										<label for="sFile2" class="btn form-button" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile2" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
 										</label>
@@ -499,13 +561,13 @@ jQuery(document).keydown(function(e){
 									&lt;span class="form-file">
 										&lt;input type="file" name="sFiles1" id="sFiles1" value="찾아보기" tabindex="-1" aria-hidden="true"/>
 										&lt;input type="text" class="form-input" title="첨부된 파일명" />
-										&lt;button type="button" class="button form-button" onclick="fileAttach(this)">&lt;span>파일첨부&lt;/span>&lt;/button>
+										&lt;button type="button" class="btn form-button" onclick="fileAttach(this)">&lt;span>파일첨부&lt;/span>&lt;/button>
 									&lt;/span>
 
                                     <!-- 이미지 미리보기 -->
 									<div class="form-file">
 										<div class="file-preview"></div>
-										<label for="sFile2" class="button form-button" role="button" tabindex="0">
+										<label for="sFile2" class="btn form-button" role="button" tabindex="0">
 											<span>파일첨부</span>
 											<input type="file" name="" id="sFile2" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">
 										</label>

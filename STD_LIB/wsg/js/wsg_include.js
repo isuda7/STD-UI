@@ -1,5 +1,5 @@
 var gRootURL = {
-	root : '../../../STD_LIB/',
+	root : '../../../../STD_LIB/',
 }
 var gBaseURL = {
 	wsg : 'wsg/',
@@ -88,7 +88,7 @@ var include = {
 
 		//샘플메뉴
 		menu0 : function(){
-			var baseURL = gBaseURL.menu0;
+			var baseURL = gRootURL.root+gBaseURL.menu0;
 			document.write('				<!-- Prototype -->');
 			document.write('				<ul class="g-depth1 g-snbMenu0">');
 			document.write('					<li class="g-node1">');
@@ -107,7 +107,7 @@ var include = {
 
 		//Genaral
 		menu1 : function(){
-			var baseURL = gBaseURL.menu1;
+			var baseURL = gRootURL.root+gBaseURL.menu1;
 			document.write('				<!-- Checklist -->');
 			document.write('				<ul class="g-depth1 g-snbMenu1">');
 			document.write('					<li class="g-node1">');
@@ -125,7 +125,7 @@ var include = {
 
 		//Components
 		menu2 : function(){
-			var baseURL = gBaseURL.menu2;
+			var baseURL = gRootURL.root+gBaseURL.menu2;
 			document.write('				<!-- Convention -->');
 			document.write('				<ul class="g-depth1 g-snbMenu2">');
 			document.write('					<li class="g-node1">');
@@ -189,7 +189,7 @@ var include = {
 
 		//Petterns
 		menu3 : function(){
-			var baseURL = gBaseURL.menu3;
+			var baseURL = gRootURL.root+gBaseURL.menu3;
 			document.write('				<!-- library -->');
 			document.write('				<ul class="g-depth1 g-snbMenu3">');
 			document.write('					<li class="g-node1">');
@@ -208,7 +208,7 @@ var include = {
 
 		//Vanilla Dom
 		menu4 : function(){
-			var baseURL = gBaseURL.menu4;
+			var baseURL = gRootURL.root+gBaseURL.menu4;
 			document.write('				<!-- Globals -->');
 			document.write('				<ul class="g-depth1 g-snbMenu4">');
 			document.write('					<li class="g-node1">');
@@ -223,7 +223,7 @@ var include = {
 
 		//Motions
 		menu5 : function(){
-			var baseURL = gBaseURL.menu5;
+			var baseURL = gRootURL.root+gBaseURL.menu5;
 			document.write('				<!-- Checklist -->');
 			document.write('				<ul class="g-depth1 g-snbMenu5">');
 			document.write('					<li class="g-node1">');

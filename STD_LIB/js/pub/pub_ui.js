@@ -94,7 +94,7 @@ var ui = {
 			id = 'sFilesAdd'+idx,
 			html = '<div class="file">'+
 					'	<input type="text" class="form-input" title="첨부된 파일명" readonly>'+
-					'	<label class="button style-1" role="button" tabindex="0">'+
+					'	<label class="btn style-1" role="button" tabindex="0">'+
 					'		<span>파일첨부</span>'+
 					'		<input type="file" name="" value="" placeholder="" title="" class="file-hide" tabindex="-1" aria-hidden="true" onchange="ui.fileAttach(this, event);">'+
 					'	</label>'+

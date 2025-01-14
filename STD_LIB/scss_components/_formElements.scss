@@ -7,11 +7,16 @@
 -------------------------------------------------------------------*/
 // Variables
 @mixin ui-input-outlined {
-    height:45px; padding:0 15px; border:1px solid #ddd; border-radius:4px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 22px; transition:all 0.3s;
+    display: flex; align-items: center; gap: 12px;
+    height:45px; padding: 0 15px; border:1px solid #ddd; border-radius:4px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 22px; transition:all 0.3s;
+    .input, .select {background: transparent;}
+    .textarea {padding:5px 15px; background: transparent;}
+    span, .button {flex:none;}
     &:hover {border-color: #222;}
-    &:focus {border-color: $color-primary; color: $color-primary;}
-    &:disabled {background-color: #fafafa; opacity: 0.75;}
-    &:disabled:hover {border-color: #999; opacity: 0.75;}
+    &:focus-visible {border-color: $color-primary; color: $color-primary;}
+    &:has(:disabled) {
+        background-color: #fafafa; opacity: 0.75;
+    }
 }
 
 /* Default */
@@ -35,8 +40,34 @@ select::-ms-expand {display:none;}
 .form-button {@include ui-input-outlined; flex:none;}
 
 /* Form Textfield */
-.form-input {@include ui-input-outlined;}
-textarea.form-input {@include ui-input-outlined; height:auto; padding-top:10px; padding-bottom:10px;}
+.form-input {
+    @include ui-input-outlined;
+    input {
+        height: 100%; width:100%;
+
+        // 입력상태 인터렉션
+        &:not(:placeholder-shown) ~ .button-clear,
+        &:not(:placeholder-shown) + .button-clear {
+            display: inline-flex;
+        }
+
+        &:not(:placeholder-shown):disabled ~ .button-clear,
+        &:not(:placeholder-shown):disabled + .button-clear {
+            display: none;
+        }
+
+        &:not(:placeholder-shown):read-only ~ .button-clear,
+        &:not(:placeholder-shown):read-only + .button-clear {
+            display: none;
+        }
+    }
+
+    .button-clear {
+        display: none;
+    }
+}
+
+.form-textarea {@include ui-input-outlined; height:auto; padding-top:10px; padding-bottom:10px;}
 
 /* Form Select */
 .form-select {@include ui-input-outlined; padding-right:45px; background:url('../img/cmn/arw_select01.png') no-repeat calc(100% - 15px) center;}
