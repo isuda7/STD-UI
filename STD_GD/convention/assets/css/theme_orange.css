@@ -41,3 +41,4 @@ a.g-top {background-color:#ff5400;}
 @media only screen and (max-width: 820px) {
 .g-lnb > .g-node-title {color:#ff5400; background-color:#fff;}
 .g-lnb > ul > li {background-color:#ff5400;}
+}

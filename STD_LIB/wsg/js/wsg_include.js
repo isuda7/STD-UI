@@ -1,5 +1,5 @@
 var gRootURL = {
-	root : '../../../../STD_LIB/',
+	root : '../../',
 }
 var gBaseURL = {
 	wsg : 'wsg/',
