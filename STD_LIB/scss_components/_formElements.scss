@@ -46,23 +46,23 @@ select::-ms-expand {display:none;}
         height: 100%; width:100%;
 
         // 입력상태 인터렉션
-        &:not(:placeholder-shown) ~ .button-clear,
-        &:not(:placeholder-shown) + .button-clear {
+        &:not(:placeholder-shown) ~ .btn-clear,
+        &:not(:placeholder-shown) + .btn-clear {
             display: inline-flex;
         }
 
-        &:not(:placeholder-shown):disabled ~ .button-clear,
-        &:not(:placeholder-shown):disabled + .button-clear {
+        &:not(:placeholder-shown):disabled ~ .btn-clear,
+        &:not(:placeholder-shown):disabled + .btn-clear {
             display: none;
         }
 
-        &:not(:placeholder-shown):read-only ~ .button-clear,
-        &:not(:placeholder-shown):read-only + .button-clear {
+        &:not(:placeholder-shown):read-only ~ .btn-clear,
+        &:not(:placeholder-shown):read-only + .btn-clear {
             display: none;
         }
     }
 
-    .button-clear {
+    .btn-clear {
         display: none;
     }
 }
