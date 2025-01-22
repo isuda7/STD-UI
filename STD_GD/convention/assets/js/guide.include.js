@@ -33,7 +33,7 @@ var include = {
 	},
 	header : function(){
 		document.write('	<header class="g-header g-in-sec">');
-		document.write('		<h1 class="g-logo"><a href="/">퍼블리싱가이드</a></h1>');
+		document.write('		<h1 class="g-logo"><a href="../">퍼블리싱가이드</a></h1>');
 		document.write('		<button type="button" class="g-btn-aside"><span>Menu</span></button>');
 		document.write('	</header>');
 	},
