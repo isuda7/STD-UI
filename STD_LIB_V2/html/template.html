@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Template</title>
+    <!-- STD_LIB CSS (Example Path) -->
+    <!-- <link rel="stylesheet" href="../../STD_LIB/scss/import.css"> -->
+    <style>
+        /* Demo Style just for this template */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            padding: 40px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 28px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff5400;
+            padding-left: 10px;
+        }
+
+        .demo-box {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 4px;
+            background: #fff;
+            margin-bottom: 15px;
+        }
+
+        .code-box {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d63384;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Component Name</h1>
+    <p>Describe the component here. (e.g. Buttons are used to trigger actions.)</p>
+
+    <h2>Basic Usage</h2>
+    <div class="demo-box">
+        <!-- Actual Component Code Here -->
+        <button type="button"
+            style="padding:10px 20px; background:#ff5400; color:#fff; border:0; border-radius:4px;">Button
+            Primary</button>
+        <button type="button"
+            style="padding:10px 20px; background:#eee; color:#333; border:0; border-radius:4px;">Button Default</button>
+    </div>
+    <div class="code-box">
+        &lt;button class="btn primary"&gt;Button Primary&lt;/button&gt;
+        &lt;button class="btn"&gt;Button Default&lt;/button&gt;
+    </div>
+
+    <h2>Variations</h2>
+    <div class="demo-box">
+        <button type="button"
+            style="padding:10px 20px; border:1px solid #ff5400; background:#fff; color:#ff5400; border-radius:4px;">Button
+            Outline</button>
+    </div>
+    <div class="code-box">
+        &lt;button class="btn outline"&gt;Button Outline&lt;/button&gt;
+    </div>
+
+</body>
+
+</html>
